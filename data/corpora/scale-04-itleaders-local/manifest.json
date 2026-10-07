@@ -1,0 +1,27 @@
+{
+  "format": "file-backed-market-corpus-v1",
+  "source": "itleaders",
+  "planned": 10,
+  "postings": 10,
+  "source_gone": 0,
+  "errors": [],
+  "by_source": {
+    "itleaders": 10
+  },
+  "corpus": {
+    "rows": 10,
+    "uncompressed_bytes": 14315,
+    "compressed_bytes": 2703,
+    "uncompressed_sha256": "411363e89021f7369512a8bb619e09042dcebcb95c18f187d3556256a4751681",
+    "compressed_sha256": "95ec58eaca2f3020999769f033910377d68a947542e49bddcc1707313e2736ab"
+  },
+  "raw_archive": {
+    "rows": 10,
+    "uncompressed_bytes": 2733207,
+    "compressed_bytes": 621595,
+    "uncompressed_sha256": "3382cf869e3ac8836fa24b8f4ecf98cdf26f0c5dfc338262c4e32565d9d6f3f0",
+    "compressed_sha256": "4762c05cfac8708fe459d1126318f38d2577d924f6c088f0768a0f594aa5df9a"
+  },
+  "raw_archive_location": ".local-evidence/scale-04-itleaders/raw-observations.jsonl.gz",
+  "transport_version": "public-current-list-html-v1"
+}
