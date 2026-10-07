@@ -11,5 +11,8 @@ TRANSPORT_VERSIONS = {
     "bulldogjob": "public-listing-ssr-v1",
     "solidjobs": "public-sitemap-jsonld-v1",
     "teamquest": "public-sitemap-html-v1",
+    "aplikuj": "public-offer-sitemaps-jsonld-v1",
+    "itleaders": "public-current-list-html-v1",
+    "michaelpage": "public-pagination-jsonld-v1",
     "pracuj": "public-mirror-isitfair-v1",
 }

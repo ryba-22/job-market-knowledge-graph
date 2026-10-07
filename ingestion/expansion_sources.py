@@ -19,6 +19,9 @@ ROCKET_SITEMAP_INDEX = "https://rocketjobs.pl/sitemaps/active-jobs.xml"
 BULLDOG_JOBS_SITEMAP = "https://bulldogjob.com/en/jobs.xml.gz"
 SOLID_JOBS_SITEMAP = "https://solid.jobs/sitemap-offers.xml"
 TEAMQUEST_JOBS_SITEMAP = "https://teamquest.pl/sitemap/praca.xml"
+APLIKUJ_SITEMAP_INDEX = "https://www.aplikuj.pl/sitemap/offer_index.xml"
+ITLEADERS_LISTING_URL = "https://it-leaders.pl/oferty-pracy"
+MICHAELPAGE_LISTING_URL = "https://www.michaelpage.pl/en/jobs"
 ISITFAIR_SEARCH_URL = "https://isitfair.pl/api/v1/offers/search"
 PRACUJ_SEARCH_TERMS = (
     "developer","engineer","programista","java","python","devops","data","tester",
@@ -446,6 +449,221 @@ class TeamQuestSource:
         )
 
 
+class AplikujSource:
+    code = "aplikuj"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(APLIKUJ_SITEMAP_INDEX)
+        response.raise_for_status()
+        root = ET.fromstring(response.text)
+        sitemap_urls = [n.text.strip() for n in root.iter() if n.tag.endswith("loc") and n.text]
+        refs = []
+        seen = set()
+        for sitemap_url in sitemap_urls:
+            child = client.get(sitemap_url)
+            child.raise_for_status()
+            sitemap = ET.fromstring(child.text)
+            for node in sitemap.iter():
+                if not node.tag.endswith("loc") or not node.text:
+                    continue
+                target = canonical_url(node.text.strip())
+                match = re.search(r"/oferta/(\d+)(?:/|$)", target)
+                if not match:
+                    continue
+                sid = match.group(1)
+                if sid in seen:
+                    continue
+                seen.add(sid)
+                refs.append(PostingRef(self.code, target, sid))
+                if len(refs) >= limit:
+                    return refs
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        if not structured:
+            title_tag = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
+            if "Strona nie została znaleziona" in title_tag:
+                raise SourceGoneError("Aplikuj.pl offer no longer exposed")
+            raise ValueError("PARSER_DRIFT: Aplikuj JobPosting JSON-LD missing")
+        title = norm_text(structured.get("title"))
+        hiring = structured.get("hiringOrganization") or {}
+        company = hiring.get("name") if isinstance(hiring, dict) else None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Aplikuj title missing")
+        canonical = soup.find("link", attrs={"rel": "canonical"})
+        canonical_href = canonical.get("href") if canonical else None
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=ref.source_posting_id,
+            url=canonical_url(canonical_href or ref.url),
+            title=title,
+            company_mention=norm_text(company) or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "hiring_organization": hiring,
+                "date_posted": structured.get("datePosted"),
+                "valid_through": structured.get("validThrough"),
+                "employment_type": structured.get("employmentType"),
+                "industry": structured.get("industry"),
+                "occupational_category": structured.get("occupationalCategory"),
+                "job_location": structured.get("jobLocation"),
+                "salary_currency": structured.get("salaryCurrency"),
+                "direct_apply": structured.get("directApply"),
+                "observation_provenance": "DIRECT",
+                "discovery_scope": "full-offer-sitemaps",
+            },
+            revision_projection={
+                "jobposting_json_ld": structured,
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
+class ITLeadersSource:
+    code = "itleaders"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(ITLEADERS_LISTING_URL)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        refs = []
+        seen = set()
+        for a in soup.find_all("a", href=True):
+            href = a.get("href") or ""
+            if "/oferta-pracy/" not in href:
+                continue
+            url = canonical_url(urljoin(str(response.url), href))
+            match = re.search(r"-(\d+)(?:/)?$", url)
+            if not match:
+                continue
+            sid = match.group(1)
+            if sid in seen:
+                continue
+            seen.add(sid)
+            refs.append(PostingRef(self.code, url, sid))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        desc = soup.find("meta", attrs={"name": "description"})
+        og_title = soup.find("meta", attrs={"property": "og:title"})
+        description = norm_text(desc.get("content") if desc else None)
+        role = norm_text(description.split(",", 1)[0] if description else None)
+        og = norm_text(og_title.get("content") if og_title else None)
+        if not role:
+            raise ValueError("PARSER_DRIFT: IT-Leaders role missing")
+        company = None
+        suffix = f" - {role}"
+        if og.endswith(suffix):
+            company = norm_text(og[:-len(suffix)])
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=ref.source_posting_id,
+            url=canonical_url(ref.url),
+            title=role,
+            company_mention=company or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "og_title": og or None,
+                "meta_description": description or None,
+                "observation_provenance": "DIRECT",
+            },
+            revision_projection={
+                "title": role,
+                "company": company,
+                "meta_description": description,
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
+class MichaelPageSource:
+    code = "michaelpage"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        refs = []
+        seen = set()
+        page = 0
+        while len(refs) < limit:
+            response = client.get(MICHAELPAGE_LISTING_URL, params={"page": page})
+            if response.status_code == 404:
+                break
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            before = len(refs)
+            for a in soup.find_all("a", href=True):
+                href = a.get("href") or ""
+                match = re.search(r"/job-detail/[^?]+/ref/(jn-[0-9-]+)", href, re.I)
+                if not match:
+                    continue
+                sid = match.group(1).lower()
+                if sid in seen:
+                    continue
+                seen.add(sid)
+                refs.append(PostingRef(self.code, canonical_url(urljoin(str(response.url), href.split("?", 1)[0])), sid))
+                if len(refs) >= limit:
+                    return refs
+            if len(refs) == before:
+                break
+            page += 1
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        if not structured:
+            title_tag = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
+            if "Page not found" in title_tag or "404" in title_tag:
+                raise SourceGoneError("Michael Page offer no longer exposed")
+            raise ValueError("PARSER_DRIFT: Michael Page JobPosting JSON-LD missing")
+        title = norm_text(structured.get("title"))
+        hiring = structured.get("hiringOrganization") or {}
+        advertiser = hiring.get("name") if isinstance(hiring, dict) else None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Michael Page title missing")
+        canonical = soup.find("link", attrs={"rel": "canonical"})
+        canonical_href = canonical.get("href") if canonical else None
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=ref.source_posting_id,
+            url=canonical_url(canonical_href or ref.url),
+            title=title,
+            company_mention=norm_text(advertiser) or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "advertiser": norm_text(advertiser) or None,
+                "date_posted": structured.get("datePosted"),
+                "employment_type": structured.get("employmentType"),
+                "industry": structured.get("industry"),
+                "job_location": structured.get("jobLocation"),
+                "observation_provenance": "DIRECT_RECRUITER",
+            },
+            revision_projection={
+                "jobposting_json_ld": structured,
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
 class PracujSecondarySource:
     code = "pracuj"
 
@@ -529,5 +747,8 @@ SOURCES = {
     "bulldogjob": BulldogJobSource(),
     "solidjobs": SolidJobsSource(),
     "teamquest": TeamQuestSource(),
+    "aplikuj": AplikujSource(),
+    "itleaders": ITLeadersSource(),
+    "michaelpage": MichaelPageSource(),
     "pracuj": PracujSecondarySource(),
 }

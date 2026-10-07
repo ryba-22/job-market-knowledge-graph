@@ -1,0 +1,22 @@
+name: SCALE-04 frozen inventory
+
+on:
+  push:
+    branches: [scale-04-more-sources]
+  pull_request:
+    paths:
+      - 'data/inventories/scale-04/**'
+      - 'tests/test_scale_04_frozen_inventory.py'
+      - '.github/workflows/scale-04.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen inventory
+        run: python -m unittest tests.test_scale_04_frozen_inventory -v

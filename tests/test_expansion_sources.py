@@ -1,6 +1,6 @@
 import json
 
-from ingestion.expansion_sources import BulldogJobSource, NoFluffJobsSource, PracujSecondarySource, RocketJobsSource
+from ingestion.expansion_sources import AplikujSource, BulldogJobSource, ITLeadersSource, MichaelPageSource, NoFluffJobsSource, PracujSecondarySource, RocketJobsSource
 from ingestion.model import PostingRef
 
 
@@ -136,3 +136,31 @@ def test_solid_generic_shell_is_source_gone():
         pass
     else:
         raise AssertionError("expected SourceGoneError")
+
+
+def test_aplikuj_parses_jobposting_jsonld():
+    html = """<html><head><link rel="canonical" href="https://www.aplikuj.pl/oferta/3313385/example"><script type="application/ld+json">{"@context":"https://schema.org","@type":"JobPosting","title":"Operator","hiringOrganization":{"@type":"Organization","name":"Acme"},"datePosted":"2026-10-01","validThrough":"2026-11-01","employmentType":"FULL_TIME","industry":"Produkcja"}</script></head><body><h1>Operator</h1></body></html>"""
+    ref=PostingRef("aplikuj","https://www.aplikuj.pl/oferta/3313385/example","3313385")
+    parsed=AplikujSource().parse_detail(html,ref)
+    assert parsed.source_posting_id=="3313385"
+    assert parsed.title=="Operator"
+    assert parsed.company_mention=="Acme"
+    assert parsed.source_specific["observation_provenance"]=="DIRECT"
+
+
+def test_itleaders_parses_role_and_company_from_meta():
+    html = """<html><head><meta name="description" content="Junior Backend Developer (Python), Lokalizacja: Gliwice, Wynagrodzenie:"><meta property="og:title" content="MindPal Sp. z o.o. - Junior Backend Developer (Python)"></head><body><h1>Oferty pracy</h1><h2>Wymagania</h2><p>Python</p></body></html>"""
+    ref=PostingRef("itleaders","https://it-leaders.pl/oferta-pracy/junior-backend-developer-python-gliwice-3851","3851")
+    parsed=ITLeadersSource().parse_detail(html,ref)
+    assert parsed.title=="Junior Backend Developer (Python)"
+    assert parsed.company_mention=="MindPal Sp. z o.o."
+    assert parsed.source_specific["observation_provenance"]=="DIRECT"
+
+
+def test_michaelpage_parses_recruiter_jsonld():
+    html = """<html><head><link rel="canonical" href="https://www.michaelpage.pl/en/job-detail/manager-sysops/ref/jn-092026-7112987"><script type="application/ld+json">{"@context":"http://schema.org/","@type":"JobPosting","title":"Manager SysOps","hiringOrganization":{"@type":"Organization","name":"Michael Page Poland"},"datePosted":"2026-09-29","employmentType":"FULL_TIME","industry":"Information Technology"}</script></head><body><h1>Manager SysOps</h1></body></html>"""
+    ref=PostingRef("michaelpage","https://www.michaelpage.pl/en/job-detail/manager-sysops/ref/jn-092026-7112987","jn-092026-7112987")
+    parsed=MichaelPageSource().parse_detail(html,ref)
+    assert parsed.title=="Manager SysOps"
+    assert parsed.company_mention=="Michael Page Poland"
+    assert parsed.source_specific["observation_provenance"]=="DIRECT_RECRUITER"
