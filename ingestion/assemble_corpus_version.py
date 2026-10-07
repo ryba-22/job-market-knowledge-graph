@@ -12,7 +12,7 @@ from pathlib import Path
 def _read(path: Path):
     return [
         json.loads(x)
-        for x in gzip.decompress(path.read_bytes()).decode("utf-8").splitlines()
+        for x in gzip.decompress(path.read_bytes()).decode("utf-8").split("\n")
         if x
     ]
 

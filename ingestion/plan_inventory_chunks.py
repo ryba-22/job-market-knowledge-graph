@@ -9,7 +9,7 @@ from pathlib import Path
 def plan(inventory_path: str, out_path: str, chunk_size: int) -> dict:
     rows=[
         json.loads(line)
-        for line in gzip.decompress(Path(inventory_path).read_bytes()).decode("utf-8").splitlines()
+        for line in gzip.decompress(Path(inventory_path).read_bytes()).decode("utf-8").split("\n")
         if line
     ]
     unknown=[r for r in rows if not r["known"]]

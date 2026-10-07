@@ -1,0 +1,49 @@
+{
+  "format": "market-corpus-v1",
+  "corpus_version": "CORPUS-07",
+  "postings": 2583,
+  "by_source": {
+    "bulldogjob": 463,
+    "justjoinit": 650,
+    "nofluffjobs": 650,
+    "pracuj": 120,
+    "rocketjobs": 650,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 19820405,
+  "compressed_bytes": 3674095,
+  "uncompressed_sha256": "d0053547d62a8e3b8c9c808efea34671fb820875604b696b6652837f0d9e80b4",
+  "compressed_sha256": "85062565d0e1b9bda52eb0697168080d2305630bfac5265f496ce85b29415970",
+  "components": [
+    {
+      "role": "base",
+      "path": "data/corpora/corpus-06/corpus.jsonl.gz",
+      "postings": 1583,
+      "compressed_sha256": "9abf08c4fc3259fbf79dca6ec32c9ba58d271b9f3a55a1f1d7577d9b31f06852"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus07/bulldogjob-0.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "0594aa979f1c027796f43fcc5238f4211f57a48fe119c4fa920e1e26c7aa7be7"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus07/justjoinit-0.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "50de424aa72f6d78a37f268063c9c49bfc8daea9b37b7d983c062c942f211761"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus07/nofluffjobs-0.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "067a4b32eaa1e0645a456d81055d967048dd6555040376f222a297aea05b0860"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus07/rocketjobs-0.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "f0439bb6d1addb93257befdba44e5ed489b7b8ee92189372607ed081667fc280"
+    }
+  ]
+}

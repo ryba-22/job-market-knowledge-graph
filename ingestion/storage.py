@@ -116,6 +116,24 @@ class PostgresStore:
             )
             conn.commit()
 
+    def source_gone_item(
+        self,
+        run_id: str,
+        source: str,
+        source_posting_id: str,
+        error_message: str,
+    ) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                update ingestion_item
+                set status='SOURCE_GONE', error_message=%s, finished_at=now()
+                where run_id=%s and source_code=%s and source_posting_id=%s
+                """,
+                (error_message[:2000], run_id, source, source_posting_id),
+            )
+            conn.commit()
+
     def fail_item(
         self,
         run_id: str,

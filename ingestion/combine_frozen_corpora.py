@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 def _read(path: Path):
-    return [json.loads(line) for line in gzip.decompress(path.read_bytes()).decode("utf-8").splitlines() if line]
+    return [json.loads(line) for line in gzip.decompress(path.read_bytes()).decode("utf-8").split("\n") if line]
 
 
 def combine(base_path: str, expansion_path: str, out_dir: str, version: str) -> dict:

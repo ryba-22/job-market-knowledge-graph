@@ -35,3 +35,17 @@ def test_combine_rejects_conflicting_duplicate(tmp_path):
         assert "conflicting duplicate" in str(exc)
     else:
         raise AssertionError("expected duplicate conflict")
+
+
+def test_jsonl_reader_does_not_split_unicode_line_separator(tmp_path):
+    import gzip,json
+    from ingestion.assemble_corpus_version import assemble
+    row={"source":"x","source_posting_id":"1","title":"before\u2028after"}
+    raw=(json.dumps(row,ensure_ascii=False,separators=(",",":"))+"\n").encode("utf-8")
+    base=tmp_path/"base.gz"
+    base.write_bytes(gzip.compress(raw,mtime=0))
+    extra=tmp_path/"extra.gz"
+    extra.write_bytes(gzip.compress(b"",mtime=0))
+    out=tmp_path/"out"
+    m=assemble(str(base),[str(extra)],str(out),"TEST")
+    assert m["postings"]==1

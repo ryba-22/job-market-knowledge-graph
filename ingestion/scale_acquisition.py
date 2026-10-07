@@ -25,7 +25,7 @@ def load_known_ids(path: str, source: str) -> set[str]:
     raw = gzip.decompress(Path(path).read_bytes()).decode("utf-8")
     return {
         str(row["source_posting_id"])
-        for line in raw.splitlines()
+        for line in raw.split("\n")
         if line
         for row in [json.loads(line)]
         if row["source"] == source

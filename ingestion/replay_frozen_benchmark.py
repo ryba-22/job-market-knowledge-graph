@@ -58,7 +58,7 @@ def _replay_full(root: Path, manifest: dict, failures: list[str]):
     pairs_text=pairs_path.read_text(encoding="utf-8")
     if sha256_text(pairs_text)!=manifest["pairs_file_sha256"]:
         failures.append("pairs.jsonl checksum mismatch")
-    pairs=[json.loads(x) for x in pairs_text.splitlines() if x.strip()]
+    pairs=[json.loads(x) for x in pairs_text.split("\n") if x.strip()]
     return postings,pairs
 
 
@@ -86,7 +86,7 @@ def _replay_compact(root: Path, manifest: dict, failures: list[str]):
     expected_raw=manifest.get("snapshot_uncompressed_sha256") or manifest["snapshot_sha256"]
     if sha256_bytes(raw)!=expected_raw:
         failures.append("uncompressed snapshot checksum mismatch")
-    records=[json.loads(x) for x in raw.decode("utf-8").splitlines() if x.strip()]
+    records=[json.loads(x) for x in raw.decode("utf-8").split("\n") if x.strip()]
     postings={}
     pairs=[]
     for record in records:

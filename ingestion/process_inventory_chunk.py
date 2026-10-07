@@ -68,13 +68,14 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
                     return SOURCES[source].fetch_detail(client, ref)
 
                 def on_failure(no, exc, will_retry, failure_type, status):
+                    gone = status in (404, 410)
                     store.record_attempt(
                         run_id=run_id,
                         source=source,
                         source_posting_id=sid,
                         requested_url=ref.url,
                         attempt_no=no,
-                        outcome="RETRYABLE_FAILURE" if will_retry else "TERMINAL_FAILURE",
+                        outcome="SOURCE_GONE" if gone else ("RETRYABLE_FAILURE" if will_retry else "TERMINAL_FAILURE"),
                         failure_type=failure_type,
                         http_status=status,
                         error_message=str(exc),
@@ -127,22 +128,29 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
                     "observation_provenance": "DIRECT",
                 })
             except Exception as exc:
-                stats["ERROR"] += 1
-                errors.append({
-                    "source_posting_id": sid,
-                    "url": ref.url,
-                    "error": f"{type(exc).__name__}: {exc}",
-                })
-                store.fail_item(run_id, source, sid, str(exc))
+                status = exc.response.status_code if isinstance(exc, httpx.HTTPStatusError) else None
+                if status in (404, 410):
+                    stats["SOURCE_GONE"] += 1
+                    store.source_gone_item(run_id, source, sid, str(exc))
+                else:
+                    stats["ERROR"] += 1
+                    errors.append({
+                        "source_posting_id": sid,
+                        "url": ref.url,
+                        "error": f"{type(exc).__name__}: {exc}",
+                    })
+                    store.fail_item(run_id, source, sid, str(exc))
             time.sleep(delay)
 
     successes = stats["OBSERVED"] + stats["UNCHANGED"] + stats["CHANGED"]
+    source_gone = stats["SOURCE_GONE"]
     report = {
         "run_id": run_id,
         "source": source,
         "chunk_index": chunk_index,
         "planned": chunk["count"],
         "successes": successes,
+        "source_gone": source_gone,
         "states": dict(stats),
         "errors": errors[:100],
         "transport": TRANSPORT_VERSIONS[source],
@@ -152,7 +160,7 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
     }
     store.finish_run(
         run_id,
-        status="COMPLETED" if successes == chunk["count"] and not errors else "PARTIAL",
+        status="COMPLETED" if successes + source_gone == chunk["count"] and not errors else "PARTIAL",
         summary=report,
     )
     return report, manifest
