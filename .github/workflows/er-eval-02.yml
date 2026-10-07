@@ -45,7 +45,10 @@ jobs:
           --source both
           --limit-per-source 50
           --delay 0.15
+          --manifest-out reports/er-eval-02-live-manifest.json
           --report reports/er-eval-02-base-crawl.json
+      - name: Ensure reviewer-required postings
+        run: python -m ingestion.ensure_eval_postings --report reports/er-eval-02-required-postings.json
       - name: ORG evidence
         run: python -m ingestion.org_enrichment --report reports/er-eval-02-org.json
       - name: Generate clean candidate corpus
