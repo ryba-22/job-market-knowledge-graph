@@ -1,0 +1,36 @@
+{"id": "CAPABILITY:LLM Inference Operations", "type": "CAPABILITY", "label": "LLM Inference Operations"}
+{"id": "OFFER:2026-10-06-tmobile-t-hub-aiops", "type": "OFFER", "label": "AIOps Engineer - AI Infrastructure & Orchestration", "company": "T-Mobile / T-Hub"}
+{"id": "PROCESS:Autoscaling", "type": "PROCESS", "label": "Autoscaling"}
+{"id": "PROCESS:Capacity and GPU Resource Management", "type": "PROCESS", "label": "Capacity and GPU Resource Management"}
+{"id": "PROCESS:Chargeback / Showback", "type": "PROCESS", "label": "Chargeback / Showback"}
+{"id": "PROCESS:Continuous Platform Improvement", "type": "PROCESS", "label": "Continuous Platform Improvement"}
+{"id": "PROCESS:GitOps / CI-CD", "type": "PROCESS", "label": "GitOps / CI-CD"}
+{"id": "PROCESS:Incident Response", "type": "PROCESS", "label": "Incident Response"}
+{"id": "PROCESS:Model Lifecycle Management", "type": "PROCESS", "label": "Model Lifecycle Management"}
+{"id": "PROCESS:Observability", "type": "PROCESS", "label": "Observability"}
+{"id": "PROCESS:Quota Management", "type": "PROCESS", "label": "Quota Management"}
+{"id": "PROCESS:Root Cause Analysis", "type": "PROCESS", "label": "Root Cause Analysis"}
+{"id": "PROCESS:Security Governance", "type": "PROCESS", "label": "Security Governance"}
+{"id": "PROCESS:Usage Metering", "type": "PROCESS", "label": "Usage Metering"}
+{"id": "QUALITY_ATTRIBUTE:Recoverability", "type": "QUALITY_ATTRIBUTE", "label": "Recoverability"}
+{"id": "RESPONSIBILITY:Operate inference platform", "type": "RESPONSIBILITY", "label": "Operate inference platform"}
+{"id": "ROLE:AIOps Engineer", "type": "ROLE", "label": "AIOps Engineer"}
+{"id": "TEAM:Platform Engineering", "type": "TEAM", "label": "Platform Engineering"}
+{"id": "TEAM:Security", "type": "TEAM", "label": "Security"}
+{"id": "TECHNOLOGY:ArgoCD", "type": "TECHNOLOGY", "label": "ArgoCD"}
+{"id": "TECHNOLOGY:Bash", "type": "TECHNOLOGY", "label": "Bash"}
+{"id": "TECHNOLOGY:CUDA", "type": "TECHNOLOGY", "label": "CUDA"}
+{"id": "TECHNOLOGY:ELK Stack", "type": "TECHNOLOGY", "label": "ELK Stack"}
+{"id": "TECHNOLOGY:GitLab CI", "type": "TECHNOLOGY", "label": "GitLab CI"}
+{"id": "TECHNOLOGY:Grafana", "type": "TECHNOLOGY", "label": "Grafana"}
+{"id": "TECHNOLOGY:Hugging Face Enterprise", "type": "TECHNOLOGY", "label": "Hugging Face Enterprise"}
+{"id": "TECHNOLOGY:Jenkins", "type": "TECHNOLOGY", "label": "Jenkins"}
+{"id": "TECHNOLOGY:Kubernetes", "type": "TECHNOLOGY", "label": "Kubernetes"}
+{"id": "TECHNOLOGY:NVIDIA Container Toolkit", "type": "TECHNOLOGY", "label": "NVIDIA Container Toolkit"}
+{"id": "TECHNOLOGY:NVIDIA GPU", "type": "TECHNOLOGY", "label": "NVIDIA GPU"}
+{"id": "TECHNOLOGY:OpenShift", "type": "TECHNOLOGY", "label": "OpenShift"}
+{"id": "TECHNOLOGY:OpenTelemetry", "type": "TECHNOLOGY", "label": "OpenTelemetry"}
+{"id": "TECHNOLOGY:Prometheus", "type": "TECHNOLOGY", "label": "Prometheus"}
+{"id": "TECHNOLOGY:Python", "type": "TECHNOLOGY", "label": "Python"}
+{"id": "TECHNOLOGY:S3", "type": "TECHNOLOGY", "label": "S3"}
+{"id": "TECHNOLOGY:vLLM", "type": "TECHNOLOGY", "label": "vLLM"}

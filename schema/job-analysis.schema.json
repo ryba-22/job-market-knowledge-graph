@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JobAnalysis",
+  "type": "object",
+  "required": ["id","source","role","company","published_at","responsibilities","technologies","processes","keywords","graph_edges"],
+  "properties": {
+    "id": {"type":"string"},
+    "source": {"type":"object","required":["url"],"properties":{"url":{"type":"string"},"retrieved_at":{"type":"string"}}},
+    "role": {"type":"string"},
+    "company": {"type":"string"},
+    "published_at": {"type":"string"},
+    "problem_statement": {"type":"string"},
+    "responsibilities": {"type":"array","items":{"type":"string"}},
+    "technologies": {"type":"array","items":{"type":"object","required":["name","category","importance"],"properties":{"name":{"type":"string"},"category":{"type":"string"},"importance":{"enum":["core","important","supporting","mentioned"]}}}},
+    "processes": {"type":"array","items":{"type":"string"}},
+    "keywords": {"type":"array","items":{"type":"string"}},
+    "teams": {"type":"array","items":{"type":"string"}},
+    "quality_attributes": {"type":"array","items":{"type":"string"}},
+    "fit": {"type":"array","items":{"type":"object"}},
+    "graph_edges": {"type":"array","items":{"type":"object","required":["from","relation","to"],"properties":{"from":{"type":"string"},"relation":{"type":"string"},"to":{"type":"string"}}}}
+  }
+}

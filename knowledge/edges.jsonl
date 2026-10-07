@@ -1,0 +1,39 @@
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:vLLM"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Kubernetes"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:OpenShift"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:NVIDIA GPU"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:CUDA"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:NVIDIA Container Toolkit"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Prometheus"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Grafana"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:OpenTelemetry"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:ELK Stack"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Python"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Bash"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:GitLab CI"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Jenkins"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:ArgoCD"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:Hugging Face Enterprise"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "TECHNOLOGY:S3"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Model Lifecycle Management"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:GitOps / CI-CD"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Autoscaling"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Observability"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Usage Metering"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Quota Management"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Chargeback / Showback"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Incident Response"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Root Cause Analysis"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Capacity and GPU Resource Management"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Security Governance"}
+{"from": "OFFER:2026-10-06-tmobile-t-hub-aiops", "relation": "OFFER_MENTIONS_NODE", "to": "PROCESS:Continuous Platform Improvement"}
+{"from": "ROLE:AIOps Engineer", "relation": "ROLE_REQUIRES_CAPABILITY", "to": "CAPABILITY:LLM Inference Operations"}
+{"from": "CAPABILITY:LLM Inference Operations", "relation": "TECHNOLOGY_SERVES_CAPABILITY", "to": "TECHNOLOGY:vLLM"}
+{"from": "RESPONSIBILITY:Operate inference platform", "relation": "RESPONSIBILITY_USES_TECHNOLOGY", "to": "TECHNOLOGY:Kubernetes"}
+{"from": "RESPONSIBILITY:Operate inference platform", "relation": "RESPONSIBILITY_USES_TECHNOLOGY", "to": "TECHNOLOGY:OpenShift"}
+{"from": "PROCESS:Observability", "relation": "PROCESS_SUPPORTED_BY_TECHNOLOGY", "to": "TECHNOLOGY:Prometheus"}
+{"from": "PROCESS:Observability", "relation": "PROCESS_SUPPORTED_BY_TECHNOLOGY", "to": "TECHNOLOGY:OpenTelemetry"}
+{"from": "PROCESS:Incident Response", "relation": "CAPABILITY_SUPPORTS_QUALITY_ATTRIBUTE", "to": "QUALITY_ATTRIBUTE:Recoverability"}
+{"from": "PROCESS:Model Lifecycle Management", "relation": "CAPABILITY_SUPPORTS_QUALITY_ATTRIBUTE", "to": "QUALITY_ATTRIBUTE:Recoverability"}
+{"from": "ROLE:AIOps Engineer", "relation": "ROLE_COLLABORATES_WITH_TEAM", "to": "TEAM:Security"}
+{"from": "ROLE:AIOps Engineer", "relation": "ROLE_COLLABORATES_WITH_TEAM", "to": "TEAM:Platform Engineering"}

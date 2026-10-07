@@ -1,0 +1,82 @@
+{
+  "id": "2026-10-06-tmobile-t-hub-aiops",
+  "source": {
+    "url": "https://theprotocol.it/szczegoly/praca/t-hub---aiops-engineer---ai-infrastructure-orchestration-warszawa-marynarska-12%2Coferta%2C01000000-2f10-afe4-f1b5-08df23ba5ced",
+    "retrieved_at": "2026-10-07"
+  },
+  "role": "AIOps Engineer - AI Infrastructure & Orchestration",
+  "company": "T-Mobile / T-Hub",
+  "published_at": "2026-10-06",
+  "problem_statement": "Operate a reliable, scalable, observable and secure multi-tenant LLM inference platform on GPU infrastructure.",
+  "responsibilities": [
+    "Design, deploy and maintain vLLM inference services",
+    "Manage and allocate NVIDIA GPU resources",
+    "Automate model onboarding, versioning, deployment, hot-swapping and rollback",
+    "Autoscale inference workloads using HPA and workload/GPU signals",
+    "Instrument token, latency, throughput and error metrics",
+    "Build dashboards, alerting and audit logging",
+    "Implement authentication, authorization, rate limiting and routing at API Gateway",
+    "Participate in troubleshooting, incident response and root cause analysis"
+  ],
+  "technologies": [
+    {"name":"vLLM","category":"LLM serving","importance":"core"},
+    {"name":"Kubernetes","category":"orchestration","importance":"core"},
+    {"name":"OpenShift","category":"platform","importance":"core"},
+    {"name":"NVIDIA GPU","category":"compute","importance":"core"},
+    {"name":"CUDA","category":"GPU runtime","importance":"core"},
+    {"name":"NVIDIA Container Toolkit","category":"GPU containers","importance":"important"},
+    {"name":"Prometheus","category":"observability","importance":"important"},
+    {"name":"Grafana","category":"observability","importance":"important"},
+    {"name":"OpenTelemetry","category":"observability","importance":"important"},
+    {"name":"ELK Stack","category":"logging","importance":"important"},
+    {"name":"Python","category":"automation","importance":"important"},
+    {"name":"Bash","category":"automation","importance":"important"},
+    {"name":"GitLab CI","category":"delivery","importance":"supporting"},
+    {"name":"Jenkins","category":"delivery","importance":"supporting"},
+    {"name":"ArgoCD","category":"GitOps","importance":"supporting"},
+    {"name":"Hugging Face Enterprise","category":"model registry","importance":"supporting"},
+    {"name":"S3","category":"object storage/model registry","importance":"supporting"}
+  ],
+  "processes": [
+    "Model Lifecycle Management",
+    "GitOps / CI-CD",
+    "Autoscaling",
+    "Observability",
+    "Usage Metering",
+    "Quota Management",
+    "Chargeback / Showback",
+    "Incident Response",
+    "Root Cause Analysis",
+    "Capacity and GPU Resource Management",
+    "Security Governance",
+    "Continuous Platform Improvement"
+  ],
+  "keywords": [
+    "LLM inference","AI Infrastructure","MLOps","AIOps","Platform Engineering","SRE",
+    "Paged Attention","continuous batching","GPU partitioning","multi-tenancy",
+    "HPA","audit logging","rate limiting","token consumption","rollback","RCA"
+  ],
+  "teams": ["AI Engineering","Platform Engineering","Security","Infrastructure"],
+  "quality_attributes": ["Reliability","Scalability","Security","Observability","Performance","Auditability","Resource Efficiency","Recoverability"],
+  "fit": [
+    {"area":"Product/platform systems thinking","current_fit":"strong","evidence_level":"practiced","learning_value":"medium"},
+    {"area":"Reliability/recovery/operational reasoning","current_fit":"strong","evidence_level":"practiced","learning_value":"high"},
+    {"area":"Agent/tool orchestration","current_fit":"strong","evidence_level":"practiced","learning_value":"medium"},
+    {"area":"Kubernetes/OpenShift production administration","current_fit":"weak","evidence_level":"none","learning_value":"high","portfolio_candidate":true},
+    {"area":"vLLM production serving","current_fit":"weak","evidence_level":"none","learning_value":"high","portfolio_candidate":true},
+    {"area":"NVIDIA/CUDA/GPU operations","current_fit":"weak","evidence_level":"none","learning_value":"high","portfolio_candidate":true},
+    {"area":"Observability stack","current_fit":"medium","evidence_level":"conceptual","learning_value":"high","portfolio_candidate":true}
+  ],
+  "graph_edges": [
+    {"from":"ROLE:AIOps Engineer","relation":"ROLE_REQUIRES_CAPABILITY","to":"CAPABILITY:LLM Inference Operations"},
+    {"from":"CAPABILITY:LLM Inference Operations","relation":"TECHNOLOGY_SERVES_CAPABILITY","to":"TECHNOLOGY:vLLM"},
+    {"from":"RESPONSIBILITY:Operate inference platform","relation":"RESPONSIBILITY_USES_TECHNOLOGY","to":"TECHNOLOGY:Kubernetes"},
+    {"from":"RESPONSIBILITY:Operate inference platform","relation":"RESPONSIBILITY_USES_TECHNOLOGY","to":"TECHNOLOGY:OpenShift"},
+    {"from":"PROCESS:Observability","relation":"PROCESS_SUPPORTED_BY_TECHNOLOGY","to":"TECHNOLOGY:Prometheus"},
+    {"from":"PROCESS:Observability","relation":"PROCESS_SUPPORTED_BY_TECHNOLOGY","to":"TECHNOLOGY:OpenTelemetry"},
+    {"from":"PROCESS:Incident Response","relation":"CAPABILITY_SUPPORTS_QUALITY_ATTRIBUTE","to":"QUALITY_ATTRIBUTE:Recoverability"},
+    {"from":"PROCESS:Model Lifecycle Management","relation":"CAPABILITY_SUPPORTS_QUALITY_ATTRIBUTE","to":"QUALITY_ATTRIBUTE:Recoverability"},
+    {"from":"ROLE:AIOps Engineer","relation":"ROLE_COLLABORATES_WITH_TEAM","to":"TEAM:Security"},
+    {"from":"ROLE:AIOps Engineer","relation":"ROLE_COLLABORATES_WITH_TEAM","to":"TEAM:Platform Engineering"}
+  ]
+}
