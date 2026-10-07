@@ -1,0 +1,69 @@
+{
+  "run_id": "source-expansion-02-bulldog100",
+  "sources": [
+    {
+      "source": "bulldogjob",
+      "transport": "public-listing-ssr-v1",
+      "discovered": 100,
+      "states": {
+        "OBSERVED": 93,
+        "ERROR": 7
+      },
+      "errors": [
+        {
+          "source_posting_id": "254823",
+          "url": "https://bulldogjob.com/companies/jobs/254823-software-engineer-iii-frontend-account-experience-primer-io",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/254823-software-engineer-iii-frontend-account-experience-primer-io'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "254831",
+          "url": "https://bulldogjob.com/companies/jobs/254831-senior-strategic-project-manager-barcelona-satispay",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/254831-senior-strategic-project-manager-barcelona-satispay'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "254832",
+          "url": "https://bulldogjob.com/companies/jobs/254832-senior-strategic-project-manager-london-satispay",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/254832-senior-strategic-project-manager-london-satispay'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "254870",
+          "url": "https://bulldogjob.com/companies/jobs/254870-senior-java-developer-krakow-luxoft-dxc",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/254870-senior-java-developer-krakow-luxoft-dxc'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "254872",
+          "url": "https://bulldogjob.com/companies/jobs/254872-staff-product-manager-amsterdam-databricks",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/254872-staff-product-manager-amsterdam-databricks'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "255076",
+          "url": "https://bulldogjob.com/companies/jobs/255076-rpa-engineer-data-center-coherent-solutions-sp-z-o-o",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/255076-rpa-engineer-data-center-coherent-solutions-sp-z-o-o'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "255176",
+          "url": "https://bulldogjob.com/companies/jobs/255176-junior-ai-product-enablement-specialist-sysdig",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/255176-junior-ai-product-enablement-specialist-sysdig'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        }
+      ]
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 93,
+    "revisions": 93,
+    "raw_observations": 93,
+    "organization_mentions": 93,
+    "organization_candidates": 93,
+    "match_candidates": 0,
+    "ingestion_runs": 1,
+    "ingestion_attempts": 143,
+    "ingestion_items": 100,
+    "by_source": {
+      "bulldogjob": 93
+    },
+    "lifecycle": {
+      "OBSERVED": 93
+    }
+  }
+}

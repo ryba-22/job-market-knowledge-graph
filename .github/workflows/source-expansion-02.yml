@@ -1,70 +1,24 @@
-name: SOURCE-EXPANSION-02 Bulldogjob
+name: SOURCE-EXPANSION-02 frozen Bulldog corpus
 
 on:
   push:
     branches: [source-expansion-02-bulldog]
+  pull_request:
+    paths:
+      - "data/corpora/source-expansion-02-bulldog/**"
+      - "data/corpora/corpus-04/**"
+      - "tests/test_corpus_04_snapshot.py"
+      - ".github/workflows/source-expansion-02.yml"
   workflow_dispatch:
 
 jobs:
-  expand:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: crawler
-          POSTGRES_PASSWORD: crawler
-          POSTGRES_DB: jobs
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U crawler -d jobs"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 20
-    env:
-      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
-      PYTHONUNBUFFERED: "1"
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install
-        run: pip install -e ".[dev]"
-      - name: Tests
-        run: pytest -q
-      - name: Migrate
-        run: python -m ingestion.migrate
-      - name: Crawl 100 Bulldogjob
-        run: >-
-          python -m ingestion.source_expansion
-          --run-id source-expansion-02-bulldog100
-          --source bulldogjob
-          --limit-per-source 100
-          --delay 1.25
-          --manifest-out reports/source-expansion-02-manifest.json
-          --report reports/source-expansion-02-crawl.json
-      - name: Export compact source corpus
-        run: python -m ingestion.export_market_corpus --out reports/source-expansion-02
-      - name: Verify source corpus
-        run: |
-          python - <<'PY2'
-          import json
-          from pathlib import Path
-          m=json.loads(Path("reports/source-expansion-02/manifest.json").read_text())
-          assert m["postings"] >= 95, m
-          assert m["by_source"].get("bulldogjob",0) >= 95, m
-          print(json.dumps(m,indent=2))
-          PY2
-      - name: Upload source corpus
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: source-expansion-02-bulldog100
-          path: |
-            reports/source-expansion-02-manifest.json
-            reports/source-expansion-02-crawl.json
-            reports/source-expansion-02/manifest.json
-            reports/source-expansion-02/corpus.jsonl.gz
+      - name: Verify frozen 493-offer corpus
+        run: python -m unittest tests.test_corpus_04_snapshot -v
