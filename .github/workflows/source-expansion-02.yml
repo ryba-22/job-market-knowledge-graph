@@ -43,7 +43,7 @@ jobs:
           --run-id source-expansion-02-bulldog100
           --source bulldogjob
           --limit-per-source 100
-          --delay 0.08
+          --delay 1.25
           --manifest-out reports/source-expansion-02-manifest.json
           --report reports/source-expansion-02-crawl.json
       - name: Export compact source corpus
