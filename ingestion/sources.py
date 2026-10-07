@@ -141,6 +141,22 @@ class JustJoinItAdapter(SourceAdapter):
         skills = []
         for node in soup.select("[data-skill][data-level]"):
             skills.append({"skill": node.get("data-skill"), "level": node.get("data-level")})
+
+        structured = _jobposting_json_ld(soup)
+        sections = _stable_sections(soup)
+        revision_projection = {
+            "jobposting_json_ld": structured or {},
+            "stable_sections": sections,
+            "skill_expectations": sorted(
+                skills,
+                key=lambda item: (
+                    norm_text(item.get("skill")).casefold(),
+                    norm_text(item.get("level")).casefold(),
+                ),
+            ),
+        }
+        # Never hash the full rendered document for JJIT. Raw HTML remains in
+        # RawObservation; revisions track only job semantics.
         return ParsedPosting(
             source=self.code,
             source_posting_id=sid,
@@ -149,6 +165,7 @@ class JustJoinItAdapter(SourceAdapter):
             company_mention=company,
             body_text=soup.get_text("\n", strip=True),
             source_specific={"skill_expectations": skills},
+            revision_projection=revision_projection,
         )
 
 
