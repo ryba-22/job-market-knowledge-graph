@@ -70,6 +70,20 @@ jobs:
           python -m ingestion.export_er_eval
           --jsonl reports/er-eval-02-final.jsonl
           --csv reports/er-eval-02-final.csv
+      - name: Freeze benchmark snapshot
+        run: >-
+          python -m ingestion.freeze_benchmark_snapshot
+          --out reports/er-eval-02-snapshot
+      - name: Offline replay frozen snapshot
+        env:
+          NO_PROXY: "*"
+          HTTP_PROXY: http://127.0.0.1:9
+          HTTPS_PROXY: http://127.0.0.1:9
+          ALL_PROXY: http://127.0.0.1:9
+        run: >-
+          python -m ingestion.replay_frozen_benchmark
+          --snapshot reports/er-eval-02-snapshot
+          --report reports/er-eval-02-offline-replay.json
       - name: Verify
         run: python -m ingestion.verify_er_eval_02 --report reports/er-eval-02-verification.json
       - name: Upload evidence
