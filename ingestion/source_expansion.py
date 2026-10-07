@@ -104,7 +104,7 @@ def run_source(client, store, run_id: str, source: str, limit: int, delay: float
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
-    p.add_argument("--source", choices=["nofluffjobs", "rocketjobs", "both"], default="both")
+    p.add_argument("--source", choices=["nofluffjobs", "rocketjobs", "bulldogjob", "both"], default="both")
     p.add_argument("--limit-per-source", type=int, default=100)
     p.add_argument("--delay", type=float, default=0.1)
     p.add_argument("--run-id")
