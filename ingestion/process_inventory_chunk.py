@@ -10,7 +10,7 @@ import time
 import httpx
 
 from .expansion_sources import SOURCES
-from .model import PostingRef
+from .model import PostingRef, SourceGoneError
 from .retry import RetryPolicy, run_with_retry
 from .sources import ADAPTERS
 from .storage import PostgresStore
@@ -129,7 +129,7 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
                 })
             except Exception as exc:
                 status = exc.response.status_code if isinstance(exc, httpx.HTTPStatusError) else None
-                if status in (404, 410):
+                if isinstance(exc, SourceGoneError) or status in (404, 410):
                     stats["SOURCE_GONE"] += 1
                     store.source_gone_item(run_id, source, sid, str(exc))
                 else:

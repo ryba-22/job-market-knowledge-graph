@@ -10,6 +10,10 @@ from typing import Any
 _WS = re.compile(r"\s+")
 
 
+class SourceGoneError(RuntimeError):
+    """The source identity is known, but the detail surface no longer exposes the posting."""
+
+
 def norm_text(value: str | None) -> str:
     return _WS.sub(" ", (value or "").strip())
 

@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 import httpx
 from bs4 import BeautifulSoup
 
-from .model import ParsedPosting, PostingRef, norm_text
+from .model import ParsedPosting, PostingRef, SourceGoneError, norm_text
 from .sources import _jobposting_json_ld, _stable_sections, canonical_url
 
 
@@ -314,6 +314,9 @@ class SolidJobsSource:
             h1 = soup.find("h1")
             title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
             if not title:
+                page_title = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
+                if page_title == "SOLID.Jobs – Platforma rekrutacyjna dla specjalistów":
+                    raise SourceGoneError("SOLID.Jobs generic app shell: posting detail no longer exposed")
                 raise ValueError("PARSER_DRIFT: SOLID.Jobs title missing")
             canonical = soup.find("link", attrs={"rel": "canonical"})
             canonical_href = canonical.get("href") if canonical else None

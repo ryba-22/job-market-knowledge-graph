@@ -124,3 +124,15 @@ def test_solid_prefers_jsonld_when_present():
     assert parsed.source_posting_id == "38940"
     assert parsed.company_mention == "ITFS"
     assert parsed.source_specific["parse_mode"] == "JSON_LD"
+
+
+def test_solid_generic_shell_is_source_gone():
+    from ingestion.model import SourceGoneError
+    html = """<html><head><title>SOLID.Jobs – Platforma rekrutacyjna dla specjalistów</title></head><body><div id="app"></div></body></html>"""
+    ref = PostingRef("solidjobs","https://solid.jobs/offer/31077/example","31077")
+    try:
+        SolidJobsSource().parse_detail(html, ref)
+    except SourceGoneError:
+        pass
+    else:
+        raise AssertionError("expected SourceGoneError")
