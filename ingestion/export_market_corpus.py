@@ -26,7 +26,7 @@ def export(dsn: str, out_dir: str) -> dict:
                 r.title_source,
                 r.source_projection_json,
                 r.normalized_projection_json,
-                r.normalized_projection_hash,
+                r.normalized_content_hash,
                 r.parser_version,
                 r.normalizer_version,
                 ro.payload_sha256,
