@@ -8,20 +8,167 @@ from pathlib import Path
 import psycopg
 
 from .model import ParsedPosting, norm_key
-
-
-ROOT = Path(__file__).resolve().parents[1]
-SCHEMA_PATH = ROOT / "schema" / "ingestion-v1.sql"
+from .versions import (
+    MATCH_GENERATOR_VERSION,
+    NORMALIZER_VERSION,
+    ORG_RESOLVER_VERSION,
+    PARSER_BUNDLE_VERSION,
+)
 
 
 class PostgresStore:
     def __init__(self, dsn: str):
         self.dsn = dsn
 
-    def init_schema(self) -> None:
-        sql = SCHEMA_PATH.read_text(encoding="utf-8")
-        with psycopg.connect(self.dsn, autocommit=True) as conn:
-            conn.execute(sql)
+    def assert_migrated(self) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            row = conn.execute(
+                "select to_regclass('public.ingestion_run'), to_regclass('public.schema_migration')"
+            ).fetchone()
+            if not row or not all(row):
+                raise RuntimeError("database is not migrated; run python -m ingestion.migrate first")
+
+    def begin_run(self, run_id: str, *, trigger_kind: str, source_scope: str) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                insert into ingestion_run(
+                    id, trigger_kind, status, source_scope,
+                    parser_bundle_version, normalizer_version
+                )
+                values (%s,%s,'STARTED',%s,%s,%s)
+                on conflict (id) do nothing
+                """,
+                (
+                    run_id,
+                    trigger_kind,
+                    source_scope,
+                    PARSER_BUNDLE_VERSION,
+                    NORMALIZER_VERSION,
+                ),
+            )
+            conn.commit()
+
+    def finish_run(self, run_id: str, *, status: str, summary: dict) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                update ingestion_run
+                set status=%s, summary_json=%s::jsonb, finished_at=now()
+                where id=%s
+                """,
+                (status, json.dumps(summary, ensure_ascii=False), run_id),
+            )
+            conn.commit()
+
+    def claim_item(self, run_id: str, source: str, source_posting_id: str) -> bool:
+        with psycopg.connect(self.dsn) as conn:
+            row = conn.execute(
+                """
+                insert into ingestion_item(run_id, source_code, source_posting_id, status)
+                values (%s,%s,%s,'PROCESSING')
+                on conflict (run_id, source_code, source_posting_id) do nothing
+                returning id
+                """,
+                (run_id, source, source_posting_id),
+            ).fetchone()
+            if row:
+                conn.commit()
+                return True
+            existing = conn.execute(
+                """
+                select status from ingestion_item
+                where run_id=%s and source_code=%s and source_posting_id=%s
+                """,
+                (run_id, source, source_posting_id),
+            ).fetchone()
+            if existing and existing[0] == "SUCCEEDED":
+                conn.commit()
+                return False
+            conn.execute(
+                """
+                update ingestion_item
+                set status='PROCESSING', error_message=null, finished_at=null
+                where run_id=%s and source_code=%s and source_posting_id=%s
+                """,
+                (run_id, source, source_posting_id),
+            )
+            conn.commit()
+            return True
+
+    def complete_item(
+        self,
+        run_id: str,
+        source: str,
+        source_posting_id: str,
+        *,
+        raw_observation_id: int,
+        job_posting_id: int,
+    ) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                update ingestion_item
+                set status='SUCCEEDED', raw_observation_id=%s, job_posting_id=%s, finished_at=now()
+                where run_id=%s and source_code=%s and source_posting_id=%s
+                """,
+                (raw_observation_id, job_posting_id, run_id, source, source_posting_id),
+            )
+            conn.commit()
+
+    def fail_item(
+        self,
+        run_id: str,
+        source: str,
+        source_posting_id: str,
+        error_message: str,
+    ) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                update ingestion_item
+                set status='FAILED', error_message=%s, finished_at=now()
+                where run_id=%s and source_code=%s and source_posting_id=%s
+                """,
+                (error_message[:2000], run_id, source, source_posting_id),
+            )
+            conn.commit()
+
+    def record_attempt(
+        self,
+        *,
+        run_id: str,
+        source: str,
+        source_posting_id: str,
+        requested_url: str,
+        attempt_no: int,
+        outcome: str,
+        failure_type: str | None = None,
+        http_status: int | None = None,
+        error_message: str | None = None,
+    ) -> None:
+        with psycopg.connect(self.dsn) as conn:
+            conn.execute(
+                """
+                insert into ingestion_attempt(
+                    run_id, source_code, source_posting_id, requested_url,
+                    attempt_no, outcome, failure_type, http_status, error_message
+                )
+                values (%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                on conflict (run_id, source_code, source_posting_id, attempt_no)
+                do update set
+                    outcome=excluded.outcome,
+                    failure_type=excluded.failure_type,
+                    http_status=excluded.http_status,
+                    error_message=excluded.error_message,
+                    finished_at=now()
+                """,
+                (
+                    run_id, source, source_posting_id, requested_url, attempt_no, outcome,
+                    failure_type, http_status, (error_message or "")[:2000] or None,
+                ),
+            )
+            conn.commit()
 
     def record_fetch(
         self,
@@ -32,17 +179,32 @@ class PostgresStore:
         status: int,
         body: str,
         content_type: str | None,
+        run_id: str,
+        source_posting_id: str,
+        parser_version: str,
+        transport_version: str,
+        archive_key: str | None = None,
     ) -> int:
         payload_hash = sha256(body.encode("utf-8")).hexdigest()
+        archive_key = archive_key or f"{source}/{source_posting_id}/{payload_hash}"
         with psycopg.connect(self.dsn) as conn:
             row = conn.execute(
                 """
-                insert into raw_observation
-                    (source_code, requested_url, final_url, http_status, content_type, payload_sha256, payload_text)
-                values (%s,%s,%s,%s,%s,%s,%s)
+                insert into raw_observation(
+                    source_code, requested_url, final_url, http_status, content_type,
+                    payload_sha256, payload_text, run_id, source_posting_id,
+                    parser_version, transport_version, archive_key
+                )
+                values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                on conflict (run_id, source_code, source_posting_id, payload_sha256)
+                where run_id is not null and source_posting_id is not null
+                do update set final_url=excluded.final_url
                 returning id
                 """,
-                (source, url, final_url, status, content_type, payload_hash, body),
+                (
+                    source, url, final_url, status, content_type, payload_hash, body,
+                    run_id, source_posting_id, parser_version, transport_version, archive_key,
+                ),
             ).fetchone()
             conn.commit()
             return row[0]
@@ -96,8 +258,9 @@ class PostgresStore:
                 """
                 insert into job_posting_revision
                     (job_posting_id, revision_no, normalized_content_hash, title_source,
-                     source_projection_json, normalized_projection_json, raw_observation_id)
-                values (%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s)
+                     source_projection_json, normalized_projection_json, raw_observation_id,
+                     parser_version, normalizer_version)
+                values (%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s,%s,%s)
                 returning id
                 """,
                 (
@@ -105,6 +268,8 @@ class PostgresStore:
                     json.dumps(parsed.source_specific, ensure_ascii=False),
                     json.dumps(projection, ensure_ascii=False),
                     raw_id,
+                    PARSER_BUNDLE_VERSION,
+                    NORMALIZER_VERSION,
                 ),
             ).fetchone()[0]
             conn.execute(
@@ -171,8 +336,8 @@ class PostgresStore:
         conn.execute(
             """
             insert into organization_candidate
-                (organization_mention_id, organization_id, confidence_band, status, evidence_json)
-            values (%s,%s,'LOW','CANDIDATE',%s::jsonb)
+                (organization_mention_id, organization_id, confidence_band, status, evidence_json, resolver_version)
+            values (%s,%s,'LOW','CANDIDATE',%s::jsonb,%s)
             on conflict do nothing
             """,
             (
@@ -182,6 +347,7 @@ class PostgresStore:
                     "reason": "exact normalized source mention only",
                     "identity_asserted": False,
                 }),
+                ORG_RESOLVER_VERSION,
             ),
         )
         conn.execute(
@@ -224,8 +390,10 @@ class PostgresStore:
                     x, y = sorted([a[0], b[0]])
                     result = conn.execute(
                         """
-                        insert into match_candidate(posting_a_id, posting_b_id, reason_json, status)
-                        values (%s,%s,%s::jsonb,'OPEN')
+                        insert into match_candidate(
+                            posting_a_id, posting_b_id, reason_json, status, candidate_generator_version
+                        )
+                        values (%s,%s,%s::jsonb,'OPEN',%s)
                         on conflict do nothing
                         returning id
                         """,
@@ -236,6 +404,7 @@ class PostgresStore:
                                 "evidence": ["same normalized title", "same normalized organization mention"],
                                 "identity_asserted": False,
                             }),
+                            MATCH_GENERATOR_VERSION,
                         ),
                     ).fetchone()
                     if result:
@@ -260,6 +429,9 @@ class PostgresStore:
                 "organization_mentions": count("organization_mention"),
                 "organization_candidates": count("organization_candidate"),
                 "match_candidates": count("match_candidate"),
+                "ingestion_runs": count("ingestion_run"),
+                "ingestion_attempts": count("ingestion_attempt"),
+                "ingestion_items": count("ingestion_item"),
                 "by_source": by_source,
                 "lifecycle": lifecycle,
             }
