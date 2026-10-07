@@ -61,14 +61,32 @@ async def fetch_batch(limit: int = 50) -> list[tuple[dict[str, Any], dict[str, A
         read_stream, write_stream = streams[0], streams[1]
         async with ClientSession(read_stream, write_stream) as session:
             await session.initialize()
-            search = await session.call_tool(
-                "search_job_offers",
-                arguments={"pageSize": min(limit, 50), "pageNumber": 1},
-            )
-            sp = _payload(search)
-            rows = _offers(sp)[:limit]
+            discovered = []
+            seen = set()
+            page = 1
+            while len(discovered) < limit:
+                search = await session.call_tool(
+                    "search_job_offers",
+                    arguments={"pageSize": min(50, limit - len(discovered)), "pageNumber": page},
+                )
+                rows = _offers(_payload(search))
+                if not rows:
+                    break
+                before = len(discovered)
+                for offer in rows:
+                    sid = str(_pick(offer, "offerId", "id", "groupId", "groupID", default=""))
+                    if not sid or sid in seen:
+                        continue
+                    seen.add(sid)
+                    discovered.append(offer)
+                    if len(discovered) >= limit:
+                        break
+                if len(discovered) == before:
+                    break
+                page += 1
+
             out = []
-            for offer in rows:
+            for offer in discovered:
                 gid = _pick(offer, "groupId", "groupID")
                 if not gid:
                     continue

@@ -1,0 +1,33 @@
+{
+  "run_id": "corpus-02-theprotocol-50",
+  "sources": [
+    {
+      "source": "theprotocol",
+      "transport": "official-mcp-v1",
+      "discovered": 50,
+      "states": {
+        "OBSERVED": 50
+      },
+      "changes": [],
+      "errors": []
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 50,
+    "revisions": 50,
+    "raw_observations": 50,
+    "organization_mentions": 50,
+    "organization_candidates": 50,
+    "match_candidates": 0,
+    "ingestion_runs": 1,
+    "ingestion_attempts": 50,
+    "ingestion_items": 50,
+    "by_source": {
+      "theprotocol": 50
+    },
+    "lifecycle": {
+      "OBSERVED": 50
+    }
+  }
+}

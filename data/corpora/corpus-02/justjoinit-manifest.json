@@ -1,0 +1,756 @@
+{
+  "sources": {
+    "justjoinit": [
+      {
+        "source": "justjoinit",
+        "source_posting_id": "diagnostyka-s-a--project-manager-krakow-pm",
+        "url": "https://justjoin.it/job-offer/diagnostyka-s-a--project-manager-krakow-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "ness-solution-technical-leader-warszawa-erp",
+        "url": "https://justjoin.it/job-offer/ness-solution-technical-leader-warszawa-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "team-connect-analityk-systemowy-warszawa-analytics-4bce2113",
+        "url": "https://justjoin.it/job-offer/team-connect-analityk-systemowy-warszawa-analytics-4bce2113"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "arp-informatyka-sp-z-o-o--specjalista-specjalistka-ds-wsparcia-it---helpdesk-warszawa-support-bab0b30e",
+        "url": "https://justjoin.it/job-offer/arp-informatyka-sp-z-o-o--specjalista-specjalistka-ds-wsparcia-it---helpdesk-warszawa-support-bab0b30e"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "itds-junior-software-qa-engineer---quality-assurance-and-testing-warszawa-testing",
+        "url": "https://justjoin.it/job-offer/itds-junior-software-qa-engineer---quality-assurance-and-testing-warszawa-testing"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "schaeffler-global-services-europe-sp-z-o-o--sap-mdg-consultant-s-4-hana-all-genders--wroclaw-erp",
+        "url": "https://justjoin.it/job-offer/schaeffler-global-services-europe-sp-z-o-o--sap-mdg-consultant-s-4-hana-all-genders--wroclaw-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-deputy-project-manager-iam-racf--warszawa-pm",
+        "url": "https://justjoin.it/job-offer/dcg-deputy-project-manager-iam-racf--warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "payback-technical-infrastructure-engineer-m-f-d--warszawa-devops-f9f6af07",
+        "url": "https://justjoin.it/job-offer/payback-technical-infrastructure-engineer-m-f-d--warszawa-devops-f9f6af07"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "hiberus-poland-database-security-analyst-cyber-security-analyst-wroclaw-security",
+        "url": "https://justjoin.it/job-offer/hiberus-poland-database-security-analyst-cyber-security-analyst-wroclaw-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "in4ge-sp-z-o-o--scrum-master-warszawa-pm-4978322b",
+        "url": "https://justjoin.it/job-offer/in4ge-sp-z-o-o--scrum-master-warszawa-pm-4978322b"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "algoteque-services-ai-solutions-engineer-ai-automation-engineer-wroclaw-ai",
+        "url": "https://justjoin.it/job-offer/algoteque-services-ai-solutions-engineer-ai-automation-engineer-wroclaw-ai"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-dora-it-analyst-expert-warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/dcg-dora-it-analyst-expert-warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "moondigo-sp-z-o-o--senior-it-project-manager-warszawa-pm",
+        "url": "https://justjoin.it/job-offer/moondigo-sp-z-o-o--senior-it-project-manager-warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "heineken-solution-engineer-one-trust-digital-commerce-krakow-architecture",
+        "url": "https://justjoin.it/job-offer/heineken-solution-engineer-one-trust-digital-commerce-krakow-architecture"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "velobank-s-a--inzynierka-inzynier-sieciowy-warszawa-admin-cd1dcd99",
+        "url": "https://justjoin.it/job-offer/velobank-s-a--inzynierka-inzynier-sieciowy-warszawa-admin-cd1dcd99"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "capgemini-invent-it-support-agent-with-german--krakow-support",
+        "url": "https://justjoin.it/job-offer/capgemini-invent-it-support-agent-with-german--krakow-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "capgemini-invent-mlodszy-a-specjalista-ka-ds-wsparcia-it-z-j-niemieckim--krakow-support",
+        "url": "https://justjoin.it/job-offer/capgemini-invent-mlodszy-a-specjalista-ka-ds-wsparcia-it-z-j-niemieckim--krakow-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "bluebinary-io-senior-frontend-vue-architect-tech-lead-wroclaw-javascript",
+        "url": "https://justjoin.it/job-offer/bluebinary-io-senior-frontend-vue-architect-tech-lead-wroclaw-javascript"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "onwelo-llm-engineer-mid-senior--warszawa-ai",
+        "url": "https://justjoin.it/job-offer/onwelo-llm-engineer-mid-senior--warszawa-ai"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "tss-java-big-data-developer-warszawa-java",
+        "url": "https://justjoin.it/job-offer/tss-java-big-data-developer-warszawa-java"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "netwise-qa-automation-engineer-m-k--warszawa-testing",
+        "url": "https://justjoin.it/job-offer/netwise-qa-automation-engineer-m-k--warszawa-testing"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "schaeffler-global-services-europe-sp-z-o-o--it-domain-solution-architect-sales-all-genders--wroclaw-architecture",
+        "url": "https://justjoin.it/job-offer/schaeffler-global-services-europe-sp-z-o-o--it-domain-solution-architect-sales-all-genders--wroclaw-architecture"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "leroy-merlin-polska-architekt-korporacyjny-architektka-korporacyjna-warszawa-architecture-a8715bfb",
+        "url": "https://justjoin.it/job-offer/leroy-merlin-polska-architekt-korporacyjny-architektka-korporacyjna-warszawa-architecture-a8715bfb"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "pekao-conext-ai-solution-architect-delivery-lead-warszawa-ai",
+        "url": "https://justjoin.it/job-offer/pekao-conext-ai-solution-architect-delivery-lead-warszawa-ai"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcv-technologies-senior-automation-test-engineer-wroclaw-testing",
+        "url": "https://justjoin.it/job-offer/dcv-technologies-senior-automation-test-engineer-wroclaw-testing"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o--senior-full-stack-engineer-java-angular--warszawa-javascript",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o--senior-full-stack-engineer-java-angular--warszawa-javascript"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "onwelo-senior-java-developer-banking--warszawa-java",
+        "url": "https://justjoin.it/job-offer/onwelo-senior-java-developer-banking--warszawa-java"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "intent-senior-project-manager-iot-projects--warszawa-pm-1206bee1",
+        "url": "https://justjoin.it/job-offer/intent-senior-project-manager-iot-projects--warszawa-pm-1206bee1"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "onwelo-principal-solution-architect-java--warszawa-architecture",
+        "url": "https://justjoin.it/job-offer/onwelo-principal-solution-architect-java--warszawa-architecture"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "awareson-sp-z-o-o--sap-rice-programme-manager-krakow-other",
+        "url": "https://justjoin.it/job-offer/awareson-sp-z-o-o--sap-rice-programme-manager-krakow-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "edge-one-solutions-sp-z-o-o-application-administrator-integrator-junior-branza-bankowa-wroclaw-admin",
+        "url": "https://justjoin.it/job-offer/edge-one-solutions-sp-z-o-o-application-administrator-integrator-junior-branza-bankowa-wroclaw-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "reply-polska-sp-z-o-o--data-analyst-crm--katowice-data",
+        "url": "https://justjoin.it/job-offer/reply-polska-sp-z-o-o--data-analyst-crm--katowice-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "hiberus-poland-mlodszy-specjalista-bezpieczenstwa-it-soc-l1--wroclaw-security",
+        "url": "https://justjoin.it/job-offer/hiberus-poland-mlodszy-specjalista-bezpieczenstwa-it-soc-l1--wroclaw-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "awareson-sp-z-o-o--network-infrastructure-administrator-poznan-admin",
+        "url": "https://justjoin.it/job-offer/awareson-sp-z-o-o--network-infrastructure-administrator-poznan-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "emagine-polska-kyc-release-manager-warszawa-pm",
+        "url": "https://justjoin.it/job-offer/emagine-polska-kyc-release-manager-warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "h2b-group-senior-test-data-manager-wwa-3city--warszawa-testing",
+        "url": "https://justjoin.it/job-offer/h2b-group-senior-test-data-manager-wwa-3city--warszawa-testing"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "fabrity-s-a--delivery-manager--poznan-pm",
+        "url": "https://justjoin.it/job-offer/fabrity-s-a--delivery-manager--poznan-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-senior-business-analyst-payments-domain--warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/dcg-senior-business-analyst-payments-domain--warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "hsbc-service-delivery-cyber-consulting-lead-tech-sme-krakow-security",
+        "url": "https://justjoin.it/job-offer/hsbc-service-delivery-cyber-consulting-lead-tech-sme-krakow-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "accenture-junior-software-engineer-warszawa-python-761720b1",
+        "url": "https://justjoin.it/job-offer/accenture-junior-software-engineer-warszawa-python-761720b1"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "link-group-senior-data-ai-analyst-warszawa-data",
+        "url": "https://justjoin.it/job-offer/link-group-senior-data-ai-analyst-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "speedapp-machine-learning-team-leader-warszawa-ai",
+        "url": "https://justjoin.it/job-offer/speedapp-machine-learning-team-leader-warszawa-ai"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "b2bnetwork-spark-data-lakehouse-developer-k-m-x--wroclaw-data",
+        "url": "https://justjoin.it/job-offer/b2bnetwork-spark-data-lakehouse-developer-k-m-x--wroclaw-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "schaeffler-global-services-europe-sp-z-o-o--sap-gts-consultant-s-4-all-genders--wroclaw-erp",
+        "url": "https://justjoin.it/job-offer/schaeffler-global-services-europe-sp-z-o-o--sap-gts-consultant-s-4-all-genders--wroclaw-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "allegro-engineering-manager-warszawa-net",
+        "url": "https://justjoin.it/job-offer/allegro-engineering-manager-warszawa-net"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "billennium-conceptual-security-expert-aws--warszawa-security",
+        "url": "https://justjoin.it/job-offer/billennium-conceptual-security-expert-aws--warszawa-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "scalo-automation-tester-qa-c--wroclaw-testing-73dc4876",
+        "url": "https://justjoin.it/job-offer/scalo-automation-tester-qa-c--wroclaw-testing-73dc4876"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-mlodszy-a-specjalista-ka-bezpieczenstwa-it-wroclaw-support",
+        "url": "https://justjoin.it/job-offer/dcg-mlodszy-a-specjalista-ka-bezpieczenstwa-it-wroclaw-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-project-manager---google-cloud-transformation-warszawa-pm",
+        "url": "https://justjoin.it/job-offer/dcg-project-manager---google-cloud-transformation-warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dna-technology-senior-fullstack-engineer-ai-product--lodz-python-20a7482b",
+        "url": "https://justjoin.it/job-offer/dna-technology-senior-fullstack-engineer-ai-product--lodz-python-20a7482b"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "sii-salesforce-business-analyst-f-m-x--warszawa-analytics-fcc950ca",
+        "url": "https://justjoin.it/job-offer/sii-salesforce-business-analyst-f-m-x--warszawa-analytics-fcc950ca"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "antal-sp-z-o-o--senior-ios-developer-warszawa-mobile-e962d89d",
+        "url": "https://justjoin.it/job-offer/antal-sp-z-o-o--senior-ios-developer-warszawa-mobile-e962d89d"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "link-group-qa-engineer-warszawa-testing-9e6264f1",
+        "url": "https://justjoin.it/job-offer/link-group-qa-engineer-warszawa-testing-9e6264f1"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcv-technologies-lead-data-platform-engineer-remote-bulgaria-data",
+        "url": "https://justjoin.it/job-offer/dcv-technologies-lead-data-platform-engineer-remote-bulgaria-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dna-technology-senior-fullstack-engineer-ai-product--lodz-javascript-c5b4c827",
+        "url": "https://justjoin.it/job-offer/dna-technology-senior-fullstack-engineer-ai-product--lodz-javascript-c5b4c827"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "velobank-s-a--programistka-programista-python-warszawa-java",
+        "url": "https://justjoin.it/job-offer/velobank-s-a--programistka-programista-python-warszawa-java"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "antal-sp-z-o-o--data-analyst-python-sql-azure-databricks--krakow-data",
+        "url": "https://justjoin.it/job-offer/antal-sp-z-o-o--data-analyst-python-sql-azure-databricks--krakow-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "yanosik-java-developer-poznan-java-5865efd0",
+        "url": "https://justjoin.it/job-offer/yanosik-java-developer-poznan-java-5865efd0"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-rhel-oraz-baz-danych-postgresql-mongodb--katowice-admin",
+        "url": "https://justjoin.it/job-offer/tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-rhel-oraz-baz-danych-postgresql-mongodb--katowice-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "experis-manpower-group-sap-s-4hana-finance-sme-ap-intercompany--wroclaw-erp",
+        "url": "https://justjoin.it/job-offer/experis-manpower-group-sap-s-4hana-finance-sme-ap-intercompany--wroclaw-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcv-technologies-data-engineer---databricks-aws-warszawa-data",
+        "url": "https://justjoin.it/job-offer/dcv-technologies-data-engineer---databricks-aws-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "b2bnetwork-starszy-programista-python-starsza-programistka-python-warszawa-python",
+        "url": "https://justjoin.it/job-offer/b2bnetwork-starszy-programista-python-starsza-programistka-python-warszawa-python"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "accenture-business-analyst-internship-program-he-she-they--warszawa-analytics-d123bc10",
+        "url": "https://justjoin.it/job-offer/accenture-business-analyst-internship-program-he-she-they--warszawa-analytics-d123bc10"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o--senior-cms-migration-integration-specialist-warszawa-support",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o--senior-cms-migration-integration-specialist-warszawa-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "antal-sp-z-o-o--senior-production-engineer-gcb4-krakow-support",
+        "url": "https://justjoin.it/job-offer/antal-sp-z-o-o--senior-production-engineer-gcb4-krakow-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "team-connect-ecommerce-merchandiser-warszawa-pm-86a69a72",
+        "url": "https://justjoin.it/job-offer/team-connect-ecommerce-merchandiser-warszawa-pm-86a69a72"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-senior-scrum-master-warszawa-pm",
+        "url": "https://justjoin.it/job-offer/dcg-senior-scrum-master-warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "scalo-product-owner-warszawa-other",
+        "url": "https://justjoin.it/job-offer/scalo-product-owner-warszawa-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "prestashop-mid-prestashop-developer-poznan-php",
+        "url": "https://justjoin.it/job-offer/prestashop-mid-prestashop-developer-poznan-php"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "reply-polska-sp-z-o-o--senior-platform-engineer-katowice-devops-36b88de3",
+        "url": "https://justjoin.it/job-offer/reply-polska-sp-z-o-o--senior-platform-engineer-katowice-devops-36b88de3"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "onwelo-systems-virtualization-engineer-warszawa-admin",
+        "url": "https://justjoin.it/job-offer/onwelo-systems-virtualization-engineer-warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "link-group-senior-platform-engineer-with-python-warszawa-python-02e0e8b5",
+        "url": "https://justjoin.it/job-offer/link-group-senior-platform-engineer-with-python-warszawa-python-02e0e8b5"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o--it-architect-warszawa-architecture",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o--it-architect-warszawa-architecture"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "software-mansion-staff-software-engineer-krakow-javascript",
+        "url": "https://justjoin.it/job-offer/software-mansion-staff-software-engineer-krakow-javascript"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "team-connect-senior-java-developer-warszawa-java-e6337f98",
+        "url": "https://justjoin.it/job-offer/team-connect-senior-java-developer-warszawa-java-e6337f98"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "sopra-steria-servicenow-developer-csa-hrsd-certified--katowice-other",
+        "url": "https://justjoin.it/job-offer/sopra-steria-servicenow-developer-csa-hrsd-certified--katowice-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "warsaw-hub-helvetia-baloise-group-cyber-threat-intelligence-analyst-warszawa-security-aea96742",
+        "url": "https://justjoin.it/job-offer/warsaw-hub-helvetia-baloise-group-cyber-threat-intelligence-analyst-warszawa-security-aea96742"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "act-digital-analityk-systemowy-warszawa-analytics-dea1554b",
+        "url": "https://justjoin.it/job-offer/act-digital-analityk-systemowy-warszawa-analytics-dea1554b"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "onwelo-it-business-system-analyst-insurance--warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/onwelo-it-business-system-analyst-insurance--warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "p-p-solutions-starszy-devops-engineer-warszawa-devops",
+        "url": "https://justjoin.it/job-offer/p-p-solutions-starszy-devops-engineer-warszawa-devops"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "capgemini-senior-cloud-engineer-wroclaw-devops",
+        "url": "https://justjoin.it/job-offer/capgemini-senior-cloud-engineer-wroclaw-devops"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "ergo-technology-services-principal-it-system-analyst-iam-systems-f-m-d-warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/ergo-technology-services-principal-it-system-analyst-iam-systems-f-m-d-warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "opennet-pl-software-engineer-2-python-ai---logistic-team-warszawa-python",
+        "url": "https://justjoin.it/job-offer/opennet-pl-software-engineer-2-python-ai---logistic-team-warszawa-python"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-sap-hcm-consultant-warszawa-erp",
+        "url": "https://justjoin.it/job-offer/dcg-sap-hcm-consultant-warszawa-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "rits-senior-manual-tester-warszawa-testing-52da65ae",
+        "url": "https://justjoin.it/job-offer/rits-senior-manual-tester-warszawa-testing-52da65ae"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "astek-polska-senior-business-analyst-k-m--warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/astek-polska-senior-business-analyst-k-m--warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "j-labs-senior-platform-engineer-krakow-devops",
+        "url": "https://justjoin.it/job-offer/j-labs-senior-platform-engineer-krakow-devops"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "b3-consulting-poland-python-developer-warszawa-python",
+        "url": "https://justjoin.it/job-offer/b3-consulting-poland-python-developer-warszawa-python"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "primesoft-polska-sp-z-o-o--php-developer-poznan-php-2fdab6ba",
+        "url": "https://justjoin.it/job-offer/primesoft-polska-sp-z-o-o--php-developer-poznan-php-2fdab6ba"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "emagine-polska-data-modeler-system-analyst-warszawa-data",
+        "url": "https://justjoin.it/job-offer/emagine-polska-data-modeler-system-analyst-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "link-group-project-manager-finanse--poznan-pm",
+        "url": "https://justjoin.it/job-offer/link-group-project-manager-finanse--poznan-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "holisticon-connect-platform-engineer-wroclaw-devops-4d79cec6",
+        "url": "https://justjoin.it/job-offer/holisticon-connect-platform-engineer-wroclaw-devops-4d79cec6"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "emagine-polska-senior-analityk-biznesowo-systemowy-bankowosc--warszawa-analytics",
+        "url": "https://justjoin.it/job-offer/emagine-polska-senior-analityk-biznesowo-systemowy-bankowosc--warszawa-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-application-administrator---data-reporting-solutions-gdansk-admin",
+        "url": "https://justjoin.it/job-offer/dcg-application-administrator---data-reporting-solutions-gdansk-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "bnp-paribas-sa-oddzial-w-polsce-it-inspector-auditor-warszawa-other",
+        "url": "https://justjoin.it/job-offer/bnp-paribas-sa-oddzial-w-polsce-it-inspector-auditor-warszawa-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "rits-senior-net-developer-lodz-net-d255feea",
+        "url": "https://justjoin.it/job-offer/rits-senior-net-developer-lodz-net-d255feea"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "leroy-merlin-polska-architekt-korporacyjny-architektka-korporacyjna-warszawa-architecture",
+        "url": "https://justjoin.it/job-offer/leroy-merlin-polska-architekt-korporacyjny-architektka-korporacyjna-warszawa-architecture"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "pko-bp-finat-senior-java-developer-fti-fcc--warszawa-java",
+        "url": "https://justjoin.it/job-offer/pko-bp-finat-senior-java-developer-fti-fcc--warszawa-java"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "billennium-principal-commercial-data-architect-warszawa-data",
+        "url": "https://justjoin.it/job-offer/billennium-principal-commercial-data-architect-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "co-brick-talents-senior-fullstack-developer-node-react--gliwice-javascript",
+        "url": "https://justjoin.it/job-offer/co-brick-talents-senior-fullstack-developer-node-react--gliwice-javascript"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "intent-quality-assurance-lead-warszawa-testing-bb821291",
+        "url": "https://justjoin.it/job-offer/intent-quality-assurance-lead-warszawa-testing-bb821291"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-baz-danych-oracle-katowice-data",
+        "url": "https://justjoin.it/job-offer/tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-baz-danych-oracle-katowice-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "h2b-group-devops-admin-linux-engineer-warszawa-admin",
+        "url": "https://justjoin.it/job-offer/h2b-group-devops-admin-linux-engineer-warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "wirtualna-polska-media-s-a--software-developer-warszawa-go-1af3eb1f",
+        "url": "https://justjoin.it/job-offer/wirtualna-polska-media-s-a--software-developer-warszawa-go-1af3eb1f"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-poczty-korporacyjnej-ms-exchange--katowice-admin",
+        "url": "https://justjoin.it/job-offer/tauron-obsluga-klienta-sp-z-o-o--administrator-administratorka-poczty-korporacyjnej-ms-exchange--katowice-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "netguru-fractional-cto---freelance-warszawa-javascript",
+        "url": "https://justjoin.it/job-offer/netguru-fractional-cto---freelance-warszawa-javascript"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "b2bnetwork-application-manager-it-analyst---dora-reporting-m-f-x--warszawa-admin",
+        "url": "https://justjoin.it/job-offer/b2bnetwork-application-manager-it-analyst---dora-reporting-m-f-x--warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o--spark-data-lakehouse-developer-wroclaw-data",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o--spark-data-lakehouse-developer-wroclaw-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-qa-automation-engineer-warszawa-testing-1c32f302",
+        "url": "https://justjoin.it/job-offer/dcg-qa-automation-engineer-warszawa-testing-1c32f302"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "tauron-obsluga-klienta-sp-z-o-o--specjalista-specjalistka-ds-zarzadzania-podatnosciami-patch-management--katowice-security",
+        "url": "https://justjoin.it/job-offer/tauron-obsluga-klienta-sp-z-o-o--specjalista-specjalistka-ds-zarzadzania-podatnosciami-patch-management--katowice-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "mpp-memory-paper-print-specjalista-ds-analiz-sprzedazowych-kalkulacji-i-automatyzacji-ai-m-k--rzeszow-analytics",
+        "url": "https://justjoin.it/job-offer/mpp-memory-paper-print-specjalista-ds-analiz-sprzedazowych-kalkulacji-i-automatyzacji-ai-m-k--rzeszow-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "connectis-data-analyst-warszawa-data-dc94e5ed",
+        "url": "https://justjoin.it/job-offer/connectis-data-analyst-warszawa-data-dc94e5ed"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "redge-technologies-programista-programistka-java-warszawa-java-d11481a7",
+        "url": "https://justjoin.it/job-offer/redge-technologies-programista-programistka-java-warszawa-java-d11481a7"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dcg-senior-java-backend-developer-warszawa-java-52afc805",
+        "url": "https://justjoin.it/job-offer/dcg-senior-java-backend-developer-warszawa-java-52afc805"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "emagine-polska-dynamics-365-and-power-platform-consultant-warszawa-erp",
+        "url": "https://justjoin.it/job-offer/emagine-polska-dynamics-365-and-power-platform-consultant-warszawa-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "akamai-technologies-secure-sdlc-architect-devsecops-krakow-security",
+        "url": "https://justjoin.it/job-offer/akamai-technologies-secure-sdlc-architect-devsecops-krakow-security"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "accenture-sap-ps-senior-consultant-warszawa-erp",
+        "url": "https://justjoin.it/job-offer/accenture-sap-ps-senior-consultant-warszawa-erp"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "sii-python-automation-tester-f-m-x--krakow-testing",
+        "url": "https://justjoin.it/job-offer/sii-python-automation-tester-f-m-x--krakow-testing"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "eservice-sp-z-o-o-programista-programistka-sql-warszawa-data",
+        "url": "https://justjoin.it/job-offer/eservice-sp-z-o-o-programista-programistka-sql-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "massive-pixel-creation-sp-z-o-o--data-scientist-data-warehouse-analytics-aws--katowice-data",
+        "url": "https://justjoin.it/job-offer/massive-pixel-creation-sp-z-o-o--data-scientist-data-warehouse-analytics-aws--katowice-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "verks-labview-test-enginner-krakow-testing-bcb77850",
+        "url": "https://justjoin.it/job-offer/verks-labview-test-enginner-krakow-testing-bcb77850"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "lsi-software-key-account-manager---roboty-positive-machines-f-m--lodz-other",
+        "url": "https://justjoin.it/job-offer/lsi-software-key-account-manager---roboty-positive-machines-f-m--lodz-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "alior-bank-sa-senior-fullstack-developer-k-m--krakow-javascript-ab488c27",
+        "url": "https://justjoin.it/job-offer/alior-bank-sa-senior-fullstack-developer-k-m--krakow-javascript-ab488c27"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o---net-technical-lead-gdansk-net",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o---net-technical-lead-gdansk-net"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "allegro-product-analyst-consumer-analytics--poznan-analytics",
+        "url": "https://justjoin.it/job-offer/allegro-product-analyst-consumer-analytics--poznan-analytics"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "procter-gamble-senior-ai-agent-engineer-warszawa-admin",
+        "url": "https://justjoin.it/job-offer/procter-gamble-senior-ai-agent-engineer-warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "hcltech-senior-engineer---pega-platform-krakow-devops",
+        "url": "https://justjoin.it/job-offer/hcltech-senior-engineer---pega-platform-krakow-devops"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "orlen-s-a--starszy-specjalista-starsza-specjalistka-w-zespole-standardow-cyberbezpieczenstwa-plock-security-00e80909",
+        "url": "https://justjoin.it/job-offer/orlen-s-a--starszy-specjalista-starsza-specjalistka-w-zespole-standardow-cyberbezpieczenstwa-plock-security-00e80909"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "bluesoft-genai-analyst-warszawa-java",
+        "url": "https://justjoin.it/job-offer/bluesoft-genai-analyst-warszawa-java"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "procter-gamble-salesforce-engineer-for-retail-execution-warszawa-erp-6c17d169",
+        "url": "https://justjoin.it/job-offer/procter-gamble-salesforce-engineer-for-retail-execution-warszawa-erp-6c17d169"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "rits-pl-sql-developer-lodz-data",
+        "url": "https://justjoin.it/job-offer/rits-pl-sql-developer-lodz-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "itlt-qa-automation-engineer-java-rest-assured--warszawa-testing-cbcf6aa9",
+        "url": "https://justjoin.it/job-offer/itlt-qa-automation-engineer-java-rest-assured--warszawa-testing-cbcf6aa9"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "emagine-polska-data-scientist-analyst-warszawa-data",
+        "url": "https://justjoin.it/job-offer/emagine-polska-data-scientist-analyst-warszawa-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "asseco-business-solutions-implementation-consultant-lublin-pm",
+        "url": "https://justjoin.it/job-offer/asseco-business-solutions-implementation-consultant-lublin-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "directio-junior-mid-it-systems-infrastructure-administrator-warszawa-admin",
+        "url": "https://justjoin.it/job-offer/directio-junior-mid-it-systems-infrastructure-administrator-warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "eservice-sp-z-o-o-head-of-product---central-europe-warszawa-pm",
+        "url": "https://justjoin.it/job-offer/eservice-sp-z-o-o-head-of-product---central-europe-warszawa-pm"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "jit-team-business-system-analyst-warszawa-analytics-4bf2f10d",
+        "url": "https://justjoin.it/job-offer/jit-team-business-system-analyst-warszawa-analytics-4bf2f10d"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "ergo-technology-services-hris-manager-f-m-d-warszawa-other",
+        "url": "https://justjoin.it/job-offer/ergo-technology-services-hris-manager-f-m-d-warszawa-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "upvanta-sp-z-o-o--senior-sanity-content-engineer-warszawa-support",
+        "url": "https://justjoin.it/job-offer/upvanta-sp-z-o-o--senior-sanity-content-engineer-warszawa-support"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "reply-polska-sp-z-o-o--software-developer---cloud-native-java-katowice-java-473ee22c",
+        "url": "https://justjoin.it/job-offer/reply-polska-sp-z-o-o--software-developer---cloud-native-java-katowice-java-473ee22c"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "talent-hunter-sp-z-o-o--cybersecurity-presales-warszawa-security-1295ba1a",
+        "url": "https://justjoin.it/job-offer/talent-hunter-sp-z-o-o--cybersecurity-presales-warszawa-security-1295ba1a"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "lsi-software-key-account-manager---roboty-positive-machines-f-m--warszawa-other",
+        "url": "https://justjoin.it/job-offer/lsi-software-key-account-manager---roboty-positive-machines-f-m--warszawa-other"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "somco-software-qt-c-developer-zielonka-c",
+        "url": "https://justjoin.it/job-offer/somco-software-qt-c-developer-zielonka-c"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "pit-radwar-s-a--starszy-administrator-systemow-i-sieci-teleinformatycznych---specjalizacja-systemy-linux-warszawa-admin",
+        "url": "https://justjoin.it/job-offer/pit-radwar-s-a--starszy-administrator-systemow-i-sieci-teleinformatycznych---specjalizacja-systemy-linux-warszawa-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "cyclad-it-infrastructure-administrator-windows-azure-3-month-contract-pruszcz-gdanski-admin",
+        "url": "https://justjoin.it/job-offer/cyclad-it-infrastructure-administrator-windows-azure-3-month-contract-pruszcz-gdanski-admin"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "kamsoft-s-a--programista-programistka-net-katowice-net",
+        "url": "https://justjoin.it/job-offer/kamsoft-s-a--programista-programistka-net-katowice-net"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "jit-team-service-developer---ms-power-platform-bmc-warszawa-devops",
+        "url": "https://justjoin.it/job-offer/jit-team-service-developer---ms-power-platform-bmc-warszawa-devops"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "alior-bank-sa-senior-fullstack-developer-k-m--krakow-java-8fadf83b",
+        "url": "https://justjoin.it/job-offer/alior-bank-sa-senior-fullstack-developer-k-m--krakow-java-8fadf83b"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "reply-polska-sp-z-o-o--data-analyst-digital-commerce--katowice-data",
+        "url": "https://justjoin.it/job-offer/reply-polska-sp-z-o-o--data-analyst-digital-commerce--katowice-data"
+      },
+      {
+        "source": "justjoinit",
+        "source_posting_id": "dataart-senior-data-scientist-warszawa-data",
+        "url": "https://justjoin.it/job-offer/dataart-senior-data-scientist-warszawa-data"
+      }
+    ]
+  }
+}

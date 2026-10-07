@@ -1,0 +1,2002 @@
+{
+  "sources": {
+    "theprotocol": [
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-a69e-08df2461699b",
+        "groupId": "a0e2cc84-3dc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/ux-researcher-krakow,oferta,01000000-ae91-c143-a69e-08df2461699b",
+        "search": {
+          "offerId": "01000000-ae91-c143-a69e-08df2461699b",
+          "groupId": "a0e2cc84-3dc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/ux-researcher-krakow,oferta,01000000-ae91-c143-a69e-08df2461699b",
+          "title": "UX Researcher",
+          "companyName": "Mindbox Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074221283/60420000-56be-0050-9373-08debd8a5df7_280x280.png",
+          "locations": [
+            "Kraków"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 22000,
+                "to": 28000,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "monthly",
+                "timeUnitName": "miesięcznie",
+                "kind": "net (+ VAT)"
+              }
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-c3c9-08df24611cd0",
+        "groupId": "9eac0238-3dc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/deputy-project-manager-iam-k-m-x-warszawa,oferta,01000000-029a-5b89-c3c9-08df24611cd0",
+        "search": {
+          "offerId": "01000000-029a-5b89-c3c9-08df24611cd0",
+          "groupId": "9eac0238-3dc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/deputy-project-manager-iam-k-m-x-warszawa,oferta,01000000-029a-5b89-c3c9-08df24611cd0",
+          "title": "Deputy Project Manager – IAM (k/m/x)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 100,
+                "to": 125,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "IAM",
+            "Identity and Access Management"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-04d3-08df2460ff4c",
+        "groupId": "c1887c1a-3dc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/it-analyst-sql-data-flow-k-m-x-warszawa,oferta,01000000-af85-32bc-04d3-08df2460ff4c",
+        "search": {
+          "offerId": "01000000-af85-32bc-04d3-08df2460ff4c",
+          "groupId": "c1887c1a-3dc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/it-analyst-sql-data-flow-k-m-x-warszawa,oferta,01000000-af85-32bc-04d3-08df2460ff4c",
+          "title": "IT Analyst – SQL & Data Flow (k/m/x)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 100,
+                "to": 130,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "SQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-357f-08df2460d81d",
+        "groupId": "5f954ff3-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-it-analyst-sql---banking-k-m-x-warszawa,oferta,01000000-ae91-c143-357f-08df2460d81d",
+        "search": {
+          "offerId": "01000000-ae91-c143-357f-08df2460d81d",
+          "groupId": "5f954ff3-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-it-analyst-sql---banking-k-m-x-warszawa,oferta,01000000-ae91-c143-357f-08df2460d81d",
+          "title": "Senior IT Analyst – SQL / Banking (k/m/x)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 100,
+                "to": 115,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "SQL",
+            "Jira",
+            "Confluence"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-f10c-08df2460b654",
+        "groupId": "690e85d1-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/ux-researcher-warszawa,oferta,01000000-af85-32bc-f10c-08df2460b654",
+        "search": {
+          "offerId": "01000000-af85-32bc-f10c-08df2460b654",
+          "groupId": "690e85d1-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/ux-researcher-warszawa,oferta,01000000-af85-32bc-f10c-08df2460b654",
+          "title": "UX Researcher",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 60,
+                "to": 80,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Figma",
+            "Jira",
+            "Confluence"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-bb78-08df24609ca5",
+        "groupId": "84dfd5b7-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/etl-developer-with-python-and-postgresql-m---f---d-krakow-floriana-straszewskiego-10,oferta,01000000-029a-5b89-bb78-08df24609ca5",
+        "search": {
+          "offerId": "01000000-029a-5b89-bb78-08df24609ca5",
+          "groupId": "84dfd5b7-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/etl-developer-with-python-and-postgresql-m---f---d-krakow-floriana-straszewskiego-10,oferta,01000000-029a-5b89-bb78-08df24609ca5",
+          "title": "ETL Developer with Python and PostgreSQL (M / F / D)",
+          "companyName": "DATAGROUP POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20407810/2da80000-56be-0050-36c8-08dc2d4a0f98_280x280.png",
+          "locations": [
+            "Kraków, Stare Miasto"
+          ],
+          "workModes": [
+            {
+              "code": "remote"
+            },
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-c66e-08df2460949d",
+        "groupId": "fcb6cfaf-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/starszy-specjalista-ds-utrzymania-aplikacji-k-m-n-konstancin-jeziorna-warszawska-165,oferta,01000000-ae91-c143-c66e-08df2460949d",
+        "search": {
+          "offerId": "01000000-ae91-c143-c66e-08df2460949d",
+          "groupId": "fcb6cfaf-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/starszy-specjalista-ds-utrzymania-aplikacji-k-m-n-konstancin-jeziorna-warszawska-165,oferta,01000000-ae91-c143-c66e-08df2460949d",
+          "title": "Starszy Specjalista ds. utrzymania aplikacji (k/m/n)",
+          "companyName": "Polskie Sieci Elektroenergetyczne S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20022176/2c580000-43a8-f403-bd9b-08d8a01775c9_280x280.png",
+          "locations": [
+            "Konstancin-Jeziorna, Klarysew"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            },
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-6591-08df24605bc3",
+        "groupId": "e965f576-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/azure-lead-engineer-krakow,oferta,01000000-029a-5b89-6591-08df24605bc3",
+        "search": {
+          "offerId": "01000000-029a-5b89-6591-08df24605bc3",
+          "groupId": "e965f576-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/azure-lead-engineer-krakow,oferta,01000000-029a-5b89-6591-08df24605bc3",
+          "title": "Azure Lead Engineer",
+          "companyName": "ALTEN Polska",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20062259/2c580000-43a8-f403-1fb3-08d7fbf29184_280x280.png",
+          "locations": [
+            "Kraków"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Terraform",
+            "Bicep",
+            "Git",
+            "PowerShell",
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-0a66-08df2460229a",
+        "groupId": "722e603d-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/expert-cyber-security-consultant-k-m-gdynia,oferta,01000000-af85-32bc-354d-08df2460222e",
+        "search": {
+          "offerId": "01000000-ae91-c143-0a66-08df2460229a",
+          "groupId": "722e603d-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/expert-cyber-security-consultant-k-m-gdansk,oferta,01000000-ae91-c143-0a66-08df2460229a",
+          "title": "Expert Cyber Security Consultant (k/m)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Gdańsk",
+            "Gdynia",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-9782-08df245ffa41",
+        "groupId": "31dee014-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/konsultant-it-power-bi-f-m-x-warszawa,oferta,01000000-ae91-c143-48dd-08df245ff9b0",
+        "search": {
+          "offerId": "01000000-af85-32bc-9782-08df245ffa41",
+          "groupId": "31dee014-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/konsultant-it-power-bi-f-m-x-plock,oferta,01000000-af85-32bc-9782-08df245ffa41",
+          "title": "Konsultant IT Power BI (f/m/x)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Płock",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "PowerShell",
+            "Power BL",
+            "SAP",
+            "Excel"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-5fd7-08df245fe87c",
+        "groupId": "db2ead03-3cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/ai-engineer-middle-warszawa,oferta,01000000-ae91-c143-5fd7-08df245fe87c",
+        "search": {
+          "offerId": "01000000-ae91-c143-5fd7-08df245fe87c",
+          "groupId": "db2ead03-3cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/ai-engineer-middle-warszawa,oferta,01000000-ae91-c143-5fd7-08df245fe87c",
+          "title": "AI Engineer (middle)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 91,
+                "to": 91,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-954a-08df245f9246",
+        "groupId": "fece78ad-3bc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/analityk-biznesowo-systemowy-k-m-n-warszawa,oferta,01000000-029a-5b89-954a-08df245f9246",
+        "search": {
+          "offerId": "01000000-029a-5b89-954a-08df245f9246",
+          "groupId": "fece78ad-3bc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/analityk-biznesowo-systemowy-k-m-n-warszawa,oferta,01000000-029a-5b89-954a-08df245f9246",
+          "title": "Analityk Biznesowo-Systemowy (K/M/N)",
+          "companyName": "RANDLAB SOFTWARE sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074157434/342a0000-56be-0050-1963-08dc70efb2f8_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 115,
+                "to": 120,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Jira",
+            "Confluence",
+            "UML",
+            "SQL",
+            "GitLab",
+            "narzędzia AI",
+            "architektura mikroserwisowa"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-c83d-08df245eb528",
+        "groupId": "e29c30d0-3ac2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-sap-abap-developer-poznan-chociszewskiego-39,oferta,01000000-ae91-c143-c83d-08df245eb528",
+        "search": {
+          "offerId": "01000000-ae91-c143-c83d-08df245eb528",
+          "groupId": "e29c30d0-3ac2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-sap-abap-developer-poznan-chociszewskiego-39,oferta,01000000-ae91-c143-c83d-08df245eb528",
+          "title": "Senior SAP ABAP Developer",
+          "companyName": "VESLOG Group Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074023916/9b030000-5dac-0015-92bc-08dbbdb11f07_280x280.png",
+          "locations": [
+            "Poznań, Grunwald"
+          ],
+          "workModes": [
+            {
+              "code": "remote"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "SAP",
+            "SAP ABAP",
+            "SAP ABAP OO"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-5559-08df245dbc3b",
+        "groupId": "a4ff6cd7-39c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/analityk---analityczka-ds-zapewnienia-jakosci-w-obszarze-hr-qa-warszawa-aleje-jerozolimskie-96,oferta,01000000-af85-32bc-5559-08df245dbc3b",
+        "search": {
+          "offerId": "01000000-af85-32bc-5559-08df245dbc3b",
+          "groupId": "a4ff6cd7-39c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/analityk---analityczka-ds-zapewnienia-jakosci-w-obszarze-hr-qa-warszawa-aleje-jerozolimskie-96,oferta,01000000-af85-32bc-5559-08df245dbc3b",
+          "title": "Analityk / Analityczka ds. Zapewnienia Jakości w Obszarze HR (QA)",
+          "companyName": "Medicover",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/5070943/03000000-bb2f-3863-32a1-08d8f361f04c_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            },
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Jira",
+            "RTM"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-e27a-08df245d7f54",
+        "groupId": "940d869a-39c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/specjalista---specjalistka-ds-cyberbezpieczenstwa-do-dzialu-cyberbezpieczenstwa-i-zarzadzania-uslugami-gdynia-rotterdamska-9,oferta,01000000-ae91-c143-e27a-08df245d7f54",
+        "search": {
+          "offerId": "01000000-ae91-c143-e27a-08df245d7f54",
+          "groupId": "940d869a-39c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/specjalista---specjalistka-ds-cyberbezpieczenstwa-do-dzialu-cyberbezpieczenstwa-i-zarzadzania-uslugami-gdynia-rotterdamska-9,oferta,01000000-ae91-c143-e27a-08df245d7f54",
+          "title": "Specjalista / Specjalistka ds. Cyberbezpieczeństwa do Działu Cyberbezpieczeństwa i Zarządzania Usługami",
+          "companyName": "Zarząd Morskiego Portu Gdynia S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18803320/03000000-bb2f-3863-72f2-08d8e959dbf5_280x280.png",
+          "locations": [
+            "Gdynia, Śródmieście"
+          ],
+          "workModes": [
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-591c-08df245b534e",
+        "groupId": "e987dcc1-59ab-f111-9b33-6045bd8bcc1b",
+        "url": "https://theprotocol.it/szczegoly/praca/devops-engineer-french-katowice-zelazna-2,oferta,01000000-135f-f2c9-728f-08df0d7dac17",
+        "search": {
+          "offerId": "01000000-029a-5b89-591c-08df245b534e",
+          "groupId": "e987dcc1-59ab-f111-9b33-6045bd8bcc1b",
+          "url": "https://theprotocol.it/szczegoly/praca/devops-engineer-french-gdansk,oferta,01000000-029a-5b89-591c-08df245b534e",
+          "title": "DevOps Engineer (French)",
+          "companyName": "Capgemini Polska",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18804842/9c2e0000-56be-0050-7f8e-08de5da67dd1_280x280.jpg",
+          "locations": [
+            "Gdańsk",
+            "Katowice",
+            "Kraków, Grzegórzki",
+            "Lublin",
+            "Opole",
+            "Poznań",
+            "Warszawa",
+            "Wrocław"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "Python",
+            "Bash",
+            "Google Cloud Platform",
+            "Kubernetes",
+            "Terraform",
+            "GitLab",
+            "Ansible",
+            "Docker",
+            "Linux"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-bf7f-08df245b40cb",
+        "groupId": "e65cfd5b-37c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/lead-project-leader---aws-ai-gdansk,oferta,01000000-ae91-c143-bf7f-08df245b40cb",
+        "search": {
+          "offerId": "01000000-ae91-c143-bf7f-08df245b40cb",
+          "groupId": "e65cfd5b-37c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/lead-project-leader---aws-ai-gdansk,oferta,01000000-ae91-c143-bf7f-08df245b40cb",
+          "title": "Lead Project Leader - AWS AI",
+          "companyName": "NORDEA Bank Abp SA Oddział w Polsce",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20074701/2c580000-43a8-f403-9c3b-08d6dec4f521_280x280.jpeg",
+          "locations": [
+            "Gdańsk"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-e623-08df245b03a2",
+        "groupId": "89ecd41e-37c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-it-analyst-banking-k-m-x-warszawa,oferta,01000000-029a-5b89-e623-08df245b03a2",
+        "search": {
+          "offerId": "01000000-029a-5b89-e623-08df245b03a2",
+          "groupId": "89ecd41e-37c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-it-analyst-banking-k-m-x-warszawa,oferta,01000000-029a-5b89-e623-08df245b03a2",
+          "title": "Senior IT Analyst – Banking (k/m/x)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 100,
+                "to": 115,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Jira",
+            "Confluence",
+            "Agile",
+            "Scrum"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-1ac6-08df245aabdb",
+        "groupId": "2582f9c6-36c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/inzynier---inzynierka-devops-aws-ubezpieczenia-warszawa-szturmowa-2,oferta,01000000-af85-32bc-1ac6-08df245aabdb",
+        "search": {
+          "offerId": "01000000-af85-32bc-1ac6-08df245aabdb",
+          "groupId": "2582f9c6-36c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/inzynier---inzynierka-devops-aws-ubezpieczenia-warszawa-szturmowa-2,oferta,01000000-af85-32bc-1ac6-08df245aabdb",
+          "title": "Inżynier / Inżynierka DevOps (AWS) (Ubezpieczenia)",
+          "companyName": "LUX MED Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18803855/2c580000-43a8-f403-0258-08d6dec4d03b_280x280.png",
+          "locations": [
+            "Warszawa, Mokotów"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Terraform",
+            "AWS"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-d43a-08df2458ac38",
+        "groupId": "523a6ac7-34c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/junior-it-project-specialist-warszawa,oferta,01000000-af85-32bc-d43a-08df2458ac38",
+        "search": {
+          "offerId": "01000000-af85-32bc-d43a-08df2458ac38",
+          "groupId": "523a6ac7-34c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/junior-it-project-specialist-warszawa,oferta,01000000-af85-32bc-d43a-08df2458ac38",
+          "title": "Junior IT Project Specialist",
+          "companyName": "ALTEN Polska",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20062259/2c580000-43a8-f403-1fb3-08d7fbf29184_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Jira"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-d5a3-08df2458486c",
+        "groupId": "440c9f63-34c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/product-owner---pivotal-crm-m---f-warszawa-aleje-jerozolimskie-96,oferta,01000000-029a-5b89-d5a3-08df2458486c",
+        "search": {
+          "offerId": "01000000-029a-5b89-d5a3-08df2458486c",
+          "groupId": "440c9f63-34c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/product-owner---pivotal-crm-m---f-warszawa-aleje-jerozolimskie-96,oferta,01000000-029a-5b89-d5a3-08df2458486c",
+          "title": "Product Owner - Pivotal CRM (m / f)",
+          "companyName": "Medicover",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/5070943/03000000-bb2f-3863-32a1-08d8f361f04c_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 2,
+              "typeName": "umowa zlecenie"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "CRM",
+            "Jira",
+            "Confluence",
+            "MS Excel",
+            "opportunity assessment"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-efd5-08df24583c85",
+        "groupId": "9025b457-34c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/qa-lead---inzynier-k-m-lublin,oferta,01000000-af85-32bc-efd5-08df24583c85",
+        "search": {
+          "offerId": "01000000-af85-32bc-efd5-08df24583c85",
+          "groupId": "9025b457-34c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/qa-lead---inzynier-k-m-lublin,oferta,01000000-af85-32bc-efd5-08df24583c85",
+          "title": "QA Lead / Inżynier (K/M)",
+          "companyName": "CodeTalent Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074230078/40470000-56be-0050-82d0-08de72c30210_280x280.png",
+          "locations": [
+            "Lublin",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę",
+              "salary": {
+                "from": 14600,
+                "to": 21800,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "miesięcznie",
+                "timeUnitName": "miesięcznie",
+                "kind": "brutto"
+              }
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-e6ae-08df2457fecc",
+        "groupId": "b60fff19-34c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/dyrektor---dyrektorka-ds-bezpieczenstwa-informacji-szczecin,oferta,01000000-029a-5b89-e6ae-08df2457fecc",
+        "search": {
+          "offerId": "01000000-029a-5b89-e6ae-08df2457fecc",
+          "groupId": "b60fff19-34c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/dyrektor---dyrektorka-ds-bezpieczenstwa-informacji-szczecin,oferta,01000000-029a-5b89-e6ae-08df2457fecc",
+          "title": "Dyrektor / Dyrektorka ds. Bezpieczeństwa Informacji",
+          "companyName": "IT CONNECT Sp. z o.o. Sp. k.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074056223/342a0000-56be-0050-c594-08dc4ef762d2_280x280.png",
+          "locations": [
+            "Szczecin"
+          ],
+          "workModes": [
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 25000,
+                "to": 25000,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "miesięcznie",
+                "timeUnitName": "miesięcznie",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "CISSP",
+            "CISM",
+            "CISA",
+            "CCISO",
+            "UKSC",
+            "NIS 2",
+            "SOC",
+            "CSIRT",
+            "SSDLC",
+            "SAST",
+            "DAST",
+            "SCA"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-e289-08df2457e625",
+        "groupId": "4d5d5701-34c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/junior-algorithmic-power-trader-krakow-kupa-5,oferta,01000000-af85-32bc-e289-08df2457e625",
+        "search": {
+          "offerId": "01000000-af85-32bc-e289-08df2457e625",
+          "groupId": "4d5d5701-34c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/junior-algorithmic-power-trader-krakow-kupa-5,oferta,01000000-af85-32bc-e289-08df2457e625",
+          "title": "Junior Algorithmic Power Trader",
+          "companyName": "MKM Consulting Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20067874/2c580000-43a8-f403-2741-08d9775e099e_280x280.png",
+          "locations": [
+            "Kraków, Stare Miasto"
+          ],
+          "workModes": [
+            {
+              "code": "full office"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-d02e-08df2457dec8",
+        "groupId": "3ceffaf9-33c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/glowny-specjalista-specjalistka-ds-badan-i-projektowania-produktow-cyfrowych--senior-ui-designer-warszawa-targowa-25,oferta,01000000-ae91-c143-d02e-08df2457dec8",
+        "search": {
+          "offerId": "01000000-ae91-c143-d02e-08df2457dec8",
+          "groupId": "3ceffaf9-33c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/glowny-specjalista-specjalistka-ds-badan-i-projektowania-produktow-cyfrowych--senior-ui-designer-warszawa-targowa-25,oferta,01000000-ae91-c143-d02e-08df2457dec8",
+          "title": "Główny Specjalista/Specjalistka ds. badań i projektowania produktów cyfrowych -Senior UI Designer",
+          "companyName": "Totalizator Sportowy",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18803296/03000000-bb2f-3863-65a4-08d8765d18ac_280x280.png",
+          "locations": [
+            "Warszawa, Praga-Północ"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-bb33-08df24566941",
+        "groupId": "f91a7184-32c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/mobile-software-engineer-2-android---technical-platform-poznan-wierzbiecice-1b,oferta,01000000-af85-32bc-bb33-08df24566941",
+        "search": {
+          "offerId": "01000000-af85-32bc-bb33-08df24566941",
+          "groupId": "f91a7184-32c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/mobile-software-engineer-2-android---technical-platform-poznan-wierzbiecice-1b,oferta,01000000-af85-32bc-bb33-08df24566941",
+          "title": "Mobile Software Engineer 2 (Android) - Technical Platform",
+          "companyName": "Allegro",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20082208/03000000-bb2f-3863-557a-08d6dec4e360_280x280.jpeg",
+          "locations": [
+            "Poznań, Wilda"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę",
+              "salary": {
+                "from": 14600,
+                "to": 20825,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "monthly",
+                "timeUnitName": "miesięcznie",
+                "kind": "gross",
+                "kindName": "brutto"
+              }
+            }
+          ],
+          "technologies": [
+            "Kotlin",
+            "Figma"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-7305-08df2455ed49",
+        "groupId": "528e7b08-32c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-scala-engineer-warszawa-zelazna-51-53,oferta,01000000-ae91-c143-7305-08df2455ed49",
+        "search": {
+          "offerId": "01000000-ae91-c143-7305-08df2455ed49",
+          "groupId": "528e7b08-32c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-scala-engineer-warszawa-zelazna-51-53,oferta,01000000-ae91-c143-7305-08df2455ed49",
+          "title": "Senior Scala Engineer",
+          "companyName": "Allegro",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20082208/03000000-bb2f-3863-557a-08d6dec4e360_280x280.jpeg",
+          "locations": [
+            "Warszawa, Wola"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "Scala",
+            "Java",
+            "Python",
+            "Google Cloud Platform",
+            "Linux"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-4b2e-08df2455eaba",
+        "groupId": "27652402-32c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-product-manager-warszawa-zelazna-51-53,oferta,01000000-029a-5b89-4b2e-08df2455eaba",
+        "search": {
+          "offerId": "01000000-029a-5b89-4b2e-08df2455eaba",
+          "groupId": "27652402-32c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-product-manager-warszawa-zelazna-51-53,oferta,01000000-029a-5b89-4b2e-08df2455eaba",
+          "title": "Senior Product Manager",
+          "companyName": "Allegro",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20082208/03000000-bb2f-3863-557a-08d6dec4e360_280x280.jpeg",
+          "locations": [
+            "Warszawa, Wola"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-e794-08df2455e6f2",
+        "groupId": "26652402-32c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/product-analyst-warszawa-zelazna-51-53,oferta,01000000-af85-32bc-e794-08df2455e6f2",
+        "search": {
+          "offerId": "01000000-af85-32bc-e794-08df2455e6f2",
+          "groupId": "26652402-32c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/product-analyst-warszawa-zelazna-51-53,oferta,01000000-af85-32bc-e794-08df2455e6f2",
+          "title": "Product Analyst",
+          "companyName": "Allegro",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20082208/03000000-bb2f-3863-557a-08d6dec4e360_280x280.jpeg",
+          "locations": [
+            "Warszawa, Wola"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "SQL",
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-42d8-08df24558f37",
+        "groupId": "d60212aa-31c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/cyber-security-consultant-threat-identification-prioritization-k-m-warszawa,oferta,01000000-af85-32bc-2677-08df24558ee0",
+        "search": {
+          "offerId": "01000000-029a-5b89-42d8-08df24558f37",
+          "groupId": "d60212aa-31c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/cyber-security-consultant-threat-identification-prioritization-k-m-gdansk,oferta,01000000-029a-5b89-42d8-08df24558f37",
+          "title": "Cyber Security Consultant – Threat Identification & Prioritization (k/m)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Gdańsk",
+            "Gdynia",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Windows Server",
+            "Linux",
+            "PowerShell"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-ed6d-08df245436dc",
+        "groupId": "e1280352-30c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/network-security-and-firewall-engineer-f-m-x-katowice,oferta,01000000-029a-5b89-2370-08df245436d8",
+        "search": {
+          "offerId": "01000000-029a-5b89-ed6d-08df245436dc",
+          "groupId": "e1280352-30c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/network-security-and-firewall-engineer-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,01000000-029a-5b89-ed6d-08df245436dc",
+          "title": "Network Security and Firewall Engineer (f/m/x)",
+          "companyName": "Sii Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20000761/03000000-bb2f-3863-1665-08d6dec4c54d_280x280.jpeg",
+          "locations": [
+            "Białystok, Centrum",
+            "Bydgoszcz",
+            "Gdańsk, Oliwa",
+            "Katowice",
+            "Kraków, Podgórze",
+            "Łódź, Śródmieście",
+            "Lublin",
+            "Piła",
+            "Poznań, Wilda",
+            "Rzeszów",
+            "Szczecin",
+            "Toruń",
+            "Warszawa, Mokotów",
+            "Wrocław, Fabryczna"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            },
+            {
+              "code": "hybrydowa"
+            },
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Firewalls",
+            "WAF (Web Application Firewall)",
+            "VPN",
+            "Palo Alto firewalls",
+            "Fortinet",
+            "Cisco",
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-4cfe-08df2453f651",
+        "groupId": "9b0cae0e-30c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/manufacturing-systems-business-analyst-f-m-x-rzeszow-aleja-tadeusza-rejtana-20b,oferta,01000000-ae91-c143-1417-08df2453f857",
+        "search": {
+          "offerId": "01000000-029a-5b89-4cfe-08df2453f651",
+          "groupId": "9b0cae0e-30c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/manufacturing-systems-business-analyst-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,01000000-029a-5b89-4cfe-08df2453f651",
+          "title": "Manufacturing Systems Business Analyst (f/m/x)",
+          "companyName": "Sii Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20000761/03000000-bb2f-3863-1665-08d6dec4c54d_280x280.jpeg",
+          "locations": [
+            "Białystok, Centrum",
+            "Bydgoszcz",
+            "Katowice",
+            "Kraków, Podgórze",
+            "Łódź, Śródmieście",
+            "Lublin",
+            "Piła",
+            "Poznań, Wilda",
+            "Rzeszów",
+            "Szczecin",
+            "Toruń",
+            "Warszawa, Mokotów",
+            "Wrocław, Fabryczna"
+          ],
+          "workModes": [
+            {
+              "code": "remote"
+            },
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            },
+            {
+              "code": "full office"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "Validated systems (GxP)",
+            "SAP",
+            "LIMS (Laboratory Information Management System)",
+            "MES (Manufacturing Execution System)"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-f939-08df24524764",
+        "groupId": "2d329762-2ec2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/junior-epm---bi-engineer-hands-on-utrzymanie-i-wsparcie-systemow-warszawa-stefana-okrzei-1,oferta,01000000-ae91-c143-f939-08df24524764",
+        "search": {
+          "offerId": "01000000-ae91-c143-f939-08df24524764",
+          "groupId": "2d329762-2ec2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/junior-epm---bi-engineer-hands-on-utrzymanie-i-wsparcie-systemow-warszawa-stefana-okrzei-1,oferta,01000000-ae91-c143-f939-08df24524764",
+          "title": "Junior EPM / BI Engineer (hands-on, utrzymanie i wsparcie systemów)",
+          "companyName": "FLEXI SOLUTIONS",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20299567/9c440000-56be-0050-c781-08dd94677189_280x280.png",
+          "locations": [
+            "Warszawa, Praga-Północ"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "SQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-345c-08df24523863",
+        "groupId": "e04c9253-2ec2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/junior-it-specialist---mlodszy-programista-sobotka,oferta,01000000-029a-5b89-345c-08df24523863",
+        "search": {
+          "offerId": "01000000-029a-5b89-345c-08df24523863",
+          "groupId": "e04c9253-2ec2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/junior-it-specialist---mlodszy-programista-sobotka,oferta,01000000-029a-5b89-345c-08df24523863",
+          "title": "Junior IT Specialist / Młodszy programista",
+          "companyName": "GK PRO sp. z o.o. SPÓŁKA KOMANDYTOWA",
+          "companyLogoUrl": "",
+          "locations": [
+            "Sobótka"
+          ],
+          "workModes": [
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę",
+              "salary": {
+                "from": 6000,
+                "to": 8500,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "miesięcznie",
+                "timeUnitName": "miesięcznie",
+                "kind": "brutto"
+              }
+            }
+          ],
+          "technologies": [
+            "Git",
+            "Linux",
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "MySQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-3093-08df2451f612",
+        "groupId": "b6330a11-2ec2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/fullstack-developer-warszawa,oferta,01000000-af85-32bc-3093-08df2451f612",
+        "search": {
+          "offerId": "01000000-af85-32bc-3093-08df2451f612",
+          "groupId": "b6330a11-2ec2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/fullstack-developer-warszawa,oferta,01000000-af85-32bc-3093-08df2451f612",
+          "title": "Fullstack Developer",
+          "companyName": "Primaris Services",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20128909/03000000-bb2f-3863-2ad5-08d925023d1a_280x280.jpg",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 115,
+                "to": 135,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Angular",
+            "Java",
+            "Spring Boot",
+            "Kafka",
+            "Hibernate"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-ce8f-08df245114c0",
+        "groupId": "0794f22f-2dc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/ai-engineer---ai-engineerka-python-llm-rag-warszawa,oferta,01000000-af85-32bc-ce8f-08df245114c0",
+        "search": {
+          "offerId": "01000000-af85-32bc-ce8f-08df245114c0",
+          "groupId": "0794f22f-2dc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/ai-engineer---ai-engineerka-python-llm-rag-warszawa,oferta,01000000-af85-32bc-ce8f-08df245114c0",
+          "title": "AI Engineer / AI Engineerka (Python, LLM, RAG)",
+          "companyName": "B2B.NET S.A.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20424689/03000000-bb2f-3863-a2ad-08d9952c4759_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 90,
+                "to": 95,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "AI",
+            "ML",
+            "LLM",
+            "RAG",
+            "NLP",
+            "Agentic AI"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-e117-08df2450c30d",
+        "groupId": "65e03dde-2cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/lider-ds-jakosci-danych-k-m-modivo-platform-wroclaw-powstancow-slaskich-9,oferta,01000000-af85-32bc-e117-08df2450c30d",
+        "search": {
+          "offerId": "01000000-af85-32bc-e117-08df2450c30d",
+          "groupId": "65e03dde-2cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/lider-ds-jakosci-danych-k-m-modivo-platform-wroclaw-powstancow-slaskich-9,oferta,01000000-af85-32bc-e117-08df2450c30d",
+          "title": "Lider ds. jakości danych (k/m) Modivo Platform",
+          "companyName": "MODIVO PLATFORM",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18800508/e0380000-56be-0050-1b93-08de850309a4_280x280.jpg",
+          "locations": [
+            "Wrocław, Krzyki"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            },
+            {
+              "code": "hybrydowa"
+            },
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "SQL",
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-a593-08df24503ac4",
+        "groupId": "5fa7f655-2cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/specjalista-ds-baz-danych-k-m-swadzim-pow-poznanski-sw-mikolaja-5,oferta,01000000-ae91-c143-a593-08df24503ac4",
+        "search": {
+          "offerId": "01000000-ae91-c143-a593-08df24503ac4",
+          "groupId": "5fa7f655-2cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/specjalista-ds-baz-danych-k-m-swadzim-pow-poznanski-sw-mikolaja-5,oferta,01000000-ae91-c143-a593-08df24503ac4",
+          "title": "Specjalista ds. Baz Danych (k/m)",
+          "companyName": "Grupa Muszkieterów",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18804741/50500000-56be-0050-242d-08ddad9b266e_280x280.png",
+          "locations": [
+            "Swadzim (pow. poznański)"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "MSSQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-fdd7-08df244ff7e7",
+        "groupId": "aa9b1813-2cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/analityk-biznesowy---systemowy-obszar-danych-i-bi-branza-ubezpieczeniowa-warszawa,oferta,01000000-029a-5b89-fdd7-08df244ff7e7",
+        "search": {
+          "offerId": "01000000-029a-5b89-fdd7-08df244ff7e7",
+          "groupId": "aa9b1813-2cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/analityk-biznesowy---systemowy-obszar-danych-i-bi-branza-ubezpieczeniowa-warszawa,oferta,01000000-029a-5b89-fdd7-08df244ff7e7",
+          "title": "Analityk Biznesowy / Systemowy (obszar danych i BI), branża ubezpieczeniowa",
+          "companyName": "NESS SOLUTION sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074051922/03000000-bb2f-3863-0a0d-08d8e2dbcc8e_280x280.jpg",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "SQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-8dcb-08df244ff4d9",
+        "groupId": "225a150c-2cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-test-automation-engineer-python-robot-framework-gdansk,oferta,01000000-029a-5b89-8dcb-08df244ff4d9",
+        "search": {
+          "offerId": "01000000-029a-5b89-8dcb-08df244ff4d9",
+          "groupId": "225a150c-2cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-test-automation-engineer-python-robot-framework-gdansk,oferta,01000000-029a-5b89-8dcb-08df244ff4d9",
+          "title": "Senior Test Automation Engineer (Python + Robot Framework)",
+          "companyName": "IT CONNECT Sp. z o.o. Sp. k.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074056223/342a0000-56be-0050-c594-08dc4ef762d2_280x280.png",
+          "locations": [
+            "Gdańsk",
+            "Gdynia",
+            "Łódź",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 130,
+                "to": 130,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "hourly",
+                "timeUnitName": "godzinowo",
+                "kind": "net (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Python",
+            "Robot Framework",
+            "SQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-3755-08df244ff0e3",
+        "groupId": "215a150c-2cc2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/lead-full-stack-engineer-java-angular-m-k-n-wroclaw-legnicka-70,oferta,01000000-ae91-c143-3755-08df244ff0e3",
+        "search": {
+          "offerId": "01000000-ae91-c143-3755-08df244ff0e3",
+          "groupId": "215a150c-2cc2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/lead-full-stack-engineer-java-angular-m-k-n-wroclaw-legnicka-70,oferta,01000000-ae91-c143-3755-08df244ff0e3",
+          "title": "Lead Full-stack Engineer | Java + Angular (m/k/n)",
+          "companyName": "UPVANTA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074103426/002a0000-56be-0050-763b-08ddd41047f0_280x280.jpg",
+          "locations": [
+            "Wrocław, Fabryczna"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 195,
+                "to": 195,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Java",
+            "Spring",
+            "Angular",
+            "TypeScript",
+            "PostgreSQL",
+            "Oracle"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-2b7a-08df244e9c69",
+        "groupId": "92c597b7-2ac2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/regular-integration-developer-warszawa,oferta,01000000-af85-32bc-2b7a-08df244e9c69",
+        "search": {
+          "offerId": "01000000-af85-32bc-2b7a-08df244e9c69",
+          "groupId": "92c597b7-2ac2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/regular-integration-developer-warszawa,oferta,01000000-af85-32bc-2b7a-08df244e9c69",
+          "title": "Regular Integration Developer",
+          "companyName": "Primaris Services",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20128909/03000000-bb2f-3863-2ad5-08d925023d1a_280x280.jpg",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 115,
+                "to": 135,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Java 21",
+            "Spring Boot",
+            "Spring Cloud",
+            "Hibernate",
+            "REST API",
+            "JSON",
+            "OpenAPI",
+            "Apache Kafka",
+            "RabbitMQ",
+            "CI/CD",
+            "Jenkins",
+            "PostgreSQL"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-178b-08df244e8117",
+        "groupId": "76a6489c-2ac2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/business-data-analyst-warszawa,oferta,01000000-ae91-c143-178b-08df244e8117",
+        "search": {
+          "offerId": "01000000-ae91-c143-178b-08df244e8117",
+          "groupId": "76a6489c-2ac2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/business-data-analyst-warszawa,oferta,01000000-ae91-c143-178b-08df244e8117",
+          "title": "Business Data Analyst",
+          "companyName": "IT CONNECT Sp. z o.o. Sp. k.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074056223/342a0000-56be-0050-c594-08dc4ef762d2_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": [
+            "ETL",
+            "REST API",
+            "BPMN",
+            "Python"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-f848-08df244e639b",
+        "groupId": "e173cd7e-2ac2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/head-of-funds-it-warszawa-towarowa-28,oferta,01000000-029a-5b89-f848-08df244e639b",
+        "search": {
+          "offerId": "01000000-029a-5b89-f848-08df244e639b",
+          "groupId": "e173cd7e-2ac2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/head-of-funds-it-warszawa-towarowa-28,oferta,01000000-029a-5b89-f848-08df244e639b",
+          "title": "Head of Funds IT",
+          "companyName": "Vistra Poland",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/18801415/900f0000-56be-0050-7b0e-08dde56169c8_280x280.jpg",
+          "locations": [
+            "Warszawa, Wola"
+          ],
+          "workModes": [
+            {
+              "code": "remote"
+            },
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-1b31-08df244dd1c3",
+        "groupId": "a7be46ec-29c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/it-security-consultant-threat-modeling-activities-warszawa,oferta,01000000-029a-5b89-2639-08df244dd137",
+        "search": {
+          "offerId": "01000000-ae91-c143-1b31-08df244dd1c3",
+          "groupId": "a7be46ec-29c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/it-security-consultant-threat-modeling-activities-gdansk,oferta,01000000-ae91-c143-1b31-08df244dd1c3",
+          "title": "IT Security Consultant – Threat Modeling activities",
+          "companyName": "IT CONNECT Sp. z o.o. Sp. k.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074056223/342a0000-56be-0050-c594-08dc4ef762d2_280x280.png",
+          "locations": [
+            "Gdańsk",
+            "Gdynia",
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 120,
+                "to": 120,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "hourly",
+                "timeUnitName": "godzinowo",
+                "kind": "net (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "STRIDE"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-7f28-08df244bc830",
+        "groupId": "5f5809e3-27c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-gcp-cloud-devops-engineer-krakow,oferta,01000000-029a-5b89-7f28-08df244bc830",
+        "search": {
+          "offerId": "01000000-029a-5b89-7f28-08df244bc830",
+          "groupId": "5f5809e3-27c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-gcp-cloud-devops-engineer-krakow,oferta,01000000-029a-5b89-7f28-08df244bc830",
+          "title": "Senior GCP Cloud DevOps Engineer",
+          "companyName": "ITDS Polska Sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/20270956/80130000-56be-0050-6e59-08de4210bdaa_280x280.jpg",
+          "locations": [
+            "Kraków"
+          ],
+          "workModes": [
+            {
+              "code": "hybrid",
+              "name": "praca hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę",
+              "salary": {
+                "from": 21700,
+                "to": 26100,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "monthly",
+                "timeUnitName": "miesięcznie",
+                "kind": "gross",
+                "kindName": "brutto"
+              }
+            },
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 30240,
+                "to": 36330,
+                "currency": "zł",
+                "timeUnitId": 0,
+                "timeUnit": "monthly",
+                "timeUnitName": "miesięcznie",
+                "kind": "net (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Google Cloud Platform",
+            "Terraform",
+            "Linux",
+            "Python",
+            "Go",
+            "Java",
+            "JavaScript",
+            "Ruby",
+            "Groovy",
+            "Scala",
+            "Ansible"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-9d87-08df244bbac8",
+        "groupId": "cadaf9d5-27c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/it-project-manager-bolechowo-pow-poznanski-obornicka-46,oferta,01000000-ae91-c143-9d87-08df244bbac8",
+        "search": {
+          "offerId": "01000000-ae91-c143-9d87-08df244bbac8",
+          "groupId": "cadaf9d5-27c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/it-project-manager-bolechowo-pow-poznanski-obornicka-46,oferta,01000000-ae91-c143-9d87-08df244bbac8",
+          "title": "IT Project Manager",
+          "companyName": "Solaris Bus & Coach sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/2514578/03000000-bb2f-3863-4af0-08d8c81fc905_280x280.png",
+          "locations": [
+            "Bolechowo (pow. poznański)"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B"
+            }
+          ],
+          "technologies": []
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-7ab4-08df244b8636",
+        "groupId": "5a9968a1-27c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/starszy-administrator-systemow-i-sieci-komputerowych---it-supervisor-m-k-n-lowicz,oferta,01000000-029a-5b89-7ab4-08df244b8636",
+        "search": {
+          "offerId": "01000000-029a-5b89-7ab4-08df244b8636",
+          "groupId": "5a9968a1-27c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/starszy-administrator-systemow-i-sieci-komputerowych---it-supervisor-m-k-n-lowicz,oferta,01000000-029a-5b89-7ab4-08df244b8636",
+          "title": "Starszy Administrator Systemów i Sieci komputerowych / IT Supervisor (m/k/n)",
+          "companyName": "Vinci Sp z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074115084/9b030000-5dac-0015-4fc1-08db14022f26_280x280.png",
+          "locations": [
+            "Łowicz"
+          ],
+          "workModes": [
+            {
+              "code": "stacjonarna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 0,
+              "typeName": "umowa o pracę"
+            }
+          ],
+          "technologies": [
+            "Infrastruktura i chmura (M365",
+            "Azure",
+            "|  Sieci LAN/WAN/WLAN/VPN/UTM",
+            "Hyper-V",
+            "ITIL",
+            "Microsoft Power Platform"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-0fa0-08df244b6bb0",
+        "groupId": "e44ee286-27c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/test-automation-engineer-warszawa,oferta,01000000-ae91-c143-0fa0-08df244b6bb0",
+        "search": {
+          "offerId": "01000000-ae91-c143-0fa0-08df244b6bb0",
+          "groupId": "e44ee286-27c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/test-automation-engineer-warszawa,oferta,01000000-ae91-c143-0fa0-08df244b6bb0",
+          "title": "Test Automation Engineer",
+          "companyName": "NESS SOLUTION sp. z o.o.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074051922/03000000-bb2f-3863-0a0d-08d8e2dbcc8e_280x280.jpg",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "zdalna"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 100,
+                "to": 135,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "Java",
+            "Playwright",
+            "Selenium",
+            "Jenkins",
+            "REST Assured",
+            "SQL",
+            "Git / Bitbucket",
+            "SoapUI/Postman"
+          ]
+        }
+      },
+      {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-f20d-08df244b1f86",
+        "groupId": "53b8b73a-27c2-f111-a6a9-000d3a3a70b9",
+        "url": "https://theprotocol.it/szczegoly/praca/senior-system-analyst-warszawa,oferta,01000000-029a-5b89-f20d-08df244b1f86",
+        "search": {
+          "offerId": "01000000-029a-5b89-f20d-08df244b1f86",
+          "groupId": "53b8b73a-27c2-f111-a6a9-000d3a3a70b9",
+          "url": "https://theprotocol.it/szczegoly/praca/senior-system-analyst-warszawa,oferta,01000000-029a-5b89-f20d-08df244b1f86",
+          "title": "Senior System Analyst",
+          "companyName": "IT CONNECT Sp. z o.o. Sp. k.",
+          "companyLogoUrl": "https://logos.gpcdn.pl/loga-firm/1074056223/342a0000-56be-0050-c594-08dc4ef762d2_280x280.png",
+          "locations": [
+            "Warszawa"
+          ],
+          "workModes": [
+            {
+              "code": "hybrydowa"
+            }
+          ],
+          "contracts": [
+            {
+              "typeId": 3,
+              "typeName": "kontrakt B2B",
+              "salary": {
+                "from": 120,
+                "to": 120,
+                "currency": "zł",
+                "timeUnitId": 1,
+                "timeUnit": "godzinowo",
+                "timeUnitName": "godzinowo",
+                "kind": "netto (+ VAT)"
+              }
+            }
+          ],
+          "technologies": [
+            "BPMN",
+            "UML",
+            "SOA",
+            "ESB",
+            "Jira",
+            "Confluence"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "run_id": "corpus-02-jjit-150",
+  "sources": [
+    {
+      "source": "justjoinit",
+      "transport": "ssr-http-v1",
+      "discovered": 150,
+      "states": {
+        "OBSERVED": 150
+      },
+      "changes": [],
+      "errors": []
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 200,
+    "revisions": 200,
+    "raw_observations": 200,
+    "organization_mentions": 200,
+    "organization_candidates": 200,
+    "match_candidates": 0,
+    "ingestion_runs": 2,
+    "ingestion_attempts": 200,
+    "ingestion_items": 200,
+    "by_source": {
+      "justjoinit": 150,
+      "theprotocol": 50
+    },
+    "lifecycle": {
+      "OBSERVED": 200
+    }
+  }
+}
