@@ -13,6 +13,7 @@ import httpx
 
 from .expansion_sources import SOURCES
 from .model import PostingRef, SourceGoneError
+from .retry import RetryPolicy, run_with_retry
 from .versions import NORMALIZER_VERSION, PARSER_BUNDLE_VERSION, TRANSPORT_VERSIONS
 
 
@@ -38,7 +39,7 @@ def _write_jsonl_gz(path: Path, rows):
     }
 
 
-def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir: str, delay: float):
+def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir: str, delay: float, max_attempts: int = 4):
     rows=_load_rows(plan_path,source,chunk_index)
     adapter=SOURCES[source]
     corpus=[]
@@ -50,7 +51,49 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
         for row in rows:
             ref=PostingRef(source,row['url'],str(row['source_posting_id']))
             try:
-                payload,final_url,status,content_type=adapter.fetch_detail(client,ref)
+                attempt_errors=[]
+                def fetch():
+                    return adapter.fetch_detail(client,ref)
+                def on_attempt_failure(attempt_no,exc,will_retry,failure_type,http_status):
+                    attempt_errors.append({
+                        'attempt_no':attempt_no,
+                        'failure_type':failure_type,
+                        'http_status':http_status,
+                        'will_retry':will_retry,
+                        'error':f'{type(exc).__name__}: {exc}',
+                    })
+                try:
+                    (payload,final_url,status,content_type),attempt_no=run_with_retry(
+                        fetch,
+                        policy=RetryPolicy(max_attempts=max_attempts,base_delay_seconds=0.75),
+                        on_attempt_failure=on_attempt_failure,
+                    )
+                except httpx.HTTPStatusError as exc:
+                    status=exc.response.status_code
+                    if status in (404,410):
+                        body=exc.response.text
+                        payload_bytes=body.encode('utf-8')
+                        payload_sha=hashlib.sha256(payload_bytes).hexdigest()
+                        raw_rows.append({
+                            'source':source,
+                            'source_posting_id':ref.source_posting_id,
+                            'requested_url':ref.url,
+                            'final_url':str(exc.response.url),
+                            'http_status':status,
+                            'content_type':exc.response.headers.get('content-type',''),
+                            'payload_sha256':payload_sha,
+                            'payload_text':body,
+                            'run_id':f'file-backed-{source}-{chunk_index}',
+                            'parser_version':PARSER_BUNDLE_VERSION,
+                            'transport_version':TRANSPORT_VERSIONS[source],
+                            'archive_key':f'local:{source}:{ref.source_posting_id}:{payload_sha}',
+                            'fetched_at':now,
+                            'attempt_errors':attempt_errors,
+                        })
+                        gone.append({'source_posting_id':ref.source_posting_id,'url':ref.url,'reason':f'HTTP_{status}'})
+                        time.sleep(delay)
+                        continue
+                    raise
                 payload_bytes=payload.encode('utf-8')
                 payload_sha=hashlib.sha256(payload_bytes).hexdigest()
                 raw_rows.append({
@@ -67,6 +110,8 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'transport_version':TRANSPORT_VERSIONS[source],
                     'archive_key':f'local:{source}:{ref.source_posting_id}:{payload_sha}',
                     'fetched_at':now,
+                    'fetch_attempts':attempt_no,
+                    'attempt_errors':attempt_errors,
                 })
                 parsed=adapter.parse_detail(payload,ref)
                 projection=parsed.normalized_projection()
@@ -125,8 +170,9 @@ def main():
     p.add_argument('--out',required=True)
     p.add_argument('--raw-out',required=True)
     p.add_argument('--delay',type=float,default=0.25)
+    p.add_argument('--max-attempts',type=int,default=4)
     args=p.parse_args()
-    print(json.dumps(acquire(args.plan,args.source,args.chunk_index,args.out,args.raw_out,args.delay),ensure_ascii=False,indent=2))
+    print(json.dumps(acquire(args.plan,args.source,args.chunk_index,args.out,args.raw_out,args.delay,args.max_attempts),ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
     main()
