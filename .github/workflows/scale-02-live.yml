@@ -1,0 +1,117 @@
+name: SCALE-02 inventory chunk acquisition
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: pilot = first chunk/source, all = every frozen chunk
+        required: true
+        default: pilot
+        type: choice
+        options:
+          - pilot
+          - all
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: matrix
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json,os
+          from pathlib import Path
+          p=json.loads(Path("data/inventories/scale-02/chunks.json").read_text())
+          rows=[]
+          for c in p["chunks"]:
+              if os.environ["MODE"]=="pilot" and c["chunk_index"]!=0:
+                  continue
+              delay=1.25 if c["source"]=="bulldogjob" else 0.12
+              rows.append({"source":c["source"],"chunk_index":c["chunk_index"],"planned":c["count"],"delay":delay})
+          print("matrix="+json.dumps({"include":rows},separators=(",",":")))
+          PY
+
+  collect:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      SOURCE: ${{ matrix.source }}
+      CHUNK_INDEX: ${{ matrix.chunk_index }}
+      PLANNED: ${{ matrix.planned }}
+      DELAY: ${{ matrix.delay }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Migrate
+        run: python -m ingestion.migrate
+      - name: Process exact frozen chunk
+        run: >-
+          python -m ingestion.process_inventory_chunk
+          --source "$SOURCE"
+          --chunk-index "$CHUNK_INDEX"
+          --delay "$DELAY"
+          --run-id "scale-02-$SOURCE-$CHUNK_INDEX"
+          --report reports/report.json
+          --manifest reports/source-manifest.json
+      - name: Export compact slice
+        run: python -m ingestion.export_market_corpus --out reports/corpus
+      - name: Export raw evidence
+        run: python -m ingestion.export_raw_archive --source "$SOURCE" --out reports/raw
+      - name: Verify chunk accounting
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          report=json.loads(Path("reports/report.json").read_text())
+          corpus=json.loads(Path("reports/corpus/manifest.json").read_text())
+          raw=json.loads(Path("reports/raw/raw-manifest.json").read_text())
+          assert report["planned"]==int(os.environ["PLANNED"])
+          assert corpus["postings"]==report["successes"]
+          assert raw["observations"]==report["successes"]
+          assert corpus["by_source"]=={os.environ["SOURCE"]:report["successes"]}
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Prepare artifact
+        if: always()
+        run: |
+          mkdir -p upload
+          cp reports/report.json "upload/$SOURCE-$CHUNK_INDEX.report.json"
+          cp reports/source-manifest.json "upload/$SOURCE-$CHUNK_INDEX.source-manifest.json"
+          cp reports/corpus/corpus.jsonl.gz "upload/$SOURCE-$CHUNK_INDEX.corpus.jsonl.gz"
+          cp reports/corpus/manifest.json "upload/$SOURCE-$CHUNK_INDEX.corpus-manifest.json"
+          cp reports/raw/raw-observations.jsonl.gz "upload/$SOURCE-$CHUNK_INDEX.raw-observations.jsonl.gz"
+          cp reports/raw/raw-manifest.json "upload/$SOURCE-$CHUNK_INDEX.raw-manifest.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scale-02-${{ matrix.source }}-${{ matrix.chunk_index }}
+          path: upload/*
