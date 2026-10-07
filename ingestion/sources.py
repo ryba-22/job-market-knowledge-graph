@@ -50,6 +50,234 @@ class SourceAdapter(ABC):
         return list(out.values())[:limit]
 
 
+
+NFJ_SEARCH_URL = "https://nofluffjobs.com/api/search/posting"
+ROCKET_LISTING_BASE = "https://rocketjobs.pl/oferty-pracy/wszystkie-lokalizacje"
+BULLDOG_LISTING_URL = "https://bulldogjob.com/companies/jobs"
+BULLDOG_ID = re.compile(r"/companies/jobs/(\d+)-")
+
+
+class NoFluffJobsAdapter(SourceAdapter):
+    code = "nofluffjobs"
+
+    def listing_urls(self):
+        return ()
+
+    def parse_listing(self, html: str, base_url: str) -> list[PostingRef]:
+        data = json.loads(html)
+        found = {}
+        for item in data.get("postings", []):
+            slug = norm_text(item.get("url") or item.get("id")).casefold()
+            if not slug:
+                continue
+            url = f"https://nofluffjobs.com/pl/job/{slug}"
+            found[slug] = PostingRef(self.code, url, slug)
+        return list(found.values())
+
+    def parse_detail(self, html: str, url: str) -> ParsedPosting:
+        data = json.loads(html)
+        sid = norm_text(data.get("id")).casefold()
+        if not sid:
+            raise ValueError("PARSER_DRIFT: NFJ id missing")
+        title = norm_text(data.get("title"))
+        if not title:
+            raise ValueError("PARSER_DRIFT: NFJ title missing")
+        company_obj = data.get("company") or {}
+        company = norm_text(company_obj.get("name") or data.get("name")) or None
+        specs = data.get("specs") or {}
+        basics = data.get("basics") or {}
+        requirements = data.get("requirements") or {}
+        stable = {
+            "title": title,
+            "company": {
+                "name": company,
+                "url": company_obj.get("url"),
+            },
+            "basics": basics,
+            "requirements": requirements,
+            "dailyTasks": (specs.get("dailyTasks") or []),
+            "location": data.get("location") or {},
+            "salary": data.get("salary") or {},
+            "apply": {
+                "option": (data.get("apply") or {}).get("option"),
+                "referenceNumber": (data.get("apply") or {}).get("referenceNumber"),
+            },
+        }
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=sid,
+            url=f"https://nofluffjobs.com/pl/job/{sid}",
+            title=title,
+            company_mention=company,
+            body_text=json.dumps(data, ensure_ascii=False, sort_keys=True),
+            source_specific={
+                "category": basics.get("category"),
+                "seniority": basics.get("seniority"),
+                "requirements": requirements,
+                "daily_tasks": specs.get("dailyTasks") or [],
+                "observation_provenance": "DIRECT_PUBLIC_API",
+            },
+            revision_projection=stable,
+        )
+
+
+class RocketJobsAdapter(SourceAdapter):
+    code = "rocketjobs"
+
+    def listing_urls(self):
+        yield ROCKET_LISTING_BASE
+        for page in range(2, 21):
+            yield f"{ROCKET_LISTING_BASE}?strona={page}"
+
+    def parse_listing(self, html: str, base_url: str) -> list[PostingRef]:
+        soup = BeautifulSoup(html, "html.parser")
+        found = {}
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if "/oferta-pracy/" not in href:
+                continue
+            url = canonical_url(urljoin(base_url, href))
+            sid = url.rstrip("/").split("/oferta-pracy/")[-1]
+            if sid:
+                found[sid] = PostingRef(self.code, url, sid)
+        return list(found.values())
+
+    def parse_detail(self, html: str, url: str) -> ParsedPosting:
+        soup = BeautifulSoup(html, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        if not structured:
+            raise ValueError("PARSER_DRIFT: Rocket JobPosting JSON-LD missing")
+        sid = canonical_url(url).rstrip("/").split("/oferta-pracy/")[-1]
+        title = norm_text(structured.get("title"))
+        org = structured.get("hiringOrganization") or {}
+        company = norm_text(org.get("name")) or None
+        if not title or not sid:
+            raise ValueError("PARSER_DRIFT: Rocket identity/title missing")
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=sid,
+            url=canonical_url(url),
+            title=title,
+            company_mention=company,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "jobposting_json_ld": structured,
+                "observation_provenance": "DIRECT_SSR",
+            },
+            revision_projection={"jobposting_json_ld": structured},
+        )
+
+
+class BulldogJobAdapter(SourceAdapter):
+    code = "bulldogjob"
+
+    def listing_urls(self):
+        yield BULLDOG_LISTING_URL
+
+    def parse_listing(self, html: str, base_url: str) -> list[PostingRef]:
+        soup = BeautifulSoup(html, "html.parser")
+        found = {}
+        for a in soup.find_all("a", href=True):
+            url = canonical_url(urljoin(base_url, a["href"]))
+            match = BULLDOG_ID.search(url)
+            if not match:
+                continue
+            sid = match.group(1)
+            found[sid] = PostingRef(self.code, url, sid)
+        return list(found.values())
+
+    def parse_detail(self, html: str, url: str) -> ParsedPosting:
+        soup = BeautifulSoup(html, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        match = BULLDOG_ID.search(canonical_url(url))
+        if not structured or not match:
+            raise ValueError("PARSER_DRIFT: Bulldog identity/JSON-LD missing")
+        title = norm_text(structured.get("title"))
+        org = structured.get("hiringOrganization") or {}
+        company = norm_text(org.get("name")) or None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Bulldog title missing")
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=match.group(1),
+            url=canonical_url(url),
+            title=title,
+            company_mention=company,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "jobposting_json_ld": structured,
+                "observation_provenance": "DIRECT_SSR",
+            },
+            revision_projection={"jobposting_json_ld": structured},
+        )
+
+
+class PracujMirrorAdapter(SourceAdapter):
+    code = "pracuj"
+
+    def listing_urls(self):
+        return ()
+
+    def parse_listing(self, html: str, base_url: str) -> list[PostingRef]:
+        data = json.loads(html)
+        found = {}
+        for item in data.get("data", []):
+            if item.get("offer_source") != "pracuj.pl":
+                continue
+            url = canonical_url(item.get("offer_href") or "")
+            match = re.search(r",oferta,(\d+)", url)
+            if not match:
+                continue
+            sid = match.group(1)
+            found[sid] = PostingRef(self.code, url, sid)
+        return list(found.values())
+
+    def parse_detail(self, html: str, url: str) -> ParsedPosting:
+        item = json.loads(html)
+        if item.get("offer_source") != "pracuj.pl":
+            raise ValueError("PARSER_DRIFT: Pracuj mirror upstream source mismatch")
+        source_url = canonical_url(item.get("offer_href") or url)
+        match = re.search(r",oferta,(\d+)", source_url)
+        if not match:
+            raise ValueError("PARSER_DRIFT: Pracuj upstream offer id missing")
+        company_obj = item.get("company") or {}
+        title = norm_text(item.get("offer_title"))
+        company = norm_text(company_obj.get("company_name")) or None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Pracuj mirror title missing")
+        stable = {
+            "title": title,
+            "company": company,
+            "city": item.get("offer_city"),
+            "remote": item.get("offer_remote_available"),
+            "category": item.get("offer_category"),
+            "technologies": sorted(item.get("offer_technologies") or []),
+            "salary": {
+                "interval": item.get("offer_salary_interval"),
+                "min": item.get("offer_salary_min"),
+                "max": item.get("offer_salary_max"),
+                "currency": item.get("offer_salary_currency"),
+            },
+            "published_at": item.get("offer_published_at"),
+        }
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=match.group(1),
+            url=source_url,
+            title=title,
+            company_mention=company,
+            body_text=json.dumps(item, ensure_ascii=False, sort_keys=True),
+            source_specific={
+                "upstream_source": "pracuj.pl",
+                "mirror": "isitfair.pl",
+                "mirror_offer_uuid": item.get("offer_uuid"),
+                "technologies": item.get("offer_technologies") or [],
+                "observation_provenance": "SECONDARY_PUBLIC_INDEX",
+            },
+            revision_projection=stable,
+        )
+
+
 class TheProtocolAdapter(SourceAdapter):
     code = "theprotocol"
 
@@ -194,6 +422,10 @@ def _best_company_heading(soup: BeautifulSoup, h1) -> str | None:
 ADAPTERS = {
     "theprotocol": TheProtocolAdapter(),
     "justjoinit": JustJoinItAdapter(),
+    "nofluffjobs": NoFluffJobsAdapter(),
+    "rocketjobs": RocketJobsAdapter(),
+    "bulldogjob": BulldogJobAdapter(),
+    "pracuj": PracujMirrorAdapter(),
 }
 
 
