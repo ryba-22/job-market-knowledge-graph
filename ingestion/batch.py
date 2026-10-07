@@ -29,6 +29,7 @@ def _load_manifest(path: str | None) -> dict:
 def run_theprotocol(store, limit: int, manifest_rows: list[dict] | None = None) -> tuple[dict, list[dict]]:
     stats = Counter()
     errors = []
+    changes = []
     manifest = []
 
     if manifest_rows:
@@ -57,6 +58,12 @@ def run_theprotocol(store, limit: int, manifest_rows: list[dict] | None = None) 
             )
             result = store.ingest(parsed, raw_id)
             stats[result["state"]] += 1
+            if result["state"] == "CHANGED":
+                changes.append({
+                    "source_posting_id": parsed.source_posting_id,
+                    "changed_fields": result.get("changed_fields", []),
+                    "change_preview": result.get("change_preview", {}),
+                })
             manifest.append({
                 "source": "theprotocol",
                 "source_posting_id": parsed.source_posting_id,
@@ -73,6 +80,7 @@ def run_theprotocol(store, limit: int, manifest_rows: list[dict] | None = None) 
         "transport": "official-mcp",
         "discovered": len(pairs),
         "states": dict(stats),
+        "changes": changes[:25],
         "errors": errors[:20],
     }, manifest)
 
@@ -90,6 +98,7 @@ def run_jjit(client, store, limit: int, delay: float, manifest_rows: list[dict] 
 
     stats = Counter()
     errors = []
+    changes = []
     manifest = []
     for ref in refs:
         try:
@@ -106,6 +115,12 @@ def run_jjit(client, store, limit: int, delay: float, manifest_rows: list[dict] 
             parsed = adapter.parse_detail(response.text, str(response.url))
             result = store.ingest(parsed, raw_id)
             stats[result["state"]] += 1
+            if result["state"] == "CHANGED":
+                changes.append({
+                    "source_posting_id": parsed.source_posting_id,
+                    "changed_fields": result.get("changed_fields", []),
+                    "change_preview": result.get("change_preview", {}),
+                })
             manifest.append({
                 "source": "justjoinit",
                 "source_posting_id": parsed.source_posting_id,
@@ -121,6 +136,7 @@ def run_jjit(client, store, limit: int, delay: float, manifest_rows: list[dict] 
         "transport": "ssr-http",
         "discovered": len(refs),
         "states": dict(stats),
+        "changes": changes[:25],
         "errors": errors[:20],
     }, manifest)
 
