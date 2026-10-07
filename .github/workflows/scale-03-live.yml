@@ -1,7 +1,8 @@
 name: SCALE-03 additional sources crawl-all
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [scale-03-retry-20261007]
 
 jobs:
   prepare:
@@ -15,8 +16,8 @@ jobs:
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json
           from pathlib import Path
-          p=json.loads(Path('data/inventories/scale-03/chunks.json').read_text())
-          limits={'solidjobs':4,'teamquest':1}
+          p=json.loads(Path('data/inventories/scale-03-retry/chunks.json').read_text())
+          limits={'solidjobs':4}
           rows=[]
           for c in p['chunks']:
               rows.append({
@@ -72,7 +73,7 @@ jobs:
       - name: Process exact frozen chunk
         run: >-
           python -m ingestion.process_inventory_chunk
-          --plan data/inventories/scale-03/chunks.json
+          --plan data/inventories/scale-03-retry/chunks.json
           --source "$SOURCE"
           --chunk-index "$CHUNK_INDEX"
           --delay "$DELAY"
