@@ -1,0 +1,99 @@
+name: CRAWL-03 production boundary
+
+on:
+  push:
+    branches: [crawl-03-production-boundary]
+  workflow_dispatch:
+
+jobs:
+  production-boundary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Unit and contract tests
+        run: pytest -q
+
+      - name: Apply migrations
+        run: python -m ingestion.migrate
+
+      - name: Prove migrations idempotent
+        run: |
+          test -z "$(python -m ingestion.migrate)"
+
+      - name: First real batch
+        run: >-
+          python -m ingestion.batch
+          --run-id crawl03-ci-first
+          --trigger-kind ci
+          --source both
+          --limit-per-source 50
+          --delay 0.15
+          --manifest-out reports/crawl-03-manifest.json
+          --report reports/crawl-03-first.json
+
+      - name: Replay same run identity
+        run: >-
+          python -m ingestion.batch
+          --run-id crawl03-ci-first
+          --trigger-kind ci-replay
+          --source both
+          --limit-per-source 50
+          --delay 0.15
+          --manifest-in reports/crawl-03-manifest.json
+          --report reports/crawl-03-replay.json
+
+      - name: Recrawl as new observation run
+        run: >-
+          python -m ingestion.batch
+          --run-id crawl03-ci-second
+          --trigger-kind ci-recrawl
+          --source both
+          --limit-per-source 50
+          --delay 0.15
+          --manifest-in reports/crawl-03-manifest.json
+          --report reports/crawl-03-second.json
+
+      - name: Verify production boundary
+        run: >-
+          python -m ingestion.verify_production
+          --expected-per-source 50
+          --report reports/crawl-03-verification.json
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-03-evidence
+          path: |
+            reports/crawl-03-manifest.json
+            reports/crawl-03-first.json
+            reports/crawl-03-replay.json
+            reports/crawl-03-second.json
+            reports/crawl-03-verification.json
