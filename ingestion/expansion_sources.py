@@ -19,28 +19,50 @@ class NoFluffJobsSource:
     code = "nofluffjobs"
 
     def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
-        response = client.post(
-            NFJ_SEARCH_URL,
-            params={"salaryCurrency": "original", "salaryPeriod": "original", "region": "pl"},
-            json={"criteriaSearch": {}},
-            headers={"Accept": "application/json"},
-        )
-        response.raise_for_status()
         refs = []
-        seen = set()
-        for row in response.json().get("postings", []):
-            slug = row.get("url") or row.get("id")
-            if not slug or slug in seen:
-                continue
-            seen.add(slug)
-            refs.append(PostingRef(self.code, f"https://nofluffjobs.com/pl/job/{slug}", slug))
-            if len(refs) >= limit:
+        seen_references = set()
+        page = 1
+        while len(refs) < limit:
+            response = client.post(
+                NFJ_SEARCH_URL,
+                params={
+                    "salaryCurrency": "original",
+                    "salaryPeriod": "original",
+                    "region": "pl",
+                    "page": page,
+                },
+                json={"criteriaSearch": {}},
+                headers={"Accept": "application/json"},
+            )
+            response.raise_for_status()
+            rows = response.json().get("postings", [])
+            if not rows:
                 break
+            before = len(refs)
+            for row in rows:
+                reference = row.get("reference")
+                slug = row.get("url") or row.get("id")
+                if not reference or not slug or reference in seen_references:
+                    continue
+                seen_references.add(reference)
+                refs.append(
+                    PostingRef(
+                        self.code,
+                        f"https://nofluffjobs.com/pl/job/{slug}",
+                        str(reference),
+                    )
+                )
+                if len(refs) >= limit:
+                    break
+            if len(refs) == before:
+                break
+            page += 1
         return refs
 
     def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        slug = ref.url.rstrip("/").split("/")[-1]
         response = client.get(
-            NFJ_DETAIL_URL.format(slug=ref.source_posting_id),
+            NFJ_DETAIL_URL.format(slug=slug),
             headers={"Accept": "application/json"},
         )
         response.raise_for_status()
@@ -58,13 +80,14 @@ class NoFluffJobsSource:
         revision_projection = {k: data[k] for k in stable_keys if k in data}
         return ParsedPosting(
             source=self.code,
-            source_posting_id=str(slug),
+            source_posting_id=ref.source_posting_id,
             url=f"https://nofluffjobs.com/pl/job/{slug}",
             title=norm_text(data.get("title")),
             company_mention=norm_text(company) or None,
             body_text=raw,
             source_specific={
                 "reference": data.get("reference"),
+                "canonical_posting_slug": slug,
                 "status": data.get("status"),
                 "version": data.get("version"),
                 "company_url": data.get("companyUrl"),
