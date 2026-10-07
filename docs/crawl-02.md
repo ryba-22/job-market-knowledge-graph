@@ -25,10 +25,10 @@ The crawler does **not** write directly into `data/jobs/`.
 ## Sources
 
 First production slice:
-- The Protocol — SSR listing/detail
+- The Protocol — official read-only MCP published by GrupaPracuj/The Protocol
 - Just Join IT — SSR listing/detail
 
-Browser automation and undocumented JJIT APIs are not happy-path dependencies.
+The Protocol HTML listing/detail transport was falsified in GitHub Actions by Cloudflare 403/challenge behavior. The production slice therefore uses the producer-owned MCP contract rather than bypassing the challenge. Browser automation and undocumented JJIT APIs are not happy-path dependencies.
 
 ## Batch contract
 
@@ -70,3 +70,27 @@ It uses a disposable PostgreSQL service and uploads:
 - `reports/crawl-02-verification.json`
 
 The workflow fails if either source yields fewer than 50 stored JobPostings or if the recrawl does not prove idempotency.
+
+
+## Verified checkpoint — 2026-10-07
+
+GitHub Actions run `37595109067` completed successfully on branch `crawl-02-real-batch`.
+
+First pass:
+- The Protocol: 50 discovered / 50 OBSERVED / 0 errors
+- Just Join IT: 50 discovered / 50 OBSERVED / 0 errors
+- PostgreSQL: 100 JobPostings, 100 revisions, 100 OrganizationMentions, 100 OrganizationCandidates
+
+Exact-identity recrawl:
+- The Protocol: 50 UNCHANGED
+- Just Join IT: 50 UNCHANGED
+- total: 200 RawObservations, 100 JobPostings, 100 revisions
+- verification: PASS
+- destructive deduplication: false
+
+Important falsifications discovered while reaching PASS:
+1. The Protocol plain HTTP/SSR is not a reliable automated transport from GitHub Actions; official MCP is.
+2. Re-running discovery is not an idempotency test because the first page is a moving window. Recrawl must pin source identities from the first pass.
+3. Full rendered JJIT page text is not a valid revision fingerprint because presentation chrome is volatile. Revision detection now hashes stable JobPosting JSON-LD / stable semantic sections.
+
+`match_candidates = 0` in this random 50+50 sample is valid; CRAWL-02 proves ingestion and resolution inputs, not that every batch must contain a cross-source match.
