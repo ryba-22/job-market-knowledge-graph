@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import re
 import xml.etree.ElementTree as ET
+from urllib.parse import urljoin
 
 import httpx
 from bs4 import BeautifulSoup
@@ -181,7 +183,7 @@ class BulldogJobSource:
             if marker not in url:
                 continue
             tail = url.split(marker, 1)[1].strip("/")
-            match = __import__("re").match(r"(\d+)-", tail)
+            match = re.match(r"(\d+)-", tail)
             if not match:
                 continue
             source_id = match.group(1)
