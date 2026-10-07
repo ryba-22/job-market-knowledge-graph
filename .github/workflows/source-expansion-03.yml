@@ -1,0 +1,24 @@
+name: SOURCE-EXPANSION-03 frozen CORPUS-05
+
+on:
+  push:
+    branches: [source-expansion-03-pracuj]
+  pull_request:
+    paths:
+      - "data/corpora/source-expansion-03-pracuj/**"
+      - "data/corpora/corpus-05/**"
+      - "tests/test_corpus_05_snapshot.py"
+      - ".github/workflows/source-expansion-03.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify frozen CORPUS-05
+        run: python -m unittest tests.test_corpus_05_snapshot -v

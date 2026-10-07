@@ -2,8 +2,6 @@ name: SOURCE-EXPANSION-03 live Pracuj secondary
 
 on:
   workflow_dispatch:
-  push:
-    branches: [source-expansion-03-pracuj]
 
 jobs:
   expand:

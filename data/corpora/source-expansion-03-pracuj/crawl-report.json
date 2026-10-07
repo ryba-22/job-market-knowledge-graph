@@ -1,0 +1,36 @@
+{
+  "run_id": "source-expansion-03-pracuj75",
+  "sources": [
+    {
+      "source": "pracuj",
+      "transport": "public-mirror-isitfair-v1",
+      "direct_source_access": false,
+      "upstream_source": "pracuj.pl",
+      "mirror": "isitfair.pl public search",
+      "discovered": 100,
+      "successes": 75,
+      "states": {
+        "OBSERVED": 75
+      },
+      "errors": []
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 75,
+    "revisions": 75,
+    "raw_observations": 75,
+    "organization_mentions": 75,
+    "organization_candidates": 75,
+    "match_candidates": 0,
+    "ingestion_runs": 1,
+    "ingestion_attempts": 75,
+    "ingestion_items": 75,
+    "by_source": {
+      "pracuj": 75
+    },
+    "lifecycle": {
+      "OBSERVED": 75
+    }
+  }
+}
