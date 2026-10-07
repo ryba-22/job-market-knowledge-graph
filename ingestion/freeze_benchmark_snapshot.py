@@ -49,13 +49,14 @@ def freeze(dsn: str, out_dir: Path) -> dict:
                 """
                 select
                     p.id,p.source_code,p.source_posting_id,p.canonical_source_url,
-                    r.id,r.title_source,r.company_mention_source,
+                    r.id,r.title_source,om.mention_text,
                     r.source_projection_json,r.normalized_projection_json,
                     r.normalized_content_hash,
                     ro.id,ro.content_type,ro.payload_sha256,ro.payload_text,
                     ro.parser_version,ro.transport_version
                 from job_posting p
                 join job_posting_revision r on r.id=p.current_revision_id
+                left join organization_mention om on om.job_posting_revision_id=r.id
                 join raw_observation ro on ro.id=r.raw_observation_id
                 where p.id=%s
                 """,
