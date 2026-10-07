@@ -80,8 +80,27 @@ async def fetch_batch(limit: int = 50) -> list[tuple[dict[str, Any], dict[str, A
             return out
 
 
+async def fetch_groups(group_ids: list[str]) -> list[dict[str, Any]]:
+    async with streamablehttp_client(MCP_URL) as streams:
+        read_stream, write_stream = streams[0], streams[1]
+        async with ClientSession(read_stream, write_stream) as session:
+            await session.initialize()
+            out = []
+            for gid in group_ids:
+                result = await session.call_tool(
+                    "get_job_offer_details",
+                    arguments={"groupId": gid},
+                )
+                out.append(_payload(result))
+            return out
+
+
 def fetch_batch_sync(limit: int = 50):
     return asyncio.run(fetch_batch(limit))
+
+
+def fetch_groups_sync(group_ids: list[str]):
+    return asyncio.run(fetch_groups(group_ids))
 
 
 def parse(search_row: dict[str, Any], details: dict[str, Any]) -> ParsedPosting:
