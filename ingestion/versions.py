@@ -9,4 +9,5 @@ TRANSPORT_VERSIONS = {
     "nofluffjobs": "public-search-detail-api-v1",
     "rocketjobs": "public-sitemap-ssr-v1",
     "bulldogjob": "public-listing-ssr-v1",
+    "pracuj": "public-mirror-isitfair-v1",
 }

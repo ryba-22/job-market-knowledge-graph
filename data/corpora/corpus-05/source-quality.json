@@ -1,0 +1,31 @@
+{
+  "corpus_version": "CORPUS-05",
+  "sources": {
+    "justjoinit": {
+      "count": 150,
+      "provenance_class": "DIRECT"
+    },
+    "theprotocol": {
+      "count": 50,
+      "provenance_class": "DIRECT"
+    },
+    "nofluffjobs": {
+      "count": 100,
+      "provenance_class": "DIRECT"
+    },
+    "rocketjobs": {
+      "count": 100,
+      "provenance_class": "DIRECT"
+    },
+    "bulldogjob": {
+      "count": 93,
+      "provenance_class": "DIRECT"
+    },
+    "pracuj": {
+      "count": 75,
+      "provenance_class": "SECONDARY_PUBLIC_INDEX",
+      "direct_source_access": false,
+      "transport": "public-mirror-isitfair-v1"
+    }
+  }
+}

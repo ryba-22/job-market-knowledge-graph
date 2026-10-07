@@ -101,10 +101,89 @@ def run_source(client, store, run_id: str, source: str, limit: int, delay: float
     }, manifest
 
 
+def run_pracuj_secondary(client, store, run_id: str, limit: int):
+    source = "pracuj"
+    adapter = SOURCES[source]
+    rows = adapter.discover_records(client, max(limit + 25, 100))
+    stats = Counter()
+    errors = []
+    manifest = []
+    successes = 0
+
+    for ref, item, requested_url in rows:
+        if successes >= limit:
+            break
+        if not store.claim_item(run_id, source, ref.source_posting_id):
+            stats["REPLAY_SKIPPED"] += 1
+            continue
+        try:
+            raw = json.dumps(item, ensure_ascii=False, sort_keys=True)
+            parsed = adapter.parse_detail(raw, ref)
+            raw_id = store.record_fetch(
+                source=source,
+                url=requested_url,
+                final_url=requested_url,
+                status=200,
+                body=raw,
+                content_type="application/json; transport=isitfair-public-search",
+                run_id=run_id,
+                source_posting_id=parsed.source_posting_id,
+                parser_version=PARSER_BUNDLE_VERSION,
+                transport_version=TRANSPORT_VERSIONS[source],
+            )
+            result = store.ingest(parsed, raw_id)
+            store.record_attempt(
+                run_id=run_id,
+                source=source,
+                source_posting_id=parsed.source_posting_id,
+                requested_url=requested_url,
+                attempt_no=1,
+                outcome="SUCCESS",
+                http_status=200,
+            )
+            store.complete_item(
+                run_id,
+                source,
+                parsed.source_posting_id,
+                raw_observation_id=raw_id,
+                job_posting_id=result["posting_id"],
+            )
+            stats[result["state"]] += 1
+            successes += 1
+            manifest.append({
+                "source": source,
+                "source_posting_id": parsed.source_posting_id,
+                "url": parsed.url,
+                "mirror": "https://isitfair.pl",
+                "mirror_offer_uuid": item.get("offer_uuid"),
+                "observation_provenance": "SECONDARY_PUBLIC_INDEX",
+            })
+        except Exception as exc:
+            stats["ERROR"] += 1
+            errors.append({
+                "source_posting_id": ref.source_posting_id,
+                "url": ref.url,
+                "error": f"{type(exc).__name__}: {exc}",
+            })
+            store.fail_item(run_id, source, ref.source_posting_id, str(exc))
+
+    return {
+        "source": source,
+        "transport": TRANSPORT_VERSIONS[source],
+        "direct_source_access": False,
+        "upstream_source": "pracuj.pl",
+        "mirror": "isitfair.pl public search",
+        "discovered": len(rows),
+        "successes": successes,
+        "states": dict(stats),
+        "errors": errors[:25],
+    }, manifest
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
-    p.add_argument("--source", choices=["nofluffjobs", "rocketjobs", "bulldogjob", "both"], default="both")
+    p.add_argument("--source", choices=["nofluffjobs", "rocketjobs", "bulldogjob", "pracuj", "both"], default="both")
     p.add_argument("--limit-per-source", type=int, default=100)
     p.add_argument("--delay", type=float, default=0.1)
     p.add_argument("--run-id")
@@ -128,7 +207,14 @@ def main():
         headers={"User-Agent": USER_AGENT, "Accept-Language": "pl,en;q=0.8"},
     ) as client:
         for source in sources:
-            source_report, rows = run_source(client, store, run_id, source, args.limit_per_source, args.delay)
+            if source == "pracuj":
+                source_report, rows = run_pracuj_secondary(
+                    client, store, run_id, args.limit_per_source
+                )
+            else:
+                source_report, rows = run_source(
+                    client, store, run_id, source, args.limit_per_source, args.delay
+                )
             report["sources"].append(source_report)
             manifest["sources"][source] = rows
 

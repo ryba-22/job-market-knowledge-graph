@@ -1,0 +1,13 @@
+{
+  "format": "market-corpus-v1",
+  "postings": 75,
+  "by_source": {
+    "pracuj": 75
+  },
+  "uncompressed_bytes": 104001,
+  "compressed_bytes": 18370,
+  "uncompressed_sha256": "aadb72df54990381aaa72487f61d2257c55799276ecac52956b564413b9a02ed",
+  "compressed_sha256": "c0570905b35a3bf1f44dbdb1a396ad2c1bd40e1c03378cd68a4fccc44468607d",
+  "contains_raw_payload": false,
+  "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+}

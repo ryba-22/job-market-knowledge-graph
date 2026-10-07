@@ -1,0 +1,606 @@
+{
+  "sources": {
+    "pracuj": [
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138472",
+        "url": "https://www.pracuj.pl/praca/developer-ai-enabled-delivery-krakow,oferta,1005138472",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "fa2127fe-cc3d-4b3f-9b09-ad8b2b0575ae",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005131878",
+        "url": "https://www.pracuj.pl/praca/developer-developerka-webcon-bps-brzeg-dolny,oferta,1005131878",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "90b357f5-dda3-48cc-b2cc-24e5a3995097",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133748",
+        "url": "https://www.pracuj.pl/praca/developer-system-analyst-branza-ubezpieczeniowa-warszawa,oferta,1005133748",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e7238dbe-2b73-4e80-b383-15bc6131cb5e",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129719",
+        "url": "https://www.pracuj.pl/praca/developer-c%23-lub-asp-net-programista-ka-c%23-lub-asp-net-jelenia-gora-wolnosci-16,oferta,1005129719",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "ad2b7bbf-f98b-4a2e-8806-bff40b3686b8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005078091",
+        "url": "https://www.pracuj.pl/praca/developer-hurtowni-danych-warszawa,oferta,1005078091",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "fd54eb79-5871-4a0d-bc32-f7b93acb82da",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005120619",
+        "url": "https://www.pracuj.pl/praca/developer-oracle-apex-low-code-development-gdansk-aleja-grunwaldzka-472,oferta,1005120619",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "97c625a1-9f89-45a6-90a7-9b2b93778c53",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129271",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-ai-developer-tools-warszawa-emilii-plater-53,oferta,1005129271",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "41e9c6d2-e5d2-490b-9768-58c63207d4b6",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128640",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-consensus-warszawa-emilii-plater-53,oferta,1005128640",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9d9e2284-bdf9-45df-a0ca-354b1bc71ad3",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099023",
+        "url": "https://www.pracuj.pl/praca/engineering-lead-architect-google-compute-engine-sole-tenancy-warszawa-emilii-plater-53,oferta,1005099023",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "30cb5b91-de28-400f-9593-130ed631e7bd",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005134365",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-database-wroclaw,oferta,1005134365",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7cfb46fd-dce4-4fd3-92ab-525eaa17f1e1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133719",
+        "url": "https://www.pracuj.pl/praca/engineering-portfolio-analyst-lodz-aleksandrowska-67,oferta,1005133719",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7445e88d-486e-4827-be8e-31d5d3d17686",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099545",
+        "url": "https://www.pracuj.pl/praca/engineering-portfolio-analyst-lodz-aleksandrowska-67,oferta,1005099545",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "a4372023-9523-45ee-8940-97e1efc934ab",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005112936",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-gdansk,oferta,1005112936",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e829494c-6ba9-4540-921d-2e8f6fd9f85a",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005106352",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-warszawa-zelazna-51-53,oferta,1005106352",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "76f3e3e4-1d15-4a52-9514-af279f4e3bf0",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005078534",
+        "url": "https://www.pracuj.pl/praca/programista-lowcode-mendix-krakow,oferta,1005078534",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "65c9d7a1-2510-4aca-91d3-19f3957637f7",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005088410",
+        "url": "https://www.pracuj.pl/praca/programista-programistka-pl-sql-katowice-aleja-murckowska-14c,oferta,1005088410",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "14a0ddcc-92e1-4b5e-ba98-e39cc3f7a925",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099824",
+        "url": "https://www.pracuj.pl/praca/programista-frontend-react-m-k-warszawa-szachowa-1,oferta,1005099824",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "5e72839c-9818-4845-a9a4-fd2683feacdc",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135945",
+        "url": "https://www.pracuj.pl/praca/programista-oracle-apex-k-m-wroclaw-plac-teatralny-1,oferta,1005135945",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "243e2783-890d-4e87-86f2-6a36868e766d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138359",
+        "url": "https://www.pracuj.pl/praca/programista-fullstack-developer-krakow-igolomska-1,oferta,1005138359",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "04d2343b-5509-4e14-82d9-576ffa35cf49",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135347",
+        "url": "https://www.pracuj.pl/praca/programista-programistka-python-warszawa,oferta,1005135347",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "121b80db-52f6-4e40-9434-7be13bf3e635",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129289",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-health-and-home-warszawa-emilii-plater-53,oferta,1005129289",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "15f88360-db47-41a1-8e5b-69bdb013c454",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129318",
+        "url": "https://www.pracuj.pl/praca/senior-software-engineer-agent-platform-workbench-warszawa-emilii-plater-53,oferta,1005129318",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f4a5c572-8885-4aec-afc8-21836a94daac",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129431",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-context-intelligence-knowledge-catalog-warszawa-emilii-plater-53,oferta,1005129431",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "c2d3d486-4a1f-4baf-b4b2-2069970753af",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099152",
+        "url": "https://www.pracuj.pl/praca/senior-full-stack-engineer-cloud-composer-and-dataform-warszawa-emilii-plater-53,oferta,1005099152",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "1a13e6a0-8b69-483d-8b38-6c68c6197702",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099832",
+        "url": "https://www.pracuj.pl/praca/starszy-programista-frontend-react-m-k-warszawa-szachowa-1,oferta,1005099832",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "51c04ec4-b4a5-468d-8a77-c09738a164fb",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005117558",
+        "url": "https://www.pracuj.pl/praca/java-software-developer-katowice-aleja-murckowska-14c,oferta,1005117558",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "22fd4070-70f8-408c-a4b0-f9b72c64d347",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005114560",
+        "url": "https://www.pracuj.pl/praca/ai-tech-lead-kierownik-projektow-ai-ostrow-wielkopolski,oferta,1005114560",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "5e6a105d-d287-4d50-baab-3c6d39c91df8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005101329",
+        "url": "https://www.pracuj.pl/praca/junior-integration-engineer-lodz-piotrkowska-280a,oferta,1005101329",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "97448874-a090-4679-8d2c-8d81eb2d7950",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099015",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-full-stack-warszawa-emilii-plater-53,oferta,1005099015",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9c81a799-33d2-4a89-b022-036326cc41de",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099064",
+        "url": "https://www.pracuj.pl/praca/software-engineering-manager-gce-engineering-productivity-warszawa-emilii-plater-53,oferta,1005099064",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "4bb9f3bf-1fe8-4b04-a9c1-899d3f3ca428",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099209",
+        "url": "https://www.pracuj.pl/praca/product-deployment-engineer-gtech-ads-gcs-warszawa-emilii-plater-53,oferta,1005099209",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "dd8f3d5b-829f-4e0d-9ad0-dd16e4f1ec53",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099281",
+        "url": "https://www.pracuj.pl/praca/product-deployment-engineer-gtech-warszawa-emilii-plater-53,oferta,1005099281",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9ef004c5-55db-428b-a2cb-b88e7cad3815",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128839",
+        "url": "https://www.pracuj.pl/praca/senior-forward-deployed-engineer-genai-google-cloud-warszawa-emilii-plater-53,oferta,1005128839",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "23d93960-8a93-441b-9a6b-8df9a0a697cb",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129158",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-embedded-systems-warszawa-emilii-plater-53,oferta,1005129158",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e8fc1cc0-ecdb-4920-abb9-c4cc541e90b1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129249",
+        "url": "https://www.pracuj.pl/praca/conversational-ai-sce-google-cloud-warszawa-emilii-plater-53,oferta,1005129249",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "508652cd-3cf1-4e57-a6b4-606f1d95069a",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129256",
+        "url": "https://www.pracuj.pl/praca/conversational-ai-sce-google-cloud-wroclaw,oferta,1005129256",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "8ea0d116-0295-478f-9521-2dd0cf321729",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129516",
+        "url": "https://www.pracuj.pl/praca/data-science-phd-intern-2027-warszawa-emilii-plater-53,oferta,1005129516",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "815e394b-b10f-4eea-95f6-14a010eea488",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129531",
+        "url": "https://www.pracuj.pl/praca/software-engineer-gce-control-plane-early-careers-phd-warszawa-emilii-plater-53,oferta,1005129531",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "98489391-877a-4a06-a5e4-64b8e6412136",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129537",
+        "url": "https://www.pracuj.pl/praca/software-engineer-performance-reliability-observability-phd-early-career-warszawa-emilii-plater-53,oferta,1005129537",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "be1734c1-ea90-4d31-98ea-e2fff6b879d1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099603",
+        "url": "https://www.pracuj.pl/praca/senior-technical-solutions-engineer-networking-warszawa-emilii-plater-53,oferta,1005099603",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "a284b49c-19a3-49ce-afc2-c969cafeca84",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005107678",
+        "url": "https://www.pracuj.pl/praca/specjalista-it-administrator-it-warszawa-polna-18-20,oferta,1005107678",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9b705a65-5867-48e1-a0e6-2a3468e1244c",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136318",
+        "url": "https://www.pracuj.pl/praca/tester-ferryt-warszawa,oferta,1005136318",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "1c1b470d-d57a-4ce9-b54e-a3a0d7bab091",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137277",
+        "url": "https://www.pracuj.pl/praca/tester-automatyzujacy-warszawa-marszalkowska-104-122,oferta,1005137277",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f1674afd-d5e7-4382-a57c-c7e2fa72bfc8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005131917",
+        "url": "https://www.pracuj.pl/praca/tester-manualny-k-m-warszawa-aleje-jerozolimskie-212a,oferta,1005131917",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e9489dbd-9da5-4ebd-9517-57e831b57281",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005132819",
+        "url": "https://www.pracuj.pl/praca/tester-testerka-aplikacji-warszawa,oferta,1005132819",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "35d918de-76cb-4808-8923-b8d5820f8aea",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133885",
+        "url": "https://www.pracuj.pl/praca/tester-manualny-k-m-warszawa,oferta,1005133885",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "dac0ba0c-7366-449c-bd45-d0fc09656e28",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133770",
+        "url": "https://www.pracuj.pl/praca/tester-systemowy-analityk-k-m-wroclaw,oferta,1005133770",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "1a088df8-7eaa-4bd1-9d7e-1bd2551215e0",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005134230",
+        "url": "https://www.pracuj.pl/praca/tester-manualny-testerka-manualna-warszawa,oferta,1005134230",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "c4d30dac-ef2d-4744-a948-edaf65a8fd57",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135420",
+        "url": "https://www.pracuj.pl/praca/analityk-systemowy-integracje-api-k-m-warszawa,oferta,1005135420",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f4219753-13e3-4e35-be15-8879d04fd5b9",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135880",
+        "url": "https://www.pracuj.pl/praca/analityk-danych-sql-k-m-pabianice,oferta,1005135880",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "632c46ed-fa4e-4717-a699-e20549ba3212",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137645",
+        "url": "https://www.pracuj.pl/praca/analityk-biznesowy-data-bi-k-m-warszawa,oferta,1005137645",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7bf84c14-c117-4fc6-9423-44b1b074496e",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005081953",
+        "url": "https://www.pracuj.pl/praca/administrator-it-t-wroclaw-plac-strzelecki-24,oferta,1005081953",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "37a0e4f1-ffc5-4fbd-9873-936f4d10ec33",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005078817",
+        "url": "https://www.pracuj.pl/praca/administrator-it-warszawa-aleje-jerozolimskie-160,oferta,1005078817",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "07b21e77-1c0c-4ad0-b122-f7d5a2f0951b",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135143",
+        "url": "https://www.pracuj.pl/praca/administrator-it-junior-it-security-specialist-warszawa-pastewna-27a,oferta,1005135143",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "22a19d1b-0289-4aa8-81b2-6db9d64ddd56",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135324",
+        "url": "https://www.pracuj.pl/praca/administrator-administratorka-rozwiazan-chmurowych-warszawa,oferta,1005135324",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "293a58b0-c841-4ea6-b60b-34c672602e85",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138369",
+        "url": "https://www.pracuj.pl/praca/administrator-ka-it-murowana-goslina-polna-21,oferta,1005138369",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "042b2a2a-d1ff-4fe5-9963-e08404ca235c",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136325",
+        "url": "https://www.pracuj.pl/praca/administrator-administratorka-systemow-it-warszawa,oferta,1005136325",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "4100cf0f-7a0d-4d69-a22e-e1e0c9245549",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133221",
+        "url": "https://www.pracuj.pl/praca/administrator-administratorka-systemow-informatycznych-windows-warszawa-szturmowa-2,oferta,1005133221",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e80721ef-8ddf-4cfd-be7b-33684b5ea036",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005132583",
+        "url": "https://www.pracuj.pl/praca/administrator-aplikacji-biznesowych-erp-k-m-wroclaw,oferta,1005132583",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "0554d3cc-2eb4-4b4e-9d10-8039ae3f0506",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005132747",
+        "url": "https://www.pracuj.pl/praca/administrator-it-k-m-wroclaw-aleja-slaska-1,oferta,1005132747",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "011f9462-1e3f-4141-a672-fbf2731dcd71",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005132349",
+        "url": "https://www.pracuj.pl/praca/administrator-aplikacyjno-integracyjny-ncr-authentic-k-m-warszawa,oferta,1005132349",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "07f347ab-3543-4f93-9df9-d8bbd5d10371",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137904",
+        "url": "https://www.pracuj.pl/praca/cloud-platform-engineer-administrator-microsoft-azure-warszawa,oferta,1005137904",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7de0b4d0-52da-4f36-8480-233142f2ca0d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136480",
+        "url": "https://www.pracuj.pl/praca/fullstack-engineer-node-js-%2b-react-warszawa-jana-nowaka-jezioranskiego-53a,oferta,1005136480",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f1d1b9d2-976f-4e80-926a-09561698ef39",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137001",
+        "url": "https://www.pracuj.pl/praca/cloud-ai-engineer-warszawa,oferta,1005137001",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "b59ba830-3e52-4c0f-ab56-afa4b4566337",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133181",
+        "url": "https://www.pracuj.pl/praca/frontend-angular-developer-wroclaw,oferta,1005133181",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "53e952bb-08cf-4fbc-80b7-f727dcc41a6e",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005122175",
+        "url": "https://www.pracuj.pl/praca/frontend-developer-angular-warszawa-aleje-jerozolimskie-93,oferta,1005122175",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "80b0d3dd-931c-45ca-bfea-9619441a5543",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005120184",
+        "url": "https://www.pracuj.pl/praca/frontend-developer-m-f-katowice-zelazna-10,oferta,1005120184",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "6baf38ea-3b4d-4656-b3ce-48191a6ddc9d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005122149",
+        "url": "https://www.pracuj.pl/praca/frontend-developer-m-f-warszawa,oferta,1005122149",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f7c08693-8a86-441d-a05a-69a2b8129b42",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136938",
+        "url": "https://www.pracuj.pl/praca/backend-developer-with-genai-warszawa,oferta,1005136938",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "50bd9c01-602c-4d64-8dfa-72494e2ca5c7",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005123295",
+        "url": "https://www.pracuj.pl/praca/backend-developer-lodz-piotrkowska-270,oferta,1005123295",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7083bb8a-f129-44e5-994a-56895f7a82d8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136260",
+        "url": "https://www.pracuj.pl/praca/fullstack-developer-katowice,oferta,1005136260",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7ae2b7cf-2b0e-4054-91fb-e03fcd6c6af6",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136252",
+        "url": "https://www.pracuj.pl/praca/fullstack-developer-z-java-i-angular-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005136252",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "fca29519-b0d6-4d73-a4b0-c0ba99df5f86",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133612",
+        "url": "https://www.pracuj.pl/praca/ai-platform-engineer-warszawa,oferta,1005133612",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "d905bf10-674c-4743-8333-db5dd3c49199",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128651",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-pixel-performance-warszawa-emilii-plater-53,oferta,1005128651",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9f33b727-97ff-48e0-80c0-0a101712b48f",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128864",
+        "url": "https://www.pracuj.pl/praca/senior-staff-software-engineer-android-automotive-os-krakow-rynek-glowny-12,oferta,1005128864",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "bd6e2f61-fde7-4291-8df3-cfd86822fca9",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      }
+    ]
+  }
+}

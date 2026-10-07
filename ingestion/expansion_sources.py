@@ -17,6 +17,12 @@ NFJ_SEARCH_URL = "https://nofluffjobs.com/api/search/posting"
 NFJ_DETAIL_URL = "https://nofluffjobs.com/api/posting/{slug}"
 ROCKET_SITEMAP_INDEX = "https://rocketjobs.pl/sitemaps/active-jobs.xml"
 BULLDOG_JOBS_SITEMAP = "https://bulldogjob.com/en/jobs.xml.gz"
+ISITFAIR_SEARCH_URL = "https://isitfair.pl/api/v1/offers/search"
+PRACUJ_SEARCH_TERMS = (
+    "developer","engineer","programista","java","python","devops","data","tester",
+    "analityk","administrator","cloud","security","frontend","backend","fullstack",
+    "architect","ai","mlops","scrum","product","software","kubernetes","sql","automation",
+)
 
 
 class NoFluffJobsSource:
@@ -243,8 +249,86 @@ class BulldogJobSource:
         )
 
 
+class PracujSecondarySource:
+    code = "pracuj"
+
+    def discover_records(self, client: httpx.Client, limit: int):
+        found = {}
+        for term in PRACUJ_SEARCH_TERMS:
+            response = client.get(
+                ISITFAIR_SEARCH_URL,
+                params={"search": term, "offer_status": "active"},
+                headers={"Accept": "application/json"},
+            )
+            response.raise_for_status()
+            for item in response.json().get("data", []):
+                if item.get("offer_source") != "pracuj.pl":
+                    continue
+                source_url = canonical_url(item.get("offer_href") or "")
+                match = re.search(r",oferta,(\d+)", source_url)
+                if not match:
+                    continue
+                sid = match.group(1)
+                if sid in found:
+                    continue
+                found[sid] = (
+                    PostingRef(self.code, source_url, sid),
+                    item,
+                    str(response.url),
+                )
+                if len(found) >= limit:
+                    return list(found.values())[:limit]
+        return list(found.values())[:limit]
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        item = json.loads(raw)
+        if item.get("offer_source") != "pracuj.pl":
+            raise ValueError("PARSER_DRIFT: Pracuj mirror upstream source mismatch")
+        source_url = canonical_url(item.get("offer_href") or ref.url)
+        match = re.search(r",oferta,(\d+)", source_url)
+        if not match:
+            raise ValueError("PARSER_DRIFT: Pracuj upstream offer id missing")
+        company_obj = item.get("company") or {}
+        title = norm_text(item.get("offer_title"))
+        company = norm_text(company_obj.get("company_name")) or None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Pracuj mirror title missing")
+        stable = {
+            "title": title,
+            "company": company,
+            "city": item.get("offer_city"),
+            "remote": item.get("offer_remote_available"),
+            "category": item.get("offer_category"),
+            "technologies": sorted(item.get("offer_technologies") or []),
+            "salary": {
+                "interval": item.get("offer_salary_interval"),
+                "min": item.get("offer_salary_min"),
+                "max": item.get("offer_salary_max"),
+                "currency": item.get("offer_salary_currency"),
+            },
+            "published_at": item.get("offer_published_at"),
+        }
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=match.group(1),
+            url=source_url,
+            title=title,
+            company_mention=company,
+            body_text=json.dumps(item, ensure_ascii=False, sort_keys=True),
+            source_specific={
+                "upstream_source": "pracuj.pl",
+                "mirror": "isitfair.pl",
+                "mirror_offer_uuid": item.get("offer_uuid"),
+                "technologies": item.get("offer_technologies") or [],
+                "observation_provenance": "SECONDARY_PUBLIC_INDEX",
+            },
+            revision_projection=stable,
+        )
+
+
 SOURCES = {
     "nofluffjobs": NoFluffJobsSource(),
     "rocketjobs": RocketJobsSource(),
     "bulldogjob": BulldogJobSource(),
+    "pracuj": PracujSecondarySource(),
 }
