@@ -1,0 +1,93 @@
+{
+  "format": "market-corpus-v1",
+  "corpus_version": "CORPUS-09",
+  "postings": 5942,
+  "by_source": {
+    "bulldogjob": 463,
+    "justjoinit": 650,
+    "nofluffjobs": 650,
+    "pracuj": 120,
+    "rocketjobs": 650,
+    "solidjobs": 3235,
+    "teamquest": 124,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 33642712,
+  "compressed_bytes": 6288040,
+  "uncompressed_sha256": "71cbea3372a04d6c6d590a5560599d87682eee263874209fddd14324ff68bd5a",
+  "compressed_sha256": "ec5b2c751b76ba47fb9599b6fecf1590820080906311ea62f5c7fef7d80a4d65",
+  "components": [
+    {
+      "role": "base",
+      "path": "data/corpora/corpus-08-partial/corpus.jsonl.gz",
+      "postings": 3875,
+      "compressed_sha256": "165e63744f1f769b251649126f23c4c40543f65f3bb4f21fc5eb6e85e921fc03"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-0.corpus.jsonl.gz",
+      "postings": 172,
+      "compressed_sha256": "15fed17b76e800d367847e55a6bab7b62c08f8f120745bfd8253e4bbc8afa0dd"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-1.corpus.jsonl.gz",
+      "postings": 194,
+      "compressed_sha256": "57021010b63a6e0048ce23f7be51c386a5554a104d4bb7472de77f20a299f058"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-10.corpus.jsonl.gz",
+      "postings": 115,
+      "compressed_sha256": "1b9ec07b81ae5abe8e14247141cf367feff078c3cf81248f21c92050bd4e9897"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-2.corpus.jsonl.gz",
+      "postings": 199,
+      "compressed_sha256": "c2f9e168c2e6522dfeeddf9cec65434d221e19be19f1231b2f2e89c023f20ed3"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-3.corpus.jsonl.gz",
+      "postings": 185,
+      "compressed_sha256": "de49889e871f3bcbb0721ce8d89d48085e73863cb82c3b749e6b232460a3292c"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-4.corpus.jsonl.gz",
+      "postings": 193,
+      "compressed_sha256": "61989366d935a25cefbabdf04611effb67208194b2811c4403075af661ccb280"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-5.corpus.jsonl.gz",
+      "postings": 167,
+      "compressed_sha256": "40227c60935cec9aa2b115306f44330b5c3537dae6d706d0b99560edf0840978"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-6.corpus.jsonl.gz",
+      "postings": 179,
+      "compressed_sha256": "1397e766debc5d6747bf6a5182ae5f38d285a6a28d0128744a1d91a42c6a2f26"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-7.corpus.jsonl.gz",
+      "postings": 166,
+      "compressed_sha256": "4671d8b63fdd2bd58c5f727335912951c68981914d69c7500208303f555ac0a6"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-8.corpus.jsonl.gz",
+      "postings": 248,
+      "compressed_sha256": "1859f9a7347d16621640e3cbc5410bb28bd39c336f4066b932125be33420e6c4"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus09-slices/solidjobs-9.corpus.jsonl.gz",
+      "postings": 249,
+      "compressed_sha256": "d341e99d9a186f61e41f674eb05c03ca499989c4508e022e311fa150fd096b50"
+    }
+  ]
+}
