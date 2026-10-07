@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import gzip
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -15,7 +16,7 @@ from .sources import _jobposting_json_ld, _stable_sections, canonical_url
 NFJ_SEARCH_URL = "https://nofluffjobs.com/api/search/posting"
 NFJ_DETAIL_URL = "https://nofluffjobs.com/api/posting/{slug}"
 ROCKET_SITEMAP_INDEX = "https://rocketjobs.pl/sitemaps/active-jobs.xml"
-BULLDOG_LISTING_URL = "https://bulldogjob.com/companies/jobs"
+BULLDOG_JOBS_SITEMAP = "https://bulldogjob.com/en/jobs.xml.gz"
 
 
 class NoFluffJobsSource:
@@ -172,13 +173,20 @@ class BulldogJobSource:
     code = "bulldogjob"
 
     def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
-        response = client.get(BULLDOG_LISTING_URL)
+        response = client.get(BULLDOG_JOBS_SITEMAP)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+        data = response.content
+        try:
+            xml = gzip.decompress(data).decode("utf-8")
+        except OSError:
+            xml = response.text
+        root = ET.fromstring(xml)
         refs = []
         seen = set()
-        for a in soup.find_all("a", href=True):
-            url = canonical_url(urljoin(str(response.url), a["href"]))
+        for node in root.iter():
+            if not node.tag.endswith("loc") or not node.text:
+                continue
+            url = canonical_url(node.text.strip())
             marker = "/companies/jobs/"
             if marker not in url:
                 continue
