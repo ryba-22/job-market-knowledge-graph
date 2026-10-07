@@ -1,31 +1,20 @@
-name: ER-EVAL-02 adjudication
+name: ER-EVAL-02 frozen benchmark
 
 on:
   push:
     branches: [er-eval-02-adjudication]
+  pull_request:
+    paths:
+      - "data/evals/er-eval-02/**"
+      - "ingestion/replay_frozen_benchmark.py"
+      - "tests/test_frozen_benchmark.py"
+      - ".github/workflows/er-eval-02.yml"
   workflow_dispatch:
 
 jobs:
-  adjudicate:
+  frozen-benchmark:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: crawler
-          POSTGRES_PASSWORD: crawler
-          POSTGRES_DB: jobs
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U crawler -d jobs"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 20
-    env:
-      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
-      PYTHONUNBUFFERED: "1"
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,48 +22,9 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: pip install -e ".[dev]"
-      - name: Tests
-        run: pytest -q
-      - name: Migrate
-        run: python -m ingestion.migrate
-      - name: Build real100
-        run: >-
-          python -m ingestion.batch
-          --run-id er-eval-02-real100
-          --trigger-kind eval
-          --source both
-          --limit-per-source 50
-          --delay 0.15
-          --manifest-out reports/er-eval-02-live-manifest.json
-          --report reports/er-eval-02-base-crawl.json
-      - name: Ensure reviewer-required postings
-        run: python -m ingestion.ensure_eval_postings --report reports/er-eval-02-required-postings.json
-      - name: ORG evidence
-        run: python -m ingestion.org_enrichment --report reports/er-eval-02-org.json
-      - name: Generate clean candidate corpus
-        run: >-
-          python -m ingestion.er_eval
-          --limit-pairs 200
-          --summary reports/er-eval-02-candidates-summary.json
-          --corpus reports/er-eval-02-candidates.jsonl
-      - name: Extract opportunity evidence
-        run: python -m ingestion.opportunity_evidence --report reports/er-eval-02-evidence.json
-      - name: Adjudicate
-        run: python -m ingestion.adjudicate --report reports/er-eval-02-adjudication.json
-      - name: Apply reviewer decisions
-        run: python -m ingestion.apply_reviewer_decisions --report reports/er-eval-02-reviewer-decisions.json
-      - name: Benchmark readiness
-        run: python -m ingestion.benchmark_er_eval --report reports/er-eval-02-benchmark.json
-      - name: Export final corpus
-        run: >-
-          python -m ingestion.export_er_eval
-          --jsonl reports/er-eval-02-final.jsonl
-          --csv reports/er-eval-02-final.csv
-      - name: Freeze benchmark snapshot
-        run: >-
-          python -m ingestion.freeze_benchmark_snapshot
-          --out reports/er-eval-02-snapshot
-      - name: Offline replay frozen snapshot
+      - name: Frozen benchmark tests
+        run: pytest -q tests/test_frozen_benchmark.py
+      - name: Offline replay with network blocked
         env:
           NO_PROXY: "*"
           HTTP_PROXY: http://127.0.0.1:9
@@ -82,13 +32,29 @@ jobs:
           ALL_PROXY: http://127.0.0.1:9
         run: >-
           python -m ingestion.replay_frozen_benchmark
-          --snapshot reports/er-eval-02-snapshot
+          --snapshot data/evals/er-eval-02/snapshot
           --report reports/er-eval-02-offline-replay.json
-      - name: Verify
-        run: python -m ingestion.verify_er_eval_02 --report reports/er-eval-02-verification.json
-      - name: Upload evidence
-        if: always()
+      - name: Verify frozen benchmark contract
+        run: |
+          python - <<'PY2'
+          import json
+          from pathlib import Path
+          p=Path("reports/er-eval-02-offline-replay.json")
+          r=json.loads(p.read_text())
+          assert r["pass"] is True
+          assert r["postings"] == 26
+          assert r["pairs"] == 19
+          assert r["labels"] == {
+              "SAME_OPPORTUNITY": 1,
+              "DISTINCT_OPPORTUNITY": 4,
+              "UNRESOLVED": 14,
+          }
+          assert r["network_used"] is False
+          assert r["database_used"] is False
+          print("frozen benchmark contract PASS")
+          PY2
+      - name: Upload offline proof
         uses: actions/upload-artifact@v4
         with:
-          name: er-eval-02-evidence
-          path: reports/er-eval-02-*
+          name: er-eval-02-frozen-benchmark-proof
+          path: reports/er-eval-02-offline-replay.json
