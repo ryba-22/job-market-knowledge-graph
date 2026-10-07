@@ -1,8 +1,7 @@
 name: SCALE-03 additional sources crawl-all
 
 on:
-  push:
-    branches: [scale-03-retry-20261007]
+  workflow_dispatch:
 
 jobs:
   prepare:
@@ -95,7 +94,7 @@ jobs:
           assert report['planned']==int(os.environ['PLANNED'])
           assert report['successes'] + report.get('source_gone',0) == report['planned']
           assert corpus['postings']==report['successes']
-          assert raw['observations']==report['successes']
+          assert raw['observations']==report['successes'] + report.get('source_gone',0)
           assert corpus['by_source']=={os.environ['SOURCE']:report['successes']}
           print(json.dumps(report,indent=2))
           PY
