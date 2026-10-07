@@ -1,0 +1,124 @@
+{
+  "version": "er-eval-02-review-v1",
+  "decisions": [
+    {
+      "a": {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-029a-5b89-7f28-08df244bc830"
+      },
+      "b": {
+        "source": "justjoinit",
+        "source_posting_id": "itds-senior-gcp-cloud-devops-engineer-krakow-devops"
+      },
+      "label": "SAME_OPPORTUNITY",
+      "rationale": "Reviewer adjudication: exact role title and Krakow location, same ITDS organization family, and highly distinctive matching client/project wording about a financial-services client and resilient/scalable high-performance GCP infrastructure. The employer-controlled ITDS posting for this role exposes internal number #10203 and matches the same role/project description.",
+      "evidence": [
+        {
+          "type": "RAW_PAIR_EVIDENCE",
+          "description": "Both source observations contain matching client/project wording captured in opportunity_evidence."
+        },
+        {
+          "type": "EMPLOYER_CONTROLLED_POSTING",
+          "url": "https://itds.pl/pl/praca/senior-gcp-cloud-devops-engineer/",
+          "observed_fact": "Senior GCP Cloud DevOps Engineer, Krakow hybrid, financial-services client, matching GCP foundation responsibilities, internal number #10203"
+        }
+      ]
+    },
+    {
+      "a": {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-0596-08df2444562b"
+      },
+      "b": {
+        "source": "justjoinit",
+        "source_posting_id": "transition-technologies-psc-iot-specialist-with-aws---talent-pool-wroclaw-architecture"
+      },
+      "label": "DISTINCT_OPPORTUNITY",
+      "rationale": "Reviewer adjudication: same organization family but explicitly different role families and separately published talent-pool needs. Business Analyst concerns business analysis/discovery/backlog work; IoT Specialist (AWS) concerns Smart Connected Products, device-cloud-application architecture and AWS IoT implementation.",
+      "evidence": [
+        {
+          "type": "PUBLIC_POSTING",
+          "url": "https://justjoin.it/job-offer/transition-technologies-psc-business-analyst---talent-pool-lodz-analytics",
+          "observed_fact": "Business Analyst - Talent Pool is a distinct role pool for future BA projects."
+        },
+        {
+          "type": "PUBLIC_POSTING",
+          "url": "https://justjoin.it/job-offer/transition-technologies-psc-iot-specialist-with-aws---talent-pool-bialystok-architecture",
+          "observed_fact": "IoT Specialist (with AWS) - Talent Pool is a distinct IoT/AWS role pool."
+        }
+      ]
+    },
+    {
+      "a": {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-ae91-c143-7305-08df2455ed49"
+      },
+      "b": {
+        "source": "justjoinit",
+        "source_posting_id": "allegro-senior-manager-data-poznan-data"
+      },
+      "label": "DISTINCT_OPPORTUNITY",
+      "rationale": "Reviewer adjudication: Allegro's employer-controlled careers surfaces list Senior Scala Engineer under Tech/Data software engineering and Senior Manager, Data under corporate/finance as separate simultaneous jobs.",
+      "evidence": [
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/job-areas/tech-data/",
+          "observed_fact": "Senior Scala Engineer is listed as a separate Tech/Data job."
+        },
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/job-areas/corporate-functions/",
+          "observed_fact": "Senior Manager, Data is listed as a separate corporate/finance job."
+        }
+      ]
+    },
+    {
+      "a": {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-bb33-08df24566941"
+      },
+      "b": {
+        "source": "justjoinit",
+        "source_posting_id": "allegro-senior-manager-data-poznan-data"
+      },
+      "label": "DISTINCT_OPPORTUNITY",
+      "rationale": "Reviewer adjudication: employer-controlled Allegro careers lists Mobile Software Engineer 2 (Android) - Technical Platform as an IT software-development role and Senior Manager, Data as a separate corporate/finance role.",
+      "evidence": [
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/pl/obszary-prac/tech-data/",
+          "observed_fact": "Mobile Software Engineer 2 (Android) - Technical Platform appears as a separate IT Software Development role."
+        },
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/pl/obszary-prac/corporate-functions/",
+          "observed_fact": "Senior Manager, Data appears as a separate Finance role."
+        }
+      ]
+    },
+    {
+      "a": {
+        "source": "theprotocol",
+        "source_posting_id": "01000000-af85-32bc-e794-08df2455e6f2"
+      },
+      "b": {
+        "source": "justjoinit",
+        "source_posting_id": "allegro-senior-manager-data-poznan-data"
+      },
+      "label": "DISTINCT_OPPORTUNITY",
+      "rationale": "Reviewer adjudication: employer-controlled Allegro careers lists Product Analyst in IT Analytics/Consulting and Senior Manager, Data in Finance as separate simultaneous roles.",
+      "evidence": [
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/job-areas/tech-data/",
+          "observed_fact": "Product Analyst appears as a separate IT Analytics & Consulting role."
+        },
+        {
+          "type": "EMPLOYER_CAREERS",
+          "url": "https://jobs.allegro.eu/job-areas/corporate-functions/",
+          "observed_fact": "Senior Manager, Data appears as a separate Finance role."
+        }
+      ]
+    }
+  ]
+}

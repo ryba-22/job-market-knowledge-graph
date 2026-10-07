@@ -1,0 +1,60 @@
+name: ER-EVAL-02 frozen benchmark
+
+on:
+  push:
+    branches: [er-eval-02-adjudication]
+  pull_request:
+    paths:
+      - "data/evals/er-eval-02/**"
+      - "ingestion/replay_frozen_benchmark.py"
+      - "tests/test_frozen_benchmark.py"
+      - ".github/workflows/er-eval-02.yml"
+  workflow_dispatch:
+
+jobs:
+  frozen-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Frozen benchmark tests
+        run: pytest -q tests/test_frozen_benchmark.py
+      - name: Offline replay with network blocked
+        env:
+          NO_PROXY: "*"
+          HTTP_PROXY: http://127.0.0.1:9
+          HTTPS_PROXY: http://127.0.0.1:9
+          ALL_PROXY: http://127.0.0.1:9
+        run: >-
+          python -m ingestion.replay_frozen_benchmark
+          --snapshot data/evals/er-eval-02/snapshot
+          --report reports/er-eval-02-offline-replay.json
+      - name: Verify frozen benchmark contract
+        run: |
+          python - <<'PY2'
+          import json
+          from pathlib import Path
+          p=Path("reports/er-eval-02-offline-replay.json")
+          r=json.loads(p.read_text())
+          assert r["pass"] is True
+          assert r["postings"] == 26
+          assert r["pairs"] == 19
+          assert r["labels"] == {
+              "SAME_OPPORTUNITY": 1,
+              "DISTINCT_OPPORTUNITY": 4,
+              "UNRESOLVED": 14,
+          }
+          assert r["network_used"] is False
+          assert r["database_used"] is False
+          print("frozen benchmark contract PASS")
+          PY2
+      - name: Upload offline proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: er-eval-02-frozen-benchmark-proof
+          path: reports/er-eval-02-offline-replay.json

@@ -31,3 +31,9 @@ def test_organization_signature_ignores_legal_suffix_only():
     assert _organization_name_signature("Ness Solution sp. z o.o.") == "ness solution"
     assert _organization_name_signature("Ness Solution") == "ness solution"
     assert _organization_name_signature("Ness Solution") != _organization_name_signature("Ness Technologies")
+
+
+def test_domain_rejects_portal_asset_subdomains():
+    assert _domain("https://og-image.justjoin.it/acme.png") is None
+    assert _domain("https://cdn.justjoin.it/assets/company.png") is None
+    assert _domain("https://static.theprotocol.it/logo.png") is None

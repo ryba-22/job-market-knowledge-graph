@@ -103,6 +103,42 @@ def fetch_groups_sync(group_ids: list[str]):
     return asyncio.run(fetch_groups(group_ids))
 
 
+async def fetch_offers_by_ids(offer_ids: list[str], max_pages: int = 20):
+    targets=set(str(x) for x in offer_ids)
+    found={}
+    async with streamablehttp_client(MCP_URL) as streams:
+        read_stream, write_stream = streams[0], streams[1]
+        async with ClientSession(read_stream, write_stream) as session:
+            await session.initialize()
+            for page in range(1,max_pages+1):
+                search=await session.call_tool(
+                    "search_job_offers",
+                    arguments={"pageSize":50,"pageNumber":page},
+                )
+                rows=_offers(_payload(search))
+                if not rows:
+                    break
+                for offer in rows:
+                    oid=str(_pick(offer,"offerId","id",default=""))
+                    if oid not in targets or oid in found:
+                        continue
+                    gid=_pick(offer,"groupId","groupID")
+                    if not gid:
+                        continue
+                    details_result=await session.call_tool(
+                        "get_job_offer_details",
+                        arguments={"groupId":gid},
+                    )
+                    found[oid]=(offer,_payload(details_result))
+                if targets <= set(found):
+                    break
+    return found
+
+
+def fetch_offers_by_ids_sync(offer_ids: list[str], max_pages: int = 20):
+    return asyncio.run(fetch_offers_by_ids(offer_ids,max_pages=max_pages))
+
+
 def parse(search_row: dict[str, Any], details: dict[str, Any]) -> ParsedPosting:
     offer_id = str(_pick(search_row, "offerId", "id", default=""))
     group_id = str(_pick(search_row, "groupId", default=""))
