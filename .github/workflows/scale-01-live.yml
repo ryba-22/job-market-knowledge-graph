@@ -1,0 +1,179 @@
+name: SCALE-01 incremental large acquisition
+
+on:
+  push:
+    branches: [scale-01-incremental-acquisition]
+  workflow_dispatch:
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Tests
+        run: pytest -q
+
+  collect:
+    needs: contracts
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - source: justjoinit
+            target: 250
+            minimum: 180
+            discovery: 700
+            delay: 0.12
+          - source: nofluffjobs
+            target: 300
+            minimum: 250
+            discovery: 650
+            delay: 0.10
+          - source: rocketjobs
+            target: 300
+            minimum: 250
+            discovery: 650
+            delay: 0.12
+          - source: bulldogjob
+            target: 120
+            minimum: 75
+            discovery: 350
+            delay: 1.25
+          - source: pracuj
+            target: 50
+            minimum: 20
+            discovery: 250
+            delay: 0.0
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      PYTHONUNBUFFERED: "1"
+      SOURCE: ${{ matrix.source }}
+      TARGET: ${{ matrix.target }}
+      MINIMUM: ${{ matrix.minimum }}
+      DISCOVERY: ${{ matrix.discovery }}
+      DELAY: ${{ matrix.delay }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Migrate
+        run: python -m ingestion.migrate
+      - name: Collect unknown identities only
+        run: >-
+          python -m ingestion.scale_acquisition
+          --source "$SOURCE"
+          --base-corpus data/corpora/corpus-05/corpus.jsonl.gz
+          --target "$TARGET"
+          --discovery-limit "$DISCOVERY"
+          --delay "$DELAY"
+          --run-id "scale-01-$SOURCE"
+          --report "reports/scale-01-$SOURCE-report.json"
+          --manifest "reports/scale-01-$SOURCE-manifest.json"
+      - name: Export compact source slice
+        run: python -m ingestion.export_market_corpus --out "reports/scale-01-$SOURCE"
+      - name: Export raw evidence archive
+        run: python -m ingestion.export_raw_archive --source "$SOURCE" --out "reports/scale-01-$SOURCE-raw"
+      - name: Verify source minimum
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          source=os.environ["SOURCE"]
+          minimum=int(os.environ["MINIMUM"])
+          report=json.loads(Path(f"reports/scale-01-{source}-report.json").read_text())
+          corpus=json.loads(Path(f"reports/scale-01-{source}/manifest.json").read_text())
+          raw=json.loads(Path(f"reports/scale-01-{source}-raw/raw-manifest.json").read_text())
+          assert report["successes"] >= minimum, report
+          assert corpus["postings"] == report["successes"], (corpus,report)
+          assert corpus["by_source"] == {source:report["successes"]}, corpus
+          assert raw["observations"] == report["successes"], raw
+          if source=="pracuj":
+              assert report["direct_source_access"] is False
+              assert report["observation_provenance"]=="SECONDARY_PUBLIC_INDEX"
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Prepare unique artifact names
+        run: |
+          mkdir -p reports/upload
+          cp "reports/scale-01-$SOURCE/corpus.jsonl.gz" "reports/upload/$SOURCE.corpus.jsonl.gz"
+          cp "reports/scale-01-$SOURCE/manifest.json" "reports/upload/$SOURCE.corpus-manifest.json"
+          cp "reports/scale-01-$SOURCE-report.json" "reports/upload/$SOURCE.report.json"
+          cp "reports/scale-01-$SOURCE-manifest.json" "reports/upload/$SOURCE.source-manifest.json"
+          cp "reports/scale-01-$SOURCE-raw/raw-observations.jsonl.gz" "reports/upload/$SOURCE.raw-observations.jsonl.gz"
+          cp "reports/scale-01-$SOURCE-raw/raw-manifest.json" "reports/upload/$SOURCE.raw-manifest.json"
+      - name: Upload source slice
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scale-01-slice-${{ matrix.source }}
+          path: reports/upload/*
+
+  consolidate:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download source slices
+        uses: actions/download-artifact@v4
+        with:
+          pattern: scale-01-slice-*
+          path: downloads
+          merge-multiple: true
+      - name: Assemble CORPUS-06 candidate
+        run: >-
+          python -m ingestion.assemble_corpus_version
+          --base data/corpora/corpus-05/corpus.jsonl.gz
+          --slice-glob "downloads/*.corpus.jsonl.gz"
+          --out reports/corpus-06
+          --version CORPUS-06
+      - name: Verify scale acceptance
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("reports/corpus-06/manifest.json").read_text())
+          assert m["postings"] >= 1343, m
+          assert m["by_source"]["theprotocol"] == 50
+          assert m["by_source"]["justjoinit"] >= 330
+          assert m["by_source"]["nofluffjobs"] >= 350
+          assert m["by_source"]["rocketjobs"] >= 350
+          assert m["by_source"]["bulldogjob"] >= 168
+          assert m["by_source"]["pracuj"] >= 95
+          print(json.dumps(m,indent=2))
+          PY
+      - name: Upload CORPUS-06 candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: scale-01-corpus-06-candidate
+          path: |
+            reports/corpus-06/manifest.json
+            reports/corpus-06/corpus.jsonl.gz
