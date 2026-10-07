@@ -1,0 +1,23 @@
+name: SCALE-02 frozen source inventory
+
+on:
+  push:
+    branches: [scale-02-full-inventory]
+  pull_request:
+    paths:
+      - "data/inventories/scale-02/**"
+      - "tests/test_scale_02_frozen_inventory.py"
+      - ".github/workflows/scale-02.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify frozen source inventory
+        run: python -m unittest tests.test_scale_02_frozen_inventory -v
