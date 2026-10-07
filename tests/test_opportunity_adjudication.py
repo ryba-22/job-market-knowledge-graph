@@ -28,3 +28,8 @@ def test_shared_application_target_requires_both_postings():
         {"posting_id":2,"type":"APPLICATION_URL","value":{"url":"https://jobs.example.com/123"}},
     ]
     assert _same_application_url(evidence)=="https://jobs.example.com/123"
+
+
+def test_rocketjobs_source_family_is_not_application_target():
+    assert not _external("https://rocketjobs.pl/")
+    assert not _external("https://panel.rocketjobs.com/")
