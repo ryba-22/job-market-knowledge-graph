@@ -22,6 +22,9 @@ TEAMQUEST_JOBS_SITEMAP = "https://teamquest.pl/sitemap/praca.xml"
 APLIKUJ_SITEMAP_INDEX = "https://www.aplikuj.pl/sitemap/offer_index.xml"
 ITLEADERS_LISTING_URL = "https://it-leaders.pl/oferty-pracy"
 MICHAELPAGE_LISTING_URL = "https://www.michaelpage.pl/en/jobs"
+EUROTECHJOBS_SITEMAP = "https://www.eurotechjobs.com/sitemap.xml"
+HN_WHOISHIRING_THREAD_ID = "49922569"
+HN_API_ITEM = "https://hacker-news.firebaseio.com/v0/item/{item_id}.json"
 ISITFAIR_SEARCH_URL = "https://isitfair.pl/api/v1/offers/search"
 PRACUJ_SEARCH_TERMS = (
     "developer","engineer","programista","java","python","devops","data","tester",
@@ -664,6 +667,139 @@ class MichaelPageSource:
         )
 
 
+class EuroTechJobsSource:
+    code = "eurotechjobs"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(EUROTECHJOBS_SITEMAP)
+        response.raise_for_status()
+        root = ET.fromstring(response.text)
+        refs = []
+        seen = set()
+        for node in root.iter():
+            if not node.tag.endswith("loc") or not node.text:
+                continue
+            url = canonical_url(node.text.strip())
+            match = re.search(r"/job_display/(\d+)(?:/|$)", url)
+            if not match:
+                continue
+            sid = match.group(1)
+            if sid in seen:
+                continue
+            seen.add(sid)
+            refs.append(PostingRef(self.code, url, sid))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        h1 = soup.find("h1")
+        title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
+        if not title:
+            page_title = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
+            if "Page not found" in page_title or "404" in page_title:
+                raise SourceGoneError("EuroTechJobs offer no longer exposed")
+            raise ValueError("PARSER_DRIFT: EuroTechJobs title missing")
+        container = soup.select_one(".jobDisplay")
+        h2s = container.find_all("h2") if container else []
+        company = norm_text(h2s[0].get_text(" ", strip=True)) if len(h2s) >= 1 else None
+        location = norm_text(h2s[1].get_text(" ", strip=True)) if len(h2s) >= 2 else None
+        og_title = soup.find("meta", attrs={"property": "og:title"})
+        og_desc = soup.find("meta", attrs={"property": "og:description"})
+        canonical = soup.find("link", attrs={"rel": "canonical"})
+        canonical_href = canonical.get("href") if canonical else None
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=ref.source_posting_id,
+            url=canonical_url(canonical_href or ref.url),
+            title=title,
+            company_mention=company or None,
+            body_text=(container or soup).get_text("\n", strip=True),
+            source_specific={
+                "company": company or None,
+                "location": location or None,
+                "og_title": og_title.get("content") if og_title else None,
+                "og_description": og_desc.get("content") if og_desc else None,
+                "observation_provenance": "DIRECT",
+                "discovery_scope": "public-sitemap",
+            },
+            revision_projection={
+                "title": title,
+                "company": company or None,
+                "location": location or None,
+                "og_description": og_desc.get("content") if og_desc else None,
+            },
+        )
+
+
+class HNWhoIsHiringSource:
+    code = "hnwhoishiring"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        thread = client.get(HN_API_ITEM.format(item_id=HN_WHOISHIRING_THREAD_ID))
+        thread.raise_for_status()
+        data = thread.json()
+        refs = []
+        for cid in data.get("kids") or []:
+            refs.append(PostingRef(
+                self.code,
+                f"https://news.ycombinator.com/item?id={cid}",
+                str(cid),
+            ))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(HN_API_ITEM.format(item_id=ref.source_posting_id))
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        item = json.loads(raw)
+        if item.get("deleted") or item.get("dead") or not item.get("text"):
+            raise SourceGoneError("HN top-level hiring comment deleted/dead/empty")
+        soup = BeautifulSoup(item.get("text") or "", "html.parser")
+        raw_plain = soup.get_text("\n", strip=True)
+        plain = norm_text(raw_plain)
+        if not plain:
+            raise SourceGoneError("HN top-level hiring comment has no text")
+        first_line = norm_text(raw_plain.split("\n", 1)[0])
+        first_segment = first_line.split("|", 1)[0].strip()
+        company = first_segment if 1 <= len(first_segment) <= 120 else None
+        title = first_line[:180]
+        comment_id = str(item.get("id") or ref.source_posting_id)
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=comment_id,
+            url=f"https://news.ycombinator.com/item?id={comment_id}",
+            title=title,
+            company_mention=company,
+            body_text=plain,
+            source_specific={
+                "thread_id": HN_WHOISHIRING_THREAD_ID,
+                "comment_id": item.get("id"),
+                "author": item.get("by"),
+                "unix_time": item.get("time"),
+                "parent": item.get("parent"),
+                "observation_provenance": "COMMUNITY_DIRECT",
+                "discovery_scope": "current-thread-top-level-comments",
+            },
+            revision_projection={
+                "thread_id": HN_WHOISHIRING_THREAD_ID,
+                "comment_id": item.get("id"),
+                "author": item.get("by"),
+                "text": plain,
+            },
+        )
+
+
 class PracujSecondarySource:
     code = "pracuj"
 
@@ -750,5 +886,7 @@ SOURCES = {
     "aplikuj": AplikujSource(),
     "itleaders": ITLeadersSource(),
     "michaelpage": MichaelPageSource(),
+    "eurotechjobs": EuroTechJobsSource(),
+    "hnwhoishiring": HNWhoIsHiringSource(),
     "pracuj": PracujSecondarySource(),
 }

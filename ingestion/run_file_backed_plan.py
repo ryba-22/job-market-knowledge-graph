@@ -10,8 +10,8 @@ import threading
 from .acquire_file_backed import acquire
 
 
-LIMITS = {"aplikuj": 4, "michaelpage": 2, "itleaders": 1}
-DELAYS = {"aplikuj": 0.25, "michaelpage": 0.30, "itleaders": 0.50}
+LIMITS = {"aplikuj": 4, "michaelpage": 2, "itleaders": 1, "eurotechjobs": 2, "hnwhoishiring": 4}
+DELAYS = {"aplikuj": 0.25, "michaelpage": 0.30, "itleaders": 0.50, "eurotechjobs": 0.30, "hnwhoishiring": 0.05}
 
 
 def _atomic_json(path: Path, value: dict):

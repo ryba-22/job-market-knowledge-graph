@@ -1,0 +1,3646 @@
+{
+  "chunk_size": 250,
+  "unknown_total": 600,
+  "chunks": [
+    {
+      "source": "eurotechjobs",
+      "chunk_index": 0,
+      "count": 250,
+      "first_source_posting_id": "295505",
+      "last_source_posting_id": "296950",
+      "rows": [
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295505",
+          "url": "https://www.eurotechjobs.com/job_display/295505/Senior_Software_Systems_Architect_Coloplast_Humlebk_Denmark"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295506",
+          "url": "https://www.eurotechjobs.com/job_display/295506/Senior_Fullstack_Developer_Java_React_Zhlke_Group_London_or_Manchester_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295511",
+          "url": "https://www.eurotechjobs.com/job_display/295511/Principal_Flight_Software_Engineer_The_Exploration_Company_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295514",
+          "url": "https://www.eurotechjobs.com/job_display/295514/AI_Research_Engineer_Domyn_Milan_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295515",
+          "url": "https://www.eurotechjobs.com/job_display/295515/Principal_Test_Development_Engineer_ams_OSRAM_Pavia_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295518",
+          "url": "https://www.eurotechjobs.com/job_display/295518/Senior_Developer_Eutelsat_Group_Issy_les_Moulineaux_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295519",
+          "url": "https://www.eurotechjobs.com/job_display/295519/Senior_Software_Engineer_Backend_Frontend_Fullstack_adidas_Zaragoza_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295520",
+          "url": "https://www.eurotechjobs.com/job_display/295520/Data_Business_Analyst_Uni_Systems_Brussels_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295522",
+          "url": "https://www.eurotechjobs.com/job_display/295522/Azure_Cloud_Solutions_Architect_Uni_Systems_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295525",
+          "url": "https://www.eurotechjobs.com/job_display/295525/Software_Engineer_C_VeroTech_Leuven_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295550",
+          "url": "https://www.eurotechjobs.com/job_display/295550/Senior_Data_Engineer_Betty_Technology_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295552",
+          "url": "https://www.eurotechjobs.com/job_display/295552/Security_Engineer_Product_Cloud_CISO_Google_Mlaga_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295555",
+          "url": "https://www.eurotechjobs.com/job_display/295555/Senior_Software_Engineer_Operations_Research_and_Gemini_Google_Zrich_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295556",
+          "url": "https://www.eurotechjobs.com/job_display/295556/Senior_Platform_Engineer_Domyn_Milan_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295560",
+          "url": "https://www.eurotechjobs.com/job_display/295560/Senior_Full_Stack_Software_Engineer_Astroscale_Harwell_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295563",
+          "url": "https://www.eurotechjobs.com/job_display/295563/Head_of_Developer_Platform_Gaming1_Liege_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295567",
+          "url": "https://www.eurotechjobs.com/job_display/295567/Senior_Software_Developer_Confluent_Flink_IBM_Ehningen_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295568",
+          "url": "https://www.eurotechjobs.com/job_display/295568/Azure_Full_Stack_Developer_Angular_React_NET_8_IBM_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295570",
+          "url": "https://www.eurotechjobs.com/job_display/295570/Software_Backend_Engineer_ING_Group_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295575",
+          "url": "https://www.eurotechjobs.com/job_display/295575/Expert_Backend_Engineer_Get_Discovered_Jimdo_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295607",
+          "url": "https://www.eurotechjobs.com/job_display/295607/Director_of_IT_Data_The_Ocean_Cleanup_Rotterdam_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295617",
+          "url": "https://www.eurotechjobs.com/job_display/295617/Head_of_AI_Product_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295623",
+          "url": "https://www.eurotechjobs.com/job_display/295623/Artificial_Intelligence_Machine_Learning_Team_Leader_Selvita_Krakw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295625",
+          "url": "https://www.eurotechjobs.com/job_display/295625/Software_Tester_Yggdrasil_Gaming_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295627",
+          "url": "https://www.eurotechjobs.com/job_display/295627/Senior_Software_Development_Engineer_in_Test_Unity_Technologies_Vilnius_Lithuania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295629",
+          "url": "https://www.eurotechjobs.com/job_display/295629/Network_and_Software_Engineer_Vodafone_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295634",
+          "url": "https://www.eurotechjobs.com/job_display/295634/Senior_AI_Software_Engineer_Vodafone_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295639",
+          "url": "https://www.eurotechjobs.com/job_display/295639/Business_Application_Analyst_Uni_Systems_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295644",
+          "url": "https://www.eurotechjobs.com/job_display/295644/Staff_Infrastructure_Engineer_Unity_Technologies_Copenhagen_Denmark"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295647",
+          "url": "https://www.eurotechjobs.com/job_display/295647/Test_Automation_Specialist_Uni_Systems_Brussels_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295666",
+          "url": "https://www.eurotechjobs.com/job_display/295666/Senior_DevOps_Engineer_Arm_Cambridge_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295668",
+          "url": "https://www.eurotechjobs.com/job_display/295668/Engineer_Embedded_Software_Datacenters_Energy_ADI_Analog_Devices_Cork_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295670",
+          "url": "https://www.eurotechjobs.com/job_display/295670/Lead_AI_Software_Engineer_Vodafone_Newbury_or_Paddington_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295673",
+          "url": "https://www.eurotechjobs.com/job_display/295673/Senior_Flight_Software_Engineer_The_Exploration_Company_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295675",
+          "url": "https://www.eurotechjobs.com/job_display/295675/Senior_Engineer_Embedded_Software_ADI_Analog_Devices_Cork_or_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295683",
+          "url": "https://www.eurotechjobs.com/job_display/295683/Senior_Software_IV_QA_Engineer_Test_Automation_Thales_Esch_sur_Alzette_Luxembourg"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295686",
+          "url": "https://www.eurotechjobs.com/job_display/295686/NodeJS_Developer_Bitdefender_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295698",
+          "url": "https://www.eurotechjobs.com/job_display/295698/Software_Development_Engineer_in_Test_EA_Electronic_Arts_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295708",
+          "url": "https://www.eurotechjobs.com/job_display/295708/Associate_Director_AI_Security_BioNTech_Mainz_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295714",
+          "url": "https://www.eurotechjobs.com/job_display/295714/Senior_Systems_Networks_Engineer_Tier_3_Devexperts_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295748",
+          "url": "https://www.eurotechjobs.com/job_display/295748/Principal_DSP_Software_Engineer_Renesas_Electronics_Athens_or_Patras_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295755",
+          "url": "https://www.eurotechjobs.com/job_display/295755/Software_Developer_Ground_Control_System_GCS_TEKEVER_Caldas_da_Rainha_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295756",
+          "url": "https://www.eurotechjobs.com/job_display/295756/Kernel_Linux_Engineer_AMD_Advanced_Micro_Devices_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295763",
+          "url": "https://www.eurotechjobs.com/job_display/295763/Application_Security_Engineer_Contentsquare_Barcelona_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295764",
+          "url": "https://www.eurotechjobs.com/job_display/295764/Fullstack_Developer_Java_Angular_AI_SEEBURGER_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295781",
+          "url": "https://www.eurotechjobs.com/job_display/295781/Senior_Data_Engineer_myPOS_Remote_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295782",
+          "url": "https://www.eurotechjobs.com/job_display/295782/Senior_Gameplay_Programmer_Unannounced_Project_Ubisoft_Stockholm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295783",
+          "url": "https://www.eurotechjobs.com/job_display/295783/Platform_Architect_Compute_Network_Database_SWIFT_Leiden_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295793",
+          "url": "https://www.eurotechjobs.com/job_display/295793/Cybersecurity_Platform_Engineer_Amusnet_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295809",
+          "url": "https://www.eurotechjobs.com/job_display/295809/Principal_Engineer_Test_Systems_Software_The_Exploration_Company_Bordeaux_or_Munich_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295814",
+          "url": "https://www.eurotechjobs.com/job_display/295814/Automation_QA_Engineer_Bang_Olufsen_Lyngby_or_Struer_Denmark"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295817",
+          "url": "https://www.eurotechjobs.com/job_display/295817/Senior_Manager_Software_Engineering_EA_Electronic_Arts_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295818",
+          "url": "https://www.eurotechjobs.com/job_display/295818/Data_Engineer_Gaming1_Lisbon_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295820",
+          "url": "https://www.eurotechjobs.com/job_display/295820/AI_Quality_Automation_Engineer_MED_EL_Innsbruck_Austria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295822",
+          "url": "https://www.eurotechjobs.com/job_display/295822/Security_Office_Business_Partner_IT_Melexis_Microelectronic_Integrated_Systems_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295834",
+          "url": "https://www.eurotechjobs.com/job_display/295834/Staff_AI_ML_Robotics_Engineer_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295839",
+          "url": "https://www.eurotechjobs.com/job_display/295839/Technical_Support_Engineer_ETREL_kofljica_Slovenia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295845",
+          "url": "https://www.eurotechjobs.com/job_display/295845/Senior_PostgreSQL_Database_Specialist_Axpo_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295872",
+          "url": "https://www.eurotechjobs.com/job_display/295872/Senior_AI_Engineer_Moderna_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295874",
+          "url": "https://www.eurotechjobs.com/job_display/295874/Systems_Software_Engineer_EA_SPORTS_FC_EA_Electronic_Arts_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295875",
+          "url": "https://www.eurotechjobs.com/job_display/295875/Data_Product_Manager_myPOS_Sofia_or_Varna_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295880",
+          "url": "https://www.eurotechjobs.com/job_display/295880/Senior_Full_Stack_Software_Engineer_with_OAuth_Endava_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295887",
+          "url": "https://www.eurotechjobs.com/job_display/295887/Robotics_Simulation_Engineer_Infrastructure_Optimisation_for_Physics_Simulation_Engines_Tesla_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295890",
+          "url": "https://www.eurotechjobs.com/job_display/295890/Senior_System_Administrator_Amusnet_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295903",
+          "url": "https://www.eurotechjobs.com/job_display/295903/Linux_Kernel_Virtualization_Manager_AMD_Advanced_Micro_Devices_Remote_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295906",
+          "url": "https://www.eurotechjobs.com/job_display/295906/Senior_ML_HW_Modelling_Engineer_Arm_Lund_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295908",
+          "url": "https://www.eurotechjobs.com/job_display/295908/Service_Desk_System_Administrator_Wargaming_Nicosia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295909",
+          "url": "https://www.eurotechjobs.com/job_display/295909/Senior_AI_NodeJS_Engineer_Tooploox_Warsaw_Wrocaw_or_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295919",
+          "url": "https://www.eurotechjobs.com/job_display/295919/Software_Design_Architecture_Engineer_Tesla_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295921",
+          "url": "https://www.eurotechjobs.com/job_display/295921/Satellite_Software_Architect_Aerospacelab_Mont_Saint_Guibert_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295936",
+          "url": "https://www.eurotechjobs.com/job_display/295936/Staff_Design_Verification_Engineer_AMD_Advanced_Micro_Devices_Cambridge_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295939",
+          "url": "https://www.eurotechjobs.com/job_display/295939/DevOps_Architect_with_GCP_Endava_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295943",
+          "url": "https://www.eurotechjobs.com/job_display/295943/Senior_Data_Scientist_Betty_Technology_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295948",
+          "url": "https://www.eurotechjobs.com/job_display/295948/SQA_Developer_Aylo_Nicosia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295949",
+          "url": "https://www.eurotechjobs.com/job_display/295949/Confirmed_Backend_Engineer_Payment_Squad_BlaBlaCar_Paris_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295961",
+          "url": "https://www.eurotechjobs.com/job_display/295961/Data_Analyst_BMW_Group_Debrecen_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295964",
+          "url": "https://www.eurotechjobs.com/job_display/295964/Product_Owner_AI_Gameloft_Paris_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295968",
+          "url": "https://www.eurotechjobs.com/job_display/295968/Audio_Machine_Learning_Data_Engineer_Logitech_Lausanne_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295969",
+          "url": "https://www.eurotechjobs.com/job_display/295969/Product_Security_Engineer_Applications_MED_EL_Innsbruck_Austria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295978",
+          "url": "https://www.eurotechjobs.com/job_display/295978/Senior_Data_Engineer_Tesla_Berlin_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295981",
+          "url": "https://www.eurotechjobs.com/job_display/295981/AI_Infrastructure_Engineer_BMW_Group_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295989",
+          "url": "https://www.eurotechjobs.com/job_display/295989/Devops_Release_Engineer_Gameloft_Paris_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "295995",
+          "url": "https://www.eurotechjobs.com/job_display/295995/Senior_Verification_Engineer_Arm_Budapest_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296012",
+          "url": "https://www.eurotechjobs.com/job_display/296012/Senior_Web_Developer_Tools_Rockstar_Games_Edinburgh_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296019",
+          "url": "https://www.eurotechjobs.com/job_display/296019/IT_Project_Manager_Business_Analyst_LIH_Luxembourg_Institute_of_Health_Luxembourg"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296033",
+          "url": "https://www.eurotechjobs.com/job_display/296033/PHP_Developer_Marketplace_Team_eMAG_Craiova_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296037",
+          "url": "https://www.eurotechjobs.com/job_display/296037/Engineering_Manager_Swile_Montpellier_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296039",
+          "url": "https://www.eurotechjobs.com/job_display/296039/Expert_AI_Engineer_Ciklum_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296040",
+          "url": "https://www.eurotechjobs.com/job_display/296040/Lead_React_Native_Engineer_Ciklum_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296042",
+          "url": "https://www.eurotechjobs.com/job_display/296042/Squad_Lead_Full_Stack_Engineering_Tieto_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296044",
+          "url": "https://www.eurotechjobs.com/job_display/296044/Applied_ML_Scientist_Zendesk_Lisbon_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296046",
+          "url": "https://www.eurotechjobs.com/job_display/296046/Senior_Machine_Learning_Scientist_Zendesk_Krakow_Lisbon_or_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296047",
+          "url": "https://www.eurotechjobs.com/job_display/296047/Senior_Java_Backend_Engineer_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296051",
+          "url": "https://www.eurotechjobs.com/job_display/296051/Data_Model_Manager_BI_specialist_CTBC_Continental_Timisoara_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296052",
+          "url": "https://www.eurotechjobs.com/job_display/296052/Machine_Learning_Engineer_Destinus_Zurich_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296053",
+          "url": "https://www.eurotechjobs.com/job_display/296053/Full_Stack_Software_Engineer_TeamViewer_Ioannina_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296096",
+          "url": "https://www.eurotechjobs.com/job_display/296096/Engineering_Manager_Embedded_Qwello_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296098",
+          "url": "https://www.eurotechjobs.com/job_display/296098/Senior_Software_Engineer_Fadata_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296109",
+          "url": "https://www.eurotechjobs.com/job_display/296109/Staff_Java_Backend_Software_Engineer_TeamViewer_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296111",
+          "url": "https://www.eurotechjobs.com/job_display/296111/NET_Engineer_Ciklum_Remote_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296112",
+          "url": "https://www.eurotechjobs.com/job_display/296112/Senior_Autonomous_Flight_Software_Engineer_Wingcopter_Weiterstadt_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296114",
+          "url": "https://www.eurotechjobs.com/job_display/296114/Staff_Machine_Learning_Engineer_Siri_Runtime_Systems_and_Interaction_Apple_Zurich_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296115",
+          "url": "https://www.eurotechjobs.com/job_display/296115/Computer_Vision_Software_Engineer_Oversonic_Robotics_Carate_Brianza_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296116",
+          "url": "https://www.eurotechjobs.com/job_display/296116/Senior_Software_Engineer_Product_Security_Snowflake_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296160",
+          "url": "https://www.eurotechjobs.com/job_display/296160/Senior_Cloud_System_Administrator_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296162",
+          "url": "https://www.eurotechjobs.com/job_display/296162/Lead_AI_Engineer_ATT_Bratislava_Slovakia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296166",
+          "url": "https://www.eurotechjobs.com/job_display/296166/Senior_DevOps_Engineer_Ciklum_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296168",
+          "url": "https://www.eurotechjobs.com/job_display/296168/Software_Engineer_Workflow_Automation_Apple_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296169",
+          "url": "https://www.eurotechjobs.com/job_display/296169/Machine_Learning_Compiler_Engineer_Apple_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296172",
+          "url": "https://www.eurotechjobs.com/job_display/296172/Senior_PHP_Developer_Sirma_Group_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296173",
+          "url": "https://www.eurotechjobs.com/job_display/296173/AI_Forward_Deployed_Engineer_Siili_Helsinki_or_Tampere_Finland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296174",
+          "url": "https://www.eurotechjobs.com/job_display/296174/Full_Stack_Engineer_Frontend_Focus_Alpine_Eagle_Karlsruhe_or_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296176",
+          "url": "https://www.eurotechjobs.com/job_display/296176/Senior_Principal_Software_Architect_Embedded_Software_ADI_Analog_Devices_Cork_Dublin_or_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296225",
+          "url": "https://www.eurotechjobs.com/job_display/296225/Principal_Software_Engineer_Arm_Sophia_Antipolis_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296226",
+          "url": "https://www.eurotechjobs.com/job_display/296226/Expert_AI_ML_Data_Engineer_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296227",
+          "url": "https://www.eurotechjobs.com/job_display/296227/Expert_Software_Engineer_Middleware_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296230",
+          "url": "https://www.eurotechjobs.com/job_display/296230/Java_Backend_Engineer_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296231",
+          "url": "https://www.eurotechjobs.com/job_display/296231/Senior_Embedded_Software_Engineer_Spire_Glasgow_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296233",
+          "url": "https://www.eurotechjobs.com/job_display/296233/Data_Science_Manager_GDIA_EU_Sales_CO2_Sustainability_Ford_Motor_Company_Budapest_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296234",
+          "url": "https://www.eurotechjobs.com/job_display/296234/Data_Engineer_Spark_Developer_European_Dynamics_Athens_or_Remote_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296236",
+          "url": "https://www.eurotechjobs.com/job_display/296236/AIML_Frontend_Engineer_Annotation_Platform_Agentic_UI_Experiences_Apple_Heidelberg_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296239",
+          "url": "https://www.eurotechjobs.com/job_display/296239/Embedded_Software_Architect_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296248",
+          "url": "https://www.eurotechjobs.com/job_display/296248/Data_Center_Manager_Server_Operations_Google_Eemshaven_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296249",
+          "url": "https://www.eurotechjobs.com/job_display/296249/Senior_AI_Engineer_ATT_Bratislava_Slovakia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296300",
+          "url": "https://www.eurotechjobs.com/job_display/296300/Senior_Linux_Platform_Engineer_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296301",
+          "url": "https://www.eurotechjobs.com/job_display/296301/AI_Data_Annotation_Specialist_Human_Neura_Robotics_Riederich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296313",
+          "url": "https://www.eurotechjobs.com/job_display/296313/Expert_AI_ML_Engineer_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296314",
+          "url": "https://www.eurotechjobs.com/job_display/296314/Software_Engineer_Linux_Kernel_Arm_Budapest_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296315",
+          "url": "https://www.eurotechjobs.com/job_display/296315/Tech_Lead_B2B_Digital_Customer_Interaction_Platform_Telenet_Group_Holding_Mechelen_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296316",
+          "url": "https://www.eurotechjobs.com/job_display/296316/Data_Scientist_Trust_Safety_TikTok_Dublin_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296317",
+          "url": "https://www.eurotechjobs.com/job_display/296317/Global_Development_Platform_Cloud_Dev_Ops_Engineer_Holcim_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296318",
+          "url": "https://www.eurotechjobs.com/job_display/296318/Principal_Software_Engineer_II_Data_Platform_Streaming_Dynamic_Tables_and_More_Snowflake_Berlin_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296320",
+          "url": "https://www.eurotechjobs.com/job_display/296320/Senior_NET_Engineer_Ciklum_Remote_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296331",
+          "url": "https://www.eurotechjobs.com/job_display/296331/Passive_RF_Signal_Processing_Engineer_Sybilla_Technologies_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296359",
+          "url": "https://www.eurotechjobs.com/job_display/296359/Hardware_Engineering_Program_Manager_Apple_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296362",
+          "url": "https://www.eurotechjobs.com/job_display/296362/Java_Fullstack_Engineer_Worldline_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296363",
+          "url": "https://www.eurotechjobs.com/job_display/296363/Cyber_Security_Expert_Senior_Worldline_Stockholm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296367",
+          "url": "https://www.eurotechjobs.com/job_display/296367/Senior_Software_Engineer_Financial_Sector_Capgemini_Diegem_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296373",
+          "url": "https://www.eurotechjobs.com/job_display/296373/Java_Software_Engineer_Capgemini_Lisbon_or_Vila_Nova_de_Gaia_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296375",
+          "url": "https://www.eurotechjobs.com/job_display/296375/DevSecOps_Engineer_Leaf_Space_Lomazzo_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296378",
+          "url": "https://www.eurotechjobs.com/job_display/296378/Senior_Security_Engineer_Isar_Aerospace_Parsdorf_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296388",
+          "url": "https://www.eurotechjobs.com/job_display/296388/Senior_MS_Dynamics_Developer_Microsoft_Power_Platform_Endava_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296389",
+          "url": "https://www.eurotechjobs.com/job_display/296389/Security_Governance_Compliance_Specialist_Amusnet_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296390",
+          "url": "https://www.eurotechjobs.com/job_display/296390/Compiler_Engineer_Machine_Learning_Arm_Lund_or_Cambridge_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296392",
+          "url": "https://www.eurotechjobs.com/job_display/296392/Senior_Machine_Learning_Engineer_Epic_Games_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296413",
+          "url": "https://www.eurotechjobs.com/job_display/296413/Senior_Software_Engineer_CPU_Performance_Modeling_AMD_Advanced_Micro_Devices_Iasi_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296414",
+          "url": "https://www.eurotechjobs.com/job_display/296414/Senior_Firmware_Engineer_AMD_Advanced_Micro_Devices_Iasi_or_Remote_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296422",
+          "url": "https://www.eurotechjobs.com/job_display/296422/Software_Engineer_C_Online_Multiplayer_CD_Projekt_Red_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296425",
+          "url": "https://www.eurotechjobs.com/job_display/296425/Principal_Software_Engineer_Linux_Kernel_Cisco_Systems_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296426",
+          "url": "https://www.eurotechjobs.com/job_display/296426/Senior_Security_Engineer_Isovalent_Cisco_Systems_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296431",
+          "url": "https://www.eurotechjobs.com/job_display/296431/Senior_Software_Engineer_Image_and_Data_Processing_Libraries_Nvidia_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296435",
+          "url": "https://www.eurotechjobs.com/job_display/296435/Software_Engineer_Mobile_Tesla_Alcobendas_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296436",
+          "url": "https://www.eurotechjobs.com/job_display/296436/Senior_Tools_Programmer_Tom_Clancys_The_Division_3_Ubisoft_Malm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296437",
+          "url": "https://www.eurotechjobs.com/job_display/296437/Senior_Hardware_Engineer_u_blox_Athens_Espoo_or_Thalwil_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296438",
+          "url": "https://www.eurotechjobs.com/job_display/296438/System_Application_Support_Engineer_SWIFT_Leiden_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296482",
+          "url": "https://www.eurotechjobs.com/job_display/296482/Tech_Engagement_Lead_AI_Labs_EMEA_Nvidia_Remote_United_Kingdom_or_France_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296483",
+          "url": "https://www.eurotechjobs.com/job_display/296483/Physical_and_Generative_AI_Engineer_AbbVie_Campoverde_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296486",
+          "url": "https://www.eurotechjobs.com/job_display/296486/C_Software_Engineer_Agile_Robots_Munich_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296492",
+          "url": "https://www.eurotechjobs.com/job_display/296492/Senior_Full_Stack_Engineer_Bolt_Warsaw_or_Berlin_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296494",
+          "url": "https://www.eurotechjobs.com/job_display/296494/Cybersecurity_Engineer_Internal_Security_Bolt_Tallinn_Estonia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296496",
+          "url": "https://www.eurotechjobs.com/job_display/296496/Senior_Quality_Assurance_Engineer_Automation_osapiens_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296502",
+          "url": "https://www.eurotechjobs.com/job_display/296502/ActionScript_UI_Developer_World_of_Tanks_Console_Wargaming_Nicosia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296503",
+          "url": "https://www.eurotechjobs.com/job_display/296503/Junior_Network_Engineer_Uni_Systems_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296504",
+          "url": "https://www.eurotechjobs.com/job_display/296504/NET_Developer_Sirma_Group_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296506",
+          "url": "https://www.eurotechjobs.com/job_display/296506/Data_Engineer_Domain_Data_OLX_Group_Remote_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296559",
+          "url": "https://www.eurotechjobs.com/job_display/296559/Senior_Engineer_Embedded_Software_ADI_Analog_Devices_Cork_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296564",
+          "url": "https://www.eurotechjobs.com/job_display/296564/Experienced_Java_Software_Engineer_Boeing_Gdansk_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296566",
+          "url": "https://www.eurotechjobs.com/job_display/296566/Senior_Software_Engineer_Zendesk_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296569",
+          "url": "https://www.eurotechjobs.com/job_display/296569/Senior_Front_End_Engineer_Orchestrator_UiPath_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296570",
+          "url": "https://www.eurotechjobs.com/job_display/296570/Principal_Software_Engineer_Site_Reliability_UiPath_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296571",
+          "url": "https://www.eurotechjobs.com/job_display/296571/Staff_Software_Engineer_Configuration_Platform_Uber_Midtjylland_Denmark"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296572",
+          "url": "https://www.eurotechjobs.com/job_display/296572/Senior_Software_Engineer_Data_Sportradar_Vienna_Austria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296574",
+          "url": "https://www.eurotechjobs.com/job_display/296574/Senior_Software_Engineer_Python_Medtronic_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296576",
+          "url": "https://www.eurotechjobs.com/job_display/296576/Data_Scientist_Gameloft_Barcelona_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296593",
+          "url": "https://www.eurotechjobs.com/job_display/296593/Senior_Fullstack_Engineer_Node_React_gamigo_Hamburg_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296595",
+          "url": "https://www.eurotechjobs.com/job_display/296595/Senior_Software_Engineer_Java_Spring_Cloud_Webfleet_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296598",
+          "url": "https://www.eurotechjobs.com/job_display/296598/Senior_Data_Engineer_Holcim_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296602",
+          "url": "https://www.eurotechjobs.com/job_display/296602/Senior_Frontend_Developer_Amusnet_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296610",
+          "url": "https://www.eurotechjobs.com/job_display/296610/Senior_Security_Engineer_Cision_Group_Remote_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296614",
+          "url": "https://www.eurotechjobs.com/job_display/296614/Software_Engineer_C_EA_SPORTS_FC_EA_Electronic_Arts_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296621",
+          "url": "https://www.eurotechjobs.com/job_display/296621/Senior_Audio_Software_Engineer_EA_Electronic_Arts_Stockholm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296632",
+          "url": "https://www.eurotechjobs.com/job_display/296632/Software_Engineer_III_Open_Cloud_Networking_Google_Zurich_or_Munich_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296633",
+          "url": "https://www.eurotechjobs.com/job_display/296633/Embedded_Software_Engineer_CES_Customer_Enabling_Solutions_Melexis_Microelectronic_Integrated_Systems_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296641",
+          "url": "https://www.eurotechjobs.com/job_display/296641/Embedded_Cyber_Security_Expert_Atlas_Copco_Wilrijk_or_Antwerp_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296642",
+          "url": "https://www.eurotechjobs.com/job_display/296642/Embedded_Linux_Software_Engineer_RD_Stryker_Cork_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296643",
+          "url": "https://www.eurotechjobs.com/job_display/296643/Senior_Microsoft_System_Engineer_Cognyte_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296645",
+          "url": "https://www.eurotechjobs.com/job_display/296645/Salesforce_Developer_Cognyte_Limassol_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296647",
+          "url": "https://www.eurotechjobs.com/job_display/296647/Embedded_Software_Graphic_Expert_BMW_Group_Ulm_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296662",
+          "url": "https://www.eurotechjobs.com/job_display/296662/Junior_AI_Research_Engineer_Domyn_Milan_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296665",
+          "url": "https://www.eurotechjobs.com/job_display/296665/DevOps_Platform_Engineer_Bachem_Bubendorf_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296666",
+          "url": "https://www.eurotechjobs.com/job_display/296666/Senior_II_Principal_Product_Experience_Designer_Dashboards_and_Notebooks_Dynatrace_Linz_or_Vienna_Austria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296683",
+          "url": "https://www.eurotechjobs.com/job_display/296683/Senior_DevOps_Consultant_with_Google_Cloud_Platform_GCP_Endava_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296685",
+          "url": "https://www.eurotechjobs.com/job_display/296685/Senior_AI_ML_Engineer_Robotics_Drones_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296690",
+          "url": "https://www.eurotechjobs.com/job_display/296690/Expert_Machine_Learning_Engineer_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296704",
+          "url": "https://www.eurotechjobs.com/job_display/296704/Business_Applications_Analyst_Salesforce_Cognyte_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296705",
+          "url": "https://www.eurotechjobs.com/job_display/296705/Salesforce_Developer_Cognyte_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296708",
+          "url": "https://www.eurotechjobs.com/job_display/296708/Senior_Database_Administrator_Playtech_Latsia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296711",
+          "url": "https://www.eurotechjobs.com/job_display/296711/Junior_QA_Engineer_Playtech_Latsia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296713",
+          "url": "https://www.eurotechjobs.com/job_display/296713/Engineering_Program_Manager_EPM_Apple_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296715",
+          "url": "https://www.eurotechjobs.com/job_display/296715/IT_Infrastructure_Security_Engineer_Alpiq_Group_Prague_Czech_Republic"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296718",
+          "url": "https://www.eurotechjobs.com/job_display/296718/IT_Domain_Architect_Trading_Alpiq_Group_Lausanne_or_Olten_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296723",
+          "url": "https://www.eurotechjobs.com/job_display/296723/Senior_Deep_Learning_Compiler_Engineer_PyTorch_Nvidia_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296732",
+          "url": "https://www.eurotechjobs.com/job_display/296732/Staff_Cloud_Data_Engineer_ams_OSRAM_Lisbon_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296734",
+          "url": "https://www.eurotechjobs.com/job_display/296734/IT_Junior_Business_Analyst_MOL_Group_Budapest_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296738",
+          "url": "https://www.eurotechjobs.com/job_display/296738/AI_Business_Solutions_Specialist_Enovos_Group_Esch_sur_Alzette_Luxembourg"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296751",
+          "url": "https://www.eurotechjobs.com/job_display/296751/Senior_Lead_AI_Engineering_GDBS_South_Pole_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296758",
+          "url": "https://www.eurotechjobs.com/job_display/296758/Associate_Director_IT_Operations_and_Enterprise_Applications_South_Pole_Milan_Italy"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296761",
+          "url": "https://www.eurotechjobs.com/job_display/296761/Senior_Database_Administrator_Playtech_Tartu_or_Tallinn_Estonia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296763",
+          "url": "https://www.eurotechjobs.com/job_display/296763/Software_Product_Support_Engineer_LV_Power_Tesla_Amsterdam_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296765",
+          "url": "https://www.eurotechjobs.com/job_display/296765/Associate_Software_Engineer_Tesla_Grnheide_Mark_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296769",
+          "url": "https://www.eurotechjobs.com/job_display/296769/Experienced_Frontend_Software_Engineer_Boeing_Gdansk_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296773",
+          "url": "https://www.eurotechjobs.com/job_display/296773/IT_OT_Network_Infrastructure_Engineer_Bachem_Stein_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296777",
+          "url": "https://www.eurotechjobs.com/job_display/296777/Senior_Full_Stack_Engineer_Ciklum_Remote_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296781",
+          "url": "https://www.eurotechjobs.com/job_display/296781/Senior_Software_Engineer_Python_Azure_GenAI_Acuity_Analytics_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296782",
+          "url": "https://www.eurotechjobs.com/job_display/296782/Principal_Cloud_Platform_Engineer_Acuity_Analytics_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296784",
+          "url": "https://www.eurotechjobs.com/job_display/296784/Quality_Assurance_Engineer_EUMETSAT_European_Organisation_for_the_Exploitation_of_Meteorological_Satellites_Darmstadt_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296788",
+          "url": "https://www.eurotechjobs.com/job_display/296788/Senior_Business_Analyst_SoftServe_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296803",
+          "url": "https://www.eurotechjobs.com/job_display/296803/Data_Processing_Testing_Engineer_EUMETSAT_European_Organisation_for_the_Exploitation_of_Meteorological_Satellites_Darmstadt_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296809",
+          "url": "https://www.eurotechjobs.com/job_display/296809/Lead_Full_Stack_AI_Product_Engineer_UCB_Union_Chimique_Belge_Barcelona_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296813",
+          "url": "https://www.eurotechjobs.com/job_display/296813/Software_Test_Solutions_Engineer_ADI_Analog_Devices_Valencia_or_Limerick_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296820",
+          "url": "https://www.eurotechjobs.com/job_display/296820/Senior_Manager_Layout_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296825",
+          "url": "https://www.eurotechjobs.com/job_display/296825/Senior_Lead_Golang_Software_Engineer_SoftServe_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296829",
+          "url": "https://www.eurotechjobs.com/job_display/296829/Lead_Machine_Learning_Engineer_SoftServe_Bulgaria_or_Poland_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296831",
+          "url": "https://www.eurotechjobs.com/job_display/296831/Senior_Director_Infrastructure_and_Cloud_Architecture_BeOne_Medicines_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296832",
+          "url": "https://www.eurotechjobs.com/job_display/296832/Associate_Director_Web_Technologies_Lead_BeOne_Medicines_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296853",
+          "url": "https://www.eurotechjobs.com/job_display/296853/IT_Services_Lead_Fourth_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296854",
+          "url": "https://www.eurotechjobs.com/job_display/296854/Data_Engineer_Enterprise_Data_Intelligence_Fourth_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296855",
+          "url": "https://www.eurotechjobs.com/job_display/296855/Senior_Power_BI_Analyst_Nuvei_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296856",
+          "url": "https://www.eurotechjobs.com/job_display/296856/Senior_Software_Quality_Engineer_Medtronic_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296884",
+          "url": "https://www.eurotechjobs.com/job_display/296884/Java_Technical_Lead_Sopra_Steria_Group_Brussels_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296885",
+          "url": "https://www.eurotechjobs.com/job_display/296885/IT_Lead_Switzerland_Austria_Biogen_Baar_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296886",
+          "url": "https://www.eurotechjobs.com/job_display/296886/Expert_Data_Processing_Software_Engineer_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296891",
+          "url": "https://www.eurotechjobs.com/job_display/296891/Data_Processing_Software_Engineer_Support_Development_Aptiv_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296910",
+          "url": "https://www.eurotechjobs.com/job_display/296910/Application_Engineer_ams_OSRAM_Premsttten_Austria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296913",
+          "url": "https://www.eurotechjobs.com/job_display/296913/Senior_Data_Platform_Engineer_Data_Operations_Team_Deezer_Paris_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296914",
+          "url": "https://www.eurotechjobs.com/job_display/296914/Senior_Expert_Platform_Engineer_Deezer_Paris_or_Bordeaux_France"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296915",
+          "url": "https://www.eurotechjobs.com/job_display/296915/Data_Engineer_INSIGHTS_Movu_Robotics_Lokeren_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296917",
+          "url": "https://www.eurotechjobs.com/job_display/296917/Machine_Learning_Engineer_Memory_Epic_Games_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296920",
+          "url": "https://www.eurotechjobs.com/job_display/296920/PL_SQL_Software_Engineer_Fadata_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296922",
+          "url": "https://www.eurotechjobs.com/job_display/296922/IT_Security_Engineer_Materialise_Leuven_or_Barcelona_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296930",
+          "url": "https://www.eurotechjobs.com/job_display/296930/Senior_iOS_Engineer_Creativity_Apps_Apple_Berlin_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296931",
+          "url": "https://www.eurotechjobs.com/job_display/296931/Senior_Database_Administrator_ATT_Bratislava_Slovakia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296933",
+          "url": "https://www.eurotechjobs.com/job_display/296933/Microsoft_Power_Platform_AI_Specialist_TeamViewer_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296935",
+          "url": "https://www.eurotechjobs.com/job_display/296935/Data_Scientist_Risk_Revolut_Multiple_Locations_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296939",
+          "url": "https://www.eurotechjobs.com/job_display/296939/Staff_Software_Development_Engineer_IT_Applications_Engineering_Tesla_Grnheide_Mark_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296940",
+          "url": "https://www.eurotechjobs.com/job_display/296940/Senior_Test_Lead_Ford_Motor_Company_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296942",
+          "url": "https://www.eurotechjobs.com/job_display/296942/Principal_Project_Manager_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296944",
+          "url": "https://www.eurotechjobs.com/job_display/296944/Senior_Engineer_NCX_Nvidia_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296949",
+          "url": "https://www.eurotechjobs.com/job_display/296949/PHP_Developer_ATT_Bratislava_Slovakia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296950",
+          "url": "https://www.eurotechjobs.com/job_display/296950/Senior_Backend_Engineer_Sirma_Group_Sofia_Bulgaria"
+        }
+      ]
+    },
+    {
+      "source": "eurotechjobs",
+      "chunk_index": 1,
+      "count": 71,
+      "first_source_posting_id": "296983",
+      "last_source_posting_id": "297364",
+      "rows": [
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296983",
+          "url": "https://www.eurotechjobs.com/job_display/296983/Data_Processing_Systems_Engineer_EUMETSAT_European_Organisation_for_the_Exploitation_of_Meteorological_Satellites_Darmstadt_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296991",
+          "url": "https://www.eurotechjobs.com/job_display/296991/Senior_DevOps_Engineer_TeamViewer_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296992",
+          "url": "https://www.eurotechjobs.com/job_display/296992/Engineering_Manager_Cisco_Systems_Krakow_or_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296993",
+          "url": "https://www.eurotechjobs.com/job_display/296993/Backend_Engineer_Devexperts_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296994",
+          "url": "https://www.eurotechjobs.com/job_display/296994/DRM_and_PAM_Engineer_Continental_Timisoara_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296995",
+          "url": "https://www.eurotechjobs.com/job_display/296995/Cloud_Platform_Engineer_Tires_Continental_Timisoara_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296996",
+          "url": "https://www.eurotechjobs.com/job_display/296996/Senior_Software_Engineer_TypeScript_React_Tesla_Grnheide_Mark_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296997",
+          "url": "https://www.eurotechjobs.com/job_display/296997/IT_Support_Engineer_Ciklum_Malaga_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "296999",
+          "url": "https://www.eurotechjobs.com/job_display/296999/UAV_Software_Engineer_Mid_Orqa_Osijek_Croatia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297000",
+          "url": "https://www.eurotechjobs.com/job_display/297000/Senior_Project_Manager_Finastra_Lisbon_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297001",
+          "url": "https://www.eurotechjobs.com/job_display/297001/Software_Engineer_Test_Infrastructure_Automation_Nvidia_Wuerselen_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297003",
+          "url": "https://www.eurotechjobs.com/job_display/297003/Senior_Backend_Data_Engineer_Spotify_Stockholm_or_London_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297054",
+          "url": "https://www.eurotechjobs.com/job_display/297054/Senior_AI_Engineer_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297055",
+          "url": "https://www.eurotechjobs.com/job_display/297055/Tech_Lead_Java_Picnic_Technologies_Amsterdam_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297056",
+          "url": "https://www.eurotechjobs.com/job_display/297056/GO_Developer_Engineer_ATT_Bratislava_Slovakia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297057",
+          "url": "https://www.eurotechjobs.com/job_display/297057/Application_Administrator_Dynamics_365_Sirma_Group_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297068",
+          "url": "https://www.eurotechjobs.com/job_display/297068/Senior_MLOps_Engineer_DSX_Enablement_Nvidia_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297069",
+          "url": "https://www.eurotechjobs.com/job_display/297069/Middle_Oracle_Postgres_Database_Administrator_Devexperts_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297071",
+          "url": "https://www.eurotechjobs.com/job_display/297071/Full_Stack_Engineer_Cisco_Systems_Krakow_or_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297082",
+          "url": "https://www.eurotechjobs.com/job_display/297082/Principal_AI_ML_Engineer_King_Stockholm_Barcelona_or_London_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297084",
+          "url": "https://www.eurotechjobs.com/job_display/297084/Mid_Senior_Test_Developer_Embedded_Systems_OS_Orqa_Osijek_Croatia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297085",
+          "url": "https://www.eurotechjobs.com/job_display/297085/Software_Engineer_AI_Adoption_Tesla_Grnheide_Mark_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297086",
+          "url": "https://www.eurotechjobs.com/job_display/297086/Scala_Developer_Playtech_Latsia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297125",
+          "url": "https://www.eurotechjobs.com/job_display/297125/Principal_Security_Engineer_Pipedrive_Tallinn_Estonia"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297126",
+          "url": "https://www.eurotechjobs.com/job_display/297126/Senior_Software_Engineer_AI_Inference_Systems_Nvidia_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297127",
+          "url": "https://www.eurotechjobs.com/job_display/297127/Senior_Data_Scientist_Ciklum_Remote_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297128",
+          "url": "https://www.eurotechjobs.com/job_display/297128/Senior_Database_Administrator_Devexperts_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297129",
+          "url": "https://www.eurotechjobs.com/job_display/297129/Android_Developer_Devexperts_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297131",
+          "url": "https://www.eurotechjobs.com/job_display/297131/Software_Engineer_III_Shopping_Ads_Google_Zurich_Switzerland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297135",
+          "url": "https://www.eurotechjobs.com/job_display/297135/Embedded_Software_Engineer_ispace_Europe_Luxembourg"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297145",
+          "url": "https://www.eurotechjobs.com/job_display/297145/Senior_Linux_System_Engineer_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297146",
+          "url": "https://www.eurotechjobs.com/job_display/297146/AI_Software_Engineer_Cisco_Systems_Krakow_or_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297147",
+          "url": "https://www.eurotechjobs.com/job_display/297147/Senior_Database_Reliability_Engineer_Gaming1_Liege_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297151",
+          "url": "https://www.eurotechjobs.com/job_display/297151/Security_Engineer_II_Sinch_Kalmar_or_Stockholm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297152",
+          "url": "https://www.eurotechjobs.com/job_display/297152/Senior_Software_Engineer_Golang_Tesla_Grnheide_Mark_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297170",
+          "url": "https://www.eurotechjobs.com/job_display/297170/IT_Security_Operations_Engineer_EMBL_EBI_European_Bioinformatics_Institute_Hinxton_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297171",
+          "url": "https://www.eurotechjobs.com/job_display/297171/Senior_Support_Engineer_Snowflake_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297172",
+          "url": "https://www.eurotechjobs.com/job_display/297172/Network_Security_Engineering_Manager_SWIFT_Leiden_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297173",
+          "url": "https://www.eurotechjobs.com/job_display/297173/Senior_DevOps_Full_Stack_Developer_Larian_Studios_Warsaw_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297174",
+          "url": "https://www.eurotechjobs.com/job_display/297174/Software_Engineer_Cisco_Systems_Galway_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297175",
+          "url": "https://www.eurotechjobs.com/job_display/297175/Staff_Software_Engineer_Cisco_Systems_Krakow_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297177",
+          "url": "https://www.eurotechjobs.com/job_display/297177/Senior_Infrastructure_Engineer_Jimdo_Remote_Multiple_Countries"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297178",
+          "url": "https://www.eurotechjobs.com/job_display/297178/Security_GRC_Analyst_Sinch_Stockholm_Sweden"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297179",
+          "url": "https://www.eurotechjobs.com/job_display/297179/Senior_Software_Engineer_Backend_Java_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297180",
+          "url": "https://www.eurotechjobs.com/job_display/297180/Senior_DevOps_Typescript_Javascript_Engineer_Ciklum_Remote_Czech_Republic"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297181",
+          "url": "https://www.eurotechjobs.com/job_display/297181/IT_Infrastructure_Support_Lead_Larian_Studios_Guildford_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297182",
+          "url": "https://www.eurotechjobs.com/job_display/297182/Senior_Front_End_Engineer_StudioWeb_UiPath_Bucharest_Romania"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297191",
+          "url": "https://www.eurotechjobs.com/job_display/297191/SharePoint_Microsoft_365_Specialist_KOMIS_Brussels_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297240",
+          "url": "https://www.eurotechjobs.com/job_display/297240/Software_Engineer_Axpo_Madrid_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297243",
+          "url": "https://www.eurotechjobs.com/job_display/297243/Software_Developer_NET_Angular_Atos_Poland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297244",
+          "url": "https://www.eurotechjobs.com/job_display/297244/Senior_Software_Verification_Engineer_Embedded_Software_Datacenters_Energy_ADI_Analog_Devices_Valencia_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297245",
+          "url": "https://www.eurotechjobs.com/job_display/297245/Panels_Hardware_Design_Lead_Engineer_Baker_Hughes_Fot_Hungary"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297247",
+          "url": "https://www.eurotechjobs.com/job_display/297247/DevSecOps_Specialist_Aylo_Nicosia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297249",
+          "url": "https://www.eurotechjobs.com/job_display/297249/Senior_Edge_AI_Robotics_Engineer_Aptiv_Wuppertal_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297251",
+          "url": "https://www.eurotechjobs.com/job_display/297251/Senior_AI_ML_Data_Engineer_Robotics_Drones_Aptiv_Wuppertal_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297253",
+          "url": "https://www.eurotechjobs.com/job_display/297253/Senior_NET_Desktop_Developer_ADI_Analog_Devices_Limerick_Ireland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297255",
+          "url": "https://www.eurotechjobs.com/job_display/297255/Senior_Identity_Software_Engineer_Tesla_Cloud_Platform_Tesla_Amsterdam_Netherlands"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297257",
+          "url": "https://www.eurotechjobs.com/job_display/297257/Backend_Software_Engineer_TeamViewer_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297261",
+          "url": "https://www.eurotechjobs.com/job_display/297261/Senior_Full_Stack_Software_Engineer_TeamViewer_Porto_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297311",
+          "url": "https://www.eurotechjobs.com/job_display/297311/SOAR_Developer_Vodafone_Lisbon_Portugal"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297313",
+          "url": "https://www.eurotechjobs.com/job_display/297313/iOS_Developer_Vodafone_Athens_Greece"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297314",
+          "url": "https://www.eurotechjobs.com/job_display/297314/Senior_Software_Engineer_Full_Stack_Java_React_Zhlke_Group_London_or_Manchester_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297315",
+          "url": "https://www.eurotechjobs.com/job_display/297315/Software_Engineer_Managed_Services_Zhlke_Group_Sofia_Bulgaria"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297316",
+          "url": "https://www.eurotechjobs.com/job_display/297316/Render_Engineer_Unannounced_Project_Wargaming_Nicosia_Cyprus"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297319",
+          "url": "https://www.eurotechjobs.com/job_display/297319/Senior_Full_Stack_Developer_NodeJS_Typescript_osapiens_Mannheim_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297330",
+          "url": "https://www.eurotechjobs.com/job_display/297330/Embedded_Software_Developer_VeroTech_Hasselt_Belgium"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297334",
+          "url": "https://www.eurotechjobs.com/job_display/297334/Frontend_Engineering_Lead_Content_Trivago_Dsseldorf_Germany"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297337",
+          "url": "https://www.eurotechjobs.com/job_display/297337/Senior_Software_Engineer_Intelligent_Document_Processing_UiPath_London_United_Kingdom"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297349",
+          "url": "https://www.eurotechjobs.com/job_display/297349/Smart_Manufacturing_Engineer_Software_ICEYE_Espoo_Finland"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297358",
+          "url": "https://www.eurotechjobs.com/job_display/297358/Satellite_Systems_Software_RF_Production_Team_Lead_ICEYE_Valencia_Spain"
+        },
+        {
+          "known": false,
+          "source": "eurotechjobs",
+          "source_posting_id": "297364",
+          "url": "https://www.eurotechjobs.com/job_display/297364/Principal_Software_Engineer_Document_Understanding_UiPath_Cluj_Napoca_Romania"
+        }
+      ]
+    },
+    {
+      "source": "hnwhoishiring",
+      "chunk_index": 0,
+      "count": 250,
+      "first_source_posting_id": "49922573",
+      "last_source_posting_id": "49969213",
+      "rows": [
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922573",
+          "url": "https://news.ycombinator.com/item?id=49922573"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922584",
+          "url": "https://news.ycombinator.com/item?id=49922584"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922593",
+          "url": "https://news.ycombinator.com/item?id=49922593"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922596",
+          "url": "https://news.ycombinator.com/item?id=49922596"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922606",
+          "url": "https://news.ycombinator.com/item?id=49922606"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922609",
+          "url": "https://news.ycombinator.com/item?id=49922609"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922615",
+          "url": "https://news.ycombinator.com/item?id=49922615"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922616",
+          "url": "https://news.ycombinator.com/item?id=49922616"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922621",
+          "url": "https://news.ycombinator.com/item?id=49922621"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922693",
+          "url": "https://news.ycombinator.com/item?id=49922693"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922695",
+          "url": "https://news.ycombinator.com/item?id=49922695"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922711",
+          "url": "https://news.ycombinator.com/item?id=49922711"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922769",
+          "url": "https://news.ycombinator.com/item?id=49922769"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922803",
+          "url": "https://news.ycombinator.com/item?id=49922803"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922829",
+          "url": "https://news.ycombinator.com/item?id=49922829"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922850",
+          "url": "https://news.ycombinator.com/item?id=49922850"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922881",
+          "url": "https://news.ycombinator.com/item?id=49922881"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922885",
+          "url": "https://news.ycombinator.com/item?id=49922885"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922899",
+          "url": "https://news.ycombinator.com/item?id=49922899"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922910",
+          "url": "https://news.ycombinator.com/item?id=49922910"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922921",
+          "url": "https://news.ycombinator.com/item?id=49922921"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922929",
+          "url": "https://news.ycombinator.com/item?id=49922929"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49922970",
+          "url": "https://news.ycombinator.com/item?id=49922970"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923010",
+          "url": "https://news.ycombinator.com/item?id=49923010"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923163",
+          "url": "https://news.ycombinator.com/item?id=49923163"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923320",
+          "url": "https://news.ycombinator.com/item?id=49923320"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923384",
+          "url": "https://news.ycombinator.com/item?id=49923384"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923426",
+          "url": "https://news.ycombinator.com/item?id=49923426"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923454",
+          "url": "https://news.ycombinator.com/item?id=49923454"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923640",
+          "url": "https://news.ycombinator.com/item?id=49923640"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923756",
+          "url": "https://news.ycombinator.com/item?id=49923756"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923784",
+          "url": "https://news.ycombinator.com/item?id=49923784"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923847",
+          "url": "https://news.ycombinator.com/item?id=49923847"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923870",
+          "url": "https://news.ycombinator.com/item?id=49923870"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49923964",
+          "url": "https://news.ycombinator.com/item?id=49923964"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924016",
+          "url": "https://news.ycombinator.com/item?id=49924016"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924087",
+          "url": "https://news.ycombinator.com/item?id=49924087"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924165",
+          "url": "https://news.ycombinator.com/item?id=49924165"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924171",
+          "url": "https://news.ycombinator.com/item?id=49924171"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924239",
+          "url": "https://news.ycombinator.com/item?id=49924239"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924327",
+          "url": "https://news.ycombinator.com/item?id=49924327"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924509",
+          "url": "https://news.ycombinator.com/item?id=49924509"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924556",
+          "url": "https://news.ycombinator.com/item?id=49924556"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924575",
+          "url": "https://news.ycombinator.com/item?id=49924575"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924581",
+          "url": "https://news.ycombinator.com/item?id=49924581"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924627",
+          "url": "https://news.ycombinator.com/item?id=49924627"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924634",
+          "url": "https://news.ycombinator.com/item?id=49924634"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924674",
+          "url": "https://news.ycombinator.com/item?id=49924674"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924849",
+          "url": "https://news.ycombinator.com/item?id=49924849"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924869",
+          "url": "https://news.ycombinator.com/item?id=49924869"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924889",
+          "url": "https://news.ycombinator.com/item?id=49924889"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924972",
+          "url": "https://news.ycombinator.com/item?id=49924972"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49924974",
+          "url": "https://news.ycombinator.com/item?id=49924974"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925063",
+          "url": "https://news.ycombinator.com/item?id=49925063"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925071",
+          "url": "https://news.ycombinator.com/item?id=49925071"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925098",
+          "url": "https://news.ycombinator.com/item?id=49925098"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925116",
+          "url": "https://news.ycombinator.com/item?id=49925116"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925202",
+          "url": "https://news.ycombinator.com/item?id=49925202"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925260",
+          "url": "https://news.ycombinator.com/item?id=49925260"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925283",
+          "url": "https://news.ycombinator.com/item?id=49925283"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925300",
+          "url": "https://news.ycombinator.com/item?id=49925300"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925329",
+          "url": "https://news.ycombinator.com/item?id=49925329"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925455",
+          "url": "https://news.ycombinator.com/item?id=49925455"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925468",
+          "url": "https://news.ycombinator.com/item?id=49925468"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925469",
+          "url": "https://news.ycombinator.com/item?id=49925469"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925489",
+          "url": "https://news.ycombinator.com/item?id=49925489"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925497",
+          "url": "https://news.ycombinator.com/item?id=49925497"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925526",
+          "url": "https://news.ycombinator.com/item?id=49925526"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925544",
+          "url": "https://news.ycombinator.com/item?id=49925544"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925545",
+          "url": "https://news.ycombinator.com/item?id=49925545"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925633",
+          "url": "https://news.ycombinator.com/item?id=49925633"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925643",
+          "url": "https://news.ycombinator.com/item?id=49925643"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925644",
+          "url": "https://news.ycombinator.com/item?id=49925644"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925696",
+          "url": "https://news.ycombinator.com/item?id=49925696"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925900",
+          "url": "https://news.ycombinator.com/item?id=49925900"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925904",
+          "url": "https://news.ycombinator.com/item?id=49925904"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925928",
+          "url": "https://news.ycombinator.com/item?id=49925928"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49925995",
+          "url": "https://news.ycombinator.com/item?id=49925995"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926031",
+          "url": "https://news.ycombinator.com/item?id=49926031"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926050",
+          "url": "https://news.ycombinator.com/item?id=49926050"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926195",
+          "url": "https://news.ycombinator.com/item?id=49926195"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926213",
+          "url": "https://news.ycombinator.com/item?id=49926213"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926228",
+          "url": "https://news.ycombinator.com/item?id=49926228"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926232",
+          "url": "https://news.ycombinator.com/item?id=49926232"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926244",
+          "url": "https://news.ycombinator.com/item?id=49926244"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926504",
+          "url": "https://news.ycombinator.com/item?id=49926504"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926511",
+          "url": "https://news.ycombinator.com/item?id=49926511"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926618",
+          "url": "https://news.ycombinator.com/item?id=49926618"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926771",
+          "url": "https://news.ycombinator.com/item?id=49926771"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926793",
+          "url": "https://news.ycombinator.com/item?id=49926793"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926811",
+          "url": "https://news.ycombinator.com/item?id=49926811"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926835",
+          "url": "https://news.ycombinator.com/item?id=49926835"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926872",
+          "url": "https://news.ycombinator.com/item?id=49926872"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49926951",
+          "url": "https://news.ycombinator.com/item?id=49926951"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927073",
+          "url": "https://news.ycombinator.com/item?id=49927073"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927083",
+          "url": "https://news.ycombinator.com/item?id=49927083"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927132",
+          "url": "https://news.ycombinator.com/item?id=49927132"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927158",
+          "url": "https://news.ycombinator.com/item?id=49927158"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927257",
+          "url": "https://news.ycombinator.com/item?id=49927257"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927265",
+          "url": "https://news.ycombinator.com/item?id=49927265"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927288",
+          "url": "https://news.ycombinator.com/item?id=49927288"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927291",
+          "url": "https://news.ycombinator.com/item?id=49927291"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927319",
+          "url": "https://news.ycombinator.com/item?id=49927319"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927351",
+          "url": "https://news.ycombinator.com/item?id=49927351"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927356",
+          "url": "https://news.ycombinator.com/item?id=49927356"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927367",
+          "url": "https://news.ycombinator.com/item?id=49927367"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927389",
+          "url": "https://news.ycombinator.com/item?id=49927389"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927464",
+          "url": "https://news.ycombinator.com/item?id=49927464"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927692",
+          "url": "https://news.ycombinator.com/item?id=49927692"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927896",
+          "url": "https://news.ycombinator.com/item?id=49927896"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927917",
+          "url": "https://news.ycombinator.com/item?id=49927917"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49927984",
+          "url": "https://news.ycombinator.com/item?id=49927984"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928023",
+          "url": "https://news.ycombinator.com/item?id=49928023"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928066",
+          "url": "https://news.ycombinator.com/item?id=49928066"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928334",
+          "url": "https://news.ycombinator.com/item?id=49928334"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928358",
+          "url": "https://news.ycombinator.com/item?id=49928358"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928396",
+          "url": "https://news.ycombinator.com/item?id=49928396"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928430",
+          "url": "https://news.ycombinator.com/item?id=49928430"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928452",
+          "url": "https://news.ycombinator.com/item?id=49928452"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928677",
+          "url": "https://news.ycombinator.com/item?id=49928677"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928727",
+          "url": "https://news.ycombinator.com/item?id=49928727"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928755",
+          "url": "https://news.ycombinator.com/item?id=49928755"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928826",
+          "url": "https://news.ycombinator.com/item?id=49928826"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49928997",
+          "url": "https://news.ycombinator.com/item?id=49928997"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929056",
+          "url": "https://news.ycombinator.com/item?id=49929056"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929200",
+          "url": "https://news.ycombinator.com/item?id=49929200"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929202",
+          "url": "https://news.ycombinator.com/item?id=49929202"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929235",
+          "url": "https://news.ycombinator.com/item?id=49929235"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929264",
+          "url": "https://news.ycombinator.com/item?id=49929264"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929283",
+          "url": "https://news.ycombinator.com/item?id=49929283"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929302",
+          "url": "https://news.ycombinator.com/item?id=49929302"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929352",
+          "url": "https://news.ycombinator.com/item?id=49929352"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929368",
+          "url": "https://news.ycombinator.com/item?id=49929368"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929415",
+          "url": "https://news.ycombinator.com/item?id=49929415"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929471",
+          "url": "https://news.ycombinator.com/item?id=49929471"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929510",
+          "url": "https://news.ycombinator.com/item?id=49929510"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929522",
+          "url": "https://news.ycombinator.com/item?id=49929522"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929547",
+          "url": "https://news.ycombinator.com/item?id=49929547"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929553",
+          "url": "https://news.ycombinator.com/item?id=49929553"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929563",
+          "url": "https://news.ycombinator.com/item?id=49929563"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929588",
+          "url": "https://news.ycombinator.com/item?id=49929588"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929655",
+          "url": "https://news.ycombinator.com/item?id=49929655"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929657",
+          "url": "https://news.ycombinator.com/item?id=49929657"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929664",
+          "url": "https://news.ycombinator.com/item?id=49929664"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929798",
+          "url": "https://news.ycombinator.com/item?id=49929798"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49929886",
+          "url": "https://news.ycombinator.com/item?id=49929886"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930066",
+          "url": "https://news.ycombinator.com/item?id=49930066"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930136",
+          "url": "https://news.ycombinator.com/item?id=49930136"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930260",
+          "url": "https://news.ycombinator.com/item?id=49930260"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930428",
+          "url": "https://news.ycombinator.com/item?id=49930428"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930470",
+          "url": "https://news.ycombinator.com/item?id=49930470"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930478",
+          "url": "https://news.ycombinator.com/item?id=49930478"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930568",
+          "url": "https://news.ycombinator.com/item?id=49930568"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930633",
+          "url": "https://news.ycombinator.com/item?id=49930633"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930656",
+          "url": "https://news.ycombinator.com/item?id=49930656"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930681",
+          "url": "https://news.ycombinator.com/item?id=49930681"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930868",
+          "url": "https://news.ycombinator.com/item?id=49930868"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930919",
+          "url": "https://news.ycombinator.com/item?id=49930919"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49930980",
+          "url": "https://news.ycombinator.com/item?id=49930980"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931033",
+          "url": "https://news.ycombinator.com/item?id=49931033"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931051",
+          "url": "https://news.ycombinator.com/item?id=49931051"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931362",
+          "url": "https://news.ycombinator.com/item?id=49931362"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931382",
+          "url": "https://news.ycombinator.com/item?id=49931382"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931412",
+          "url": "https://news.ycombinator.com/item?id=49931412"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931475",
+          "url": "https://news.ycombinator.com/item?id=49931475"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931740",
+          "url": "https://news.ycombinator.com/item?id=49931740"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931746",
+          "url": "https://news.ycombinator.com/item?id=49931746"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49931850",
+          "url": "https://news.ycombinator.com/item?id=49931850"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49932264",
+          "url": "https://news.ycombinator.com/item?id=49932264"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49932275",
+          "url": "https://news.ycombinator.com/item?id=49932275"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49932525",
+          "url": "https://news.ycombinator.com/item?id=49932525"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49932831",
+          "url": "https://news.ycombinator.com/item?id=49932831"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933038",
+          "url": "https://news.ycombinator.com/item?id=49933038"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933080",
+          "url": "https://news.ycombinator.com/item?id=49933080"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933183",
+          "url": "https://news.ycombinator.com/item?id=49933183"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933369",
+          "url": "https://news.ycombinator.com/item?id=49933369"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933473",
+          "url": "https://news.ycombinator.com/item?id=49933473"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933483",
+          "url": "https://news.ycombinator.com/item?id=49933483"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933507",
+          "url": "https://news.ycombinator.com/item?id=49933507"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933882",
+          "url": "https://news.ycombinator.com/item?id=49933882"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49933969",
+          "url": "https://news.ycombinator.com/item?id=49933969"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934114",
+          "url": "https://news.ycombinator.com/item?id=49934114"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934195",
+          "url": "https://news.ycombinator.com/item?id=49934195"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934530",
+          "url": "https://news.ycombinator.com/item?id=49934530"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934638",
+          "url": "https://news.ycombinator.com/item?id=49934638"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934886",
+          "url": "https://news.ycombinator.com/item?id=49934886"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49934993",
+          "url": "https://news.ycombinator.com/item?id=49934993"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935001",
+          "url": "https://news.ycombinator.com/item?id=49935001"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935083",
+          "url": "https://news.ycombinator.com/item?id=49935083"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935210",
+          "url": "https://news.ycombinator.com/item?id=49935210"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935441",
+          "url": "https://news.ycombinator.com/item?id=49935441"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935497",
+          "url": "https://news.ycombinator.com/item?id=49935497"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935587",
+          "url": "https://news.ycombinator.com/item?id=49935587"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935692",
+          "url": "https://news.ycombinator.com/item?id=49935692"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935697",
+          "url": "https://news.ycombinator.com/item?id=49935697"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49935698",
+          "url": "https://news.ycombinator.com/item?id=49935698"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49936155",
+          "url": "https://news.ycombinator.com/item?id=49936155"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49936182",
+          "url": "https://news.ycombinator.com/item?id=49936182"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49936718",
+          "url": "https://news.ycombinator.com/item?id=49936718"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49936893",
+          "url": "https://news.ycombinator.com/item?id=49936893"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937058",
+          "url": "https://news.ycombinator.com/item?id=49937058"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937104",
+          "url": "https://news.ycombinator.com/item?id=49937104"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937360",
+          "url": "https://news.ycombinator.com/item?id=49937360"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937635",
+          "url": "https://news.ycombinator.com/item?id=49937635"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937789",
+          "url": "https://news.ycombinator.com/item?id=49937789"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49937835",
+          "url": "https://news.ycombinator.com/item?id=49937835"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49939047",
+          "url": "https://news.ycombinator.com/item?id=49939047"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49939260",
+          "url": "https://news.ycombinator.com/item?id=49939260"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49939371",
+          "url": "https://news.ycombinator.com/item?id=49939371"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49939804",
+          "url": "https://news.ycombinator.com/item?id=49939804"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49940125",
+          "url": "https://news.ycombinator.com/item?id=49940125"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49940381",
+          "url": "https://news.ycombinator.com/item?id=49940381"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49942189",
+          "url": "https://news.ycombinator.com/item?id=49942189"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49943713",
+          "url": "https://news.ycombinator.com/item?id=49943713"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49943992",
+          "url": "https://news.ycombinator.com/item?id=49943992"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49945147",
+          "url": "https://news.ycombinator.com/item?id=49945147"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49945634",
+          "url": "https://news.ycombinator.com/item?id=49945634"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49945738",
+          "url": "https://news.ycombinator.com/item?id=49945738"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49945810",
+          "url": "https://news.ycombinator.com/item?id=49945810"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49946276",
+          "url": "https://news.ycombinator.com/item?id=49946276"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49951635",
+          "url": "https://news.ycombinator.com/item?id=49951635"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49953830",
+          "url": "https://news.ycombinator.com/item?id=49953830"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49956481",
+          "url": "https://news.ycombinator.com/item?id=49956481"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49957336",
+          "url": "https://news.ycombinator.com/item?id=49957336"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49961408",
+          "url": "https://news.ycombinator.com/item?id=49961408"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49961551",
+          "url": "https://news.ycombinator.com/item?id=49961551"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49961597",
+          "url": "https://news.ycombinator.com/item?id=49961597"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49962002",
+          "url": "https://news.ycombinator.com/item?id=49962002"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49962075",
+          "url": "https://news.ycombinator.com/item?id=49962075"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49962303",
+          "url": "https://news.ycombinator.com/item?id=49962303"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49962725",
+          "url": "https://news.ycombinator.com/item?id=49962725"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49963267",
+          "url": "https://news.ycombinator.com/item?id=49963267"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49963332",
+          "url": "https://news.ycombinator.com/item?id=49963332"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49963906",
+          "url": "https://news.ycombinator.com/item?id=49963906"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49963937",
+          "url": "https://news.ycombinator.com/item?id=49963937"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49964196",
+          "url": "https://news.ycombinator.com/item?id=49964196"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49964254",
+          "url": "https://news.ycombinator.com/item?id=49964254"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49964448",
+          "url": "https://news.ycombinator.com/item?id=49964448"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49965012",
+          "url": "https://news.ycombinator.com/item?id=49965012"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49965266",
+          "url": "https://news.ycombinator.com/item?id=49965266"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49966033",
+          "url": "https://news.ycombinator.com/item?id=49966033"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49966427",
+          "url": "https://news.ycombinator.com/item?id=49966427"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49966712",
+          "url": "https://news.ycombinator.com/item?id=49966712"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49966852",
+          "url": "https://news.ycombinator.com/item?id=49966852"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49967017",
+          "url": "https://news.ycombinator.com/item?id=49967017"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49967489",
+          "url": "https://news.ycombinator.com/item?id=49967489"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49968179",
+          "url": "https://news.ycombinator.com/item?id=49968179"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49968228",
+          "url": "https://news.ycombinator.com/item?id=49968228"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49968954",
+          "url": "https://news.ycombinator.com/item?id=49968954"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49969213",
+          "url": "https://news.ycombinator.com/item?id=49969213"
+        }
+      ]
+    },
+    {
+      "source": "hnwhoishiring",
+      "chunk_index": 1,
+      "count": 29,
+      "first_source_posting_id": "49971729",
+      "last_source_posting_id": "49995549",
+      "rows": [
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49971729",
+          "url": "https://news.ycombinator.com/item?id=49971729"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49972097",
+          "url": "https://news.ycombinator.com/item?id=49972097"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49972736",
+          "url": "https://news.ycombinator.com/item?id=49972736"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49973408",
+          "url": "https://news.ycombinator.com/item?id=49973408"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49974107",
+          "url": "https://news.ycombinator.com/item?id=49974107"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49975117",
+          "url": "https://news.ycombinator.com/item?id=49975117"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49975827",
+          "url": "https://news.ycombinator.com/item?id=49975827"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49976344",
+          "url": "https://news.ycombinator.com/item?id=49976344"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49976346",
+          "url": "https://news.ycombinator.com/item?id=49976346"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49976350",
+          "url": "https://news.ycombinator.com/item?id=49976350"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49976425",
+          "url": "https://news.ycombinator.com/item?id=49976425"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49976516",
+          "url": "https://news.ycombinator.com/item?id=49976516"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49978570",
+          "url": "https://news.ycombinator.com/item?id=49978570"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49979600",
+          "url": "https://news.ycombinator.com/item?id=49979600"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49980137",
+          "url": "https://news.ycombinator.com/item?id=49980137"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49980354",
+          "url": "https://news.ycombinator.com/item?id=49980354"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49980680",
+          "url": "https://news.ycombinator.com/item?id=49980680"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49980867",
+          "url": "https://news.ycombinator.com/item?id=49980867"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49980976",
+          "url": "https://news.ycombinator.com/item?id=49980976"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49981582",
+          "url": "https://news.ycombinator.com/item?id=49981582"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49982648",
+          "url": "https://news.ycombinator.com/item?id=49982648"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49982803",
+          "url": "https://news.ycombinator.com/item?id=49982803"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49986260",
+          "url": "https://news.ycombinator.com/item?id=49986260"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49986633",
+          "url": "https://news.ycombinator.com/item?id=49986633"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49987144",
+          "url": "https://news.ycombinator.com/item?id=49987144"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49991656",
+          "url": "https://news.ycombinator.com/item?id=49991656"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49993917",
+          "url": "https://news.ycombinator.com/item?id=49993917"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49994263",
+          "url": "https://news.ycombinator.com/item?id=49994263"
+        },
+        {
+          "known": false,
+          "source": "hnwhoishiring",
+          "source_posting_id": "49995549",
+          "url": "https://news.ycombinator.com/item?id=49995549"
+        }
+      ]
+    }
+  ],
+  "chunks_by_source": {
+    "eurotechjobs": 2,
+    "hnwhoishiring": 2
+  }
+}

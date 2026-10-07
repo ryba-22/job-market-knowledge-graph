@@ -1,0 +1,23 @@
+{
+  "format": "source-inventory-v1",
+  "scope": "scale-05-eurotechjobs-hn",
+  "sources": {
+    "eurotechjobs": {
+      "discoverable": 321,
+      "known": 0,
+      "unknown": 321
+    },
+    "hnwhoishiring": {
+      "discoverable": 279,
+      "known": 0,
+      "unknown": 279
+    }
+  },
+  "discoverable_total": 600,
+  "known_total": 0,
+  "unknown_total": 600,
+  "uncompressed_bytes": 95562,
+  "compressed_bytes": 10406,
+  "uncompressed_sha256": "021cac7cf9afaaec7d91b77bc08fa2b3f2c0443ecc91f25ce60f6b5fd98f7017",
+  "compressed_sha256": "635d2b51cc5fe6140fb67e7b08ffe6ead4bc8d9e196000059e317385cd3885fd"
+}

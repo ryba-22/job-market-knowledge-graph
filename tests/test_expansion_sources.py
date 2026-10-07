@@ -1,6 +1,6 @@
 import json
 
-from ingestion.expansion_sources import AplikujSource, BulldogJobSource, ITLeadersSource, MichaelPageSource, NoFluffJobsSource, PracujSecondarySource, RocketJobsSource
+from ingestion.expansion_sources import AplikujSource, BulldogJobSource, EuroTechJobsSource, HNWhoIsHiringSource, ITLeadersSource, MichaelPageSource, NoFluffJobsSource, PracujSecondarySource, RocketJobsSource
 from ingestion.model import PostingRef
 
 
@@ -172,3 +172,32 @@ line 2","hiringOrganization":{"@type":"Organization","name":"Michael Page Poland
     parsed=MichaelPageSource().parse_detail(html,ref)
     assert parsed.title=="Power BI Lead"
     assert parsed.company_mention=="Michael Page Poland"
+
+
+def test_eurotechjobs_parses_visible_detail():
+    html = """<html><head><link rel="canonical" href="https://www.eurotechjobs.com/job_display/296685/Example"><meta property="og:title" content="Senior AI Engineer - Aptiv, Krakow"><meta property="og:description" content="Build robotics systems"></head><body><div class="jobDisplay"><h1>Senior AI Engineer</h1><h2>Aptiv</h2><h2>Krakow, Poland</h2><p>Build robotics systems</p></div></body></html>"""
+    ref=PostingRef("eurotechjobs","https://www.eurotechjobs.com/job_display/296685/Example","296685")
+    parsed=EuroTechJobsSource().parse_detail(html,ref)
+    assert parsed.source_posting_id=="296685"
+    assert parsed.title=="Senior AI Engineer"
+    assert parsed.company_mention=="Aptiv"
+    assert parsed.source_specific["location"]=="Krakow, Poland"
+    assert parsed.source_specific["observation_provenance"]=="DIRECT"
+
+
+def test_hn_whoishiring_parses_top_level_comment():
+    raw=json.dumps({
+        "id":49995549,
+        "parent":49922569,
+        "by":"founder",
+        "time":1791000000,
+        "type":"comment",
+        "text":"Acme AI | Remote | Senior Platform Engineer<br>We build inference infrastructure."
+    })
+    ref=PostingRef("hnwhoishiring","https://news.ycombinator.com/item?id=49995549","49995549")
+    parsed=HNWhoIsHiringSource().parse_detail(raw,ref)
+    assert parsed.source_posting_id=="49995549"
+    assert parsed.company_mention=="Acme AI"
+    assert parsed.title.startswith("Acme AI | Remote | Senior Platform Engineer")
+    assert parsed.source_specific["thread_id"]=="49922569"
+    assert parsed.source_specific["observation_provenance"]=="COMMUNITY_DIRECT"
