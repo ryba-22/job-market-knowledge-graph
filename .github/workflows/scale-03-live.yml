@@ -1,8 +1,7 @@
 name: SCALE-03 additional sources crawl-all
 
 on:
-  push:
-    branches: [scale-03-additional-sources]
+  workflow_dispatch:
 
 jobs:
   prepare:

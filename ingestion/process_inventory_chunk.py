@@ -86,11 +86,6 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
                     policy=policy,
                     on_attempt_failure=on_failure,
                 )
-                parsed = (
-                    ADAPTERS[source].parse_detail(raw, final_url)
-                    if source == "justjoinit"
-                    else SOURCES[source].parse_detail(raw, ref)
-                )
                 raw_id = store.record_fetch(
                     source=source,
                     url=ref.url,
@@ -99,9 +94,14 @@ def process(dsn: str, *, plan_path: str, source: str, chunk_index: int, delay: f
                     body=raw,
                     content_type=content_type,
                     run_id=run_id,
-                    source_posting_id=parsed.source_posting_id,
+                    source_posting_id=sid,
                     parser_version=PARSER_BUNDLE_VERSION,
                     transport_version=TRANSPORT_VERSIONS[source],
+                )
+                parsed = (
+                    ADAPTERS[source].parse_detail(raw, final_url)
+                    if source == "justjoinit"
+                    else SOURCES[source].parse_detail(raw, ref)
                 )
                 result = store.ingest(parsed, raw_id)
                 store.record_attempt(

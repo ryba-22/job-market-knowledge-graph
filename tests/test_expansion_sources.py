@@ -103,3 +103,24 @@ def test_pracuj_secondary_rejects_non_pracuj_upstream():
         assert "upstream source mismatch" in str(exc)
     else:
         raise AssertionError("expected upstream-source rejection")
+
+from ingestion.expansion_sources import SolidJobsSource
+
+
+def test_solid_html_fallback_without_jsonld():
+    html = """<html><head><link rel="canonical" href="https://solid.jobs/offer/30898/affirm-senior-software-engineer-iam"><meta property="og:description" content="IAM role"></head><body><h1>Senior Software Engineer - IAM</h1><section><h2>Zakres zadań</h2><p>Build IAM systems</p></section></body></html>"""
+    ref = PostingRef("solidjobs","https://solid.jobs/offer/30898/affirm-senior-software-engineer-iam","30898")
+    parsed = SolidJobsSource().parse_detail(html, ref)
+    assert parsed.source_posting_id == "30898"
+    assert parsed.title == "Senior Software Engineer - IAM"
+    assert parsed.source_specific["parse_mode"] == "HTML_FALLBACK"
+    assert parsed.source_specific["observation_provenance"] == "DIRECT"
+
+
+def test_solid_prefers_jsonld_when_present():
+    html = """<html><head><script type="application/ld+json">{"@context":"https://schema.org","@type":"JobPosting","title":"AI Engineer","identifier":{"value":"38940"},"url":"https://solid.jobs/offer/38940/itfs-ai-specialist","hiringOrganization":{"name":"ITFS"}}</script></head><body><h1>AI Engineer</h1></body></html>"""
+    ref = PostingRef("solidjobs","https://solid.jobs/offer/38940/itfs-ai-specialist","38940")
+    parsed = SolidJobsSource().parse_detail(html, ref)
+    assert parsed.source_posting_id == "38940"
+    assert parsed.company_mention == "ITFS"
+    assert parsed.source_specific["parse_mode"] == "JSON_LD"

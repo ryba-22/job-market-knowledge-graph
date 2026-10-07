@@ -284,23 +284,15 @@ class SolidJobsSource:
     def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
         soup = BeautifulSoup(raw, "html.parser")
         structured = _jobposting_json_ld(soup)
-        if not structured:
-            raise ValueError("PARSER_DRIFT: SOLID.Jobs JobPosting JSON-LD missing")
-        identifier = structured.get("identifier") or {}
-        sid = str(identifier.get("value") or ref.source_posting_id)
-        title = norm_text(structured.get("title"))
-        hiring = structured.get("hiringOrganization") or {}
-        company = hiring.get("name") if isinstance(hiring, dict) else None
-        if not title:
-            raise ValueError("PARSER_DRIFT: SOLID.Jobs title missing")
-        return ParsedPosting(
-            source=self.code,
-            source_posting_id=sid,
-            url=canonical_url(structured.get("url") or ref.url),
-            title=title,
-            company_mention=norm_text(company) or None,
-            body_text=soup.get_text("\n", strip=True),
-            source_specific={
+        if structured:
+            identifier = structured.get("identifier") or {}
+            sid = str(identifier.get("value") or ref.source_posting_id)
+            title = norm_text(structured.get("title"))
+            hiring = structured.get("hiringOrganization") or {}
+            company = hiring.get("name") if isinstance(hiring, dict) else None
+            if not title:
+                raise ValueError("PARSER_DRIFT: SOLID.Jobs title missing")
+            source_specific = {
                 "identifier": identifier,
                 "hiring_organization": hiring,
                 "date_posted": structured.get("datePosted"),
@@ -311,11 +303,52 @@ class SolidJobsSource:
                 "skills": structured.get("skills"),
                 "direct_apply": structured.get("directApply"),
                 "observation_provenance": "DIRECT",
-            },
-            revision_projection={
+                "parse_mode": "JSON_LD",
+            }
+            revision_projection = {
                 "jobposting_json_ld": structured,
                 "stable_sections": _stable_sections(soup),
-            },
+            }
+            url = canonical_url(structured.get("url") or ref.url)
+        else:
+            h1 = soup.find("h1")
+            title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
+            if not title:
+                raise ValueError("PARSER_DRIFT: SOLID.Jobs title missing")
+            canonical = soup.find("link", attrs={"rel": "canonical"})
+            canonical_href = canonical.get("href") if canonical else None
+            url = canonical_url(canonical_href or ref.url)
+            match = re.search(r"/offer/(\d+)(?:/|$)", url)
+            sid = match.group(1) if match else ref.source_posting_id
+            og_site = soup.find("meta", attrs={"property": "og:site_name"})
+            og_desc = soup.find("meta", attrs={"property": "og:description"})
+            company_meta = soup.find("meta", attrs={"name": "author"})
+            company = company_meta.get("content") if company_meta else None
+            source_specific = {
+                "identifier": {"value": sid},
+                "hiring_organization": {"name": company} if company else {},
+                "meta_description": og_desc.get("content") if og_desc else None,
+                "site_name": og_site.get("content") if og_site else None,
+                "observation_provenance": "DIRECT",
+                "parse_mode": "HTML_FALLBACK",
+            }
+            revision_projection = {
+                "html_fallback": {
+                    "title": title,
+                    "company": norm_text(company) or None,
+                    "meta_description": og_desc.get("content") if og_desc else None,
+                },
+                "stable_sections": _stable_sections(soup),
+            }
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=str(sid),
+            url=url,
+            title=title,
+            company_mention=norm_text(company) or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific=source_specific,
+            revision_projection=revision_projection,
         )
 
 
