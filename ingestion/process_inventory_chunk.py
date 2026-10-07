@@ -170,7 +170,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dsn", default=os.environ.get("DATABASE_URL"))
     p.add_argument("--plan", default="data/inventories/scale-02/chunks.json")
-    p.add_argument("--source", required=True, choices=("justjoinit", "nofluffjobs", "rocketjobs", "bulldogjob"))
+    p.add_argument("--source", required=True, choices=("justjoinit", "nofluffjobs", "rocketjobs", "bulldogjob", "solidjobs", "teamquest"))
     p.add_argument("--chunk-index", required=True, type=int)
     p.add_argument("--delay", type=float, default=0.1)
     p.add_argument("--run-id")

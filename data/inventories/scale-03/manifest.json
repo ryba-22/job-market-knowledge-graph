@@ -1,0 +1,19 @@
+{
+  "format": "source-inventory-v1",
+  "sources": {
+    "solidjobs": {
+      "discoverable": 3787,
+      "unknown": 3787
+    },
+    "teamquest": {
+      "discoverable": 124,
+      "unknown": 124
+    }
+  },
+  "discoverable_total": 3911,
+  "unknown_total": 3911,
+  "uncompressed_sha256": "3331dd74f226a31afe924591538f018bdacdfd02bea5c336433a3b29040d67fb",
+  "compressed_sha256": "bf42d959f5ebbed5f1e6fca045cbe58b5032d6ccd32631ad2d76e66e9d38067e",
+  "uncompressed_bytes": 566211,
+  "compressed_bytes": 67255
+}

@@ -17,6 +17,8 @@ NFJ_SEARCH_URL = "https://nofluffjobs.com/api/search/posting"
 NFJ_DETAIL_URL = "https://nofluffjobs.com/api/posting/{slug}"
 ROCKET_SITEMAP_INDEX = "https://rocketjobs.pl/sitemaps/active-jobs.xml"
 BULLDOG_JOBS_SITEMAP = "https://bulldogjob.com/en/jobs.xml.gz"
+SOLID_JOBS_SITEMAP = "https://solid.jobs/sitemap-offers.xml"
+TEAMQUEST_JOBS_SITEMAP = "https://teamquest.pl/sitemap/praca.xml"
 ISITFAIR_SEARCH_URL = "https://isitfair.pl/api/v1/offers/search"
 PRACUJ_SEARCH_TERMS = (
     "developer","engineer","programista","java","python","devops","data","tester",
@@ -249,6 +251,165 @@ class BulldogJobSource:
         )
 
 
+class SolidJobsSource:
+    code = "solidjobs"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(SOLID_JOBS_SITEMAP)
+        response.raise_for_status()
+        root = ET.fromstring(response.text)
+        refs = []
+        seen = set()
+        for node in root.iter():
+            if not node.tag.endswith("loc") or not node.text:
+                continue
+            url = canonical_url(node.text.strip())
+            match = re.search(r"/offer/(\d+)(?:/|$)", url)
+            if not match:
+                continue
+            sid = match.group(1)
+            if sid in seen:
+                continue
+            seen.add(sid)
+            refs.append(PostingRef(self.code, url, sid))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        if not structured:
+            raise ValueError("PARSER_DRIFT: SOLID.Jobs JobPosting JSON-LD missing")
+        identifier = structured.get("identifier") or {}
+        sid = str(identifier.get("value") or ref.source_posting_id)
+        title = norm_text(structured.get("title"))
+        hiring = structured.get("hiringOrganization") or {}
+        company = hiring.get("name") if isinstance(hiring, dict) else None
+        if not title:
+            raise ValueError("PARSER_DRIFT: SOLID.Jobs title missing")
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=sid,
+            url=canonical_url(structured.get("url") or ref.url),
+            title=title,
+            company_mention=norm_text(company) or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "identifier": identifier,
+                "hiring_organization": hiring,
+                "date_posted": structured.get("datePosted"),
+                "date_modified": structured.get("dateModified"),
+                "valid_through": structured.get("validThrough"),
+                "employment_type": structured.get("employmentType"),
+                "base_salary": structured.get("baseSalary"),
+                "skills": structured.get("skills"),
+                "direct_apply": structured.get("directApply"),
+                "observation_provenance": "DIRECT",
+            },
+            revision_projection={
+                "jobposting_json_ld": structured,
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
+class TeamQuestSource:
+    code = "teamquest"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(TEAMQUEST_JOBS_SITEMAP)
+        response.raise_for_status()
+        root = ET.fromstring(response.text)
+        refs = []
+        seen = set()
+        for node in root.iter():
+            if not node.tag.endswith("loc") or not node.text:
+                continue
+            url = canonical_url(node.text.strip())
+            match = re.search(r"/(?:[^/]+/)?(\d+)-praca-", url)
+            if not match:
+                continue
+            sid = match.group(1)
+            if sid in seen:
+                continue
+            seen.add(sid)
+            refs.append(PostingRef(self.code, url, sid))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        h1 = soup.find("h1")
+        title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
+        if not title:
+            raise ValueError("PARSER_DRIFT: TeamQuest title missing")
+        job_id = None
+        hidden = soup.find("input", attrs={"name": "joborder_id"})
+        if hidden:
+            job_id = hidden.get("value")
+        sid = str(job_id or ref.source_posting_id)
+        location_meta = soup.find("meta", attrs={"itemprop": "addressLocality"})
+        date_meta = soup.find("meta", attrs={"itemprop": "datePosted"})
+        salary = soup.find("span", class_="job-sallary")
+        min_meta = salary.find("meta", attrs={"itemprop": "minValue"}) if salary else None
+        max_meta = salary.find("meta", attrs={"itemprop": "maxValue"}) if salary else None
+        currency_meta = salary.find("meta", attrs={"itemprop": "currency"}) if salary else None
+        contract = soup.select_one(".contract__types")
+        experience = soup.select_one(".experience__levels")
+        tech = [norm_text(x.get_text(" ", strip=True)) for x in soup.select("h3 + .tags a, .tags a, .tag") if norm_text(x.get_text(" ", strip=True))]
+        meta_desc = soup.find("meta", attrs={"name": "description"})
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=sid,
+            url=canonical_url(ref.url),
+            title=title,
+            company_mention="TeamQuest",
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "advertiser": "TeamQuest",
+                "joborder_id": sid,
+                "location": location_meta.get("content") if location_meta else None,
+                "date_posted": date_meta.get("content") if date_meta else None,
+                "salary": {
+                    "min": min_meta.get("content") if min_meta else None,
+                    "max": max_meta.get("content") if max_meta else None,
+                    "currency": currency_meta.get("content") if currency_meta else None,
+                },
+                "contract": norm_text(contract.get_text(" ", strip=True)) if contract else None,
+                "experience": norm_text(experience.get_text(" ", strip=True)) if experience else None,
+                "technologies": sorted(set(tech)),
+                "meta_description": meta_desc.get("content") if meta_desc else None,
+                "observation_provenance": "DIRECT",
+            },
+            revision_projection={
+                "title": title,
+                "source_specific": {
+                    "location": location_meta.get("content") if location_meta else None,
+                    "date_posted": date_meta.get("content") if date_meta else None,
+                    "salary_min": min_meta.get("content") if min_meta else None,
+                    "salary_max": max_meta.get("content") if max_meta else None,
+                    "salary_currency": currency_meta.get("content") if currency_meta else None,
+                    "contract": norm_text(contract.get_text(" ", strip=True)) if contract else None,
+                    "experience": norm_text(experience.get_text(" ", strip=True)) if experience else None,
+                    "technologies": sorted(set(tech)),
+                },
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
 class PracujSecondarySource:
     code = "pracuj"
 
@@ -330,5 +491,7 @@ SOURCES = {
     "nofluffjobs": NoFluffJobsSource(),
     "rocketjobs": RocketJobsSource(),
     "bulldogjob": BulldogJobSource(),
+    "solidjobs": SolidJobsSource(),
+    "teamquest": TeamQuestSource(),
     "pracuj": PracujSecondarySource(),
 }
