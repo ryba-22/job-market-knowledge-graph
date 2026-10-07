@@ -41,6 +41,16 @@ def test_rocket_parses_jobposting_jsonld():
     assert p.revision_projection["jobposting_json_ld"]["employmentType"]=="FULL_TIME"
 
 
+def test_rocket_html_fallback_archived_without_jsonld():
+    html="""<html><head><link rel="canonical" href="https://rocketjobs.pl/oferta-pracy/ab-industry-example"><meta property="og:title" content="Administrator - Projektant 3D: Macierzysz / Warszawa"></head><body><h1>Administrator - Projektant 3D: Macierzysz / Warszawa</h1><div>Oferta archiwalna</div><a class="company_all_offers_link">Praca AB Industry</a><section><h2>Opis stanowiska</h2><p>Projektowanie instalacji.</p></section></body></html>"""
+    ref=PostingRef("rocketjobs","https://rocketjobs.pl/oferta-pracy/ab-industry-example","ab-industry-example")
+    parsed=RocketJobsSource().parse_detail(html,ref)
+    assert parsed.title=="Administrator - Projektant 3D: Macierzysz / Warszawa"
+    assert parsed.company_mention=="AB Industry"
+    assert parsed.source_specific["parse_mode"]=="HTML_FALLBACK"
+    assert parsed.source_specific["archived"] is True
+
+
 def test_bulldog_parses_numeric_identity_and_jsonld():
     html='''<html><head><script type="application/ld+json">{
       "@context":"https://schema.org","@type":"JobPosting",

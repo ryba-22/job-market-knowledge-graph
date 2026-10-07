@@ -153,8 +153,43 @@ class RocketJobsSource:
     def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
         soup = BeautifulSoup(raw, "html.parser")
         structured = _jobposting_json_ld(soup)
+        canonical = soup.find("link", attrs={"rel": "canonical"})
+        canonical_href = canonical.get("href") if canonical else None
         if not structured:
-            raise ValueError("PARSER_DRIFT: RocketJobs JobPosting JSON-LD missing")
+            body_text = soup.get_text("\n", strip=True)
+            archived = "Oferta archiwalna" in body_text
+            h1 = soup.find("h1")
+            title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
+            company_link = soup.select_one(".company_all_offers_link")
+            company = norm_text(company_link.get_text(" ", strip=True) if company_link else None)
+            company = re.sub(r"^Praca\s+", "", company, flags=re.I).strip()
+            if not archived or not title or not company:
+                raise ValueError("PARSER_DRIFT: RocketJobs JobPosting JSON-LD missing")
+            return ParsedPosting(
+                source=self.code,
+                source_posting_id=ref.source_posting_id,
+                url=canonical_url(canonical_href or ref.url),
+                title=title,
+                company_mention=company,
+                body_text=body_text,
+                source_specific={
+                    "hiring_organization": {"name": company},
+                    "date_posted": None,
+                    "valid_through": None,
+                    "employment_type": None,
+                    "observation_provenance": "DIRECT",
+                    "parse_mode": "HTML_FALLBACK",
+                    "archived": True,
+                },
+                revision_projection={
+                    "html_fallback": {
+                        "title": title,
+                        "company": company,
+                        "archived": True,
+                    },
+                    "stable_sections": _stable_sections(soup),
+                },
+            )
         title = structured.get("title")
         hiring = structured.get("hiringOrganization") or {}
         company = hiring.get("name") if isinstance(hiring, dict) else None
@@ -166,7 +201,7 @@ class RocketJobsSource:
         return ParsedPosting(
             source=self.code,
             source_posting_id=ref.source_posting_id,
-            url=canonical_url(ref.url),
+            url=canonical_url(canonical_href or ref.url),
             title=norm_text(title),
             company_mention=norm_text(company) or None,
             body_text=soup.get_text("\n", strip=True),
@@ -175,6 +210,9 @@ class RocketJobsSource:
                 "date_posted": structured.get("datePosted"),
                 "valid_through": structured.get("validThrough"),
                 "employment_type": structured.get("employmentType"),
+                "observation_provenance": "DIRECT",
+                "parse_mode": "JSON_LD",
+                "archived": False,
             },
             revision_projection={
                 "jobposting_json_ld": structured,
