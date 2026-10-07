@@ -1,0 +1,2037 @@
+{
+  "sources": {
+    "nofluffjobs": [
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "YL6VWSII",
+        "url": "https://nofluffjobs.com/pl/job/c-cloud-engineer-motorola-solutions-systems-polska-krakow-1",
+        "api_url": "https://nofluffjobs.com/api/posting/c-cloud-engineer-motorola-solutions-systems-polska-krakow-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "PQW7TJUE",
+        "url": "https://nofluffjobs.com/pl/job/konfigurator-analityk-bpm-low-code-margo-wroclaw",
+        "api_url": "https://nofluffjobs.com/api/posting/konfigurator-analityk-bpm-low-code-margo-wroclaw",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "INQ02XKD",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-developer-net-angular-scalo-west-pomeranian-5",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-developer-net-angular-scalo-west-pomeranian-5",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "3GU3JYE9",
+        "url": "https://nofluffjobs.com/pl/job/system-analyst-scalo-west-pomeranian-56",
+        "api_url": "https://nofluffjobs.com/api/posting/system-analyst-scalo-west-pomeranian-56",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "3GOAEM7I",
+        "url": "https://nofluffjobs.com/pl/job/business-analyst-master-data-management-scalo-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/business-analyst-master-data-management-scalo-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "UOTFIUUZ",
+        "url": "https://nofluffjobs.com/pl/job/net-backend-developer-scalo-lodz",
+        "api_url": "https://nofluffjobs.com/api/posting/net-backend-developer-scalo-lodz",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "FUU27IN7",
+        "url": "https://nofluffjobs.com/pl/job/platform-engineer-scalo-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/platform-engineer-scalo-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "HVVCLSIX",
+        "url": "https://nofluffjobs.com/pl/job/senior-data-scientist-growth-alliance-f-m-x-hellofresh-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-data-scientist-growth-alliance-f-m-x-hellofresh-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "KKVCJ6HU",
+        "url": "https://nofluffjobs.com/pl/job/ai-first-senior-java-developer-matrix-global-services-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/ai-first-senior-java-developer-matrix-global-services-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "O7RCOAYF",
+        "url": "https://nofluffjobs.com/pl/job/ai-first-senior-full-stack-react-python-developer-matrix-global-services-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/ai-first-senior-full-stack-react-python-developer-matrix-global-services-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "DL2LBFZP",
+        "url": "https://nofluffjobs.com/pl/job/business-application-specialist-erp-winged-it-bielskobiala",
+        "api_url": "https://nofluffjobs.com/api/posting/business-application-specialist-erp-winged-it-bielskobiala",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "W5H7ZE8Q",
+        "url": "https://nofluffjobs.com/pl/job/specjalista-ka-aml-kyc-connectis--west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/specjalista-ka-aml-kyc-connectis--west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "P2PKAFA6",
+        "url": "https://nofluffjobs.com/pl/job/analityk-biznesowy-avenga-agencja-pracy-nr-kraz-8448-warszawa-5",
+        "api_url": "https://nofluffjobs.com/api/posting/analityk-biznesowy-avenga-agencja-pracy-nr-kraz-8448-warszawa-5",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "AOOCPLRY",
+        "url": "https://nofluffjobs.com/pl/job/senior-product-engineer-agentic-ai-python-react-digital-new-agency-poland-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-product-engineer-agentic-ai-python-react-digital-new-agency-poland-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "VLOI1QXO",
+        "url": "https://nofluffjobs.com/pl/job/middle-support-engineer-node-js-masterborn-greater-poland-1",
+        "api_url": "https://nofluffjobs.com/api/posting/middle-support-engineer-node-js-masterborn-greater-poland-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "QTCNYOXA",
+        "url": "https://nofluffjobs.com/pl/job/senior-machine-learning-engineer-codequest-west-pomeranian-1",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-machine-learning-engineer-codequest-west-pomeranian-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "SSTMMTWF",
+        "url": "https://nofluffjobs.com/pl/job/scrum-master-mid-senior-datafeedwatch-by-cart-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/scrum-master-mid-senior-datafeedwatch-by-cart-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "42ZUSIPA",
+        "url": "https://nofluffjobs.com/pl/job/d365-f-o-azure-integration-developer-1dea-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/d365-f-o-azure-integration-developer-1dea-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "GAOZP5YT",
+        "url": "https://nofluffjobs.com/pl/job/architect-java-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/architect-java-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "S2UYFHP3",
+        "url": "https://nofluffjobs.com/pl/job/consultant-veeva-safety-managed-services-remote-veeva-systems-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/consultant-veeva-safety-managed-services-remote-veeva-systems-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "JBUVPMYB",
+        "url": "https://nofluffjobs.com/pl/job/servicenow-logik-cpq-engineer-sni-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/servicenow-logik-cpq-engineer-sni-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "VSFLVUOF",
+        "url": "https://nofluffjobs.com/pl/job/senior-hr-data-analytics-specialist-falck-digital-technology-poland-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-hr-data-analytics-specialist-falck-digital-technology-poland-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "O1SZFZCD",
+        "url": "https://nofluffjobs.com/pl/job/product-designer-coordinate-asana-warszawa-1",
+        "api_url": "https://nofluffjobs.com/api/posting/product-designer-coordinate-asana-warszawa-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "CIDJQOSR",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-engineer-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-engineer-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "AVYSN7LB",
+        "url": "https://nofluffjobs.com/pl/job/senior-analytical-engineering-manager-asana-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-analytical-engineering-manager-asana-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "IMII5W4M",
+        "url": "https://nofluffjobs.com/pl/job/java-developer-connectis--warszawa-77",
+        "api_url": "https://nofluffjobs.com/api/posting/java-developer-connectis--warszawa-77",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "OIDBSKY2",
+        "url": "https://nofluffjobs.com/pl/job/full-stack-react-python-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/full-stack-react-python-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "1ILDDVBJ",
+        "url": "https://nofluffjobs.com/pl/job/senior-clinical-business-analyst-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-clinical-business-analyst-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "UHQ5MFP6",
+        "url": "https://nofluffjobs.com/pl/job/senior-python-developer-braver-it-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-python-developer-braver-it-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "EE6HSKDN",
+        "url": "https://nofluffjobs.com/pl/job/staff-software-engineer-python-braver-it-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/staff-software-engineer-python-braver-it-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "MPFLRMEW",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-developer-java-angular-connectis--warszawa-17",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-developer-java-angular-connectis--warszawa-17",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "HQ0PQCJ3",
+        "url": "https://nofluffjobs.com/pl/job/lead-software-engineer-python-braver-it-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/lead-software-engineer-python-braver-it-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "SCTXM3NM",
+        "url": "https://nofluffjobs.com/pl/job/senior-ai-engineer-node-js-react-iteamly-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-ai-engineer-node-js-react-iteamly-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "RA4TW2EF",
+        "url": "https://nofluffjobs.com/pl/job/data-engineer-recovery-data-management-dcg-gdansk",
+        "api_url": "https://nofluffjobs.com/api/posting/data-engineer-recovery-data-management-dcg-gdansk",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "A8JD0JQL",
+        "url": "https://nofluffjobs.com/pl/job/senior-automation-qa-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-automation-qa-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "SQ5LU1NE",
+        "url": "https://nofluffjobs.com/pl/job/it-researcher-itfs-gdynia",
+        "api_url": "https://nofluffjobs.com/api/posting/it-researcher-itfs-gdynia",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "5VYPHWW0",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-product-engineer-ai-ux-frontend-backend-itfs-west-pomeranian-1",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-product-engineer-ai-ux-frontend-backend-itfs-west-pomeranian-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "OUGMZVST",
+        "url": "https://nofluffjobs.com/pl/job/senior-sap-s-4hana-abap-consultant-with-sd-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-sap-s-4hana-abap-consultant-with-sd-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "TPYH7GOH",
+        "url": "https://nofluffjobs.com/pl/job/it-automation-tester-java-ework-group-gdynia-1",
+        "api_url": "https://nofluffjobs.com/api/posting/it-automation-tester-java-ework-group-gdynia-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "G60LDJ02",
+        "url": "https://nofluffjobs.com/pl/job/java-tech-lead-m-f-arche-solutions-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/java-tech-lead-m-f-arche-solutions-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "QLZWBHKU",
+        "url": "https://nofluffjobs.com/pl/job/it-architect-technical-consultant-genesys-cloud-itfs-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/it-architect-technical-consultant-genesys-cloud-itfs-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "ZF6LGILL",
+        "url": "https://nofluffjobs.com/pl/job/radca-prawny-adwokat-k-m-x-infrastruktura-energetyka-people-point-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/radca-prawny-adwokat-k-m-x-infrastruktura-energetyka-people-point-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "EHRHKS9Y",
+        "url": "https://nofluffjobs.com/pl/job/remote-senior-data-scientist-ds-stream-west-pomeranian-3",
+        "api_url": "https://nofluffjobs.com/api/posting/remote-senior-data-scientist-ds-stream-west-pomeranian-3",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "SD6ILGIV",
+        "url": "https://nofluffjobs.com/pl/job/ai-engineer-100-remote-ds-stream-west-pomeranian-2",
+        "api_url": "https://nofluffjobs.com/api/posting/ai-engineer-100-remote-ds-stream-west-pomeranian-2",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "SRJMCZG8",
+        "url": "https://nofluffjobs.com/pl/job/senior-sap-drc-fi-tax-consultant-e-invoicing-tax-compliance-square-one-resources-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-sap-drc-fi-tax-consultant-e-invoicing-tax-compliance-square-one-resources-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "V66PIKCS",
+        "url": "https://nofluffjobs.com/pl/job/senior-it-project-manager-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-it-project-manager-avenga-agencja-pracy-nr-kraz-8448-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "RT3OQ9JX",
+        "url": "https://nofluffjobs.com/pl/job/technical-sales-support-specialist-with-german-antal-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/technical-sales-support-specialist-with-german-antal-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "UAMHXQD8",
+        "url": "https://nofluffjobs.com/pl/job/senior-euc-manager-square-one-resources-warsaw",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-euc-manager-square-one-resources-warsaw",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "MEZO4KCT",
+        "url": "https://nofluffjobs.com/pl/job/pmo-project-coordinator-1dea-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/pmo-project-coordinator-1dea-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "JQ0WLLG6",
+        "url": "https://nofluffjobs.com/pl/job/expert-application-security-specialist-diverse-cg-sp-k--warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/expert-application-security-specialist-diverse-cg-sp-k--warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "J594BBIS",
+        "url": "https://nofluffjobs.com/pl/job/l2-l3-helpdesk-engineer-itfs-west-pomeranian-1",
+        "api_url": "https://nofluffjobs.com/api/posting/l2-l3-helpdesk-engineer-itfs-west-pomeranian-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "YQ7FFRMT",
+        "url": "https://nofluffjobs.com/pl/job/channel-business-development-manager-xopero-software-szczecinek-1",
+        "api_url": "https://nofluffjobs.com/api/posting/channel-business-development-manager-xopero-software-szczecinek-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "H7DXWE5Q",
+        "url": "https://nofluffjobs.com/pl/job/cloud-engineer-aws-python-genai-m-f-arche-solutions-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/cloud-engineer-aws-python-genai-m-f-arche-solutions-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "HUYUPBNR",
+        "url": "https://nofluffjobs.com/pl/job/software-quality-assurance-engineer-manual-sybilla-technologies-west-pomeranian-1",
+        "api_url": "https://nofluffjobs.com/api/posting/software-quality-assurance-engineer-manual-sybilla-technologies-west-pomeranian-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "UQD0YNZT",
+        "url": "https://nofluffjobs.com/pl/job/consultant-analytic-d365-finance-and-procurement-link-group-nadarzyn",
+        "api_url": "https://nofluffjobs.com/api/posting/consultant-analytic-d365-finance-and-procurement-link-group-nadarzyn",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "D7FANCHQ",
+        "url": "https://nofluffjobs.com/pl/job/security-architect-link-group-west-pomeranian-2",
+        "api_url": "https://nofluffjobs.com/api/posting/security-architect-link-group-west-pomeranian-2",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "9LS9XU73",
+        "url": "https://nofluffjobs.com/pl/job/data-scientist-marketing-diverse-cg-sp-k--west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/data-scientist-marketing-diverse-cg-sp-k--west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "XCGQKXR9",
+        "url": "https://nofluffjobs.com/pl/job/senior-delivery-implementation-manager-matrix-global-services-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-delivery-implementation-manager-matrix-global-services-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "LZFNMJ55",
+        "url": "https://nofluffjobs.com/pl/job/technical-lead-link-group-west-pomeranian-1",
+        "api_url": "https://nofluffjobs.com/api/posting/technical-lead-link-group-west-pomeranian-1",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "TJC7XLJV",
+        "url": "https://nofluffjobs.com/pl/job/business-data-analyst-dcg-gdansk",
+        "api_url": "https://nofluffjobs.com/api/posting/business-data-analyst-dcg-gdansk",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "IIK3MDO5",
+        "url": "https://nofluffjobs.com/pl/job/senior-full-stack-engineer-box-warsaw",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-full-stack-engineer-box-warsaw",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "ZINGZRXJ",
+        "url": "https://nofluffjobs.com/pl/job/sme-sap-s-4hana-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/sme-sap-s-4hana-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "FBBH5UTR",
+        "url": "https://nofluffjobs.com/pl/job/senior-frontend-engineer-launchpad-box-warsaw",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-frontend-engineer-launchpad-box-warsaw",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "PJGS6TKA",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-enigineer-net-angular-azure-itfs-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-enigineer-net-angular-azure-itfs-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "JZZUAHAH",
+        "url": "https://nofluffjobs.com/pl/job/data-analyst-connectis--warszawa-7",
+        "api_url": "https://nofluffjobs.com/api/posting/data-analyst-connectis--warszawa-7",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "FUZJBMRI",
+        "url": "https://nofluffjobs.com/pl/job/senior-manager-artificial-intelligence-link-group-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-manager-artificial-intelligence-link-group-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "3KNFGNCN",
+        "url": "https://nofluffjobs.com/pl/job/working-student-it-support-falck-digital-technology-poland-warszawa",
+        "api_url": "https://nofluffjobs.com/api/posting/working-student-it-support-falck-digital-technology-poland-warszawa",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "GRMZWOH2",
+        "url": "https://nofluffjobs.com/pl/job/senior-business-analyst-consultant-retail-banking-gft-poland-poznan",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-business-analyst-consultant-retail-banking-gft-poland-poznan",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "QLHIBEBV",
+        "url": "https://nofluffjobs.com/pl/job/expert-business-analyst-consultant-retail-banking-gft-poland-poznan",
+        "api_url": "https://nofluffjobs.com/api/posting/expert-business-analyst-consultant-retail-banking-gft-poland-poznan",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "GAXAAJIP",
+        "url": "https://nofluffjobs.com/pl/job/senior-software-engineer-java-vyntra-global-warsaw",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-software-engineer-java-vyntra-global-warsaw",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "HCG7CHWF",
+        "url": "https://nofluffjobs.com/pl/job/fullstack-developer-java-react-node-link-group-krakow",
+        "api_url": "https://nofluffjobs.com/api/posting/fullstack-developer-java-react-node-link-group-krakow",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "IBPZVWTN",
+        "url": "https://nofluffjobs.com/pl/job/asystent-ds-administracji-i-hr-wave-gdansk",
+        "api_url": "https://nofluffjobs.com/api/posting/asystent-ds-administracji-i-hr-wave-gdansk",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "MZVAW1PU",
+        "url": "https://nofluffjobs.com/pl/job/business-analyst-credit-risk-excellence-relocation-to-qatar-virtusa-doha",
+        "api_url": "https://nofluffjobs.com/api/posting/business-analyst-credit-risk-excellence-relocation-to-qatar-virtusa-doha",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "UYFKWK3C",
+        "url": "https://nofluffjobs.com/pl/job/principal-python-langgraph-engineer-apreel-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/principal-python-langgraph-engineer-apreel-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      },
+      {
+        "source": "nofluffjobs",
+        "source_posting_id": "MFUULSVE",
+        "url": "https://nofluffjobs.com/pl/job/senior-network-deployment-engineer-codilime-west-pomeranian",
+        "api_url": "https://nofluffjobs.com/api/posting/senior-network-deployment-engineer-codilime-west-pomeranian",
+        "observation_provenance": "DIRECT_PUBLIC_API"
+      }
+    ],
+    "rocketjobs": [
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "otto-work-force-operator-ka-produkcji-z-udt-32-zl-brutto-h-premia-wolne-weekendy-lodz-produkcja-pracownicy-produkcyjni",
+        "url": "https://rocketjobs.pl/oferta-pracy/otto-work-force-operator-ka-produkcji-z-udt-32-zl-brutto-h-premia-wolne-weekendy-lodz-produkcja-pracownicy-produkcyjni",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "abc-work-sp-z-o-o-sp-k-opiekun-klienta-b2b-rozwoj-relacji-i-pozyskiwanie-nowych-klientow-warszawa-sales-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/abc-work-sp-z-o-o-sp-k-opiekun-klienta-b2b-rozwoj-relacji-i-pozyskiwanie-nowych-klientow-warszawa-sales-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "abc-work-sp-z-o-o-sp-k-opiekun-ka-zmiany-na-pakowni-catering-dietetyczny--bojano-produkcja-pracownicy-produkcyjni",
+        "url": "https://rocketjobs.pl/oferta-pracy/abc-work-sp-z-o-o-sp-k-opiekun-ka-zmiany-na-pakowni-catering-dietetyczny--bojano-produkcja-pracownicy-produkcyjni",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "media-choice-paid-media-digital-analytics-team-leader-wroclaw-marketing-performance-sem",
+        "url": "https://rocketjobs.pl/oferta-pracy/media-choice-paid-media-digital-analytics-team-leader-wroclaw-marketing-performance-sem",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "fm-logistic-key-account-director--contract-logistics-olszowa-sales-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/fm-logistic-key-account-director--contract-logistics-olszowa-sales-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "state-street-derivatives-specialist-gdansk-finanse-analiza",
+        "url": "https://rocketjobs.pl/oferta-pracy/state-street-derivatives-specialist-gdansk-finanse-analiza",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "grupa-plichta-mechanik-samochodowy-elektromechanik-k-m--bydgoszcz-inzynieria-motoryzacja-b06de128",
+        "url": "https://rocketjobs.pl/oferta-pracy/grupa-plichta-mechanik-samochodowy-elektromechanik-k-m--bydgoszcz-inzynieria-motoryzacja-b06de128",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "state-street-senior-payment-specialist-with-german-language-skills-associate-2-krakow-finanse-analiza",
+        "url": "https://rocketjobs.pl/oferta-pracy/state-street-senior-payment-specialist-with-german-language-skills-associate-2-krakow-finanse-analiza",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "state-street-payment-specialist-with-german-language-skills-associate-1-krakow-finanse-analiza",
+        "url": "https://rocketjobs.pl/oferta-pracy/state-street-payment-specialist-with-german-language-skills-associate-1-krakow-finanse-analiza",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "vynn-group-sp-z-o-o--specjalista-ds-kontroli-jakosci---wilcza-gora-wilcza-gora-zdrowie-laboratorium",
+        "url": "https://rocketjobs.pl/oferta-pracy/vynn-group-sp-z-o-o--specjalista-ds-kontroli-jakosci---wilcza-gora-wilcza-gora-zdrowie-laboratorium",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "ssc-gorskie-resorty-pl-sp-z-o-o-sp-k---barman-ka-w-nowym-resorcie-the-view-mountain--szklarska-poreba-gastronomia",
+        "url": "https://rocketjobs.pl/oferta-pracy/ssc-gorskie-resorty-pl-sp-z-o-o-sp-k---barman-ka-w-nowym-resorcie-the-view-mountain--szklarska-poreba-gastronomia",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "vynn-group-sp-z-o-o--specjalista-ds-eksportu---wilcza-gora-wilcza-gora-sales-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/vynn-group-sp-z-o-o--specjalista-ds-eksportu---wilcza-gora-wilcza-gora-sales-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "vynn-group-sp-z-o-o--specjalista-ds-eksportu---wilcza-gora-wilcza-gora-sales-uslugi-profesjonalne",
+        "url": "https://rocketjobs.pl/oferta-pracy/vynn-group-sp-z-o-o--specjalista-ds-eksportu---wilcza-gora-wilcza-gora-sales-uslugi-profesjonalne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "centrum-medyczne-pulawska-mlodszy-specjalista-ds-obslugi-pacjenta-k-m---cmp-ursus-dzieci-warszawy-warszawa-support-farmacja-medycyna-55ac0398",
+        "url": "https://rocketjobs.pl/oferta-pracy/centrum-medyczne-pulawska-mlodszy-specjalista-ds-obslugi-pacjenta-k-m---cmp-ursus-dzieci-warszawy-warszawa-support-farmacja-medycyna-55ac0398",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "state-street-senior-tax-specialist-associate-2--custody-tax-services-gdansk-finanse-podatki-e4477ec3",
+        "url": "https://rocketjobs.pl/oferta-pracy/state-street-senior-tax-specialist-associate-2--custody-tax-services-gdansk-finanse-podatki-e4477ec3",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "egala-specjalista-ds-ubezpieczen-zerniki-praca-biurowa-administracja",
+        "url": "https://rocketjobs.pl/oferta-pracy/egala-specjalista-ds-ubezpieczen-zerniki-praca-biurowa-administracja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "leroy-merlin-polska-pracownik-pracownica-magazynu-sklepu-gliwice-praca-w-sklepie-ebd046fd",
+        "url": "https://rocketjobs.pl/oferta-pracy/leroy-merlin-polska-pracownik-pracownica-magazynu-sklepu-gliwice-praca-w-sklepie-ebd046fd",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "leroy-merlin-polska-doradca-doradczyni-ds-kluczowych-klientow-gliwice-sales-wyposazenie-domu",
+        "url": "https://rocketjobs.pl/oferta-pracy/leroy-merlin-polska-doradca-doradczyni-ds-kluczowych-klientow-gliwice-sales-wyposazenie-domu",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "abalone-poland-sp-z-o-o--zlecenie-w-magazynie-sortowni---warszawa-dawidy-tuz-przy-lotnisku-chopina--dawidy-logistyka-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/abalone-poland-sp-z-o-o--zlecenie-w-magazynie-sortowni---warszawa-dawidy-tuz-przy-lotnisku-chopina--dawidy-logistyka-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "jit-team-analityk-biznesowo-systemowy-ferryt--warszawa-bi-data",
+        "url": "https://rocketjobs.pl/oferta-pracy/jit-team-analityk-biznesowo-systemowy-ferryt--warszawa-bi-data",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "totalizator-sportowy-specjalista-specjalistka-ds-wsparcia-sprzedazy-marketing--lublin-marketing-marketing",
+        "url": "https://rocketjobs.pl/oferta-pracy/totalizator-sportowy-specjalista-specjalistka-ds-wsparcia-sprzedazy-marketing--lublin-marketing-marketing",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "digital-kingdom-motion-designer-ka-warszawa-design-motion-design",
+        "url": "https://rocketjobs.pl/oferta-pracy/digital-kingdom-motion-designer-ka-warszawa-design-motion-design",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "motorola-solutions-cybersecurity-architect-krakow-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/motorola-solutions-cybersecurity-architect-krakow-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "deka-spolka-z-ograniczona-odpowiedzialnoscia-asystent-asystentka-ds-windykacji-k-m--kielce-praca-biurowa-administracja",
+        "url": "https://rocketjobs.pl/oferta-pracy/deka-spolka-z-ograniczona-odpowiedzialnoscia-asystent-asystentka-ds-windykacji-k-m--kielce-praca-biurowa-administracja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "manpower-finance-manager-m-k--warszawa-finanse-analiza",
+        "url": "https://rocketjobs.pl/oferta-pracy/manpower-finance-manager-m-k--warszawa-finanse-analiza",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "uniqa-menedzer-menedzerka-regionu---wojewodztwo-slaskie-czestochowa-sales-finanse-bankowosc-ubezpieczenia",
+        "url": "https://rocketjobs.pl/oferta-pracy/uniqa-menedzer-menedzerka-regionu---wojewodztwo-slaskie-czestochowa-sales-finanse-bankowosc-ubezpieczenia",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "dpd-polska-doreczanie-przesylek-rowerem-cargo-tarnow-logistyka-kurier",
+        "url": "https://rocketjobs.pl/oferta-pracy/dpd-polska-doreczanie-przesylek-rowerem-cargo-tarnow-logistyka-kurier",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "coral-travel-poland-product-specialist-junior-f-m--warszawa-pm",
+        "url": "https://rocketjobs.pl/oferta-pracy/coral-travel-poland-product-specialist-junior-f-m--warszawa-pm",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "forum-media-polska-specjalista-specjalistka-ds-sprzedazy-telefonicznej-lublin-sales-marketing-reklama-media",
+        "url": "https://rocketjobs.pl/oferta-pracy/forum-media-polska-specjalista-specjalistka-ds-sprzedazy-telefonicznej-lublin-sales-marketing-reklama-media",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "heineken-krakow-buyer-d-t-professional-services-krakow-sales-uslugi-profesjonalne-bc63207e",
+        "url": "https://rocketjobs.pl/oferta-pracy/heineken-krakow-buyer-d-t-professional-services-krakow-sales-uslugi-profesjonalne-bc63207e",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---lodz-lodz-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---lodz-lodz-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---bydgoszcz-bydgoszcz-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---bydgoszcz-bydgoszcz-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "rtv-euro-agd-zastepca-kierownika-sklepu-k-m-n--warszawa-praca-w-sklepie",
+        "url": "https://rocketjobs.pl/oferta-pracy/rtv-euro-agd-zastepca-kierownika-sklepu-k-m-n--warszawa-praca-w-sklepie",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "certifier-customer-solutions-specialist-krakow-support-it-i-telekomunikacja",
+        "url": "https://rocketjobs.pl/oferta-pracy/certifier-customer-solutions-specialist-krakow-support-it-i-telekomunikacja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---poznan-poznan-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---poznan-poznan-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "aterima-europe-sp-z-o-o-sp-k--praca-na-magazynie-kosmetykow---kompletacja-i-zaladunki-zgierz-logistyka-inne",
+        "url": "https://rocketjobs.pl/oferta-pracy/aterima-europe-sp-z-o-o-sp-k--praca-na-magazynie-kosmetykow---kompletacja-i-zaladunki-zgierz-logistyka-inne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "bdo-senior-seniorka-w-dziale-audytu-financial-services--warszawa-finanse-audyt",
+        "url": "https://rocketjobs.pl/oferta-pracy/bdo-senior-seniorka-w-dziale-audytu-financial-services--warszawa-finanse-audyt",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "mirbud-s-a--mechanik-mechaniczka-sprzetu-budowlanego-i-samochodow-ciezarowych-miekinia-inzynieria-mechanika",
+        "url": "https://rocketjobs.pl/oferta-pracy/mirbud-s-a--mechanik-mechaniczka-sprzetu-budowlanego-i-samochodow-ciezarowych-miekinia-inzynieria-mechanika",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---katowice-katowice-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---katowice-katowice-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "goldenmark-center-sp-z-o-o--doradca-klienta-k-m--rzeszow-praca-w-sklepie",
+        "url": "https://rocketjobs.pl/oferta-pracy/goldenmark-center-sp-z-o-o--doradca-klienta-k-m--rzeszow-praca-w-sklepie",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "dpd-polska-kurier-kurierka-dpd-krakow-logistyka-kurier-756fcd7f",
+        "url": "https://rocketjobs.pl/oferta-pracy/dpd-polska-kurier-kurierka-dpd-krakow-logistyka-kurier-756fcd7f",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "uniqa-starsza-y-specjalist-ka-ds-planowania-i-analizy-kosztow-warszawa-finanse-analiza",
+        "url": "https://rocketjobs.pl/oferta-pracy/uniqa-starsza-y-specjalist-ka-ds-planowania-i-analizy-kosztow-warszawa-finanse-analiza",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "castorama-polska-sp-z-o-o--pracownik--czka-sektora-logistyki-koszalin-logistyka-logistyka",
+        "url": "https://rocketjobs.pl/oferta-pracy/castorama-polska-sp-z-o-o--pracownik--czka-sektora-logistyki-koszalin-logistyka-logistyka",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "modivo-platform-recepcjonista-recepcjonistka-polkowice-praca-biurowa-sekretariat-recepcja",
+        "url": "https://rocketjobs.pl/oferta-pracy/modivo-platform-recepcjonista-recepcjonistka-polkowice-praca-biurowa-sekretariat-recepcja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---bialystok-bialystok-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---bialystok-bialystok-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---warszawa-warszawa-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---warszawa-warszawa-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "cosinus-nauczyciel-nauczycielka-na-kierunku-technik-administracji-warszawa-edukacja-szkolnictwo",
+        "url": "https://rocketjobs.pl/oferta-pracy/cosinus-nauczyciel-nauczycielka-na-kierunku-technik-administracji-warszawa-edukacja-szkolnictwo",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "zjednoczone-przedsiebiorstwa-rozrywkowe-s-a--doradca-doradczyni-klienta-kasyno-poznan-support-uslugi-profesjonalne",
+        "url": "https://rocketjobs.pl/oferta-pracy/zjednoczone-przedsiebiorstwa-rozrywkowe-s-a--doradca-doradczyni-klienta-kasyno-poznan-support-uslugi-profesjonalne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "rtv-euro-agd-doradca-klienta-k-m-n--wyszkow-praca-w-sklepie",
+        "url": "https://rocketjobs.pl/oferta-pracy/rtv-euro-agd-doradca-klienta-k-m-n--wyszkow-praca-w-sklepie",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "edugo-p-s-a--nauczyciel-nauczycielka-podstaw-programowania-dla-dzieci-w-minecraft-warszawa-edukacja-szkolnictwo-7f7c5d39",
+        "url": "https://rocketjobs.pl/oferta-pracy/edugo-p-s-a--nauczyciel-nauczycielka-podstaw-programowania-dla-dzieci-w-minecraft-warszawa-edukacja-szkolnictwo-7f7c5d39",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---krakow-krakow-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m---krakow-krakow-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "cosinus-nauczyciel-nauczycielka-na-kierunku-technik-uslug-kosmetycznych-warszawa-edukacja-szkolnictwo",
+        "url": "https://rocketjobs.pl/oferta-pracy/cosinus-nauczyciel-nauczycielka-na-kierunku-technik-uslug-kosmetycznych-warszawa-edukacja-szkolnictwo",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "cosinus-nauczyciel-nauczycielka-na-kierunku-asystent-kierownika-produkcji-filmowej-warszawa-edukacja-szkolnictwo",
+        "url": "https://rocketjobs.pl/oferta-pracy/cosinus-nauczyciel-nauczycielka-na-kierunku-asystent-kierownika-produkcji-filmowej-warszawa-edukacja-szkolnictwo",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "smart-hr-specjalista-ds-sprzedazy---systemy-zabezpieczen-m-k--warszawa-sales-inzynieria-technika-produkcja",
+        "url": "https://rocketjobs.pl/oferta-pracy/smart-hr-specjalista-ds-sprzedazy---systemy-zabezpieczen-m-k--warszawa-sales-inzynieria-technika-produkcja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "maxi-zoo-zastepca-zastepczyni-kierownika-sklepu---maxi-zoo-sochaczew-caly-etat--sochaczew-praca-w-sklepie",
+        "url": "https://rocketjobs.pl/oferta-pracy/maxi-zoo-zastepca-zastepczyni-kierownika-sklepu---maxi-zoo-sochaczew-caly-etat--sochaczew-praca-w-sklepie",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "antal-sp-z-o-o--data-analytics-consultant-m-f--warszawa-bi-data",
+        "url": "https://rocketjobs.pl/oferta-pracy/antal-sp-z-o-o--data-analytics-consultant-m-f--warszawa-bi-data",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "labcon-social-media-manager-warszawa-marketing-social-media-601b1132",
+        "url": "https://rocketjobs.pl/oferta-pracy/labcon-social-media-manager-warszawa-marketing-social-media-601b1132",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "castorama-polska-sp-z-o-o--doradca--czyni-handlowy--a---1-2-etatu-tarnow-sales-sieci-handlowe",
+        "url": "https://rocketjobs.pl/oferta-pracy/castorama-polska-sp-z-o-o--doradca--czyni-handlowy--a---1-2-etatu-tarnow-sales-sieci-handlowe",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "adamed-specjalista-ds-automatyzacji-procesow-biznesowych-webcon-k-m-n--pabianice-bi-data",
+        "url": "https://rocketjobs.pl/oferta-pracy/adamed-specjalista-ds-automatyzacji-procesow-biznesowych-webcon-k-m-n--pabianice-bi-data",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "allegro-cx-quality-and-development-specialist-poznan-support-uslugi-profesjonalne",
+        "url": "https://rocketjobs.pl/oferta-pracy/allegro-cx-quality-and-development-specialist-poznan-support-uslugi-profesjonalne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m--gdansk-gdansk-bankowosc-bankowosc-korporacyjna-sme",
+        "url": "https://rocketjobs.pl/oferta-pracy/alior-bank-sa-doradca-ds-klienta-korporacyjnego-mid-k-m--gdansk-gdansk-bankowosc-bankowosc-korporacyjna-sme",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "medicover-optyk-optometrysta-optometrystka---medicover-optyk-woloska-warszawa-zdrowie-opieka-medyczna",
+        "url": "https://rocketjobs.pl/oferta-pracy/medicover-optyk-optometrysta-optometrystka---medicover-optyk-woloska-warszawa-zdrowie-opieka-medyczna",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "antal-sp-z-o-o--supply-chain-planning-specialist-with-german-krakow-logistyka-logistyka",
+        "url": "https://rocketjobs.pl/oferta-pracy/antal-sp-z-o-o--supply-chain-planning-specialist-with-german-krakow-logistyka-logistyka",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "grupa-muszkieterow-osoba-na-stanowisko-kierownik-dzialu-importu-i-eksportu-k-m--swadzim-logistyka-zarzadzanie-flota",
+        "url": "https://rocketjobs.pl/oferta-pracy/grupa-muszkieterow-osoba-na-stanowisko-kierownik-dzialu-importu-i-eksportu-k-m--swadzim-logistyka-zarzadzanie-flota",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "telewizja-polska-specjalista-ds-mediow-spolecznosciowych-m-k--warszawa-marketing-social-media",
+        "url": "https://rocketjobs.pl/oferta-pracy/telewizja-polska-specjalista-ds-mediow-spolecznosciowych-m-k--warszawa-marketing-social-media",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "ecotec-polska-electrical-supervisor-k-m-praca-w-niemczech-warszawa-budownictwo-instalacje-8bf28286",
+        "url": "https://rocketjobs.pl/oferta-pracy/ecotec-polska-electrical-supervisor-k-m-praca-w-niemczech-warszawa-budownictwo-instalacje-8bf28286",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "velobank-s-a--ekspertka-ekspert-ds-ryzyka-rynkowego-i-wycen-katowice-bankowosc-analiza-ryzyko-52d61439",
+        "url": "https://rocketjobs.pl/oferta-pracy/velobank-s-a--ekspertka-ekspert-ds-ryzyka-rynkowego-i-wycen-katowice-bankowosc-analiza-ryzyko-52d61439",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "pzu-zycie-s-a--doradca-doradczyni-klienta-pzu-piaseczno-sales-finanse-bankowosc-ubezpieczenia",
+        "url": "https://rocketjobs.pl/oferta-pracy/pzu-zycie-s-a--doradca-doradczyni-klienta-pzu-piaseczno-sales-finanse-bankowosc-ubezpieczenia",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "wipasz-s-a--kierowca---kat-c-e-k-m--miedzyrzec-podlaski-logistyka-kierowca",
+        "url": "https://rocketjobs.pl/oferta-pracy/wipasz-s-a--kierowca---kat-c-e-k-m--miedzyrzec-podlaski-logistyka-kierowca",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "grupa-plichta-specjalista-specjalistka-ds-sprzedazy-samochodow-nowych-marki-kia-bydgoszcz-sales-motoryzacja-transport",
+        "url": "https://rocketjobs.pl/oferta-pracy/grupa-plichta-specjalista-specjalistka-ds-sprzedazy-samochodow-nowych-marki-kia-bydgoszcz-sales-motoryzacja-transport",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "hirewise---rekrutacja-w-sprzedazy-i-marketingu-lider-sprzedazy-krajowej-k-m--krakow-sales-uslugi-profesjonalne",
+        "url": "https://rocketjobs.pl/oferta-pracy/hirewise---rekrutacja-w-sprzedazy-i-marketingu-lider-sprzedazy-krajowej-k-m--krakow-sales-uslugi-profesjonalne",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "dpd-polska-kurier-kurierka-dpd-z-wlasnym-autem-slupsk-logistyka-kurier",
+        "url": "https://rocketjobs.pl/oferta-pracy/dpd-polska-kurier-kurierka-dpd-z-wlasnym-autem-slupsk-logistyka-kurier",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "capgemini-junior-customer-support-specialist-with-italian--krakow-support-it-i-telekomunikacja",
+        "url": "https://rocketjobs.pl/oferta-pracy/capgemini-junior-customer-support-specialist-with-italian--krakow-support-it-i-telekomunikacja",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "level-work-operator-maszyn-cnc-k-m--nasielsk-produkcja-pracownicy-produkcyjni-e0d4c3f5",
+        "url": "https://rocketjobs.pl/oferta-pracy/level-work-operator-maszyn-cnc-k-m--nasielsk-produkcja-pracownicy-produkcyjni-e0d4c3f5",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "rocketjobs",
+        "source_posting_id": "lvl-up-commerce-customer-care-specialist-wspolpraca--warszawa-support-marketing-reklama-media",
+        "url": "https://rocketjobs.pl/oferta-pracy/lvl-up-commerce-customer-care-specialist-wspolpraca--warszawa-support-marketing-reklama-media",
+        "observation_provenance": "DIRECT_SSR"
+      }
+    ],
+    "bulldogjob": [
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257383",
+        "url": "https://bulldogjob.com/companies/jobs/257383-developer-experience-engineer-london-new-york-city-elevenlabs",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257306",
+        "url": "https://bulldogjob.com/companies/jobs/257306-frontend-leaning-engineer-creative-studio-dublin-new-york-city-london-elevenlabs",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256961",
+        "url": "https://bulldogjob.com/companies/jobs/256961-senior-software-engineer-backend-reliability-london-camunda",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256955",
+        "url": "https://bulldogjob.com/companies/jobs/256955-head-vp-of-product-ai-process-insights-automation-mimica",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256858",
+        "url": "https://bulldogjob.com/companies/jobs/256858-product-designer-monq-ltd",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256714",
+        "url": "https://bulldogjob.com/companies/jobs/256714-senior-software-engineer-secure-build-docker",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256630",
+        "url": "https://bulldogjob.com/companies/jobs/256630-business-analyst-techtorch",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256548",
+        "url": "https://bulldogjob.com/companies/jobs/256548-software-engineer-education-birmingham-cambridge-barcelona-london-krakow-autodesk",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256543",
+        "url": "https://bulldogjob.com/companies/jobs/256543-technical-product-owner-core-services-doit",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256401",
+        "url": "https://bulldogjob.com/companies/jobs/256401-enterprise-solution-architect-innovecs",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256378",
+        "url": "https://bulldogjob.com/companies/jobs/256378-engineering-manager-uk-birmingham-bristol-manchester-london-cambridge-edinburgh-belfast-ashby",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256377",
+        "url": "https://bulldogjob.com/companies/jobs/256377-staff-platform-engineer-uk-birmingham-bristol-manchester-london-cambridge-edinburgh-belfast-ashby",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256214",
+        "url": "https://bulldogjob.com/companies/jobs/256214-software-engineer-iii-059-c-h-robinson-belgium-bvba",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256204",
+        "url": "https://bulldogjob.com/companies/jobs/256204-senior-data-engineer-camunda",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256070",
+        "url": "https://bulldogjob.com/companies/jobs/256070-senior-staff-react-native-engineer-london-new-york-city-moonpay",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256062",
+        "url": "https://bulldogjob.com/companies/jobs/256062-ai-developer-techtorch",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255749",
+        "url": "https://bulldogjob.com/companies/jobs/255749-data-engineer-forward-deployed-modus-create",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255655",
+        "url": "https://bulldogjob.com/companies/jobs/255655-senior-blockchain-platform-engineer-new-york-city-london-moonpay",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255654",
+        "url": "https://bulldogjob.com/companies/jobs/255654-senior-blockchain-engineer-new-york-city-london-moonpay",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255574",
+        "url": "https://bulldogjob.com/companies/jobs/255574-front-end-design-verification-engineer-santa-clara-tenstorrent",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255482",
+        "url": "https://bulldogjob.com/companies/jobs/255482-staff-software-engineer-developer-experience-docker",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255374",
+        "url": "https://bulldogjob.com/companies/jobs/255374-ai-identity-endpoint-controls-lead-modernatx-inc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255373",
+        "url": "https://bulldogjob.com/companies/jobs/255373-sr-ai-red-team-engineer-modernatx-inc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255338",
+        "url": "https://bulldogjob.com/companies/jobs/255338-staff-data-engineer-london-new-york-city-moonpay",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255250",
+        "url": "https://bulldogjob.com/companies/jobs/255250-senior-software-engineer-sandboxes-london-docker",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254975",
+        "url": "https://bulldogjob.com/companies/jobs/254975-game-tech-lead-ue5-multiplayer-systems-sao-paulo-almaty-barcelona-berlin-dubai-istanbul-kuala-lumpur-xsolla",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254801",
+        "url": "https://bulldogjob.com/companies/jobs/254801-senior-platform-engineer-tiger-data",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254798",
+        "url": "https://bulldogjob.com/companies/jobs/254798-senior-security-engineer-docker-desktop-docker",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257501",
+        "url": "https://bulldogjob.com/companies/jobs/257501-senior-fullstack-engineer-symfony-vue-area-poznan-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256137",
+        "url": "https://bulldogjob.com/companies/jobs/256137-senior-software-engineer-compute-warsaw-berlin-bolt",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256850",
+        "url": "https://bulldogjob.com/companies/jobs/256850-senior-middleware-engineer-linux-c-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256849",
+        "url": "https://bulldogjob.com/companies/jobs/256849-senior-deep-learning-engineer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257499",
+        "url": "https://bulldogjob.com/companies/jobs/257499-sap-hr-specialist-poznan-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256538",
+        "url": "https://bulldogjob.com/companies/jobs/256538-azure-databricks-developer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257198",
+        "url": "https://bulldogjob.com/companies/jobs/257198-back-end-software-developer-java-spring-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257498",
+        "url": "https://bulldogjob.com/companies/jobs/257498-fullstack-mobile-developer-kotlin-java-backend-bialystok-gdansk-katowice-krakow-lublin-poznan-rzeszow-warsaw-wroclaw-lodz-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256133",
+        "url": "https://bulldogjob.com/companies/jobs/256133-senior-pdgs-fullstack-developer-creotech-instruments-s-a",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256132",
+        "url": "https://bulldogjob.com/companies/jobs/256132-senior-platform-engineer-devsecops-warsaw-creotech-instruments-s-a",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256537",
+        "url": "https://bulldogjob.com/companies/jobs/256537-senior-python-developer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257510",
+        "url": "https://bulldogjob.com/companies/jobs/257510-senior-vision-systems-engineer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257496",
+        "url": "https://bulldogjob.com/companies/jobs/257496-senior-developer-full-stack-lodz-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257495",
+        "url": "https://bulldogjob.com/companies/jobs/257495-web-solution-architect-gdansk-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256131",
+        "url": "https://bulldogjob.com/companies/jobs/256131-image-payload-processing-engineer-creotech-instruments-s-a",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256130",
+        "url": "https://bulldogjob.com/companies/jobs/256130-software-engineer-2-java-kotlin-allegro-ai-assistant-poznan-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256057",
+        "url": "https://bulldogjob.com/companies/jobs/256057-lead-java-software-developer-krakow-warsaw-wroclaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256536",
+        "url": "https://bulldogjob.com/companies/jobs/256536-senior-data-engineer-investment-data-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257494",
+        "url": "https://bulldogjob.com/companies/jobs/257494-cybersecurity-engineer-warsaw-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256129",
+        "url": "https://bulldogjob.com/companies/jobs/256129-senior-software-engineer-java-kotlin-product-page-torun-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256128",
+        "url": "https://bulldogjob.com/companies/jobs/256128-senior-mobile-software-engineer-ios-consumer-experience-poznan-krakow-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256535",
+        "url": "https://bulldogjob.com/companies/jobs/256535-senior-cloud-enterprise-architect-azure-data-fabric-ai-agents-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256847",
+        "url": "https://bulldogjob.com/companies/jobs/256847-senior-ai-platform-engineer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257491",
+        "url": "https://bulldogjob.com/companies/jobs/257491-mobile-solution-architect-gdansk-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256127",
+        "url": "https://bulldogjob.com/companies/jobs/256127-software-engineer-2-net-c-onebox-backservices-warsaw-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256126",
+        "url": "https://bulldogjob.com/companies/jobs/256126-software-engineer-1-java-kotlin-allegro-ads-warsaw-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257197",
+        "url": "https://bulldogjob.com/companies/jobs/257197-senior-react-ui-developer-with-ux-background-wroclaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255633",
+        "url": "https://bulldogjob.com/companies/jobs/255633-senior-cloud-developer-azure-ms-data-fabric-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257489",
+        "url": "https://bulldogjob.com/companies/jobs/257489-web-mobile-solution-architect-gdansk-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256125",
+        "url": "https://bulldogjob.com/companies/jobs/256125-software-engineer-2-java-kotlin-basket-building-poznan-allegro",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255090",
+        "url": "https://bulldogjob.com/companies/jobs/255090-ios-software-engineer-klient-bulldogjob",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256055",
+        "url": "https://bulldogjob.com/companies/jobs/256055-it-pm-qa-release-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256534",
+        "url": "https://bulldogjob.com/companies/jobs/256534-senior-cloud-developer-azure-ms-data-fabric-collibra-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257487",
+        "url": "https://bulldogjob.com/companies/jobs/257487-senior-frontend-developer-react-react-native-warsaw-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256092",
+        "url": "https://bulldogjob.com/companies/jobs/256092-senior-full-stack-engineer-platform-warsaw-bolt",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256091",
+        "url": "https://bulldogjob.com/companies/jobs/256091-senior-backend-engineer-warsaw-bolt",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257509",
+        "url": "https://bulldogjob.com/companies/jobs/257509-lead-front-end-developer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256054",
+        "url": "https://bulldogjob.com/companies/jobs/256054-progress-4gl-openedge-developer-wroclaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257485",
+        "url": "https://bulldogjob.com/companies/jobs/257485-mobile-fullstack-team-leader-bialystok-gdansk-katowice-krakow-lublin-poznan-rzeszow-warsaw-wroclaw-lodz-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255079",
+        "url": "https://bulldogjob.com/companies/jobs/255079-junior-salesforce-consultant-internship-program-she-he-they-warsaw-krakow-katowice-gdansk-lodz-accenture-polska",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "256533",
+        "url": "https://bulldogjob.com/companies/jobs/256533-senior-manual-qa-engineer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257196",
+        "url": "https://bulldogjob.com/companies/jobs/257196-automation-qa-engineer-krakow-wroclaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257448",
+        "url": "https://bulldogjob.com/companies/jobs/257448-senior-java-developer-gdansk-krakow-warsaw-wroclaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255548",
+        "url": "https://bulldogjob.com/companies/jobs/255548-senior-backend-engineer-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257481",
+        "url": "https://bulldogjob.com/companies/jobs/257481-senior-full-stack-developer-experience-with-angular-postgresql-python-lodz-teamquest",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255549",
+        "url": "https://bulldogjob.com/companies/jobs/255549-senior-murex-integration-specialist-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "257120",
+        "url": "https://bulldogjob.com/companies/jobs/257120-senior-forward-deployment-engineer-warsaw-luxoft-dxc",
+        "observation_provenance": "DIRECT_SSR"
+      }
+    ],
+    "pracuj": [
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138472",
+        "url": "https://www.pracuj.pl/praca/developer-ai-enabled-delivery-krakow,oferta,1005138472",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "fa2127fe-cc3d-4b3f-9b09-ad8b2b0575ae",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005131878",
+        "url": "https://www.pracuj.pl/praca/developer-developerka-webcon-bps-brzeg-dolny,oferta,1005131878",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "90b357f5-dda3-48cc-b2cc-24e5a3995097",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133748",
+        "url": "https://www.pracuj.pl/praca/developer-system-analyst-branza-ubezpieczeniowa-warszawa,oferta,1005133748",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e7238dbe-2b73-4e80-b383-15bc6131cb5e",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129719",
+        "url": "https://www.pracuj.pl/praca/developer-c%23-lub-asp-net-programista-ka-c%23-lub-asp-net-jelenia-gora-wolnosci-16,oferta,1005129719",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "ad2b7bbf-f98b-4a2e-8806-bff40b3686b8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005078091",
+        "url": "https://www.pracuj.pl/praca/developer-hurtowni-danych-warszawa,oferta,1005078091",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "fd54eb79-5871-4a0d-bc32-f7b93acb82da",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005120619",
+        "url": "https://www.pracuj.pl/praca/developer-oracle-apex-low-code-development-gdansk-aleja-grunwaldzka-472,oferta,1005120619",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "97c625a1-9f89-45a6-90a7-9b2b93778c53",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129271",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-ai-developer-tools-warszawa-emilii-plater-53,oferta,1005129271",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "41e9c6d2-e5d2-490b-9768-58c63207d4b6",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128640",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-consensus-warszawa-emilii-plater-53,oferta,1005128640",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9d9e2284-bdf9-45df-a0ca-354b1bc71ad3",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099023",
+        "url": "https://www.pracuj.pl/praca/engineering-lead-architect-google-compute-engine-sole-tenancy-warszawa-emilii-plater-53,oferta,1005099023",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "30cb5b91-de28-400f-9593-130ed631e7bd",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005134365",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-database-wroclaw,oferta,1005134365",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7cfb46fd-dce4-4fd3-92ab-525eaa17f1e1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005133719",
+        "url": "https://www.pracuj.pl/praca/engineering-portfolio-analyst-lodz-aleksandrowska-67,oferta,1005133719",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7445e88d-486e-4827-be8e-31d5d3d17686",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099545",
+        "url": "https://www.pracuj.pl/praca/engineering-portfolio-analyst-lodz-aleksandrowska-67,oferta,1005099545",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "a4372023-9523-45ee-8940-97e1efc934ab",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005112936",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-gdansk,oferta,1005112936",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e829494c-6ba9-4540-921d-2e8f6fd9f85a",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005106352",
+        "url": "https://www.pracuj.pl/praca/engineering-manager-warszawa-zelazna-51-53,oferta,1005106352",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "76f3e3e4-1d15-4a52-9514-af279f4e3bf0",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005078534",
+        "url": "https://www.pracuj.pl/praca/programista-lowcode-mendix-krakow,oferta,1005078534",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "65c9d7a1-2510-4aca-91d3-19f3957637f7",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005088410",
+        "url": "https://www.pracuj.pl/praca/programista-programistka-pl-sql-katowice-aleja-murckowska-14c,oferta,1005088410",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "14a0ddcc-92e1-4b5e-ba98-e39cc3f7a925",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099824",
+        "url": "https://www.pracuj.pl/praca/programista-frontend-react-m-k-warszawa-szachowa-1,oferta,1005099824",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "5e72839c-9818-4845-a9a4-fd2683feacdc",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135945",
+        "url": "https://www.pracuj.pl/praca/programista-oracle-apex-k-m-wroclaw-plac-teatralny-1,oferta,1005135945",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "243e2783-890d-4e87-86f2-6a36868e766d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138359",
+        "url": "https://www.pracuj.pl/praca/programista-fullstack-developer-krakow-igolomska-1,oferta,1005138359",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "04d2343b-5509-4e14-82d9-576ffa35cf49",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135347",
+        "url": "https://www.pracuj.pl/praca/programista-programistka-python-warszawa,oferta,1005135347",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "121b80db-52f6-4e40-9434-7be13bf3e635",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129289",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-health-and-home-warszawa-emilii-plater-53,oferta,1005129289",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "15f88360-db47-41a1-8e5b-69bdb013c454",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129318",
+        "url": "https://www.pracuj.pl/praca/senior-software-engineer-agent-platform-workbench-warszawa-emilii-plater-53,oferta,1005129318",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f4a5c572-8885-4aec-afc8-21836a94daac",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129431",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-context-intelligence-knowledge-catalog-warszawa-emilii-plater-53,oferta,1005129431",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "c2d3d486-4a1f-4baf-b4b2-2069970753af",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099152",
+        "url": "https://www.pracuj.pl/praca/senior-full-stack-engineer-cloud-composer-and-dataform-warszawa-emilii-plater-53,oferta,1005099152",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "1a13e6a0-8b69-483d-8b38-6c68c6197702",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099832",
+        "url": "https://www.pracuj.pl/praca/starszy-programista-frontend-react-m-k-warszawa-szachowa-1,oferta,1005099832",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "51c04ec4-b4a5-468d-8a77-c09738a164fb",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005117558",
+        "url": "https://www.pracuj.pl/praca/java-software-developer-katowice-aleja-murckowska-14c,oferta,1005117558",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "22fd4070-70f8-408c-a4b0-f9b72c64d347",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005114560",
+        "url": "https://www.pracuj.pl/praca/ai-tech-lead-kierownik-projektow-ai-ostrow-wielkopolski,oferta,1005114560",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "5e6a105d-d287-4d50-baab-3c6d39c91df8",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005101329",
+        "url": "https://www.pracuj.pl/praca/junior-integration-engineer-lodz-piotrkowska-280a,oferta,1005101329",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "97448874-a090-4679-8d2c-8d81eb2d7950",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099015",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-full-stack-warszawa-emilii-plater-53,oferta,1005099015",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9c81a799-33d2-4a89-b022-036326cc41de",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099064",
+        "url": "https://www.pracuj.pl/praca/software-engineering-manager-gce-engineering-productivity-warszawa-emilii-plater-53,oferta,1005099064",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "4bb9f3bf-1fe8-4b04-a9c1-899d3f3ca428",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099209",
+        "url": "https://www.pracuj.pl/praca/product-deployment-engineer-gtech-ads-gcs-warszawa-emilii-plater-53,oferta,1005099209",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "dd8f3d5b-829f-4e0d-9ad0-dd16e4f1ec53",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099281",
+        "url": "https://www.pracuj.pl/praca/product-deployment-engineer-gtech-warszawa-emilii-plater-53,oferta,1005099281",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9ef004c5-55db-428b-a2cb-b88e7cad3815",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005128839",
+        "url": "https://www.pracuj.pl/praca/senior-forward-deployed-engineer-genai-google-cloud-warszawa-emilii-plater-53,oferta,1005128839",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "23d93960-8a93-441b-9a6b-8df9a0a697cb",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129158",
+        "url": "https://www.pracuj.pl/praca/software-engineer-iii-embedded-systems-warszawa-emilii-plater-53,oferta,1005129158",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e8fc1cc0-ecdb-4920-abb9-c4cc541e90b1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129249",
+        "url": "https://www.pracuj.pl/praca/conversational-ai-sce-google-cloud-warszawa-emilii-plater-53,oferta,1005129249",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "508652cd-3cf1-4e57-a6b4-606f1d95069a",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129256",
+        "url": "https://www.pracuj.pl/praca/conversational-ai-sce-google-cloud-wroclaw,oferta,1005129256",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "8ea0d116-0295-478f-9521-2dd0cf321729",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129516",
+        "url": "https://www.pracuj.pl/praca/data-science-phd-intern-2027-warszawa-emilii-plater-53,oferta,1005129516",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "815e394b-b10f-4eea-95f6-14a010eea488",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129531",
+        "url": "https://www.pracuj.pl/praca/software-engineer-gce-control-plane-early-careers-phd-warszawa-emilii-plater-53,oferta,1005129531",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "98489391-877a-4a06-a5e4-64b8e6412136",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005129537",
+        "url": "https://www.pracuj.pl/praca/software-engineer-performance-reliability-observability-phd-early-career-warszawa-emilii-plater-53,oferta,1005129537",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "be1734c1-ea90-4d31-98ea-e2fff6b879d1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005099603",
+        "url": "https://www.pracuj.pl/praca/senior-technical-solutions-engineer-networking-warszawa-emilii-plater-53,oferta,1005099603",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "a284b49c-19a3-49ce-afc2-c969cafeca84",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135421",
+        "url": "https://www.pracuj.pl/praca/ai-solution-architect-warszawa-zwirki-i-wigury-16a,oferta,1005135421",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "60449728-c54f-4787-b1be-5595f472a2e6",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135456",
+        "url": "https://www.pracuj.pl/praca/data-scientist-warszawa,oferta,1005135456",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "a42b1913-ac82-4385-9e04-09d289894677",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135902",
+        "url": "https://www.pracuj.pl/praca/senior-python-developer-k-m-n-warszawa,oferta,1005135902",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "f77d925a-43e0-41ad-aa7a-247b13bbf342",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135952",
+        "url": "https://www.pracuj.pl/praca/llmops-k-m-warszawa,oferta,1005135952",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "c7df1e27-7220-49c3-be40-cfaa185db85b",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136020",
+        "url": "https://www.pracuj.pl/praca/embedded-qa-automation-engineer-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005136020",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "2e07dfd9-5957-42b9-97f1-489dbeec86ad",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136325",
+        "url": "https://www.pracuj.pl/praca/administrator-administratorka-systemow-it-warszawa,oferta,1005136325",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "4100cf0f-7a0d-4d69-a22e-e1e0c9245549",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136609",
+        "url": "https://www.pracuj.pl/praca/data-analyst-cryptography-krakow,oferta,1005136609",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "0af0699e-04b5-45b0-8080-c742188982de",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136665",
+        "url": "https://www.pracuj.pl/praca/ml-genai-engineer-warszawa,oferta,1005136665",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "89caabc4-8ff3-4465-b0fb-781baec36f87",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136926",
+        "url": "https://www.pracuj.pl/praca/senior-gcp-ai-developer-warszawa,oferta,1005136926",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "e8cf4f5e-b3c2-4ec0-9d6d-3e0a16acc440",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136928",
+        "url": "https://www.pracuj.pl/praca/senior-python-ai-engineer-warszawa,oferta,1005136928",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "102fa975-7472-413a-8c75-28a864292e73",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005107678",
+        "url": "https://www.pracuj.pl/praca/specjalista-it-administrator-it-warszawa-polna-18-20,oferta,1005107678",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9b705a65-5867-48e1-a0e6-2a3468e1244c",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135143",
+        "url": "https://www.pracuj.pl/praca/administrator-it-junior-it-security-specialist-warszawa-pastewna-27a,oferta,1005135143",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "22a19d1b-0289-4aa8-81b2-6db9d64ddd56",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135324",
+        "url": "https://www.pracuj.pl/praca/administrator-administratorka-rozwiazan-chmurowych-warszawa,oferta,1005135324",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "293a58b0-c841-4ea6-b60b-34c672602e85",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136316",
+        "url": "https://www.pracuj.pl/praca/tech-lead-devops-engineer-f-m-x-katowice,oferta,1005136316",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9841c41e-5597-461a-a72f-264f1ca26b07",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137904",
+        "url": "https://www.pracuj.pl/praca/cloud-platform-engineer-administrator-microsoft-azure-warszawa,oferta,1005137904",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "7de0b4d0-52da-4f36-8480-233142f2ca0d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135488",
+        "url": "https://www.pracuj.pl/praca/senior-node-js-developer-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005135488",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "59df956f-2d13-4aa7-a985-a8f03f487926",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135369",
+        "url": "https://www.pracuj.pl/praca/devops-engineer-krakow,oferta,1005135369",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "2b3172f5-d927-4070-804d-43cbbbce9c09",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137421",
+        "url": "https://www.pracuj.pl/praca/ai-infrastructure-systems-engineer-warszawa,oferta,1005137421",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "584d3ee3-21f9-4a2d-82a5-4386db60acc7",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137493",
+        "url": "https://www.pracuj.pl/praca/senior-r-developer-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005137493",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "9f2ab981-8895-4575-be04-be51ac2c42fe",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138336",
+        "url": "https://www.pracuj.pl/praca/senior-software-devops-engineer-sre-gdansk,oferta,1005138336",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "c297a306-63a5-498e-b876-a50ae107dcd0",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136478",
+        "url": "https://www.pracuj.pl/praca/t-hub-contact-center-architect-with-german-warszawa-marynarska-12,oferta,1005136478",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "401e0438-3870-4c2d-a113-30fc25c3b9b1",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135136",
+        "url": "https://www.pracuj.pl/praca/devops-engineer-factory-edge-platform-m-f-d-niepolomice-doktora-rudolfa-diesla-1,oferta,1005135136",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "726274f4-4da9-4b13-abf2-686bfd148335",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137649",
+        "url": "https://www.pracuj.pl/praca/senior-fullstack-developer-java-%2b-angular-warszawa,oferta,1005137649",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "ac6d7b8b-2c0a-4681-925c-5bf717b7d476",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138246",
+        "url": "https://www.pracuj.pl/praca/qa-performance-engineer-iot-sphere-wroclaw-powstancow-slaskich-7a,oferta,1005138246",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "ad602164-e276-4ed5-91d7-3b98b19b915b",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005138338",
+        "url": "https://www.pracuj.pl/praca/senior-software-engineer-devsecops-engineer-go-java-warszawa,oferta,1005138338",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "80ca7bd2-88dc-4021-93ce-eecd390e33e4",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137867",
+        "url": "https://www.pracuj.pl/praca/senior-product-owner-with-experience-in-oncology-projects-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005137867",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "43ee9883-c50b-48d2-b1c1-1fa81fc9d76e",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136064",
+        "url": "https://www.pracuj.pl/praca/data-engineer-k-m-warszawa,oferta,1005136064",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "6d7fbf98-d320-4f57-8cc2-28dc36373334",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136610",
+        "url": "https://www.pracuj.pl/praca/data-engineer-krakow,oferta,1005136610",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "44c09e58-4adb-46c4-88b2-7eaa5f48fe78",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136970",
+        "url": "https://www.pracuj.pl/praca/database-security-analyst-cyber-security-analyst-gdansk,oferta,1005136970",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "4502c26a-eb4b-407a-9523-f878f1a19d72",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136980",
+        "url": "https://www.pracuj.pl/praca/data-analyst-k-m-gdansk,oferta,1005136980",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "cc634192-f3b5-42ac-b7ed-9fc5da3e123d",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137522",
+        "url": "https://www.pracuj.pl/praca/data-analyst-gdansk-aleja-grunwaldzka-472b,oferta,1005137522",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "8be93f62-f749-4a1e-9b40-e558f1a64783",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005135781",
+        "url": "https://www.pracuj.pl/praca/data-test-automation-engineer-m-k-n-poznan,oferta,1005135781",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "acccc353-deed-4508-b974-a6e61ddd1fcf",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005136375",
+        "url": "https://www.pracuj.pl/praca/data-engineer-with-microsoft-fabric-f-m-x-bialystok-jozefa-marjanskiego-3,oferta,1005136375",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "20c90a0d-f1cc-449d-9b07-f347a5168dd2",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137043",
+        "url": "https://www.pracuj.pl/praca/data-engineer-data-platform-poznan-wierzbiecice-1b,oferta,1005137043",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "3f2f0945-b73a-4839-9ebf-fb4b2446c6dc",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      },
+      {
+        "source": "pracuj",
+        "source_posting_id": "1005137065",
+        "url": "https://www.pracuj.pl/praca/data-engineer-warszawa,oferta,1005137065",
+        "mirror": "https://isitfair.pl",
+        "mirror_offer_uuid": "da2c8a38-29c3-4b20-8ebc-f0a93986d62f",
+        "observation_provenance": "SECONDARY_PUBLIC_INDEX"
+      }
+    ]
+  }
+}

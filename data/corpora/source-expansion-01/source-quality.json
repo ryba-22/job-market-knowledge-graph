@@ -1,0 +1,42 @@
+{
+  "corpus_version": "market-500-v1",
+  "sources": {
+    "justjoinit": {
+      "count": 150,
+      "provenance_class": "DIRECT",
+      "transport": "ssr-http-v1"
+    },
+    "theprotocol": {
+      "count": 50,
+      "provenance_class": "DIRECT",
+      "transport": "official-mcp-v1"
+    },
+    "nofluffjobs": {
+      "count": 75,
+      "provenance_class": "DIRECT",
+      "transport": "public-rest-api-v1"
+    },
+    "rocketjobs": {
+      "count": 75,
+      "provenance_class": "DIRECT",
+      "transport": "public-ssr-v1"
+    },
+    "bulldogjob": {
+      "count": 75,
+      "provenance_class": "DIRECT",
+      "transport": "public-ssr-en-v1"
+    },
+    "pracuj": {
+      "count": 75,
+      "provenance_class": "SECONDARY_PUBLIC_INDEX",
+      "transport": "public-mirror-isitfair-v1",
+      "upstream_source": "pracuj.pl",
+      "direct_source_access": false
+    }
+  },
+  "notes": [
+    "Pracuj observations are not evidence-equivalent to direct source observations.",
+    "No Cloudflare/WAF bypass was used.",
+    "Source identity and transport identity remain separate."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "format": "market-corpus-v2-multisource",
+  "postings": 500,
+  "by_source": {
+    "bulldogjob": 75,
+    "justjoinit": 150,
+    "nofluffjobs": 75,
+    "pracuj": 75,
+    "rocketjobs": 75,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 4653957,
+  "compressed_bytes": 736162,
+  "uncompressed_sha256": "bdf772b87f0d5cff51e62d4f5d262fc5674545847b56b6046f152f3474471217",
+  "compressed_sha256": "76df916b9bdf67decd46995e0f91d35972811a96e8d4741dca6607234e0c7890",
+  "base_corpus": "data/corpora/corpus-02/corpus.jsonl.gz",
+  "expansion_corpus": "reports/source-expansion-01-new/corpus.jsonl.gz"
+}

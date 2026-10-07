@@ -1,0 +1,16 @@
+{
+  "format": "market-corpus-v1",
+  "postings": 300,
+  "by_source": {
+    "bulldogjob": 75,
+    "nofluffjobs": 75,
+    "pracuj": 75,
+    "rocketjobs": 75
+  },
+  "uncompressed_bytes": 2208065,
+  "compressed_bytes": 339010,
+  "uncompressed_sha256": "ded13612c3fee1b572de313cf8cc65c56fc750c6d8724fe050e5ebc04e12ccef",
+  "compressed_sha256": "d2fa3850891ea6667622f4c4d2b4ff687ee181d2d6f4afc70880aabab8d0f5fa",
+  "contains_raw_payload": false,
+  "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+}

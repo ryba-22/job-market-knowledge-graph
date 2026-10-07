@@ -1,0 +1,87 @@
+{
+  "run_id": "source-expansion-01",
+  "target_per_source": 75,
+  "sources": [
+    {
+      "source": "nofluffjobs",
+      "transport": "public-rest-api-v1",
+      "discovered": 100,
+      "target": 75,
+      "successes": 75,
+      "states": {
+        "OBSERVED": 75
+      },
+      "errors": []
+    },
+    {
+      "source": "rocketjobs",
+      "transport": "public-ssr-v1",
+      "discovered": 100,
+      "target": 75,
+      "successes": 75,
+      "states": {
+        "OBSERVED": 75
+      },
+      "errors": []
+    },
+    {
+      "source": "bulldogjob",
+      "transport": "public-ssr-en-v1",
+      "discovered": 100,
+      "target": 75,
+      "successes": 75,
+      "states": {
+        "OBSERVED": 75,
+        "ERROR": 2
+      },
+      "errors": [
+        {
+          "source_posting_id": "256852",
+          "url": "https://bulldogjob.com/companies/jobs/256852-principal-full-stack-developer-net-angular-gdansk-krakow-warsaw-wroclaw-luxoft-dxc",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/256852-principal-full-stack-developer-net-angular-gdansk-krakow-warsaw-wroclaw-luxoft-dxc'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        },
+        {
+          "source_posting_id": "256851",
+          "url": "https://bulldogjob.com/companies/jobs/256851-connectivity-test-engineer-krakow-luxoft-dxc",
+          "error": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://bulldogjob.com/companies/jobs/256851-connectivity-test-engineer-krakow-luxoft-dxc'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+        }
+      ]
+    },
+    {
+      "source": "pracuj",
+      "transport": "public-mirror-isitfair-v1",
+      "direct_source_access": false,
+      "upstream_source": "pracuj.pl",
+      "mirror": "isitfair.pl public search",
+      "discovered": 100,
+      "target": 75,
+      "successes": 75,
+      "states": {
+        "OBSERVED": 75
+      },
+      "errors": []
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 300,
+    "revisions": 300,
+    "raw_observations": 300,
+    "organization_mentions": 300,
+    "organization_candidates": 300,
+    "match_candidates": 0,
+    "ingestion_runs": 1,
+    "ingestion_attempts": 355,
+    "ingestion_items": 302,
+    "by_source": {
+      "bulldogjob": 75,
+      "nofluffjobs": 75,
+      "pracuj": 75,
+      "rocketjobs": 75
+    },
+    "lifecycle": {
+      "OBSERVED": 300
+    }
+  },
+  "insufficient_sources": []
+}

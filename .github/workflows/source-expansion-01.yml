@@ -1,90 +1,23 @@
-name: SOURCE-EXPANSION-01 real300
+name: SOURCE-EXPANSION-01 frozen market500
 
 on:
   push:
     branches: [source-expansion-01-four-boards]
+  pull_request:
+    paths:
+      - "data/corpora/source-expansion-01/**"
+      - "tests/test_source_expansion_01_snapshot.py"
+      - ".github/workflows/source-expansion-01.yml"
   workflow_dispatch:
 
 jobs:
-  expansion:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: crawler
-          POSTGRES_PASSWORD: crawler
-          POSTGRES_DB: jobs
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U crawler -d jobs"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 20
-    env:
-      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
-      PYTHONUNBUFFERED: "1"
-
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install
-        run: pip install -e ".[dev]"
-      - name: Tests
-        run: pytest -q
-      - name: Migrate
-        run: python -m ingestion.migrate
-      - name: Collect 75 x 4 new sources
-        run: >-
-          python -m ingestion.source_expansion
-          --target-per-source 75
-          --delay 0.06
-          --report reports/source-expansion-01-run.json
-          --manifest reports/source-expansion-01-manifest.json
-      - name: Export expansion corpus
-        run: python -m ingestion.export_market_corpus --out reports/source-expansion-01-new
-      - name: Combine with frozen CORPUS-02
-        run: >-
-          python -m ingestion.combine_market_corpora
-          --base data/corpora/corpus-02/corpus.jsonl.gz
-          --expansion reports/source-expansion-01-new/corpus.jsonl.gz
-          --out reports/source-expansion-01-combined
-      - name: Verify six-source 500 corpus
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          m=json.loads(Path("reports/source-expansion-01-combined/manifest.json").read_text())
-          expected={
-              "justjoinit":150,
-              "theprotocol":50,
-              "nofluffjobs":75,
-              "rocketjobs":75,
-              "bulldogjob":75,
-              "pracuj":75,
-          }
-          assert m["postings"] == 500, m
-          assert m["by_source"] == expected, m
-          run=json.loads(Path("reports/source-expansion-01-run.json").read_text())
-          assert run["insufficient_sources"] == [], run
-          pracuj=next(x for x in run["sources"] if x["source"]=="pracuj")
-          assert pracuj["direct_source_access"] is False
-          assert pracuj["transport"] == "public-mirror-isitfair-v1"
-          print(json.dumps(m,indent=2))
-          PY
-      - name: Upload expansion evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: source-expansion-01-real500
-          path: |
-            reports/source-expansion-01-run.json
-            reports/source-expansion-01-manifest.json
-            reports/source-expansion-01-new/manifest.json
-            reports/source-expansion-01-new/corpus.jsonl.gz
-            reports/source-expansion-01-combined/manifest.json
-            reports/source-expansion-01-combined/corpus.jsonl.gz
+      - name: Verify frozen six-source corpus
+        run: python -m unittest tests.test_source_expansion_01_snapshot -v
