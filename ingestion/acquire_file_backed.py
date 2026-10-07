@@ -42,11 +42,16 @@ def _write_jsonl_gz(path: Path, rows):
 
 def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir: str, delay: float, max_attempts: int = 4):
     rows=_load_rows(plan_path,source,chunk_index)
+    if source == "aplikuj":
+        plan_scope = json.loads(Path(plan_path).read_text(encoding="utf-8")).get("aplikuj_scope")
+        if plan_scope != "technical-it-v1":
+            raise RuntimeError("REFUSED: Aplikuj requires technical-it-v1 category-scoped plan")
     adapter=ADAPTERS[source] if source in ADAPTERS else SOURCES[source]
     corpus=[]
     raw_rows=[]
     gone=[]
     errors=[]
+    excluded_non_it=[]
     now=datetime.now(timezone.utc).isoformat()
     with httpx.Client(timeout=45,follow_redirects=True,headers={'User-Agent':'job-market-knowledge-graph/file-backed-local','Accept-Language':'pl,en;q=0.8'}) as client:
         for row in rows:
@@ -119,6 +124,12 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'attempt_errors':attempt_errors,
                 })
                 parsed=adapter.parse_detail(payload,final_url) if source in ADAPTERS else adapter.parse_detail(payload,ref)
+                if source == "aplikuj":
+                    from .aplikuj_it_scope import is_technical_it
+                    if not is_technical_it(parsed.title, parsed.source_specific.get("industry")):
+                        raw_rows.pop()  # do not retain non-IT details in the cache
+                        excluded_non_it.append(parsed.source_posting_id)
+                        continue
                 projection=parsed.normalized_projection()
                 revision_hash=parsed.normalized_hash()
                 corpus.append({
@@ -154,6 +165,8 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
         'planned':len(rows),
         'postings':len(corpus),
         'source_gone':len(gone),
+        'excluded_non_it':len(excluded_non_it),
+        'scope':'technical-it-v1' if source=='aplikuj' else None,
         'errors':errors,
         'by_source':{source:len(corpus)} if corpus else {},
         'corpus':corpus_meta,

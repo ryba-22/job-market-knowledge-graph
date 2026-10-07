@@ -30,8 +30,8 @@ def _manifest_ok(path: Path) -> bool:
         return False
     return (
         not m.get("errors")
-        and int(m.get("planned", 0)) == int(m.get("postings", 0)) + int(m.get("source_gone", 0))
-        and int((m.get("raw_archive") or {}).get("rows", 0)) == int(m.get("planned", 0))
+        and int(m.get("planned", 0)) == int(m.get("postings", 0)) + int(m.get("source_gone", 0)) + int(m.get("excluded_non_it", 0))
+        and int((m.get("raw_archive") or {}).get("rows", 0)) == int(m.get("planned", 0)) - int(m.get("excluded_non_it", 0))
     )
 
 
@@ -45,6 +45,7 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
             "chunks_done": 0,
             "postings": 0,
             "source_gone": 0,
+            "excluded_non_it": 0,
             "errors": 0,
         }
         for c in chunks:
@@ -58,21 +59,23 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
                 continue
             d["postings"] += int(m.get("postings", 0))
             d["source_gone"] += int(m.get("source_gone", 0))
+            d["excluded_non_it"] += int(m.get("excluded_non_it", 0))
             d["errors"] += len(m.get("errors") or [])
             if _manifest_ok(mp):
                 d["chunks_done"] += 1
-        d["accounted"] = d["postings"] + d["source_gone"]
+        d["accounted"] = d["postings"] + d["source_gone"] + d["excluded_non_it"]
         d["pct"] = round(100 * d["accounted"] / d["planned"], 2) if d["planned"] else 100.0
         by_source[source] = d
     total = {
         "planned": sum(x["planned"] for x in by_source.values()),
         "postings": sum(x["postings"] for x in by_source.values()),
         "source_gone": sum(x["source_gone"] for x in by_source.values()),
+        "excluded_non_it": sum(x["excluded_non_it"] for x in by_source.values()),
         "errors": sum(x["errors"] for x in by_source.values()),
         "chunks_done": sum(x["chunks_done"] for x in by_source.values()),
         "chunks_total": sum(x["chunks_total"] for x in by_source.values()),
     }
-    total["accounted"] = total["postings"] + total["source_gone"]
+    total["accounted"] = total["postings"] + total["source_gone"] + total["excluded_non_it"]
     total["pct"] = round(100 * total["accounted"] / total["planned"], 2) if total["planned"] else 100.0
     return {"updated_at": datetime.now(timezone.utc).isoformat(), "sources": by_source, "total": total}
 
@@ -80,6 +83,8 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
 def run(plan_path: str, sources: list[str], out_root: str, raw_root: str, status_path: str, max_attempts: int):
     plan = json.loads(Path(plan_path).read_text(encoding="utf-8"))
     selected = set(sources)
+    if "aplikuj" in selected and plan.get("aplikuj_scope") != "technical-it-v1":
+        raise RuntimeError("REFUSED: unscoped Aplikuj plan; rebuild from IT category inventory")
     out = Path(out_root)
     raw = Path(raw_root)
     status = Path(status_path)

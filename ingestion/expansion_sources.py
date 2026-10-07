@@ -494,30 +494,40 @@ class AplikujSource:
     code = "aplikuj"
 
     def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
-        response = client.get(APLIKUJ_SITEMAP_INDEX)
-        response.raise_for_status()
-        root = ET.fromstring(response.text)
-        sitemap_urls = [n.text.strip() for n in root.iter() if n.tag.endswith("loc") and n.text]
+        from .aplikuj_it_scope import is_it_listing_candidate
+
+        # The full offer sitemap includes all professions, not just IT.
+        # The category listing still contains promoted/unrelated cards, hence
+        # the additional conservative job-title check.
         refs = []
         seen = set()
-        for sitemap_url in sitemap_urls:
-            child = client.get(sitemap_url)
-            child.raise_for_status()
-            sitemap = ET.fromstring(child.text)
-            for node in sitemap.iter():
-                if not node.tag.endswith("loc") or not node.text:
-                    continue
-                target = canonical_url(node.text.strip())
+        for page in range(1, 101):
+            page_url = "https://www.aplikuj.pl/praca/it-informatyka"
+            if page > 1:
+                page_url += f"/strona-{page}"
+            response = client.get(page_url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            cards = soup.select("li.offer-card a.offer-title[href]")
+            if not cards:
+                break
+            new_ids = 0
+            for link in cards:
+                title = norm_text(link.get_text(" ", strip=True))
+                target = canonical_url(link.get("href", ""))
                 match = re.search(r"/oferta/(\d+)(?:/|$)", target)
-                if not match:
+                if not match or not is_it_listing_candidate(title):
                     continue
                 sid = match.group(1)
                 if sid in seen:
                     continue
                 seen.add(sid)
+                new_ids += 1
                 refs.append(PostingRef(self.code, target, sid))
                 if len(refs) >= limit:
                     return refs
+            if not soup.select(f'a[href$="strona-{page + 1}"]'):
+                break
         return refs
 
     def fetch_detail(self, client: httpx.Client, ref: PostingRef):
@@ -564,7 +574,7 @@ class AplikujSource:
                     "salary_currency": None,
                     "direct_apply": None,
                     "observation_provenance": "DIRECT",
-                    "discovery_scope": "full-offer-sitemaps",
+                    "discovery_scope": "it-category-listing-filtered",
                     "parse_mode": "HTML_FALLBACK",
                     "meta_description": meta_description or None,
                 },
@@ -600,7 +610,7 @@ class AplikujSource:
                 "salary_currency": structured.get("salaryCurrency"),
                 "direct_apply": structured.get("directApply"),
                 "observation_provenance": "DIRECT",
-                "discovery_scope": "full-offer-sitemaps",
+                "discovery_scope": "it-category-listing-filtered",
                 "parse_mode": "JSON_LD",
             },
             revision_projection={

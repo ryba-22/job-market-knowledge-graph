@@ -29,9 +29,12 @@ def plan(inventory_path: str, out_path: str, chunk_size: int) -> dict:
                 "last_source_posting_id":part[-1]["source_posting_id"],
                 "rows":part,
             })
+    inventory_manifest_path = Path(inventory_path).with_name("manifest.json")
+    inventory_manifest = json.loads(inventory_manifest_path.read_text(encoding="utf-8")) if inventory_manifest_path.exists() else {}
     result={
         "chunk_size":chunk_size,
         "unknown_total":len(unknown),
+        "aplikuj_scope":inventory_manifest.get("aplikuj_scope"),
         "chunks":chunks,
         "chunks_by_source":{
             s:sum(1 for c in chunks if c["source"]==s)
