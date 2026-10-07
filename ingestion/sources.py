@@ -67,18 +67,19 @@ class NoFluffJobsAdapter(SourceAdapter):
         data = json.loads(html)
         found = {}
         for item in data.get("postings", []):
+            reference = norm_text(item.get("reference"))
             slug = norm_text(item.get("url") or item.get("id")).casefold()
-            if not slug:
+            if not reference or not slug:
                 continue
             url = f"https://nofluffjobs.com/pl/job/{slug}"
-            found[slug] = PostingRef(self.code, url, slug)
+            found[reference] = PostingRef(self.code, url, reference)
         return list(found.values())
 
     def parse_detail(self, html: str, url: str) -> ParsedPosting:
         data = json.loads(html)
-        sid = norm_text(data.get("id")).casefold()
+        sid = norm_text(data.get("reference"))
         if not sid:
-            raise ValueError("PARSER_DRIFT: NFJ id missing")
+            raise ValueError("PARSER_DRIFT: NFJ reference missing")
         title = norm_text(data.get("title"))
         if not title:
             raise ValueError("PARSER_DRIFT: NFJ title missing")
@@ -106,7 +107,7 @@ class NoFluffJobsAdapter(SourceAdapter):
         return ParsedPosting(
             source=self.code,
             source_posting_id=sid,
-            url=f"https://nofluffjobs.com/pl/job/{sid}",
+            url=canonical_url(url),
             title=title,
             company_mention=company,
             body_text=json.dumps(data, ensure_ascii=False, sort_keys=True),
@@ -115,6 +116,8 @@ class NoFluffJobsAdapter(SourceAdapter):
                 "seniority": basics.get("seniority"),
                 "requirements": requirements,
                 "daily_tasks": specs.get("dailyTasks") or [],
+                "reference": sid,
+                "presentation_id": data.get("id"),
                 "observation_provenance": "DIRECT_PUBLIC_API",
             },
             revision_projection=stable,
@@ -173,6 +176,8 @@ class BulldogJobAdapter(SourceAdapter):
 
     def listing_urls(self):
         yield BULLDOG_LISTING_URL
+        for page in range(2, 21):
+            yield f"{BULLDOG_LISTING_URL}/s/page,{page}"
 
     def parse_listing(self, html: str, base_url: str) -> list[PostingRef]:
         soup = BeautifulSoup(html, "html.parser")

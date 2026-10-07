@@ -47,7 +47,10 @@ def _run_direct_html(client, store, run_id, source, target, delay):
     adapter = ADAPTERS[source]
     refs = adapter.discover(client, max(target + 25, 100))
     stats, errors, manifest = Counter(), [], []
-    policy = RetryPolicy(max_attempts=3, base_delay_seconds=0.25)
+    policy = RetryPolicy(
+        max_attempts=4 if source == "bulldogjob" else 3,
+        base_delay_seconds=1.5 if source == "bulldogjob" else 0.25,
+    )
     for ref in refs:
         if _success_count(stats) >= target:
             break
@@ -134,7 +137,8 @@ def _run_nfj(client, store, run_id, target, delay):
             stats["REPLAY_SKIPPED"] += 1
             manifest.append({"source":source,"source_posting_id":sid,"url":ref.url})
             continue
-        api_url = f"https://nofluffjobs.com/api/posting/{sid}"
+        slug = ref.url.rstrip("/").split("/")[-1]
+        api_url = f"https://nofluffjobs.com/api/posting/{slug}"
         try:
             def fetch():
                 response = client.get(api_url, headers={"Accept":"application/json"})

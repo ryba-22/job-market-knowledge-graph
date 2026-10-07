@@ -10,14 +10,16 @@ def test_nfj_listing_and_detail_preserve_direct_source_identity():
         "postings": [{
             "id": "Senior-Python-Acme-Remote",
             "url": "senior-python-acme-remote",
+            "reference": "NFJ-REF-1",
             "title": "Senior Python Developer",
             "name": "Acme",
         }]
     }
     refs = ADAPTERS["nofluffjobs"].parse_listing(json.dumps(listing), "https://nofluffjobs.com")
-    assert refs[0].source_posting_id == "senior-python-acme-remote"
+    assert refs[0].source_posting_id == "NFJ-REF-1"
     detail = {
         "id": "senior-python-acme-remote",
+        "reference": "NFJ-REF-1",
         "title": "Senior Python Developer",
         "company": {"name": "Acme", "url": "https://acme.example"},
         "basics": {"category": "backend", "seniority": ["Senior"]},
@@ -28,7 +30,7 @@ def test_nfj_listing_and_detail_preserve_direct_source_identity():
         "salary": {"from": 20000, "to": 26000, "currency": "PLN"},
     }
     parsed = ADAPTERS["nofluffjobs"].parse_detail(json.dumps(detail), refs[0].url)
-    assert parsed.source_posting_id == "senior-python-acme-remote"
+    assert parsed.source_posting_id == "NFJ-REF-1"
     assert parsed.company_mention == "Acme"
     assert parsed.source_specific["observation_provenance"] == "DIRECT_PUBLIC_API"
 
@@ -91,3 +93,9 @@ def test_pracuj_secondary_index_keeps_upstream_url_and_id():
     assert parsed.source_specific["upstream_source"] == "pracuj.pl"
     assert parsed.source_specific["mirror"] == "isitfair.pl"
     assert parsed.source_specific["observation_provenance"] == "SECONDARY_PUBLIC_INDEX"
+
+
+def test_bulldog_listing_urls_use_path_pagination():
+    urls=list(ADAPTERS["bulldogjob"].listing_urls())
+    assert urls[0] == "https://bulldogjob.com/companies/jobs"
+    assert urls[1] == "https://bulldogjob.com/companies/jobs/s/page,2"
