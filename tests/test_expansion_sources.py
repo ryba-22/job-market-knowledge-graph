@@ -148,6 +148,17 @@ def test_aplikuj_parses_jobposting_jsonld():
     assert parsed.source_specific["observation_provenance"]=="DIRECT"
 
 
+def test_aplikuj_html_fallback_without_jsonld():
+    html = """<html><head><title>Oferta pracy Doradca Klienta, PRO DOMO Sp. z o.o. - Pabianice - Aplikuj.pl</title><link rel="canonical" href="https://www.aplikuj.pl/oferta/1038688/doradca-klienta-umowa-o-prace-lento"><meta name="description" content="Zapoznaj się z ofertą pracy Doradca Klienta w Pabianicach. Pracownika poszukuje firma PRO DOMO Sp. z o.o.. Aplikuj już dzisiaj!"></head><body><h1>Doradca Klienta</h1><div class="offer-employer-header__company text-md lg:text-base">Pracodawca - PRO DOMO Sp. z o.o.</div><section><h2>Opis stanowiska</h2><p>Obsługa klientów.</p></section></body></html>"""
+    ref=PostingRef("aplikuj","https://www.aplikuj.pl/oferta/1038688/doradca-klienta-umowa-o-prace-lento","1038688")
+    parsed=AplikujSource().parse_detail(html,ref)
+    assert parsed.source_posting_id=="1038688"
+    assert parsed.title=="Doradca Klienta"
+    assert parsed.company_mention=="PRO DOMO Sp. z o.o."
+    assert parsed.source_specific["observation_provenance"]=="DIRECT"
+    assert parsed.source_specific["parse_mode"]=="HTML_FALLBACK"
+
+
 def test_itleaders_parses_role_and_company_from_meta():
     html = """<html><head><meta name="description" content="Junior Backend Developer (Python), Lokalizacja: Gliwice, Wynagrodzenie:"><meta property="og:title" content="MindPal Sp. z o.o. - Junior Backend Developer (Python)"></head><body><h1>Oferty pracy</h1><h2>Wymagania</h2><p>Python</p></body></html>"""
     ref=PostingRef("itleaders","https://it-leaders.pl/oferta-pracy/junior-backend-developer-python-gliwice-3851","3851")

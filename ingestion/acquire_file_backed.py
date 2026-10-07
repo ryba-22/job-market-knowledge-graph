@@ -14,6 +14,7 @@ import httpx
 from .expansion_sources import SOURCES
 from .model import PostingRef, SourceGoneError
 from .retry import RetryPolicy, run_with_retry
+from .sources import ADAPTERS
 from .versions import NORMALIZER_VERSION, PARSER_BUNDLE_VERSION, TRANSPORT_VERSIONS
 
 
@@ -41,7 +42,7 @@ def _write_jsonl_gz(path: Path, rows):
 
 def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir: str, delay: float, max_attempts: int = 4):
     rows=_load_rows(plan_path,source,chunk_index)
-    adapter=SOURCES[source]
+    adapter=ADAPTERS[source] if source in ADAPTERS else SOURCES[source]
     corpus=[]
     raw_rows=[]
     gone=[]
@@ -53,6 +54,10 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
             try:
                 attempt_errors=[]
                 def fetch():
+                    if source in ADAPTERS:
+                        response=client.get(ref.url)
+                        response.raise_for_status()
+                        return response.text,str(response.url),response.status_code,response.headers.get('content-type','')
                     return adapter.fetch_detail(client,ref)
                 def on_attempt_failure(attempt_no,exc,will_retry,failure_type,http_status):
                     attempt_errors.append({
@@ -65,7 +70,7 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                 try:
                     (payload,final_url,status,content_type),attempt_no=run_with_retry(
                         fetch,
-                        policy=RetryPolicy(max_attempts=max_attempts,base_delay_seconds=0.75),
+                        policy=RetryPolicy(max_attempts=max_attempts,base_delay_seconds=5.0 if source=='eurotechjobs' else 0.75),
                         on_attempt_failure=on_attempt_failure,
                     )
                 except httpx.HTTPStatusError as exc:
@@ -113,7 +118,7 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'fetch_attempts':attempt_no,
                     'attempt_errors':attempt_errors,
                 })
-                parsed=adapter.parse_detail(payload,ref)
+                parsed=adapter.parse_detail(payload,final_url) if source in ADAPTERS else adapter.parse_detail(payload,ref)
                 projection=parsed.normalized_projection()
                 revision_hash=parsed.normalized_hash()
                 corpus.append({

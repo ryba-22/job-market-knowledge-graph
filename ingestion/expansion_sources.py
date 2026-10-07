@@ -490,18 +490,60 @@ class AplikujSource:
     def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
         soup = BeautifulSoup(raw, "html.parser")
         structured = _jobposting_json_ld(soup)
+        title_tag = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
+        if not structured and "Strona nie została znaleziona" in title_tag:
+            raise SourceGoneError("Aplikuj.pl offer no longer exposed")
+        canonical = soup.find("link", attrs={"rel": "canonical"})
+        canonical_href = canonical.get("href") if canonical else None
         if not structured:
-            title_tag = norm_text(soup.title.get_text(" ", strip=True) if soup.title else None)
-            if "Strona nie została znaleziona" in title_tag:
-                raise SourceGoneError("Aplikuj.pl offer no longer exposed")
-            raise ValueError("PARSER_DRIFT: Aplikuj JobPosting JSON-LD missing")
+            h1 = soup.find("h1")
+            title = norm_text(h1.get_text(" ", strip=True) if h1 else None)
+            if not title:
+                raise ValueError("PARSER_DRIFT: Aplikuj title missing")
+            employer = soup.select_one(".offer-employer-header__company")
+            company = norm_text(employer.get_text(" ", strip=True) if employer else None)
+            company = re.sub(r"^Pracodawca\s*-\s*", "", company, flags=re.I).strip()
+            meta_desc_tag = soup.find("meta", attrs={"name": "description"})
+            meta_description = norm_text(meta_desc_tag.get("content") if meta_desc_tag else None)
+            if not company and meta_description:
+                match = re.search(r"Pracownika poszukuje firma\s+(.+?)\.\s*Aplikuj", meta_description, re.I)
+                company = norm_text(match.group(1)) if match else ""
+            return ParsedPosting(
+                source=self.code,
+                source_posting_id=ref.source_posting_id,
+                url=canonical_url(canonical_href or ref.url),
+                title=title,
+                company_mention=company or None,
+                body_text=soup.get_text("\n", strip=True),
+                source_specific={
+                    "hiring_organization": {"name": company} if company else {},
+                    "date_posted": None,
+                    "valid_through": None,
+                    "employment_type": None,
+                    "industry": None,
+                    "occupational_category": None,
+                    "job_location": None,
+                    "salary_currency": None,
+                    "direct_apply": None,
+                    "observation_provenance": "DIRECT",
+                    "discovery_scope": "full-offer-sitemaps",
+                    "parse_mode": "HTML_FALLBACK",
+                    "meta_description": meta_description or None,
+                },
+                revision_projection={
+                    "html_fallback": {
+                        "title": title,
+                        "company": company or None,
+                        "meta_description": meta_description or None,
+                    },
+                    "stable_sections": _stable_sections(soup),
+                },
+            )
         title = norm_text(structured.get("title"))
         hiring = structured.get("hiringOrganization") or {}
         company = hiring.get("name") if isinstance(hiring, dict) else None
         if not title:
             raise ValueError("PARSER_DRIFT: Aplikuj title missing")
-        canonical = soup.find("link", attrs={"rel": "canonical"})
-        canonical_href = canonical.get("href") if canonical else None
         return ParsedPosting(
             source=self.code,
             source_posting_id=ref.source_posting_id,
@@ -521,6 +563,7 @@ class AplikujSource:
                 "direct_apply": structured.get("directApply"),
                 "observation_provenance": "DIRECT",
                 "discovery_scope": "full-offer-sitemaps",
+                "parse_mode": "JSON_LD",
             },
             revision_projection={
                 "jobposting_json_ld": structured,
