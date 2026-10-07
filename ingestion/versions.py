@@ -8,4 +8,5 @@ TRANSPORT_VERSIONS = {
     "justjoinit": "ssr-http-v1",
     "nofluffjobs": "public-search-detail-api-v1",
     "rocketjobs": "public-sitemap-ssr-v1",
+    "bulldogjob": "public-listing-ssr-v1",
 }
