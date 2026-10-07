@@ -1,0 +1,42 @@
+{
+  "run_id": "source-expansion-01-real200",
+  "sources": [
+    {
+      "source": "nofluffjobs",
+      "transport": "public-search-detail-api-v1",
+      "discovered": 100,
+      "states": {
+        "OBSERVED": 100
+      },
+      "errors": []
+    },
+    {
+      "source": "rocketjobs",
+      "transport": "public-sitemap-ssr-v1",
+      "discovered": 100,
+      "states": {
+        "OBSERVED": 100
+      },
+      "errors": []
+    }
+  ],
+  "new_match_candidates": 0,
+  "database": {
+    "postings": 200,
+    "revisions": 200,
+    "raw_observations": 200,
+    "organization_mentions": 200,
+    "organization_candidates": 200,
+    "match_candidates": 0,
+    "ingestion_runs": 1,
+    "ingestion_attempts": 200,
+    "ingestion_items": 200,
+    "by_source": {
+      "nofluffjobs": 100,
+      "rocketjobs": 100
+    },
+    "lifecycle": {
+      "OBSERVED": 200
+    }
+  }
+}
