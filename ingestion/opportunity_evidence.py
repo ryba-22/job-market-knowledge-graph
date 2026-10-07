@@ -14,7 +14,7 @@ import psycopg
 
 
 EXTRACTOR_VERSION = "opportunity-evidence-v1"
-PORTAL_ROOTS = ("justjoin.it", "theprotocol.it")
+PORTAL_ROOTS = ("justjoin.it", "rocketjobs.pl", "rocketjobs.com", "theprotocol.it")
 ATS_HOST_HINTS = (
     "greenhouse.io", "lever.co", "workdayjobs.com", "myworkdayjobs.com",
     "smartrecruiters.com", "teamtailor.com", "recruitee.com", "ashbyhq.com",
@@ -127,7 +127,7 @@ def _extract_html(html: str) -> list[dict]:
         ats = _ats_identity(href)
         if ats:
             out.append({"type":"ATS_URL","url":href,"path":"html.a[href]","ats":ats})
-        elif _external(href) and any(x in text for x in ("apply","aplikuj","application","career","job")):
+        elif _external(href) and any(x in text for x in ("apply","aplikuj","application","wyślij cv","prześlij cv")):
             out.append({"type":"APPLICATION_URL","url":href,"path":"html.a[href]"})
     return out
 
