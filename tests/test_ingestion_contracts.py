@@ -3,8 +3,12 @@ from ingestion.sources import JustJoinItAdapter, TheProtocolAdapter
 
 
 def test_theprotocol_listing_extracts_stable_id():
-    html = """
-    <a href="/szczegoly/praca/x%2Coferta%2C01000000-2f10-afe4-f1b5-08df23ba5ced">x</a>
+    html = """<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://theprotocol.it/szczegoly/praca/x%2Coferta%2C01000000-2f10-afe4-f1b5-08df23ba5ced</loc>
+      </url>
+    </urlset>
     """
     refs = TheProtocolAdapter().parse_listing(html, "https://theprotocol.it/praca/")
     assert len(refs) == 1
