@@ -1,0 +1,33 @@
+{
+  "format": "source-inventory-v1",
+  "base_corpus": "data/corpora/corpus-06/corpus.jsonl.gz",
+  "sources": {
+    "justjoinit": {
+      "discoverable": 1405,
+      "known": 381,
+      "unknown": 1024
+    },
+    "nofluffjobs": {
+      "discoverable": 2616,
+      "known": 399,
+      "unknown": 2217
+    },
+    "rocketjobs": {
+      "discoverable": 15468,
+      "known": 400,
+      "unknown": 15068
+    },
+    "bulldogjob": {
+      "discoverable": 870,
+      "known": 213,
+      "unknown": 657
+    }
+  },
+  "discoverable_total": 20359,
+  "known_total": 1393,
+  "unknown_total": 18966,
+  "uncompressed_bytes": 5360653,
+  "compressed_bytes": 442115,
+  "uncompressed_sha256": "b377061a62a4d307dfc092fbcbf8fc978d47c8dd6635fd0305e0d04010f333bb",
+  "compressed_sha256": "ed5ed93f6c01a73f0c71435014686c943d8cad2d9f0ece95aa79965ec571d0da"
+}
