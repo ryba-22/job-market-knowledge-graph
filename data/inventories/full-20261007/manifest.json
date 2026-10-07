@@ -1,0 +1,92 @@
+{
+  "format": "source-inventory-v1",
+  "scope": "full-local-acquisition",
+  "base_corpus": "data/corpora/corpus-10/corpus.jsonl.gz",
+  "sources": {
+    "justjoinit": {
+      "discoverable": 1499,
+      "known": 358,
+      "unknown": 1141,
+      "error": null
+    },
+    "theprotocol": {
+      "discoverable": 4699,
+      "known": 50,
+      "unknown": 4649,
+      "error": null
+    },
+    "nofluffjobs": {
+      "discoverable": 2631,
+      "known": 649,
+      "unknown": 1982,
+      "error": null
+    },
+    "rocketjobs": {
+      "discoverable": 15468,
+      "known": 650,
+      "unknown": 14818,
+      "error": null
+    },
+    "bulldogjob": {
+      "discoverable": 867,
+      "known": 408,
+      "unknown": 459,
+      "error": null
+    },
+    "solidjobs": {
+      "discoverable": 3842,
+      "known": 3234,
+      "unknown": 608,
+      "error": null
+    },
+    "teamquest": {
+      "discoverable": 124,
+      "known": 124,
+      "unknown": 0,
+      "error": null
+    },
+    "aplikuj": {
+      "discoverable": 40953,
+      "known": 0,
+      "unknown": 40953,
+      "error": null
+    },
+    "itleaders": {
+      "discoverable": 10,
+      "known": 8,
+      "unknown": 2,
+      "error": null
+    },
+    "michaelpage": {
+      "discoverable": 369,
+      "known": 368,
+      "unknown": 1,
+      "error": null
+    },
+    "eurotechjobs": {
+      "discoverable": 321,
+      "known": 0,
+      "unknown": 321,
+      "error": null
+    },
+    "hnwhoishiring": {
+      "discoverable": 283,
+      "known": 0,
+      "unknown": 283,
+      "error": null
+    },
+    "pracuj": {
+      "discoverable": 0,
+      "known": 0,
+      "unknown": 0,
+      "error": "AttributeError: 'PracujSecondarySource' object has no attribute 'discover'"
+    }
+  },
+  "discoverable_total": 71066,
+  "known_total": 5849,
+  "unknown_total": 65217,
+  "uncompressed_bytes": 18329212,
+  "compressed_bytes": 2105877,
+  "uncompressed_sha256": "3cf50a216289890d44e335fb6fedf4ff690fada133a8091f66796cbf0cd5b966",
+  "compressed_sha256": "7f4389731f21817eab4694e4cb53d96010448fd4c765135fd97cc6fe21f914b8"
+}

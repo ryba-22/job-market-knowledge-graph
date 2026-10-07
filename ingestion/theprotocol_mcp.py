@@ -56,6 +56,41 @@ def _company(value: Any) -> str | None:
     return None
 
 
+async def discover_offers(limit: int = 100000) -> list[dict[str, Any]]:
+    async with streamablehttp_client(MCP_URL) as streams:
+        read_stream, write_stream = streams[0], streams[1]
+        async with ClientSession(read_stream, write_stream) as session:
+            await session.initialize()
+            discovered = []
+            seen = set()
+            page = 1
+            while len(discovered) < limit:
+                search = await session.call_tool(
+                    "search_job_offers",
+                    arguments={"filters": {"pageSize": 50, "pageNumber": page}},
+                )
+                rows = _offers(_payload(search))
+                if not rows:
+                    break
+                before = len(discovered)
+                for offer in rows:
+                    sid = str(_pick(offer, "offerId", "id", "groupId", "groupID", default=""))
+                    if not sid or sid in seen:
+                        continue
+                    seen.add(sid)
+                    discovered.append(offer)
+                    if len(discovered) >= limit:
+                        break
+                if len(discovered) == before:
+                    break
+                page += 1
+            return discovered
+
+
+def discover_offers_sync(limit: int = 100000):
+    return asyncio.run(discover_offers(limit))
+
+
 async def fetch_batch(limit: int = 50) -> list[tuple[dict[str, Any], dict[str, Any]]]:
     async with streamablehttp_client(MCP_URL) as streams:
         read_stream, write_stream = streams[0], streams[1]
@@ -67,7 +102,7 @@ async def fetch_batch(limit: int = 50) -> list[tuple[dict[str, Any], dict[str, A
             while len(discovered) < limit:
                 search = await session.call_tool(
                     "search_job_offers",
-                    arguments={"pageSize": min(50, limit - len(discovered)), "pageNumber": page},
+                    arguments={"filters": {"pageSize": 50, "pageNumber": page}},
                 )
                 rows = _offers(_payload(search))
                 if not rows:
@@ -131,7 +166,7 @@ async def fetch_offers_by_ids(offer_ids: list[str], max_pages: int = 20):
             for page in range(1,max_pages+1):
                 search=await session.call_tool(
                     "search_job_offers",
-                    arguments={"pageSize":50,"pageNumber":page},
+                    arguments={"filters":{"pageSize":50,"pageNumber":page}},
                 )
                 rows=_offers(_payload(search))
                 if not rows:

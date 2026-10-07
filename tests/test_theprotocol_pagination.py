@@ -19,7 +19,9 @@ class FakeSession:
 
     async def call_tool(self,name,arguments):
         if name=="search_job_offers":
-            page=arguments["pageNumber"]
+            filters=arguments["filters"]
+            assert filters["pageSize"]==50
+            page=filters["pageNumber"]
             self.search_pages.append(page)
             start=(page-1)*50
             offers=[

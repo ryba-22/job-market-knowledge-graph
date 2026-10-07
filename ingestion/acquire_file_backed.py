@@ -14,6 +14,8 @@ import httpx
 from .expansion_sources import SOURCES
 from .model import PostingRef, SourceGoneError
 from .retry import RetryPolicy, run_with_retry
+from .sources import ADAPTERS
+from .theprotocol_mcp import fetch_groups_sync, parse as parse_theprotocol
 from .versions import NORMALIZER_VERSION, PARSER_BUNDLE_VERSION, TRANSPORT_VERSIONS
 
 
@@ -41,18 +43,33 @@ def _write_jsonl_gz(path: Path, rows):
 
 def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir: str, delay: float, max_attempts: int = 4):
     rows=_load_rows(plan_path,source,chunk_index)
-    adapter=SOURCES[source]
+    adapter=ADAPTERS[source] if source in ADAPTERS else SOURCES[source]
     corpus=[]
     raw_rows=[]
     gone=[]
     errors=[]
     now=datetime.now(timezone.utc).isoformat()
+    protocol_details={}
+    if source=="theprotocol":
+        group_ids=[str(row["group_id"]) for row in rows]
+        details=fetch_groups_sync(group_ids)
+        protocol_details={str(row["source_posting_id"]):detail for row,detail in zip(rows,details,strict=True)}
     with httpx.Client(timeout=45,follow_redirects=True,headers={'User-Agent':'job-market-knowledge-graph/file-backed-local','Accept-Language':'pl,en;q=0.8'}) as client:
         for row in rows:
             ref=PostingRef(source,row['url'],str(row['source_posting_id']))
             try:
                 attempt_errors=[]
                 def fetch():
+                    if source=="theprotocol":
+                        detail=protocol_details.get(ref.source_posting_id) or {}
+                        if not detail:
+                            raise SourceGoneError("The Protocol MCP details missing")
+                        payload=json.dumps({"search":row.get("mcp_search_row") or {},"details":detail},ensure_ascii=False,sort_keys=True)
+                        return payload,ref.url,200,"application/json"
+                    if source in ADAPTERS:
+                        response=client.get(ref.url)
+                        response.raise_for_status()
+                        return response.text,str(response.url),response.status_code,response.headers.get('content-type','')
                     return adapter.fetch_detail(client,ref)
                 def on_attempt_failure(attempt_no,exc,will_retry,failure_type,http_status):
                     attempt_errors.append({
@@ -113,7 +130,7 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'fetch_attempts':attempt_no,
                     'attempt_errors':attempt_errors,
                 })
-                parsed=adapter.parse_detail(payload,ref)
+                parsed=parse_theprotocol(row.get("mcp_search_row") or {},protocol_details.get(ref.source_posting_id) or {}) if source=="theprotocol" else adapter.parse_detail(payload,final_url if source in ADAPTERS else ref)
                 projection=parsed.normalized_projection()
                 revision_hash=parsed.normalized_hash()
                 corpus.append({

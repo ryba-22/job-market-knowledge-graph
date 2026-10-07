@@ -1,2 +1,6 @@
 .local-evidence/
 .local-crawl/
+.local-inventory/
+.venv/
+__pycache__/
+*.egg-info/
