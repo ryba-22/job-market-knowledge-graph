@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import socket
 
 from ingestion.replay_frozen_benchmark import replay
 
@@ -32,3 +33,23 @@ def test_replay_frozen_snapshot_without_network_or_database(tmp_path):
         assert "expected 19 pairs" in msg
     else:
         raise AssertionError("fixture should fail cardinality guard")
+
+
+def test_repo_frozen_benchmark_replays_with_socket_blocked(monkeypatch):
+    def deny_network(*args,**kwargs):
+        raise AssertionError("network access attempted during frozen benchmark replay")
+
+    monkeypatch.setattr(socket.socket,"connect",deny_network)
+    root=Path(__file__).resolve().parents[1]/"data"/"evals"/"er-eval-02"/"snapshot"
+    result=replay(root)
+    assert result["pass"] is True
+    assert result["mode"]=="compact-repo-snapshot"
+    assert result["postings"]==26
+    assert result["pairs"]==19
+    assert result["labels"]=={
+        "SAME_OPPORTUNITY":1,
+        "DISTINCT_OPPORTUNITY":4,
+        "UNRESOLVED":14,
+    }
+    assert result["network_used"] is False
+    assert result["database_used"] is False
