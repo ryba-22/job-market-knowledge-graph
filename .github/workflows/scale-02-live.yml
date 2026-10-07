@@ -1,6 +1,8 @@
 name: SCALE-02 inventory chunk acquisition
 
 on:
+  push:
+    branches: [scale-02-crawl-all-20261007]
   workflow_dispatch:
     inputs:
       mode:
@@ -21,18 +23,23 @@ jobs:
       - uses: actions/checkout@v4
       - id: matrix
         env:
-          MODE: ${{ inputs.mode || 'pilot' }}
+          MODE: ${{ inputs.mode || 'all' }}
         run: |
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import json,os
           from pathlib import Path
           p=json.loads(Path("data/inventories/scale-02/chunks.json").read_text())
           rows=[]
+          limits={"rocketjobs":4,"nofluffjobs":3,"justjoinit":2,"bulldogjob":1}
           for c in p["chunks"]:
-              if os.environ["MODE"]=="pilot" and c["chunk_index"]!=0:
+              mode=os.environ["MODE"]
+              if mode=="pilot" and c["chunk_index"]!=0:
+                  continue
+              if mode=="all" and c["chunk_index"]==0:
                   continue
               delay=1.25 if c["source"]=="bulldogjob" else 0.12
-              rows.append({"source":c["source"],"chunk_index":c["chunk_index"],"planned":c["count"],"delay":delay})
+              slot=c["chunk_index"] % limits[c["source"]]
+              rows.append({"source":c["source"],"chunk_index":c["chunk_index"],"planned":c["count"],"delay":delay,"slot":slot})
           print("matrix="+json.dumps({"include":rows},separators=(",",":")))
           PY
 
@@ -40,10 +47,13 @@ jobs:
     needs: prepare
     strategy:
       fail-fast: false
-      max-parallel: 8
+      max-parallel: 10
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    concurrency:
+      group: scale-02-${{ matrix.source }}-${{ matrix.slot }}
+      cancel-in-progress: false
     services:
       postgres:
         image: postgres:16
@@ -95,6 +105,7 @@ jobs:
           corpus=json.loads(Path("reports/corpus/manifest.json").read_text())
           raw=json.loads(Path("reports/raw/raw-manifest.json").read_text())
           assert report["planned"]==int(os.environ["PLANNED"])
+          assert report["successes"] + report.get("source_gone",0) == report["planned"]
           assert corpus["postings"]==report["successes"]
           assert raw["observations"]==report["successes"]
           assert corpus["by_source"]=={os.environ["SOURCE"]:report["successes"]}
