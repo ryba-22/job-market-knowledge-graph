@@ -1,0 +1,104 @@
+name: SOURCE-EXPANSION-03 live Pracuj secondary
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [source-expansion-03-pracuj]
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Tests
+        run: pytest -q
+      - name: Migrate
+        run: python -m ingestion.migrate
+      - name: Crawl 75 Pracuj secondary observations
+        run: >-
+          python -m ingestion.source_expansion
+          --run-id source-expansion-03-pracuj75
+          --source pracuj
+          --limit-per-source 75
+          --manifest-out reports/source-expansion-03-manifest.json
+          --report reports/source-expansion-03-crawl.json
+      - name: Export Pracuj source slice
+        run: python -m ingestion.export_market_corpus --out reports/source-expansion-03
+      - name: Verify Pracuj provenance
+        run: |
+          python - <<'PY2'
+          import gzip,json
+          from pathlib import Path
+          m=json.loads(Path("reports/source-expansion-03/manifest.json").read_text())
+          assert m["postings"] == 75, m
+          assert m["by_source"] == {"pracuj":75}, m
+          rows=[json.loads(x) for x in gzip.decompress(Path("reports/source-expansion-03/corpus.jsonl.gz").read_bytes()).decode().splitlines() if x]
+          assert all(r["source_projection"].get("observation_provenance")=="SECONDARY_PUBLIC_INDEX" for r in rows)
+          report=json.loads(Path("reports/source-expansion-03-crawl.json").read_text())
+          src=report["sources"][0]
+          assert src["source"]=="pracuj"
+          assert src["direct_source_access"] is False
+          assert src["transport"]=="public-mirror-isitfair-v1"
+          assert src["successes"]==75
+          print(json.dumps(m,indent=2))
+          PY2
+      - name: Build CORPUS-05
+        run: >-
+          python -m ingestion.combine_frozen_corpora
+          --base data/corpora/corpus-04/corpus.jsonl.gz
+          --expansion reports/source-expansion-03/corpus.jsonl.gz
+          --out reports/corpus-05
+          --version CORPUS-05
+      - name: Verify CORPUS-05
+        run: |
+          python - <<'PY3'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("reports/corpus-05/manifest.json").read_text())
+          expected={
+              "justjoinit":150,
+              "theprotocol":50,
+              "nofluffjobs":100,
+              "rocketjobs":100,
+              "bulldogjob":93,
+              "pracuj":75,
+          }
+          assert m["postings"]==568,m
+          assert m["by_source"]==expected,m
+          print(json.dumps(m,indent=2))
+          PY3
+      - name: Upload SOURCE-EXPANSION-03 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-expansion-03-pracuj75
+          path: |
+            reports/source-expansion-03-manifest.json
+            reports/source-expansion-03-crawl.json
+            reports/source-expansion-03/manifest.json
+            reports/source-expansion-03/corpus.jsonl.gz
+            reports/corpus-05/manifest.json
+            reports/corpus-05/corpus.jsonl.gz

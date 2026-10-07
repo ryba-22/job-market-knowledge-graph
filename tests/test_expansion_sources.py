@@ -1,6 +1,6 @@
 import json
 
-from ingestion.expansion_sources import BulldogJobSource, NoFluffJobsSource, RocketJobsSource
+from ingestion.expansion_sources import BulldogJobSource, NoFluffJobsSource, PracujSecondarySource, RocketJobsSource
 from ingestion.model import PostingRef
 
 
@@ -57,3 +57,49 @@ def test_bulldog_parses_numeric_identity_and_jsonld():
     assert p.title=="Principal Developer"
     assert p.company_mention=="Luxoft DXC"
     assert p.source_specific["skills"]=="C#, Angular"
+
+
+def test_pracuj_secondary_parses_upstream_identity_and_provenance():
+    raw=json.dumps({
+        "offer_source":"pracuj.pl",
+        "offer_href":"https://www.pracuj.pl/praca/data-engineer-warszawa,oferta,1005078091",
+        "offer_uuid":"mirror-uuid-1",
+        "offer_title":"Data Engineer",
+        "offer_city":"Warszawa",
+        "offer_remote_available":True,
+        "offer_category":"data",
+        "offer_technologies":["Python","SQL"],
+        "offer_salary_interval":"month",
+        "offer_salary_min":20000,
+        "offer_salary_max":26000,
+        "offer_salary_currency":"PLN",
+        "offer_published_at":"2026-10-01T08:00:00Z",
+        "company":{"company_name":"Acme"},
+    })
+    ref=PostingRef(
+        "pracuj",
+        "https://www.pracuj.pl/praca/data-engineer-warszawa,oferta,1005078091",
+        "1005078091",
+    )
+    p=PracujSecondarySource().parse_detail(raw,ref)
+    assert p.source_posting_id=="1005078091"
+    assert p.title=="Data Engineer"
+    assert p.company_mention=="Acme"
+    assert p.source_specific["observation_provenance"]=="SECONDARY_PUBLIC_INDEX"
+    assert p.source_specific["upstream_source"]=="pracuj.pl"
+    assert p.source_specific["mirror"]=="isitfair.pl"
+
+
+def test_pracuj_secondary_rejects_non_pracuj_upstream():
+    raw=json.dumps({
+        "offer_source":"other.example",
+        "offer_href":"https://www.pracuj.pl/praca/x,oferta,1005078091",
+        "offer_title":"X",
+    })
+    ref=PostingRef("pracuj","https://www.pracuj.pl/praca/x,oferta,1005078091","1005078091")
+    try:
+        PracujSecondarySource().parse_detail(raw,ref)
+    except ValueError as exc:
+        assert "upstream source mismatch" in str(exc)
+    else:
+        raise AssertionError("expected upstream-source rejection")
