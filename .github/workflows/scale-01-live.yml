@@ -1,8 +1,6 @@
 name: SCALE-01 incremental large acquisition
 
 on:
-  push:
-    branches: [scale-01-incremental-acquisition]
   workflow_dispatch:
 
 jobs:

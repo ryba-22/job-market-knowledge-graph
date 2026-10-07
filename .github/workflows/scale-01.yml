@@ -1,0 +1,23 @@
+name: SCALE-01 frozen CORPUS-06
+
+on:
+  push:
+    branches: [scale-01-incremental-acquisition]
+  pull_request:
+    paths:
+      - "data/corpora/corpus-06/**"
+      - "tests/test_corpus_06_snapshot.py"
+      - ".github/workflows/scale-01.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify frozen CORPUS-06
+        run: python -m unittest tests.test_corpus_06_snapshot -v
