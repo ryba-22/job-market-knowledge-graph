@@ -1,0 +1,69 @@
+{
+  "format": "market-corpus-v1",
+  "corpus_version": "CORPUS-08-PARTIAL",
+  "postings": 3875,
+  "by_source": {
+    "bulldogjob": 463,
+    "justjoinit": 650,
+    "nofluffjobs": 650,
+    "pracuj": 120,
+    "rocketjobs": 650,
+    "solidjobs": 1168,
+    "teamquest": 124,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 24742471,
+  "compressed_bytes": 4563141,
+  "uncompressed_sha256": "a004515c2fea943bf3a78e2bf14179abb2c7c42724e30b4cdba3d1cae1480eff",
+  "compressed_sha256": "165e63744f1f769b251649126f23c4c40543f65f3bb4f21fc5eb6e85e921fc03",
+  "components": [
+    {
+      "role": "base",
+      "path": "data/corpora/corpus-07/corpus.jsonl.gz",
+      "postings": 2583,
+      "compressed_sha256": "85062565d0e1b9bda52eb0697168080d2305630bfac5265f496ce85b29415970"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-0.corpus.jsonl.gz",
+      "postings": 220,
+      "compressed_sha256": "9b6f5ad4b3056fea9d380ff58620fc02f6360ac6b0105218c47eba515dc0b7da"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-1.corpus.jsonl.gz",
+      "postings": 222,
+      "compressed_sha256": "49bac71341a97705da80e69c29fba67cf65120041f0b6c1f909f269c6469d4f8"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-15.corpus.jsonl.gz",
+      "postings": 37,
+      "compressed_sha256": "50ef746f857bf0f72f0b14ba6880e597ac5249754498f3d2d451a888b8148de4"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-2.corpus.jsonl.gz",
+      "postings": 220,
+      "compressed_sha256": "700369bf9aad4c8af9996192566e31c989cdd9b35fabc2d19121f2ede9a8e26f"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-3.corpus.jsonl.gz",
+      "postings": 219,
+      "compressed_sha256": "a98ea7274a168b118678bbad5b020ff2435a1902f41178ab2aa73bc064219372"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/solidjobs-4.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "69ee7af32f20d1c1f0f0500376b6b144b532f5023860fb7005636cfcf30430e6"
+    },
+    {
+      "role": "slice",
+      "path": "/tmp/corpus08/teamquest-0.corpus.jsonl.gz",
+      "postings": 124,
+      "compressed_sha256": "e988616b01c7a2daebd6a108b7bc3164d733dff00459d5788ff461f2a9270bcd"
+    }
+  ]
+}
