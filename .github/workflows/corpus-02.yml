@@ -38,16 +38,25 @@ jobs:
         run: pytest -q
       - name: Migrate
         run: python -m ingestion.migrate
-      - name: Crawl 100 + 100
+      - name: Crawl 50 The Protocol
         run: >-
           python -m ingestion.batch
-          --run-id corpus-02-real200
+          --run-id corpus-02-theprotocol-50
           --trigger-kind corpus-expansion
-          --source both
-          --limit-per-source 100
-          --delay 0.12
-          --manifest-out reports/corpus-02-live-manifest.json
-          --report reports/corpus-02-crawl.json
+          --source theprotocol
+          --limit-per-source 50
+          --manifest-out reports/corpus-02-tp-manifest.json
+          --report reports/corpus-02-tp-crawl.json
+      - name: Crawl 150 Just Join IT
+        run: >-
+          python -m ingestion.batch
+          --run-id corpus-02-jjit-150
+          --trigger-kind corpus-expansion
+          --source justjoinit
+          --limit-per-source 150
+          --delay 0.10
+          --manifest-out reports/corpus-02-jjit-manifest.json
+          --report reports/corpus-02-jjit-crawl.json
       - name: Export durable compact corpus
         run: python -m ingestion.export_market_corpus --out reports/corpus-02
       - name: Verify corpus size
@@ -57,8 +66,8 @@ jobs:
           from pathlib import Path
           m=json.loads(Path("reports/corpus-02/manifest.json").read_text())
           assert m["postings"] >= 190, m
-          assert m["by_source"].get("theprotocol",0) >= 95, m
-          assert m["by_source"].get("justjoinit",0) >= 95, m
+          assert m["by_source"].get("theprotocol",0) >= 50, m
+          assert m["by_source"].get("justjoinit",0) >= 140, m
           print(json.dumps(m,indent=2))
           PY
       - name: Upload corpus evidence
@@ -67,7 +76,9 @@ jobs:
         with:
           name: corpus-02-real200
           path: |
-            reports/corpus-02-live-manifest.json
-            reports/corpus-02-crawl.json
+            reports/corpus-02-tp-manifest.json
+            reports/corpus-02-tp-crawl.json
+            reports/corpus-02-jjit-manifest.json
+            reports/corpus-02-jjit-crawl.json
             reports/corpus-02/manifest.json
             reports/corpus-02/corpus.jsonl.gz
