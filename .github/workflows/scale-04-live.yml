@@ -1,4 +1,4 @@
-name: SCALE-04 additional direct sources crawl-all
+name: SCALE-04 additional direct sources pilot
 
 on:
   push:
@@ -17,11 +17,12 @@ jobs:
           import json
           from pathlib import Path
           p=json.loads(Path('data/inventories/scale-04/chunks.json').read_text())
-          limits={'aplikuj':2,'itleaders':1,'michaelpage':1}
           delays={'aplikuj':0.25,'itleaders':0.5,'michaelpage':0.3}
           rows=[]
           for c in p['chunks']:
-              rows.append({'source':c['source'],'chunk_index':c['chunk_index'],'planned':c['count'],'delay':delays[c['source']],'slot':c['chunk_index'] % limits[c['source']]})
+              if c['chunk_index'] != 0:
+                  continue
+              rows.append({'source':c['source'],'chunk_index':c['chunk_index'],'planned':c['count'],'delay':delays[c['source']]})
           print('matrix='+json.dumps({'include':rows},separators=(',',':')))
           PY
 
@@ -29,13 +30,10 @@ jobs:
     needs: prepare
     strategy:
       fail-fast: false
-      max-parallel: 4
+      max-parallel: 3
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    concurrency:
-      group: scale-04-${{ matrix.source }}-${{ matrix.slot }}
-      cancel-in-progress: false
     services:
       postgres:
         image: postgres:16
@@ -72,7 +70,7 @@ jobs:
           --source "$SOURCE"
           --chunk-index "$CHUNK_INDEX"
           --delay "$DELAY"
-          --run-id "scale-04-$SOURCE-$CHUNK_INDEX"
+          --run-id "scale-04-pilot-$SOURCE-$CHUNK_INDEX"
           --report reports/report.json
           --manifest reports/source-manifest.json
       - name: Export compact slice
