@@ -37,17 +37,14 @@ jobs:
       - name: Install
         run: pip install -e ".[dev]"
 
-      - name: Install Chromium for The Protocol detail transport
-        run: python -m playwright install --with-deps chromium
-
       - name: Contract tests
         run: pytest -q
 
       - name: First real batch
-        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --report reports/crawl-02-first.json
+        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --manifest-out reports/crawl-02-manifest.json --report reports/crawl-02-first.json
 
-      - name: Recrawl same discovery surface
-        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --report reports/crawl-02-second.json
+      - name: Recrawl exact same source identities
+        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --manifest-in reports/crawl-02-manifest.json --report reports/crawl-02-second.json
 
       - name: Verify batch + idempotency
         run: python -m ingestion.verify --min-per-source 50 --report reports/crawl-02-verification.json
@@ -58,6 +55,7 @@ jobs:
         with:
           name: crawl-02-evidence
           path: |
+            reports/crawl-02-manifest.json
             reports/crawl-02-first.json
             reports/crawl-02-second.json
             reports/crawl-02-verification.json
