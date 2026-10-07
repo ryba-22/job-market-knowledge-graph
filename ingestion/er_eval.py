@@ -19,6 +19,23 @@ GENERATOR_VERSION = "er-eval-v1"
 
 TOKEN_RE = re.compile(r"[a-zA-Z0-9+#.]+", re.U)
 SENIORITY = {"junior","mid","middle","senior","lead","staff","principal","intern","trainee"}
+LEGAL_SUFFIX_PATTERNS = (
+    r"\bspółka z ograniczoną odpowiedzialnością\b",
+    r"\bsp\.?\s*z\.?\s*o\.?\s*o\.?\b",
+    r"\bspółka komandytowa\b",
+    r"\bsp\.?\s*k\.?\b",
+    r"\bs\.?\s*a\.?\b",
+    r"\bltd\.?\b",
+    r"\blimited\b",
+)
+
+
+def _organization_name_signature(value: str) -> str:
+    text = norm_key(value)
+    text = re.sub(r"[^a-z0-9ąćęłńóśźż]+", " ", text)
+    for pattern in LEGAL_SUFFIX_PATTERNS:
+        text = re.sub(pattern, " ", text, flags=re.I)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def _title_tokens(title: str) -> set[str]:
@@ -115,6 +132,9 @@ def generate(dsn: str, limit_pairs: int = 200) -> dict:
                 ta, tb = _title_tokens(a["title"]), _title_tokens(b["title"])
                 sim = _jaccard(ta, tb)
                 same_org_mention = bool(a["org_mention"]) and a["org_mention"] == b["org_mention"]
+                org_signature_a = _organization_name_signature(a["org_mention"])
+                org_signature_b = _organization_name_signature(b["org_mention"])
+                same_org_signature = bool(org_signature_a) and org_signature_a == org_signature_b
                 same_org_candidate = (
                     a["organization_id"] is not None
                     and a["organization_id"] == b["organization_id"]
@@ -124,11 +144,13 @@ def generate(dsn: str, limit_pairs: int = 200) -> dict:
                 same_seniority = _seniority(ta) == _seniority(tb)
                 seniority_conflict = bool(_seniority(ta) and _seniority(tb) and _seniority(ta) != _seniority(tb))
 
-                if not (same_org_mention or same_org_candidate or shared_domain or sim >= 0.45):
+                if not (same_org_mention or same_org_signature or same_org_candidate or shared_domain or sim >= 0.45):
                     continue
 
                 if same_org_mention and sim == 1.0:
                     stratum = "same_org_exact_title"
+                elif same_org_signature and not same_org_mention and sim == 1.0:
+                    stratum = "org_legal_suffix_variant_exact_title"
                 elif same_org_mention and sim >= 0.55:
                     stratum = "same_org_similar_title"
                 elif same_org_candidate and sim >= 0.45:
@@ -146,6 +168,9 @@ def generate(dsn: str, limit_pairs: int = 200) -> dict:
                 features = {
                     "title_jaccard": round(sim, 4),
                     "same_org_mention": same_org_mention,
+                    "same_org_name_signature": same_org_signature,
+                    "org_signature_a": org_signature_a,
+                    "org_signature_b": org_signature_b,
                     "same_org_candidate": same_org_candidate,
                     "shared_explicit_domain": shared_domain,
                     "same_seniority_signal": same_seniority,
@@ -159,7 +184,7 @@ def generate(dsn: str, limit_pairs: int = 200) -> dict:
                 }
                 ranking = (
                     3 if shared_domain else 0,
-                    2 if same_org_mention else 0,
+                    2 if (same_org_mention or same_org_signature) else 0,
                     1 if same_org_candidate else 0,
                     sim,
                 )
