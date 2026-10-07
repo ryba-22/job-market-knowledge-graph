@@ -33,3 +33,17 @@ def test_shared_application_target_requires_both_postings():
 def test_rocketjobs_source_family_is_not_application_target():
     assert not _external("https://rocketjobs.pl/")
     assert not _external("https://panel.rocketjobs.com/")
+
+
+def test_reviewer_fixture_has_only_supported_labels():
+    import json
+    from pathlib import Path
+    path=Path(__file__).resolve().parents[1]/"data"/"evals"/"er-eval-02-reviewer-decisions.json"
+    payload=json.loads(path.read_text(encoding="utf-8"))
+    labels={x["label"] for x in payload["decisions"]}
+    assert labels <= {"SAME_OPPORTUNITY","DISTINCT_OPPORTUNITY","UNRESOLVED"}
+    assert any(x["label"]=="SAME_OPPORTUNITY" for x in payload["decisions"])
+    assert any(x["label"]=="DISTINCT_OPPORTUNITY" for x in payload["decisions"])
+    for item in payload["decisions"]:
+        assert item["rationale"]
+        assert item["evidence"]
