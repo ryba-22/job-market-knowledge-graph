@@ -16,9 +16,10 @@ def test_nfj_parses_structured_detail():
         "reference":"ABC123",
         "status":"PUBLISHED",
     })
-    ref=PostingRef("nofluffjobs","https://nofluffjobs.com/pl/job/senior-python-acme-warszawa","senior-python-acme-warszawa")
+    ref=PostingRef("nofluffjobs","https://nofluffjobs.com/pl/job/senior-python-acme-warszawa","ABC123")
     p=NoFluffJobsSource().parse_detail(raw,ref)
-    assert p.source_posting_id=="senior-python-acme-warszawa"
+    assert p.source_posting_id=="ABC123"
+    assert p.source_specific["canonical_posting_slug"]=="senior-python-acme-warszawa"
     assert p.title=="Senior Python Engineer"
     assert p.company_mention=="Acme"
     assert p.revision_projection["requirements"]["musts"]==["Python"]
