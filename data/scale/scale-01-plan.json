@@ -1,0 +1,14 @@
+{
+  "scale_version": "SCALE-01",
+  "base_corpus": "data/corpora/corpus-05/corpus.jsonl.gz",
+  "target_new_total": 1020,
+  "minimum_new_total": 775,
+  "sources": {
+    "justjoinit": {"target_new": 250, "minimum_new": 180, "discovery_limit": 700, "delay_seconds": 0.12, "provenance_class": "DIRECT"},
+    "nofluffjobs": {"target_new": 300, "minimum_new": 250, "discovery_limit": 650, "delay_seconds": 0.10, "provenance_class": "DIRECT"},
+    "rocketjobs": {"target_new": 300, "minimum_new": 250, "discovery_limit": 650, "delay_seconds": 0.12, "provenance_class": "DIRECT"},
+    "bulldogjob": {"target_new": 120, "minimum_new": 75, "discovery_limit": 350, "delay_seconds": 1.25, "provenance_class": "DIRECT"},
+    "pracuj": {"target_new": 50, "minimum_new": 20, "discovery_limit": 250, "delay_seconds": 0.0, "provenance_class": "SECONDARY_PUBLIC_INDEX"},
+    "theprotocol": {"target_new": 0, "minimum_new": 0, "discovery_limit": 0, "delay_seconds": 0.0, "provenance_class": "DIRECT", "blocked_reason": "official MCP currently yields only the already-covered 50 unique postings"}
+  }
+}

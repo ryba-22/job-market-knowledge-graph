@@ -1,0 +1,55 @@
+{
+  "format": "market-corpus-v1",
+  "corpus_version": "CORPUS-06",
+  "postings": 1583,
+  "by_source": {
+    "bulldogjob": 213,
+    "justjoinit": 400,
+    "nofluffjobs": 400,
+    "pracuj": 120,
+    "rocketjobs": 400,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 11987684,
+  "compressed_bytes": 2193630,
+  "uncompressed_sha256": "162c8c50221e45e679f22d11c8605b020088a41e0f07bda2070fe2c44269d309",
+  "compressed_sha256": "9abf08c4fc3259fbf79dca6ec32c9ba58d271b9f3a55a1f1d7577d9b31f06852",
+  "components": [
+    {
+      "role": "base",
+      "path": "data/corpora/corpus-05/corpus.jsonl.gz",
+      "postings": 568,
+      "compressed_sha256": "db92dd6b1a5560e815db3220b3604573f46ac349bd64eeb682bca9bd276ea013"
+    },
+    {
+      "role": "slice",
+      "path": "downloads/bulldogjob.corpus.jsonl.gz",
+      "postings": 120,
+      "compressed_sha256": "54e528861686be904d5e63d4d09bee58360eb72293a3c3ed2d0e782f03eadb23"
+    },
+    {
+      "role": "slice",
+      "path": "downloads/justjoinit.corpus.jsonl.gz",
+      "postings": 250,
+      "compressed_sha256": "3ac4c498deeb25112d2e7f449d055739202199985aae8e3d3ceef60f5e496ba7"
+    },
+    {
+      "role": "slice",
+      "path": "downloads/nofluffjobs.corpus.jsonl.gz",
+      "postings": 300,
+      "compressed_sha256": "91ac30e4b812937ac1147660497f25a3efcb700c480f8c8cd4a4b654052226c5"
+    },
+    {
+      "role": "slice",
+      "path": "downloads/pracuj.corpus.jsonl.gz",
+      "postings": 45,
+      "compressed_sha256": "1ae8cc69404c47705f62393111834d27cb0fb8e77299464eab254bb0961a28e1"
+    },
+    {
+      "role": "slice",
+      "path": "downloads/rocketjobs.corpus.jsonl.gz",
+      "postings": 300,
+      "compressed_sha256": "e3fcd90881b0cd626b12fa05a4dd1821ebb22b4c7c3043ceebcaa10920117d4b"
+    }
+  ]
+}

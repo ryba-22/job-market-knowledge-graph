@@ -1,0 +1,74 @@
+{
+  "scale_version": "SCALE-01",
+  "workflow_run": 37628390910,
+  "head_sha": "67a7b7bb88287683a472d041a7e4df4faa40d992",
+  "base_corpus": {
+    "version": "CORPUS-05",
+    "postings": 568,
+    "compressed_sha256": "db92dd6b1a5560e815db3220b3604573f46ac349bd64eeb682bca9bd276ea013"
+  },
+  "source_batches": {
+    "justjoinit": {
+      "base_known_ids": 150,
+      "discovered_total": 700,
+      "unknown_candidates": 700,
+      "target_new": 250,
+      "successes": 250,
+      "errors": 0,
+      "artifact_id": 11484903141,
+      "artifact_digest": "sha256:c7b234020b88b5341d1fe0a659faaa2b6762a81e0a1e635fc4330f62789b22f4"
+    },
+    "nofluffjobs": {
+      "base_known_ids": 100,
+      "discovered_total": 650,
+      "unknown_candidates": 551,
+      "target_new": 300,
+      "successes": 300,
+      "errors": 0,
+      "artifact_id": 11485935713,
+      "artifact_digest": "sha256:29f920c66bceff784f4e1d55ff1f25fd8b2b150f8388f18204ba747b61b1d3a9"
+    },
+    "rocketjobs": {
+      "base_known_ids": 100,
+      "discovered_total": 650,
+      "unknown_candidates": 550,
+      "target_new": 300,
+      "successes": 300,
+      "errors": 0,
+      "artifact_id": 11484937969,
+      "artifact_digest": "sha256:03352d62316d4b201c207f365038fdd6bfc1afe7a8992b26cef1c9ea73c629b6"
+    },
+    "bulldogjob": {
+      "base_known_ids": 93,
+      "discovered_total": 350,
+      "unknown_candidates": 257,
+      "target_new": 120,
+      "successes": 120,
+      "errors": 0,
+      "artifact_id": 11484843082,
+      "artifact_digest": "sha256:8a7ff285d5df236da938b8d34d785c020e6961522a90008a2a50bfc236bd7285"
+    },
+    "pracuj": {
+      "base_known_ids": 75,
+      "discovered_total": 120,
+      "unknown_candidates": 45,
+      "target_new": 50,
+      "successes": 45,
+      "errors": 0,
+      "provenance_class": "SECONDARY_PUBLIC_INDEX",
+      "artifact_id": 11485631137,
+      "artifact_digest": "sha256:d3cb1d2f01ce7c86a9617f69c2f36767e5f51247d594d5131268f5be366dadc7"
+    },
+    "theprotocol": {
+      "target_new": 0,
+      "successes": 0,
+      "blocked_reason": "official MCP currently yields only already-covered unique identities"
+    }
+  },
+  "result": {
+    "new_postings": 1015,
+    "postings": 1583,
+    "artifact_id": 11485866609,
+    "artifact_digest": "sha256:93510a442e4c202a050c970ec562fe22d5e6ebfd1ffb707fa33690815c23387c"
+  }
+}
