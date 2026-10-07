@@ -4,12 +4,12 @@ Goal: increase the durable offer corpus without modifying the frozen ER-EVAL-02 
 
 ## Phase 1
 
-Collect 100 current postings from each already-understood source:
+Collect 200 current postings from the already-understood sources:
 
 - The Protocol: 100
 - Just Join IT: 100
 
-Target: at least 190 successful postings total, allowing a small number of lifecycle 404s.
+Target: at least 190 successful postings total, allowing a small number of lifecycle 404s. The Protocol transport pagination above 50 is tracked separately; the corpus expansion is not blocked on bypassing that transport boundary.
 
 ## Boundary
 
