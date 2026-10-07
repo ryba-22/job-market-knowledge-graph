@@ -47,3 +47,12 @@ def test_reviewer_fixture_has_only_supported_labels():
     for item in payload["decisions"]:
         assert item["rationale"]
         assert item["evidence"]
+
+
+def test_required_reviewer_postings_are_deduplicated():
+    from ingestion.ensure_eval_postings import _required
+    payload={"decisions":[
+        {"a":{"source":"a","source_posting_id":"1"},"b":{"source":"b","source_posting_id":"2"}},
+        {"a":{"source":"a","source_posting_id":"1"},"b":{"source":"c","source_posting_id":"3"}},
+    ]}
+    assert _required(payload)==[("a","1"),("b","2"),("c","3")]
