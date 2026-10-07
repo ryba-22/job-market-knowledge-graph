@@ -98,30 +98,21 @@ def _run_direct_html(client, store, run_id, source, target, delay):
 
 def _discover_nfj(client, limit):
     adapter = ADAPTERS["nofluffjobs"]
-    found = {}
-    page, offset = 1, 0
-    while len(found) < limit:
-        response = client.post(
-            NFJ_SEARCH_URL,
-            params={
-                "limit":min(50, limit-len(found)), "offset":offset,
-                "salaryCurrency":"PLN","salaryPeriod":"month","region":"pl",
-            },
-            json={"page":page,"criteriaSearch":{}},
-            headers={"Content-Type":"application/json"},
-        )
-        response.raise_for_status()
-        refs = adapter.parse_listing(response.text, str(response.url))
-        before = len(found)
-        for ref in refs:
-            found.setdefault(ref.source_posting_id, ref)
-            if len(found) >= limit:
-                break
-        if len(found) == before:
-            break
-        page += 1
-        offset += 50
-    return list(found.values())[:limit]
+    response = client.post(
+        NFJ_SEARCH_URL,
+        params={
+            "limit": max(limit, 100),
+            "offset": 0,
+            "salaryCurrency": "PLN",
+            "salaryPeriod": "month",
+            "region": "pl",
+        },
+        json={"page": 1, "criteriaSearch": {}},
+        headers={"Content-Type": "application/json"},
+    )
+    response.raise_for_status()
+    refs = adapter.parse_listing(response.text, str(response.url))
+    return refs[:limit]
 
 def _run_nfj(client, store, run_id, target, delay):
     source = "nofluffjobs"
