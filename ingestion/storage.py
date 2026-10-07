@@ -66,11 +66,16 @@ class PostgresStore:
             posting_id, current_revision_id = posting
 
             previous_hash = None
+            previous_projection = None
             if current_revision_id:
-                previous_hash = conn.execute(
-                    "select normalized_content_hash from job_posting_revision where id=%s",
+                previous_row = conn.execute(
+                    "select normalized_content_hash, normalized_projection_json from job_posting_revision where id=%s",
                     (current_revision_id,),
-                ).fetchone()[0]
+                ).fetchone()
+                previous_hash = previous_row[0]
+                previous_projection = previous_row[1]
+                if isinstance(previous_projection, str):
+                    previous_projection = json.loads(previous_projection)
 
             if previous_hash == content_hash:
                 conn.execute(
@@ -124,12 +129,26 @@ class PostgresStore:
                 (posting_id, raw_id, "OBSERVED" if revision_no == 1 else "CHANGED"),
             )
             conn.commit()
+            changed_fields = []
+            change_preview = {}
+            if previous_projection is not None:
+                keys = sorted(set(previous_projection) | set(projection))
+                changed_fields = [k for k in keys if previous_projection.get(k) != projection.get(k)]
+                for k in changed_fields:
+                    before = previous_projection.get(k)
+                    after = projection.get(k)
+                    change_preview[k] = {
+                        "before": str(before)[:500],
+                        "after": str(after)[:500],
+                    }
             return {
                 "posting_id": posting_id,
                 "revision_id": revision_id,
                 "revision_no": revision_no,
                 "revision_created": True,
                 "state": "OBSERVED" if revision_no == 1 else "CHANGED",
+                "changed_fields": changed_fields,
+                "change_preview": change_preview,
             }
 
     def _seed_org_candidate(self, conn, mention_id: int, mention: str) -> None:
