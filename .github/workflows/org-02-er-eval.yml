@@ -1,0 +1,81 @@
+name: ORG-02 + ER-EVAL
+
+on:
+  push:
+    branches: [org-02-er-eval]
+  workflow_dispatch:
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Tests
+        run: pytest -q
+
+      - name: Migrate
+        run: python -m ingestion.migrate
+
+      - name: Build real 100-posting corpus
+        run: >-
+          python -m ingestion.batch
+          --run-id org02-er-eval-real100
+          --trigger-kind eval
+          --source both
+          --limit-per-source 50
+          --delay 0.15
+          --report reports/org02-er-base-crawl.json
+
+      - name: ORG-02 enrichment
+        run: python -m ingestion.org_enrichment --report reports/org-02-summary.json
+
+      - name: ER-EVAL corpus
+        run: >-
+          python -m ingestion.er_eval
+          --limit-pairs 200
+          --summary reports/er-eval-summary.json
+          --corpus reports/er-eval-corpus.jsonl
+
+      - name: Verify ORG-02 + ER-EVAL
+        run: >-
+          python -m ingestion.verify_org_er
+          --expected-postings 100
+          --report reports/org-02-er-eval-verification.json
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: org-02-er-eval-evidence
+          path: |
+            reports/org02-er-base-crawl.json
+            reports/org-02-summary.json
+            reports/er-eval-summary.json
+            reports/er-eval-corpus.jsonl
+            reports/org-02-er-eval-verification.json
