@@ -1,0 +1,60 @@
+name: CRAWL-02 real batch
+
+on:
+  push:
+    branches: [crawl-02-real-batch]
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: crawler
+          POSTGRES_PASSWORD: crawler
+          POSTGRES_DB: jobs
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U crawler -d jobs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Contract tests
+        run: pytest -q
+
+      - name: First real batch
+        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --report reports/crawl-02-first.json
+
+      - name: Recrawl same discovery surface
+        run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --report reports/crawl-02-second.json
+
+      - name: Verify batch + idempotency
+        run: python -m ingestion.verify --min-per-source 50 --report reports/crawl-02-verification.json
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-02-evidence
+          path: |
+            reports/crawl-02-first.json
+            reports/crawl-02-second.json
+            reports/crawl-02-verification.json
