@@ -21,6 +21,13 @@ def _atomic_json(path: Path, value: dict):
     tmp.replace(path)
 
 
+def _schedule_jobs(jobs: list[dict]) -> list[dict]:
+    # Inventory plans are grouped by source. Round-robin by chunk index so one
+    # high-volume source cannot occupy the entire worker pool while waiting on
+    # its per-source semaphore.
+    return sorted(jobs, key=lambda c: (int(c["chunk_index"]), c["source"]))
+
+
 def _manifest_ok(path: Path) -> bool:
     if not path.exists():
         return False
@@ -90,6 +97,7 @@ def run(plan_path: str, sources: list[str], out_root: str, raw_root: str, status
         mp = out / c["source"] / str(c["chunk_index"]) / "manifest.json"
         if not _manifest_ok(mp):
             jobs.append(c)
+    jobs = _schedule_jobs(jobs)
 
     lock = threading.Lock()
     current = build_status(plan, selected, out)

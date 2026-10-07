@@ -1,6 +1,6 @@
 import json
 
-from ingestion.run_file_backed_plan import _manifest_ok, build_status
+from ingestion.run_file_backed_plan import _manifest_ok, _schedule_jobs, build_status
 
 
 def test_manifest_ok_requires_full_accounting_and_raw(tmp_path):
@@ -42,3 +42,23 @@ def test_status_counts_completed_chunks(tmp_path):
     assert s["sources"]["x"]["accounted"] == 2
     assert s["sources"]["x"]["chunks_done"] == 1
     assert s["sources"]["x"]["pct"] == 40.0
+
+
+def test_schedule_jobs_round_robins_sources_by_chunk_index():
+    jobs = [
+        {"source": "aplikuj", "chunk_index": 0},
+        {"source": "aplikuj", "chunk_index": 1},
+        {"source": "aplikuj", "chunk_index": 2},
+        {"source": "rocketjobs", "chunk_index": 0},
+        {"source": "rocketjobs", "chunk_index": 1},
+        {"source": "theprotocol", "chunk_index": 0},
+    ]
+    scheduled = _schedule_jobs(jobs)
+    assert [(j["chunk_index"], j["source"]) for j in scheduled] == [
+        (0, "aplikuj"),
+        (0, "rocketjobs"),
+        (0, "theprotocol"),
+        (1, "aplikuj"),
+        (1, "rocketjobs"),
+        (2, "aplikuj"),
+    ]
