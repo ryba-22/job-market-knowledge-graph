@@ -1,8 +1,6 @@
 name: SCALE-02 inventory chunk acquisition
 
 on:
-  push:
-    branches: [scale-02-full-inventory]
   workflow_dispatch:
     inputs:
       mode:
