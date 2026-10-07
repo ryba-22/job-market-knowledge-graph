@@ -58,6 +58,10 @@ jobs:
         run: python -m ingestion.opportunity_evidence --report reports/er-eval-02-evidence.json
       - name: Adjudicate
         run: python -m ingestion.adjudicate --report reports/er-eval-02-adjudication.json
+      - name: Apply reviewer decisions
+        run: python -m ingestion.apply_reviewer_decisions --report reports/er-eval-02-reviewer-decisions.json
+      - name: Benchmark readiness
+        run: python -m ingestion.benchmark_er_eval --report reports/er-eval-02-benchmark.json
       - name: Export final corpus
         run: >-
           python -m ingestion.export_er_eval
