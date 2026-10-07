@@ -1,5 +1,5 @@
 from ingestion.org_enrichment import _domain, _extract_explicit_urls
-from ingestion.er_eval import _jaccard, _seniority, _title_tokens
+from ingestion.er_eval import _jaccard, _organization_name_signature, _seniority, _title_tokens
 
 
 def test_domain_rejects_source_portals():
@@ -25,3 +25,9 @@ def test_title_similarity_is_not_identity():
     b = _title_tokens("Platform Engineer")
     assert 0 < _jaccard(a, b) < 1
     assert _seniority(a) != _seniority(b)
+
+
+def test_organization_signature_ignores_legal_suffix_only():
+    assert _organization_name_signature("Ness Solution sp. z o.o.") == "ness solution"
+    assert _organization_name_signature("Ness Solution") == "ness solution"
+    assert _organization_name_signature("Ness Solution") != _organization_name_signature("Ness Technologies")
