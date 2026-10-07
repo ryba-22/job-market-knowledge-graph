@@ -6,4 +6,6 @@ MATCH_GENERATOR_VERSION = "exact-title-org-v1"
 TRANSPORT_VERSIONS = {
     "theprotocol": "official-mcp-v1",
     "justjoinit": "ssr-http-v1",
+    "nofluffjobs": "public-search-detail-api-v1",
+    "rocketjobs": "public-sitemap-ssr-v1",
 }
