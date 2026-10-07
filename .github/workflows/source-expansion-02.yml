@@ -1,0 +1,24 @@
+name: SOURCE-EXPANSION-02 frozen Bulldog corpus
+
+on:
+  push:
+    branches: [source-expansion-02-bulldog]
+  pull_request:
+    paths:
+      - "data/corpora/source-expansion-02-bulldog/**"
+      - "data/corpora/corpus-04/**"
+      - "tests/test_corpus_04_snapshot.py"
+      - ".github/workflows/source-expansion-02.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify frozen 493-offer corpus
+        run: python -m unittest tests.test_corpus_04_snapshot -v

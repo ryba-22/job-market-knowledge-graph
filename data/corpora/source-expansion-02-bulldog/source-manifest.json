@@ -1,0 +1,471 @@
+{
+  "sources": {
+    "bulldogjob": [
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254703",
+        "url": "https://bulldogjob.com/companies/jobs/254703-lead-sap-technical-consultant-sap-integration-krakow-danish-crown-gbs"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254704",
+        "url": "https://bulldogjob.com/companies/jobs/254704-lead-sap-technical-consultant-sap-basis-krakow-danish-crown-gbs"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254705",
+        "url": "https://bulldogjob.com/companies/jobs/254705-senior-developer-krakow-danish-crown-gbs"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254706",
+        "url": "https://bulldogjob.com/companies/jobs/254706-senior-java-developer-krakow-wroclaw-katowice-warsaw-lodz-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254716",
+        "url": "https://bulldogjob.com/companies/jobs/254716-site-reliability-engineer-frontend-london-captial-on-top"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254720",
+        "url": "https://bulldogjob.com/companies/jobs/254720-site-reliability-engineer-hardware-vilnius-vinted"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254721",
+        "url": "https://bulldogjob.com/companies/jobs/254721-site-reliability-engineer-hardware-vinted"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254766",
+        "url": "https://bulldogjob.com/companies/jobs/254766-devops-engineer-warsaw-devire"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254771",
+        "url": "https://bulldogjob.com/companies/jobs/254771-senior-backend-developer-python-docker-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254776",
+        "url": "https://bulldogjob.com/companies/jobs/254776-full-stack-front-end-developer-scala-java-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254777",
+        "url": "https://bulldogjob.com/companies/jobs/254777-senior-backend-engineer-cloud-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254778",
+        "url": "https://bulldogjob.com/companies/jobs/254778-senior-software-engineer-linux-krakow-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254779",
+        "url": "https://bulldogjob.com/companies/jobs/254779-powerapps-regular-software-engineer-krakow-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254781",
+        "url": "https://bulldogjob.com/companies/jobs/254781-principal-engineer-privacy-amsterdam-databricks"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254783",
+        "url": "https://bulldogjob.com/companies/jobs/254783-senior-software-engineer-barcelona-travelpark"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254784",
+        "url": "https://bulldogjob.com/companies/jobs/254784-data-engineer-london-the-dot-collective"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254785",
+        "url": "https://bulldogjob.com/companies/jobs/254785-data-solution-architect-london-the-dot-collective"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254786",
+        "url": "https://bulldogjob.com/companies/jobs/254786-data-analyst-london-the-dot-collective"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254787",
+        "url": "https://bulldogjob.com/companies/jobs/254787-senior-data-analyst-barcelona-veeva-systems"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254789",
+        "url": "https://bulldogjob.com/companies/jobs/254789-senior-product-manager-legal-it-krakow-cytiva"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254790",
+        "url": "https://bulldogjob.com/companies/jobs/254790-tech-lead-backend-gaming-services-integrations-lisbon-montreal-xsolla"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254791",
+        "url": "https://bulldogjob.com/companies/jobs/254791-quality-assurance-engineer-london-the-dot-collective"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254793",
+        "url": "https://bulldogjob.com/companies/jobs/254793-fullstack-software-engineer-x-f-m-global-architecture-alan"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254796",
+        "url": "https://bulldogjob.com/companies/jobs/254796-director-of-product-design-payments-london-airwallex"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254797",
+        "url": "https://bulldogjob.com/companies/jobs/254797-team-lead-odc-barcelona-veeva-systems"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254798",
+        "url": "https://bulldogjob.com/companies/jobs/254798-senior-security-engineer-docker-desktop-docker"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254799",
+        "url": "https://bulldogjob.com/companies/jobs/254799-sr-forward-deployed-ai-engineer-smartsheet"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254800",
+        "url": "https://bulldogjob.com/companies/jobs/254800-senior-software-engineer-distributed-systems-toogeza"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254801",
+        "url": "https://bulldogjob.com/companies/jobs/254801-senior-platform-engineer-tiger-data"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254802",
+        "url": "https://bulldogjob.com/companies/jobs/254802-senior-software-engineer-python-rust-constructor-tech"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254804",
+        "url": "https://bulldogjob.com/companies/jobs/254804-senior-product-manager-self-service-cloud-elastic"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254805",
+        "url": "https://bulldogjob.com/companies/jobs/254805-senior-full-stack-engineer-n-ix"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254809",
+        "url": "https://bulldogjob.com/companies/jobs/254809-cloud-engineering-team-lead-london-capital-on-tap"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254816",
+        "url": "https://bulldogjob.com/companies/jobs/254816-sr-technical-program-manager-i-smartsheet"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254821",
+        "url": "https://bulldogjob.com/companies/jobs/254821-erp-project-manager-kyiv-lviv-ajax-systems"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254874",
+        "url": "https://bulldogjob.com/companies/jobs/254874-techops-specialist-it-support-specialist-barcelona-travelpark"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254876",
+        "url": "https://bulldogjob.com/companies/jobs/254876-data-engineer-operational-awareness-dsp-vanderlande"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254878",
+        "url": "https://bulldogjob.com/companies/jobs/254878-sr-staff-javascript-developer-web-sdk-oscilar"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254880",
+        "url": "https://bulldogjob.com/companies/jobs/254880-ml-ops-engineer-pragmatike"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254881",
+        "url": "https://bulldogjob.com/companies/jobs/254881-ai-infrastructure-engineer-gpu-remote-emea-dubai-pragmatike"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254882",
+        "url": "https://bulldogjob.com/companies/jobs/254882-senior-product-owner-xsolla-money-account-berlin-lisbon-istanbul-barcelona-london-xsolla"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254892",
+        "url": "https://bulldogjob.com/companies/jobs/254892-senior-delivery-manager-webshop-london-berlin-lisbon-barcelona-xsolla"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254893",
+        "url": "https://bulldogjob.com/companies/jobs/254893-workplace-ai-enablement-collaboration-engineer-arrow"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254901",
+        "url": "https://bulldogjob.com/companies/jobs/254901-senior-decision-scientist-frontend-technologies-amsterdam-vinted"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "222484",
+        "url": "https://bulldogjob.com/companies/jobs/222484-cloud-security-specialist-regular-senior-she-he-they-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "251356",
+        "url": "https://bulldogjob.com/companies/jobs/251356-sap-ps-senior-consultant-warsaw-katowice-lodz-krakow-wroclaw-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254955",
+        "url": "https://bulldogjob.com/companies/jobs/254955-axiom-tester-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254956",
+        "url": "https://bulldogjob.com/companies/jobs/254956-axiom-implementation-consultant-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254957",
+        "url": "https://bulldogjob.com/companies/jobs/254957-full-stack-software-design-engineer-javascript-angular-amp-java-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254958",
+        "url": "https://bulldogjob.com/companies/jobs/254958-senior-qa-automation-krakow-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254959",
+        "url": "https://bulldogjob.com/companies/jobs/254959-java-team-lead-krakow-warsaw-wroclaw-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254962",
+        "url": "https://bulldogjob.com/companies/jobs/254962-embedded-hardware-developer-kyiv-lviv-ajax-systems"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254963",
+        "url": "https://bulldogjob.com/companies/jobs/254963-senior-python-engineer-vilnius-kayak"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254965",
+        "url": "https://bulldogjob.com/companies/jobs/254965-android-developer-malaga-betsson-group"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254967",
+        "url": "https://bulldogjob.com/companies/jobs/254967-staff-software-engineer-backend-london-databricks"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254968",
+        "url": "https://bulldogjob.com/companies/jobs/254968-platform-software-engineer-paris-barcelona-joko"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254970",
+        "url": "https://bulldogjob.com/companies/jobs/254970-senior-data-scientist-pricing-paris-barcelona-back-market"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254971",
+        "url": "https://bulldogjob.com/companies/jobs/254971-staff-machine-learning-engineer-simulation-london-waymo"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254972",
+        "url": "https://bulldogjob.com/companies/jobs/254972-senior-cloud-architect-delivery-genai-doit"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254973",
+        "url": "https://bulldogjob.com/companies/jobs/254973-senior-cloud-architect-delivery-genai-doit"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254975",
+        "url": "https://bulldogjob.com/companies/jobs/254975-game-tech-lead-ue5-multiplayer-systems-sao-paulo-almaty-barcelona-berlin-dubai-istanbul-kuala-lumpur-xsolla"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254977",
+        "url": "https://bulldogjob.com/companies/jobs/254977-staff-lead-front-end-engineer-prague-dublin-amsterdam-berlin-buenos-aires-barcelona-mimica"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254979",
+        "url": "https://bulldogjob.com/companies/jobs/254979-senior-supply-product-manager-barcelona-appodeal"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254981",
+        "url": "https://bulldogjob.com/companies/jobs/254981-staff-engineer-frontend-primer-io"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254983",
+        "url": "https://bulldogjob.com/companies/jobs/254983-software-engineer-ii-edr-workflows-security-elastic"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254985",
+        "url": "https://bulldogjob.com/companies/jobs/254985-level-1-technical-support-with-german-bucharest-verifone"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254989",
+        "url": "https://bulldogjob.com/companies/jobs/254989-sales-director-it-contracting-body-shopping-warsaw-krakow-madiff-spolka-z-ograniczona-odpowiedzialnoscia"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254995",
+        "url": "https://bulldogjob.com/companies/jobs/254995-senior-software-engineer-java-vilnius-nfq"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254997",
+        "url": "https://bulldogjob.com/companies/jobs/254997-solution-architect-power-utilities-zurich-barcelona-anybotics"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "254998",
+        "url": "https://bulldogjob.com/companies/jobs/254998-senior-solutions-engineer-auth0-london-okta"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255058",
+        "url": "https://bulldogjob.com/companies/jobs/255058-cinematic-character-artist-photorealistic-characters-gdansk-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255059",
+        "url": "https://bulldogjob.com/companies/jobs/255059-senior-java-developer-krakow-warsaw-wroclaw-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255064",
+        "url": "https://bulldogjob.com/companies/jobs/255064-sr-forward-deployed-ai-engineer-london-smartsheet"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255066",
+        "url": "https://bulldogjob.com/companies/jobs/255066-senior-data-engineer-redshift-welltech"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255068",
+        "url": "https://bulldogjob.com/companies/jobs/255068-solutions-engineer-sr-london-opentable"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255069",
+        "url": "https://bulldogjob.com/companies/jobs/255069-software-engineer-barcelona-novanta"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255070",
+        "url": "https://bulldogjob.com/companies/jobs/255070-senior-product-manager-ongoing-monitoring-london-tide"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255072",
+        "url": "https://bulldogjob.com/companies/jobs/255072-principal-consultant-ai-product-bristol-amdaris"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255077",
+        "url": "https://bulldogjob.com/companies/jobs/255077-enterprise-infrastructure-engineer-london-boku"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255079",
+        "url": "https://bulldogjob.com/companies/jobs/255079-junior-salesforce-consultant-internship-program-she-he-they-warsaw-krakow-katowice-gdansk-lodz-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255080",
+        "url": "https://bulldogjob.com/companies/jobs/255080-senior-machine-learning-engineer-klient-bulldogjob"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255086",
+        "url": "https://bulldogjob.com/companies/jobs/255086-engineering-manager-paris-barcelona-joko"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255091",
+        "url": "https://bulldogjob.com/companies/jobs/255091-data-scientist-the-hague-nn-group"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255093",
+        "url": "https://bulldogjob.com/companies/jobs/255093-full-stack-engineer-cloud-saas-integrations-doit"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "251708",
+        "url": "https://bulldogjob.com/companies/jobs/251708-graphic-designer-she-he-they-warsaw-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255156",
+        "url": "https://bulldogjob.com/companies/jobs/255156-senior-python-developer-krakow-luxoft-dxc"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255163",
+        "url": "https://bulldogjob.com/companies/jobs/255163-staff-software-engineer-prague-nicosia-wrike"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255166",
+        "url": "https://bulldogjob.com/companies/jobs/255166-payment-systems-delivery-manager-almaty-barcelona-berlin-dubai-paris-kuala-lumpur-xsolla"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255167",
+        "url": "https://bulldogjob.com/companies/jobs/255167-founding-product-manager-zurich-barcelona-london-blp-digital-ag"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255168",
+        "url": "https://bulldogjob.com/companies/jobs/255168-engineering-manager-tallinn-bondora"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "236453",
+        "url": "https://bulldogjob.com/companies/jobs/236453-sap-iam-analyst-consultant-she-he-they-accenture-polska"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255239",
+        "url": "https://bulldogjob.com/companies/jobs/255239-linux-c-developer-video-management-system-kyiv-ajax-systems"
+      },
+      {
+        "source": "bulldogjob",
+        "source_posting_id": "255241",
+        "url": "https://bulldogjob.com/companies/jobs/255241-data-scientist-amsterdam-dentsu"
+      }
+    ]
+  }
+}

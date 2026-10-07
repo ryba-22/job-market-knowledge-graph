@@ -1,6 +1,6 @@
 import json
 
-from ingestion.expansion_sources import NoFluffJobsSource, RocketJobsSource
+from ingestion.expansion_sources import BulldogJobSource, NoFluffJobsSource, RocketJobsSource
 from ingestion.model import PostingRef
 
 
@@ -39,3 +39,21 @@ def test_rocket_parses_jobposting_jsonld():
     assert p.title=="Data Engineer"
     assert p.company_mention=="Acme"
     assert p.revision_projection["jobposting_json_ld"]["employmentType"]=="FULL_TIME"
+
+
+def test_bulldog_parses_numeric_identity_and_jsonld():
+    html='''<html><head><script type="application/ld+json">{
+      "@context":"https://schema.org","@type":"JobPosting",
+      "@id":"https://bulldogjob.com/companies/jobs/256852-example",
+      "title":"Principal Developer",
+      "description":"Build systems",
+      "skills":"C#, Angular",
+      "hiringOrganization":{"@type":"Organization","name":"Luxoft DXC"},
+      "employmentType":"FULL_TIME"
+    }</script></head><body><h1>Principal Developer</h1></body></html>'''
+    ref=PostingRef("bulldogjob","https://bulldogjob.com/companies/jobs/256852-example","256852")
+    p=BulldogJobSource().parse_detail(html,ref)
+    assert p.source_posting_id=="256852"
+    assert p.title=="Principal Developer"
+    assert p.company_mention=="Luxoft DXC"
+    assert p.source_specific["skills"]=="C#, Angular"

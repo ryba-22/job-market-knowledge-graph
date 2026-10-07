@@ -1,0 +1,89 @@
+{
+  "format": "market-corpus-v1",
+  "corpus_version": "CORPUS-04",
+  "postings": 493,
+  "by_source": {
+    "bulldogjob": 93,
+    "justjoinit": 150,
+    "nofluffjobs": 100,
+    "rocketjobs": 100,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 4508649,
+  "compressed_bytes": 818147,
+  "uncompressed_sha256": "624b95d14f1848cce12508e60e3d355bec6c94c0bf120944cf16314eb93a5edf",
+  "compressed_sha256": "92396c6e0215df7d4fc8df5951fa07e859a143d05440e3685f51617d12fd6d6b",
+  "components": {
+    "CORPUS-03": {
+      "format": "market-corpus-v1",
+      "corpus_version": "CORPUS-03",
+      "postings": 400,
+      "by_source": {
+        "justjoinit": 150,
+        "nofluffjobs": 100,
+        "rocketjobs": 100,
+        "theprotocol": 50
+      },
+      "uncompressed_bytes": 3857411,
+      "compressed_bytes": 656848,
+      "uncompressed_sha256": "4bc9ae3c496f336ef59cc3d1122950682e5432ab499a2c8cb08508b5797c9ae3",
+      "compressed_sha256": "1dd8b70bcfc4e7c00e646a77518fb24eb120f5ceda818ea15f2550616fb1b29b",
+      "components": {
+        "CORPUS-02": {
+          "format": "market-corpus-v1",
+          "postings": 200,
+          "by_source": {
+            "justjoinit": 150,
+            "theprotocol": 50
+          },
+          "uncompressed_bytes": 2445892,
+          "compressed_bytes": 397964,
+          "uncompressed_sha256": "67a391f4df2980b67d560edb27d89baf886c8a049c61d989067e49b5c4a54c45",
+          "compressed_sha256": "dd34df09f187e605f8cd35674650d12f75ebd842ac0cd0b793eb5ad711cd109d",
+          "contains_raw_payload": false,
+          "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+        },
+        "SOURCE-EXPANSION-01": {
+          "format": "market-corpus-v1",
+          "postings": 200,
+          "by_source": {
+            "nofluffjobs": 100,
+            "rocketjobs": 100
+          },
+          "uncompressed_bytes": 1411519,
+          "compressed_bytes": 259362,
+          "uncompressed_sha256": "c0a280ad76300741ea5a58704e1f7b0896592811263bf3a2375f30c4bb5a83ff",
+          "compressed_sha256": "fe94b48295f25a87e478473d731075690a18283b1f8abaf0cb703e09faaeb603",
+          "contains_raw_payload": false,
+          "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+        }
+      },
+      "source_artifact": {
+        "workflow_run": 37618151571,
+        "artifact_id": 11479864524,
+        "artifact_digest": "sha256:e851a5b077847c6ce652a4f66af7b726cab17f17fcd847915806013c65ecb615"
+      }
+    },
+    "SOURCE-EXPANSION-02-BULLDOG": {
+      "format": "market-corpus-v1",
+      "postings": 93,
+      "by_source": {
+        "bulldogjob": 93
+      },
+      "uncompressed_bytes": 651238,
+      "compressed_bytes": 161879,
+      "uncompressed_sha256": "982b08c4785ec909eb9fa40caa83246274245750d9007f95cd2fae9d22541c8e",
+      "compressed_sha256": "2184de647ac10f6d10d8cf748e2dec30b33a50dc081be5681c4a41e5ac02f55c",
+      "contains_raw_payload": false,
+      "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+    }
+  },
+  "source_artifact": {
+    "workflow_run": 37619450236,
+    "artifact_id": 11481186966,
+    "artifact_digest": "sha256:3c15432232d40c35e41ecf849aac13e9364c28e89dc318845ee6dd71b73afd00",
+    "requested": 100,
+    "successful": 93,
+    "rate_limited_429": 7
+  }
+}
