@@ -37,7 +37,10 @@ def _domain(url: str) -> str | None:
         host = (urlparse(url).hostname or "").lower().strip(".")
     except Exception:
         return None
-    if not host or host in {"theprotocol.it", "www.theprotocol.it", "justjoin.it", "www.justjoin.it"}:
+    if not host:
+        return None
+    portal_roots = ("theprotocol.it", "justjoin.it")
+    if any(host == root or host.endswith("." + root) for root in portal_roots):
         return None
     return host[4:] if host.startswith("www.") else host
 
