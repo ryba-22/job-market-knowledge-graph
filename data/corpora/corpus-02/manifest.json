@@ -1,0 +1,14 @@
+{
+  "format": "market-corpus-v1",
+  "postings": 200,
+  "by_source": {
+    "justjoinit": 150,
+    "theprotocol": 50
+  },
+  "uncompressed_bytes": 2445892,
+  "compressed_bytes": 397964,
+  "uncompressed_sha256": "67a391f4df2980b67d560edb27d89baf886c8a049c61d989067e49b5c4a54c45",
+  "compressed_sha256": "dd34df09f187e605f8cd35674650d12f75ebd842ac0cd0b793eb5ad711cd109d",
+  "contains_raw_payload": false,
+  "raw_payload_provenance": "Each record retains SHA-256, byte count and archive_key for the immutable RawObservation."
+}
