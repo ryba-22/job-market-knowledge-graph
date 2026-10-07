@@ -109,7 +109,7 @@ def parse(search_row: dict[str, Any], details: dict[str, Any]) -> ParsedPosting:
     url = str(_pick(details, "offerUrl", "url", default=_pick(search_row, "url", "offerUrl", default="")))
     title = norm_text(str(_pick(details, "title", "jobTitle", default=_pick(search_row, "title", default=""))))
     company = _company(_pick(details, "company", "employer", "hiringOrganization")) or _company(
-        _pick(search_row, "company", "employer", "employerName")
+        _pick(search_row, "company", "employer", "employerName", "companyName")
     )
     if not offer_id:
         offer_id = group_id
