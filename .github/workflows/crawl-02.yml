@@ -40,6 +40,9 @@ jobs:
       - name: Contract tests
         run: pytest -q
 
+      - name: Apply migrations
+        run: python -m ingestion.migrate
+
       - name: First real batch
         run: python -m ingestion.batch --source both --limit-per-source 50 --delay 0.15 --manifest-out reports/crawl-02-manifest.json --report reports/crawl-02-first.json
 
