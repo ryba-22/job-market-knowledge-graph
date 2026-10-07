@@ -1,8 +1,7 @@
 name: SCALE-04 additional direct sources pilot
 
 on:
-  push:
-    branches: [scale-04-more-sources]
+  workflow_dispatch:
 
 jobs:
   prepare:
