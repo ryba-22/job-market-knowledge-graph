@@ -13,6 +13,7 @@ from .sources import _jobposting_json_ld, _stable_sections, canonical_url
 NFJ_SEARCH_URL = "https://nofluffjobs.com/api/search/posting"
 NFJ_DETAIL_URL = "https://nofluffjobs.com/api/posting/{slug}"
 ROCKET_SITEMAP_INDEX = "https://rocketjobs.pl/sitemaps/active-jobs.xml"
+BULLDOG_LISTING_URL = "https://bulldogjob.com/companies/jobs"
 
 
 class NoFluffJobsSource:
@@ -165,7 +166,75 @@ class RocketJobsSource:
         )
 
 
+class BulldogJobSource:
+    code = "bulldogjob"
+
+    def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
+        response = client.get(BULLDOG_LISTING_URL)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        refs = []
+        seen = set()
+        for a in soup.find_all("a", href=True):
+            url = canonical_url(urljoin(str(response.url), a["href"]))
+            marker = "/companies/jobs/"
+            if marker not in url:
+                continue
+            tail = url.split(marker, 1)[1].strip("/")
+            match = __import__("re").match(r"(\d+)-", tail)
+            if not match:
+                continue
+            source_id = match.group(1)
+            if source_id in seen:
+                continue
+            seen.add(source_id)
+            refs.append(PostingRef(self.code, url, source_id))
+            if len(refs) >= limit:
+                break
+        return refs
+
+    def fetch_detail(self, client: httpx.Client, ref: PostingRef):
+        response = client.get(ref.url)
+        response.raise_for_status()
+        return response.text, str(response.url), response.status_code, response.headers.get("content-type", "")
+
+    def parse_detail(self, raw: str, ref: PostingRef) -> ParsedPosting:
+        soup = BeautifulSoup(raw, "html.parser")
+        structured = _jobposting_json_ld(soup)
+        if not structured:
+            raise ValueError("PARSER_DRIFT: Bulldogjob JobPosting JSON-LD missing")
+        title = structured.get("title")
+        hiring = structured.get("hiringOrganization") or {}
+        company = hiring.get("name") if isinstance(hiring, dict) else None
+        if not title:
+            h1 = soup.find("h1")
+            title = h1.get_text(" ", strip=True) if h1 else None
+        if not title:
+            raise ValueError("PARSER_DRIFT: Bulldogjob title missing")
+        return ParsedPosting(
+            source=self.code,
+            source_posting_id=ref.source_posting_id,
+            url=canonical_url(ref.url),
+            title=norm_text(title),
+            company_mention=norm_text(company) or None,
+            body_text=soup.get_text("\n", strip=True),
+            source_specific={
+                "jobposting_id": structured.get("@id"),
+                "hiring_organization": hiring,
+                "skills": structured.get("skills"),
+                "date_posted": structured.get("datePosted"),
+                "valid_through": structured.get("validThrough"),
+                "employment_type": structured.get("employmentType"),
+            },
+            revision_projection={
+                "jobposting_json_ld": structured,
+                "stable_sections": _stable_sections(soup),
+            },
+        )
+
+
 SOURCES = {
     "nofluffjobs": NoFluffJobsSource(),
     "rocketjobs": RocketJobsSource(),
+    "bulldogjob": BulldogJobSource(),
 }
