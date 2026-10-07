@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import gzip
 import hashlib
 import json
@@ -65,7 +66,10 @@ def _replay_compact(root: Path, manifest: dict, failures: list[str]):
     compressed_parts=[]
     for item in manifest["snapshot_chunks"]:
         path=root/item["file"]
-        data=path.read_bytes()
+        if manifest.get("chunk_encoding")=="base64":
+            data=base64.b64decode(path.read_text(encoding="ascii").strip())
+        else:
+            data=path.read_bytes()
         if len(data)!=item["bytes"]:
             failures.append(f"chunk byte length mismatch: {item['file']}")
         if sha256_bytes(data)!=item["sha256"]:
