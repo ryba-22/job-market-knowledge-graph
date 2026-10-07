@@ -164,3 +164,11 @@ def test_michaelpage_parses_recruiter_jsonld():
     assert parsed.title=="Manager SysOps"
     assert parsed.company_mention=="Michael Page Poland"
     assert parsed.source_specific["observation_provenance"]=="DIRECT_RECRUITER"
+
+def test_michaelpage_tolerates_control_chars_in_jsonld_description():
+    html = '''<html><head><script type="application/ld+json">{"@context":"http://schema.org/","@type":"JobPosting","title":"Power BI Lead","description":"line 1
+line 2","hiringOrganization":{"@type":"Organization","name":"Michael Page Poland"},"industry":"Information Technology"}</script></head><body><h1>Power BI Lead</h1></body></html>'''
+    ref=PostingRef("michaelpage","https://www.michaelpage.pl/job-detail/power-bi-lead/ref/jn-1","jn-1")
+    parsed=MichaelPageSource().parse_detail(html,ref)
+    assert parsed.title=="Power BI Lead"
+    assert parsed.company_mention=="Michael Page Poland"

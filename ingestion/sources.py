@@ -206,6 +206,11 @@ def _jobposting_json_ld(soup: BeautifulSoup):
             continue
         try:
             value = json.loads(raw)
+        except json.JSONDecodeError:
+            try:
+                value = json.loads(raw, strict=False)
+            except Exception:
+                continue
         except Exception:
             continue
         values = value if isinstance(value, list) else [value]
