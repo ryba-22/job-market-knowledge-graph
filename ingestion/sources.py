@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 from collections.abc import Iterable
+import json
 import re
 from urllib.parse import urljoin, urlsplit, urlunsplit
 
@@ -177,3 +178,61 @@ ADAPTERS = {
     "theprotocol": TheProtocolAdapter(),
     "justjoinit": JustJoinItAdapter(),
 }
+
+
+def _jobposting_json_ld(soup: BeautifulSoup):
+    """Return stable JobPosting structured data, excluding volatile presentation metadata."""
+    candidates = []
+    for node in soup.find_all("script", attrs={"type": "application/ld+json"}):
+        raw = node.string or node.get_text()
+        if not raw:
+            continue
+        try:
+            value = json.loads(raw)
+        except Exception:
+            continue
+        values = value if isinstance(value, list) else [value]
+        for item in values:
+            if isinstance(item, dict) and item.get("@type") == "JobPosting":
+                candidates.append(item)
+            if isinstance(item, dict) and isinstance(item.get("@graph"), list):
+                candidates.extend(
+                    x for x in item["@graph"]
+                    if isinstance(x, dict) and x.get("@type") == "JobPosting"
+                )
+    if not candidates:
+        return None
+    item = candidates[0]
+    stable_keys = (
+        "title", "description", "qualifications", "skills", "responsibilities",
+        "employmentType", "jobLocationType", "applicantLocationRequirements",
+        "jobLocation", "baseSalary", "hiringOrganization", "industry",
+        "experienceRequirements", "educationRequirements",
+    )
+    return {k: item[k] for k in stable_keys if k in item}
+
+
+def _stable_sections(soup: BeautifulSoup):
+    """Conservative fallback: only job-content sections, never full rendered page chrome."""
+    wanted = {
+        "job description", "responsibilities", "requirements", "nice to have",
+        "tech stack", "benefits", "about the company", "about us",
+    }
+    out = {}
+    headings = soup.find_all(["h2", "h3"])
+    for heading in headings:
+        name = norm_text(heading.get_text(" ", strip=True))
+        if name.casefold() not in wanted:
+            continue
+        parts = []
+        for node in heading.find_all_next():
+            if node is heading:
+                continue
+            if getattr(node, "name", None) in ("h2", "h3"):
+                break
+            if getattr(node, "name", None) in ("p", "li", "h4"):
+                text = norm_text(node.get_text(" ", strip=True))
+                if text and text not in parts:
+                    parts.append(text)
+        out[name.casefold()] = parts
+    return out
