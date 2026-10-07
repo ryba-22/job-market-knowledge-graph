@@ -1,0 +1,29 @@
+{
+  "format": "source-inventory-v1",
+  "scope": "scale-04-more-direct-sources",
+  "base_corpus": "data/corpora/corpus-08-partial/corpus.jsonl.gz",
+  "sources": {
+    "aplikuj": {
+      "discoverable": 522,
+      "known": 0,
+      "unknown": 522
+    },
+    "itleaders": {
+      "discoverable": 10,
+      "known": 0,
+      "unknown": 10
+    },
+    "michaelpage": {
+      "discoverable": 86,
+      "known": 0,
+      "unknown": 86
+    }
+  },
+  "discoverable_total": 618,
+  "known_total": 0,
+  "unknown_total": 618,
+  "uncompressed_bytes": 114645,
+  "compressed_bytes": 16329,
+  "uncompressed_sha256": "42165950c7999dba74efce5b64c2d735b29a0d2fdebc57d9da4bfaed3737a5c3",
+  "compressed_sha256": "16d5ded7bde7b19acab5aa3d47fbb27deff413f4fa8b524bfea223c260c5248a"
+}
