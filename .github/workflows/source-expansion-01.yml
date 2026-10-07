@@ -1,72 +1,24 @@
-name: SOURCE-EXPANSION-01 NFJ + RocketJobs
+name: SOURCE-EXPANSION-01 frozen corpus
 
 on:
   push:
     branches: [source-expansion-01-nfj-rocket]
+  pull_request:
+    paths:
+      - "data/corpora/source-expansion-01/**"
+      - "data/corpora/corpus-03/**"
+      - "tests/test_corpus_03_snapshot.py"
+      - ".github/workflows/source-expansion-01.yml"
   workflow_dispatch:
 
 jobs:
-  expand:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: crawler
-          POSTGRES_PASSWORD: crawler
-          POSTGRES_DB: jobs
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd "pg_isready -U crawler -d jobs"
-          --health-interval 5s
-          --health-timeout 5s
-          --health-retries 20
-    env:
-      DATABASE_URL: postgresql://crawler:crawler@localhost:5432/jobs
-      PYTHONUNBUFFERED: "1"
-
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install
-        run: pip install -e ".[dev]"
-      - name: Tests
-        run: pytest -q
-      - name: Migrate
-        run: python -m ingestion.migrate
-      - name: Crawl 100 NFJ + 100 RocketJobs
-        run: >-
-          python -m ingestion.source_expansion
-          --run-id source-expansion-01-real200
-          --source both
-          --limit-per-source 100
-          --delay 0.08
-          --manifest-out reports/source-expansion-01-manifest.json
-          --report reports/source-expansion-01-crawl.json
-      - name: Export compact source corpus
-        run: python -m ingestion.export_market_corpus --out reports/source-expansion-01
-      - name: Verify source corpus
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          m=json.loads(Path("reports/source-expansion-01/manifest.json").read_text())
-          assert m["postings"] >= 190, m
-          assert m["by_source"].get("nofluffjobs",0) >= 95, m
-          assert m["by_source"].get("rocketjobs",0) >= 95, m
-          print(json.dumps(m,indent=2))
-          PY
-      - name: Upload source corpus
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: source-expansion-01-real200
-          path: |
-            reports/source-expansion-01-manifest.json
-            reports/source-expansion-01-crawl.json
-            reports/source-expansion-01/manifest.json
-            reports/source-expansion-01/corpus.jsonl.gz
+      - name: Verify frozen 400-offer corpus
+        run: python -m unittest tests.test_corpus_03_snapshot -v
