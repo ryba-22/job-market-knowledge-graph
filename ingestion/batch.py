@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import time
+from contextlib import nullcontext
 
 import httpx
 
@@ -18,28 +19,67 @@ USER_AGENT = "job-market-knowledge-graph/CRAWL-02 (+https://github.com/ryba-22/j
 
 def run_source(client, store, source_code: str, limit: int, delay: float) -> dict:
     adapter = ADAPTERS[source_code]
-    refs = adapter.discover(client, limit)
     stats = Counter()
     errors = []
-    for ref in refs:
-        try:
-            response = client.get(ref.url)
-            response.raise_for_status()
-            raw_id = store.record_fetch(
-                source=source_code,
-                url=ref.url,
-                final_url=str(response.url),
-                status=response.status_code,
-                body=response.text,
-                content_type=response.headers.get("content-type"),
-            )
-            parsed = adapter.parse_detail(response.text, str(response.url))
-            result = store.ingest(parsed, raw_id)
-            stats[result["state"]] += 1
-        except Exception as exc:
-            stats["ERROR"] += 1
-            errors.append({"url": ref.url, "error": f"{type(exc).__name__}: {exc}"})
-        time.sleep(delay)
+    try:
+        refs = adapter.discover(client, limit)
+    except Exception as exc:
+        return {
+            "source": source_code,
+            "discovered": 0,
+            "states": {"DISCOVERY_ERROR": 1},
+            "errors": [{"url": "discovery", "error": f"{type(exc).__name__}: {exc}"}],
+        }
+
+    browser = None
+    page = None
+    if source_code == "theprotocol":
+        from playwright.sync_api import sync_playwright
+        browser_runtime = sync_playwright().start()
+        browser = browser_runtime.chromium.launch(headless=True)
+        page = browser.new_page(locale="pl-PL")
+    else:
+        browser_runtime = None
+
+    try:
+        for ref in refs:
+            try:
+                if page is not None:
+                    response = page.goto(ref.url, wait_until="domcontentloaded", timeout=45000)
+                    status = response.status if response else 200
+                    html = page.content()
+                    final_url = page.url
+                    content_type = "text/html; browser-rendered"
+                else:
+                    response = client.get(ref.url)
+                    response.raise_for_status()
+                    status = response.status_code
+                    html = response.text
+                    final_url = str(response.url)
+                    content_type = response.headers.get("content-type")
+                raw_id = store.record_fetch(
+                    source=source_code,
+                    url=ref.url,
+                    final_url=final_url,
+                    status=status,
+                    body=html,
+                    content_type=content_type,
+                )
+                parsed = adapter.parse_detail(html, final_url)
+                result = store.ingest(parsed, raw_id)
+                stats[result["state"]] += 1
+            except Exception as exc:
+                stats["ERROR"] += 1
+                errors.append({"url": ref.url, "error": f"{type(exc).__name__}: {exc}"})
+            time.sleep(delay)
+    finally:
+        if page is not None:
+            page.close()
+        if browser is not None:
+            browser.close()
+        if browser_runtime is not None:
+            browser_runtime.stop()
+
     return {
         "source": source_code,
         "discovered": len(refs),
