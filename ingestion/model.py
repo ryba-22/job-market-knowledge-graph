@@ -34,13 +34,19 @@ class ParsedPosting:
     company_mention: str | None
     body_text: str
     source_specific: dict[str, Any] = field(default_factory=dict)
+    revision_projection: dict[str, Any] | None = None
 
     def normalized_projection(self) -> dict[str, Any]:
-        return {
+        projection = {
             "title": norm_text(self.title),
             "company_mention": norm_text(self.company_mention),
-            "body_text": norm_text(self.body_text),
         }
+        if self.revision_projection is not None:
+            projection["semantic_content"] = self.revision_projection
+        else:
+            # Compatibility fallback for sources that already provide a stable body.
+            projection["body_text"] = norm_text(self.body_text)
+        return projection
 
     def normalized_hash(self) -> str:
         payload = json.dumps(
