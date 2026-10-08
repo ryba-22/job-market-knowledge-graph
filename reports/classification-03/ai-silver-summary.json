@@ -1,0 +1,19 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-FIRSTPASS",
+  "status": "SILVER_COMPLETE_HUMAN_GOLD_STILL_BLOCKED",
+  "model": "sonnet",
+  "source_postings": 200,
+  "ai_silver_annotations": 200,
+  "label_counts": {
+    "IT_ADJACENT": 23,
+    "IT_TECHNICAL": 55,
+    "NON_IT": 111,
+    "UNDETERMINABLE": 11
+  },
+  "batch_count": 25,
+  "batches_complete": 25,
+  "batches_failed": [],
+  "new_cost_usd": 1.387,
+  "no_independent_gold": true,
+  "human_review_required": true
+}

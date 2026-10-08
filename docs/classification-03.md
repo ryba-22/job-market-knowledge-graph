@@ -87,3 +87,27 @@ jq '.' reports/classification-03/evaluation.json
 - Independent gold labels: **0/200**. Human evaluation pending. The 64 author-curated diagnostic labels from CLASSIFICATION-02 do **not** qualify as independent gold or holdout.
 
 Source files remain unchanged, current crawlers remain stopped.
+
+## AI-first operational extension — 2026-10-08
+
+**The user approved AI-first annotation with humans handling ambiguity, disagreements and an independent control subset.** This does not change the meaning of human gold or release gates. The frozen 200-offer A/B independent-eval protocol remains intact and blocked until independently validated.
+
+### Executed source-only AI pass
+
+- Runner: `.venv/bin/python -m ingestion.classification03_ai --model sonnet --workers 4`
+- 200/200 classified using the **full original text**, without CLASSIFICATION-02 labels in prompts. Output was verified individually for posting IDs, source revision/payload hashes, legal family/label values and exact source-quoted evidence; 25/25 batches validated. No API/tool permission was granted to the AI model.
+- **AI SILVER / NOT GOLD**: 55 `IT_TECHNICAL`; 111 `NON_IT`; 23 `IT_ADJACENT`; 11 `UNDETERMINABLE`. Confidence: 138 high, 57 medium, 5 low. This is the model's subjective confidence, not calibrated probability.
+- Private files: `.local-evidence/classification-03/ai-silver-v1/parts/part-*.json` (source input hash + batch usage), `silver-annotations.jsonl` and `summary.json`. Traceable, individually source-anchored, never merged into human-gold exports.
+- CLI-reported cost for 25 batches: USD 1.387. Text was sent to the configured external Claude model for classification; source text and associated details remain in ignored local archives, not committed to public GitHub. Check the job-board data processing/licensing and service-provider retention policy before wider repeated use.
+
+### Human-facing triage
+
+- Offline command: `.venv/bin/python -m ingestion.classification03_triage`.
+- Generated **69 source-only human review items**, de-duplicated: 34 AI uncertain/mixed decisions, 6 critical AI-vs-rules differences, 5 low-confidence AI decisions, and 40 fixed stratified random controls. Reasons overlap. 34 distinct cases carry a risk/uncertainty flag, and 29 of those are additional to the 40 random controls (5 overlaps).
+- The 40 control cases come from the 160-case probability panel with fixed stratum quotas (12 predicted IT, 12 predicted non-IT, 16 rule-review), selected independently of the **AI SILVER** result. They are not 40 simple random cases from all 509. Broad inference requires appropriate strata weights and uncertainty estimation.
+- `.local-evidence/classification-03/silver-human-triage-manifest.json` freezes queue IDs, AI output SHA256 and selection reasons. No silent reshuffle/overwrite if the silver model result changes.
+- Open `xdg-open .local-evidence/classification-03/reviewer-human.html`. The display contains only title, category, source link, **complete original description**, and annotation controls. AI labels, confidence, classifier predictions, reasons for prioritization, and gold/holdout information are **not displayed**.
+- Export human work to `.local-evidence/classification-03/reviewer-human-annotations.json`, then run `.venv/bin/python -m ingestion.classification03_triage --score-human`. Pending exports, it returns `BLOCKED_NO_HUMAN_REVIEWS`. A partial file reports only checked counts/agreement within the targeted sample; **not unbiased accuracy**.
+- Independently reviewing the triage queue is operational QA and improves the next rule iteration. It does **not** by itself unlock the original full 200-offer independent-gold benchmark; that remains `BLOCKED_NO_INDEPENDENT_GOLD`, and no automatic `--freeze-gold` was performed.
+- High-risk disagreements are an explicit domain-review gate: do not blindly choose either model's answer. Manual reviewers should independently assess duties first, then adjudicate with side-by-side evidence only after submitting the first label.
+- Suggested ownership: one actual reviewer for 69 source-only items; domain adjudicator for six critical disagreements and ambiguous hybrid classes; QA/engineering verify exports and run compare; Ryba approves scope thresholds and GO/NO-GO. A model persona is **not** a separate human reviewer.

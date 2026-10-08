@@ -1,0 +1,38 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-HUMAN-TRIAGE",
+  "status": "HUMAN_REVIEW_QUEUE_READY_GOLD_STILL_BLOCKED",
+  "ai_silver_count": 200,
+  "ai_silver_label_counts": {
+    "IT_ADJACENT": 23,
+    "IT_TECHNICAL": 55,
+    "NON_IT": 111,
+    "UNDETERMINABLE": 11
+  },
+  "ai_silver_confidence_counts": {
+    "high": 138,
+    "low": 5,
+    "medium": 57
+  },
+  "human_queue_unique": 69,
+  "high_priority_flagged_unique": 34,
+  "additional_priority_outside_control": 29,
+  "stratified_random_control_unique": 40,
+  "review_reason_counts_overlapping": {
+    "AI_AMBIGUOUS": 34,
+    "CONTROL_STRATIFIED": 40,
+    "CRITICAL_DISAGREEMENT": 6,
+    "LOW_CONFIDENCE": 5
+  },
+  "human_review_received": 0,
+  "blind_human_packet": ".local-evidence/classification-03/reviewer-human.jsonl",
+  "human_reviewer_html": ".local-evidence/classification-03/reviewer-human.html",
+  "all_inputs_revision_verified": true,
+  "no_independent_gold": true,
+  "classification02_metrics_release": "BLOCKED",
+  "measurement_limitations": [
+    "Human-triage queue intentionally enriches ambiguous/disagreement cases; pooled counts not representative.",
+    "40 random controls selected with fixed quotas from the 160 stratified-probability panel; no uncertainty intervals.",
+    "Original 200-offer independent-gold benchmark remains separately blocked until independent labels.",
+    "AI-silver labels cannot automatically count as human gold, nor as independent precision/recall."
+  ]
+}
