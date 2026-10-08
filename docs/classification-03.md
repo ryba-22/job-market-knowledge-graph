@@ -148,3 +148,49 @@ Disposition: 33 unanimous binary AI outcomes; 7 majority (2 of 3) unverified bin
 Quality gate: THREE_AI_SILVER_RECONCILED_HUMAN_GOLD_STILL_BLOCKED. No human labels; no independent-gold quality score; no production GO. The human review UI remains available for future independent verification, but the requested AI-only review has been executed.
 
 Statistical limitation: this 47-case priority queue is enriched for ambiguity and high-risk disagreements, so distribution 16/24/7 is not an unbiased sample of Polish or even Aplikuj-wide IT vacancies.
+
+## Full AI review of remaining 153, plus 309 previously unsampled archive IDs (2026-10-08)
+
+Decision scope: user requested that AI review the remaining offers too. The completed 47-case AI priority review was not rerun. Frozen CLASSIFICATION-03 200-case sample has 153 complementary cases; the original frozen 509-case archive has 309 further IDs outside that sample. All three populations are disjoint except where deliberately joined for reporting.
+
+### C03 original 200 evaluation sample: second Sonnet + Opus for 153
+
+Runnable implementation: `python -m ingestion.classification03_ai_remaining --reviewer second_sonnet --workers 3`, `python -m ingestion.classification03_ai_remaining --reviewer third_opus --workers 3`, `python -m ingestion.classification03_ai_remaining --compare`.
+
+Both models received the original full source-only posting packets; the original classifier labels, existing silver reviews and stratification/holdout labels were not exposed to the model. Both 153-case runs wrote verified resumable parts and a complete one-to-one sidecar in `.local-evidence/classification-03/ai-remaining153-v1/`.
+
+Source-bound result for all 200: 200 Sonnet-first, 200 Sonnet-second (separate session), 200 Opus. 181 offers have unanimous 3/3 labels; 19 have 2/3 agreement. Conservative silver proposals: **59 IT_TECHNICAL / 111 NON_IT / 30 REVIEW_REQUIRED**. There are 4 conflicts against previously confident C02 rule classifications. Of the 181 unanimous source judgments, 20 can still be ambiguous; agreement does not establish correctness.
+
+Source-preserving sidecar: `.local-evidence/classification-03/ai-remaining153-v1/ai-proposals-200.jsonl`. Aggregate: `reports/classification-03/ai-complete200.json`.
+
+### Original 509 source archive: remaining 309 unsampled offers
+
+Runnable implementation: `python -m ingestion.classification03_ai_archive --model sonnet --workers 3`, `python -m ingestion.classification03_ai_archive --model opus --workers 3`, `python -m ingestion.classification03_ai_archive --merge`.
+
+Sampling complement from the 509 frozen source corpus, not from active site or fresh HTTP. Sonnet source-only assessment is complete for 309/309. Opus completed 222/309 before the provider session quota was hit (reset announced 11:00 Europe/Warsaw); 87 Opus second opinions remain missing. All completed source-bound parts and the 309 Sonnet sidecar are preserved in `.local-evidence/classification-03/ai-unsampled309-v1/{sonnet,opus}/`. The merged 509-source view includes the 200 triple-AI silver proposals, 222 two-model silver comparisons, and 87 explicitly PENDING_SECOND_AI records; agreement on strict IT or non-IT is required for a binary proposal where two models exist.
+
+The model run is an AI operational review, not an independent human annotation. Never place its labels in `reviewer-a-annotations.json`, `reviewer-b-annotations.json`, or a gold-freeze. Do not use the resulting source category breakdown to estimate current distinct Polish IT vacancies: the source is a particular category index with unknown freshness, not a deduplicated census.
+
+All successful parts are checkpoint-resumable, input fingerprints pinned, and source ID / revision / quoted source evidence verified. For quota-blocked Opus 309, re-running `python -m ingestion.classification03_ai_archive --model opus --workers 1` reuses cached 37 successful batches and tries only unfinished batches; do not claim it completed before the service is actually available. Source observations and CLASSIFICATION-02 prior predictions are unchanged. Any production classifier update requires a separate accepted policy and independent quality evaluation.
+
+### Seven persistent review cases — separate fourth blind AI challenge
+
+Source cohort: the seven REVIEW_REQUIRED records in the previous 47-case silver proposal. We ran one more source-only Opus review, frozen by source IDs and source hash; the previous three-vote consensus stays unchanged. Runner: `python -m ingestion.classification03_ai_last7`; private archive: `.local-evidence/classification-03/ai-last7-challenge-v1/`.
+
+Fourth-model labels: 3 `IT_TECHNICAL`, 3 `IT_ADJACENT`, 1 `UNDETERMINABLE`. This is additional evidence, not truth. Crucial adversarial exception: posting 3335098 was labeled `IT_TECHNICAL` by the fourth model *despite having no actual duties described*, merely skills/requirements for an IT internship. Literal anchored quotes are a necessary but insufficient check; they do not prove correct occupational scope. We **retain** the previous REVIEW_REQUIRED proposal rather than force a binary label. Similarly the generic title posting 3315746 remains UNDETERMINABLE due to missing actual work. PMO/release governance are policy-boundary cases and require explicit scope decision, not majority vote.
+
+All seven remain eligible for human/policy-owner source adjudication if production deployment is pursued. No previously confident classification is silently overwritten.
+
+### Execution result — all 509 source IDs and model quota recovery
+
+At this checkpoint all original 509 postings now have at least one source-only AI annotation. Exactly 200/200 frozen evaluation sample postings have three AI assessments (two Sonnet sessions + one Opus). Of the other 309 IDs, Sonnet analyzed 309/309; Opus finished 37/52 chunks = 222/309. This means **422/509 have at least two AI opinions**; **87/509 are flagged PENDING_SECOND_AI**, not falsely treated as a disagreement or a real-world non-IT posting.
+
+The provider's Opus command responded with: 'You've hit your session limit · resets 11am (Europe/Warsaw)'. Its CLI exit was 1, with no stderr; the error message was in JSON stdout. Work was halted rather than silently restarting the full crawler or discarding completed chunks. Fail-fast handling now identifies provider quota and prevents further repeated batch attempts. Restart with `python -m ingestion.classification03_ai_archive --model opus --workers 1` after quota access is restored; successful 37 batches are reused. Do not announce second-pass completion until the new 309/309 pass actually succeeds.
+
+Aggregate for entire source under conservative silver disposition: **98 IT_TECHNICAL; 237 NON_IT; 87 REVIEW_REQUIRED; 87 PENDING_SECOND_AI** (509 total). Two-model comparison within the 222 finished 309-pool reviews: 207 label agreements, 15 disagreements. Confident original-classifier conflicts in the merged source: 7 prior IT confirmations and 3 prior non-IT confirmations. These source-bound counts are not precision, recall or a market size estimate. Two missing model opinions cannot be fabricated.
+
+Aggregated report: `reports/classification-03/ai-archive509.json`; local comprehensive 509 identity/hash-linked sidecar: `.local-evidence/classification-03/ai-unsampled309-v1/merged/ai-archive509-sidecar.jsonl`; 222 verified Opus records cached in `.local-evidence/classification-03/ai-unsampled309-v1/opus/opus-partial-verified.jsonl`.
+
+The sample-200 source model audit produced **59 IT_TECHNICAL / 111 NON_IT / 30 REVIEW_REQUIRED** (181 3/3 matching labels, 19 2/3). The seven previously unresolved cases also received a fourth source-only Opus challenge review (3 technical IT, 3 IT-adjacent, 1 undeterminable), but no binary auto-promotion was applied: in case #3335098, the source lists requirements but not actual duties, so the model's positive IT label is insufficient evidence.
+
+**Gold/release gates remain BLOCKED**; human independent labels remain 0; source archive and original CLASSIFICATION-02 state remain unchanged.

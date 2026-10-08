@@ -1,0 +1,28 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-ARCHIVE509",
+  "status": "AI_ARCHIVE509_FIRSTPASS_COMPLETE_SECOND_AI_QUOTA_BLOCKED",
+  "source_total": 509,
+  "ai_first_review_coverage": 509,
+  "at_least_two_ai_reviews_coverage": 422,
+  "frozen_sample_200": 200,
+  "unsampled_extra_309": 309,
+  "opus_completed_309": 222,
+  "awaiting_second_ai_309": 87,
+  "extra_two_model_agreement_309": {
+    "model_agreement": 207,
+    "model_disagreement": 15
+  },
+  "proposed_silver_scope_counts_509": {
+    "IT_TECHNICAL": 98,
+    "NON_IT": 237,
+    "PENDING_SECOND_AI": 87,
+    "REVIEW_REQUIRED": 87
+  },
+  "conflicts_against_confident_rules": {
+    "confident_it_conflict": 7,
+    "confident_non_it_conflict": 3
+  },
+  "human_gold": 0,
+  "production_go": false,
+  "caveat": "All 509 original IDs received at least one source-only AI review. The frozen 200 have three model opinions. For the other 309, missing Opus responses are explicitly marked PENDING_SECOND_AI due to provider session quota; they are not silently treated as review errors or consensus. No independent gold or production approval."
+}

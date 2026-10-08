@@ -1,0 +1,36 @@
+{
+  "checkpoint": "CLASSIFICATION-03-ALL-200-AI-SILVER",
+  "status": "THREE_AI_SILVER_200_COMPLETE_GOLD_BLOCKED",
+  "source_postings": 200,
+  "first_ai_review": 200,
+  "second_ai_review": 200,
+  "third_ai_review": 200,
+  "new_second_reviews": 153,
+  "new_third_reviews": 153,
+  "unanimous_labels": 181,
+  "agreement": {
+    "2_of_3": 19,
+    "3_of_3": 181
+  },
+  "proposed_scope_counts": {
+    "IT_TECHNICAL": 59,
+    "NON_IT": 111,
+    "REVIEW_REQUIRED": 30
+  },
+  "dispositions": {
+    "AI_MAJORITY": 9,
+    "AMBIGUOUS_SCOPE": 30,
+    "UNANIMOUS": 161
+  },
+  "non_unanimous_or_review": 39,
+  "confident_classifier_conflicts": 4,
+  "not_gold": true,
+  "human_reviewed": 0,
+  "production_go": false,
+  "limitations": [
+    "Both Sonnet sessions have correlated-model error risk",
+    "Opus is AI not independent human reviewer",
+    "Unanimity and 2/3 voting do not prove correctness",
+    "Intentionally enriched evaluation strata require weighting for any population estimate"
+  ]
+}

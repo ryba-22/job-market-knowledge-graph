@@ -102,7 +102,14 @@ def call_ai(items: list[dict], model: str, timeout: int = 220) -> tuple[list[dic
           "--json-schema",json.dumps(STRUCTURED_SCHEMA,separators=(",",":"))]
     process=subprocess.run(args,input=prompt,capture_output=True,text=True,timeout=timeout,cwd="/tmp")
     if process.returncode:
-        raise RuntimeError(f"LLM failed: exit {process.returncode}, stderr: {(process.stderr or '')[:220]}")
+        try:
+            provider_response=json.loads(process.stdout or "{}")
+            provider_detail=str(provider_response.get("result") or "")[:200]
+        except json.JSONDecodeError:
+            provider_detail=""
+        if "session limit" in provider_detail.lower() or "usage limit" in provider_detail.lower():
+            raise RuntimeError(f"PROVIDER_QUOTA: {provider_detail}")
+        raise RuntimeError(f"LLM failed: exit {process.returncode}, provider: {provider_detail[:100]}, stderr: {(process.stderr or '')[:120]}")
     answer=json.loads(process.stdout)
     if answer.get("is_error"):
         raise RuntimeError(f"LLM returned error {str(answer.get('result'))[:220]}")
