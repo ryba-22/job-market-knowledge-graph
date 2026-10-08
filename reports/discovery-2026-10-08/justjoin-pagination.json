@@ -1,0 +1,67 @@
+{
+  "base": {
+    "status": 200,
+    "h1": [
+      "Work: All offers - 19\u00a0756 offers"
+    ],
+    "raw_links": 100,
+    "unique_ids": 50,
+    "example_ids": [
+      "https://justjoin.it/job-offer/epam-systems-senior-technical-consultant-microsoft-azure--wroclaw-architecture-aa3f9a04",
+      "https://justjoin.it/job-offer/epam-systems-senior-technical-consultant-microsoft-azure--krakow-architecture-b773eaa6"
+    ],
+    "overlap_base": 50
+  },
+  "page2": {
+    "status": 200,
+    "h1": [
+      "Job offers    19\u00a0756 offers"
+    ],
+    "raw_links": 100,
+    "unique_ids": 50,
+    "example_ids": [
+      "https://justjoin.it/job-offer/emagine-polska-super-niche-iot-edge-architect-london-architecture",
+      "https://justjoin.it/job-offer/emagine-polska-senior-data-engineer---teradata-lisbon-data-e17793fc"
+    ],
+    "overlap_base": 1
+  },
+  "page30": {
+    "status": 200,
+    "h1": [
+      "Job offers    19\u00a0756 offers"
+    ],
+    "raw_links": 100,
+    "unique_ids": 50,
+    "example_ids": [
+      "https://justjoin.it/job-offer/epam-systems-senior-ai-engineer-wroclaw-ai-8ec81af9",
+      "https://justjoin.it/job-offer/epam-systems-senior-sap-mdg-developer-wroclaw-erp"
+    ],
+    "overlap_base": 0
+  },
+  "page31": {
+    "status": 200,
+    "h1": [
+      "Job offers    19\u00a0756 offers"
+    ],
+    "raw_links": 100,
+    "unique_ids": 50,
+    "example_ids": [
+      "https://justjoin.it/job-offer/epam-systems-salesforce-technical-architect-katowice-architecture",
+      "https://justjoin.it/job-offer/epam-systems-senior-agentic-automation-engineer-warsaw-ai"
+    ],
+    "overlap_base": 0
+  },
+  "from100": {
+    "status": 200,
+    "h1": [
+      "Work: All offers - 19\u00a0756 offers"
+    ],
+    "raw_links": 100,
+    "unique_ids": 50,
+    "example_ids": [
+      "https://justjoin.it/job-offer/epam-systems-senior-technical-consultant-microsoft-azure--wroclaw-architecture-aa3f9a04",
+      "https://justjoin.it/job-offer/epam-systems-senior-technical-consultant-microsoft-azure--krakow-architecture-b773eaa6"
+    ],
+    "overlap_base": 50
+  }
+}

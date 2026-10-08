@@ -1,0 +1,312 @@
+{
+  "as_of_utc": "2026-10-08T03:01:41.564705+00:00",
+  "scope": "listing-only; no offer details; no worker resume",
+  "aplikuj": {
+    "source": "https://www.aplikuj.pl/praca/it-informatyka",
+    "site_declared": 509,
+    "pages_checked": 11,
+    "page_rows": 509,
+    "unique_listing_ids": 509,
+    "conservative_it_title_signal": 114,
+    "not_automatically_accepted": 395,
+    "sample_accepted": [
+      {
+        "id": "3309779",
+        "title": "Młodszy Specjalista IT / IT Support Specialist (K/M)",
+        "url": "https://www.aplikuj.pl/oferta/3309779/mlodszy-specjalista-it-it-support-specialist-k-m-umowa-o-prace-bilfinger-isp-poland",
+        "conservative_it": true
+      },
+      {
+        "id": "3326803",
+        "title": "Analityk Systemowo-Biznesowy",
+        "url": "https://www.aplikuj.pl/oferta/3326803/analityk-systemowo-biznesowy-kontrakt-b2b-tukano-software-house",
+        "conservative_it": true
+      },
+      {
+        "id": "3317608",
+        "title": "Informatyk / informatyczka",
+        "url": "https://www.aplikuj.pl/oferta/3317608/informatyk-informatyczka-umowa-o-prace-beskidzkie-centrum-medyczne-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3301054",
+        "title": "Senior IT Analyst Business Systems - Manufacturing",
+        "url": "https://www.aplikuj.pl/oferta/3301054/senior-it-analyst-business-systems-manufacturing-umowa-o-prace-cooper-standard-polska-sp-z-o-o-oddzial-w-bielsku-bialej",
+        "conservative_it": true
+      },
+      {
+        "id": "3313396",
+        "title": "Programista LowCode Mendix",
+        "url": "https://www.aplikuj.pl/oferta/3313396/programista-lowcode-mendix-umowa-o-prace-saleshr",
+        "conservative_it": true
+      },
+      {
+        "id": "3313362",
+        "title": "Wdrożeniowiec / Konsultant oprogramowania enova365 (M/K)",
+        "url": "https://www.aplikuj.pl/oferta/3313362/wdrozeniowiec-konsultant-oprogramowania-enova365-m-k-umowa-o-prace-mar-kom-star-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3299747",
+        "title": "IT Process Manager",
+        "url": "https://www.aplikuj.pl/oferta/3299747/it-process-manager-umowa-o-prace-manpowergroup-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3299728",
+        "title": "WMS System Specialist",
+        "url": "https://www.aplikuj.pl/oferta/3299728/wms-system-specialist-umowa-o-prace-manpowergroup-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3292634",
+        "title": "RPA Developer (UiPath)",
+        "url": "https://www.aplikuj.pl/oferta/3292634/rpa-developer-uipath-kontrakt-b2b-manpowergroup-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3329579",
+        "title": "Programista PLC (Product Development)",
+        "url": "https://www.aplikuj.pl/oferta/3329579/programista-plc-product-development-umowa-o-prace-manpowergroup-sp-z-o-o",
+        "conservative_it": true
+      },
+      {
+        "id": "3341503",
+        "title": "Inspektor/inspektorka ds. łączności i informatyki",
+        "url": "https://www.aplikuj.pl/oferta/3341503/inspektor-inspektorka-ds-lacznosci-i-informatyki-umowa-o-prace",
+        "conservative_it": true
+      },
+      {
+        "id": "3335134",
+        "title": "Główny specjalista/główna specjalistka ds. bezpieczeństwa teleinformatycznego i cyberbezpieczeństwa",
+        "url": "https://www.aplikuj.pl/oferta/3335134/glowny-specjalista-glowna-specjalistka-ds-bezpieczenstwa-teleinformatycznego-i-cyberbezpieczenstwa-umowa-o-prace",
+        "conservative_it": true
+      }
+    ],
+    "sample_review": [
+      {
+        "id": "3332471",
+        "title": "Specjalista ds. ITAR / Export Compliance M/K",
+        "url": "https://www.aplikuj.pl/oferta/3332471/specjalista-ds-itar-export-compliance-m-k-umowa-o-prace-szczesniak-pojazdy-specjalne-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3314919",
+        "title": "Nauczyciel / nauczycielka informatyki",
+        "url": "https://www.aplikuj.pl/oferta/3314919/nauczyciel-nauczycielka-informatyki-umowa-o-prace-szkola-podstawowa-elf",
+        "conservative_it": false
+      },
+      {
+        "id": "3339960",
+        "title": "Administrator/ Administratorka Infrastruktury Teleinformatycznej",
+        "url": "https://www.aplikuj.pl/oferta/3339960/administrator-administratorka-infrastruktury-teleinformatycznej-umowa-o-prace-polska-spolka-gazownictwa-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3322480",
+        "title": "Bezpłatna Praktyka Studencka w WhitePress – Rozwiń Swoje Skrzydła!",
+        "url": "https://www.aplikuj.pl/oferta/3322480/bezplatna-praktyka-studencka-w-whitepress-rozwin-swoje-skrzydla-umowa-o-prace-whitepress",
+        "conservative_it": false
+      },
+      {
+        "id": "3321441",
+        "title": "Specjalista ds. digital marketingu (k/m)",
+        "url": "https://www.aplikuj.pl/oferta/3321441/specjalista-ds-digital-marketingu-k-m-umowa-o-prace-keno-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3001521",
+        "title": "Specjalista/-ka ds. wsparcia administracyjnego – dział IT",
+        "url": "https://www.aplikuj.pl/oferta/3001521/specjalista-ka-ds-wsparcia-administracyjnego-dzial-it-umowa-o-prace-tymczasowa-manpowergroup-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3001520",
+        "title": "Specjalista/-ka ds. wsparcia administracyjnego – dział IT",
+        "url": "https://www.aplikuj.pl/oferta/3001520/specjalista-ka-ds-wsparcia-administracyjnego-dzial-it-umowa-o-prace-tymczasowa-manpowergroup-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3240983",
+        "title": "Learning System Specialist (LMS) with German (K/M)",
+        "url": "https://www.aplikuj.pl/oferta/3240983/learning-system-specialist-lms-with-german-k-m-umowa-o-prace-manpowergroup-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3239659",
+        "title": "Learning System Specialist (LMS) with Italian/Turkish (K/M)",
+        "url": "https://www.aplikuj.pl/oferta/3239659/learning-system-specialist-lms-with-italian-turkish-k-m-umowa-o-prace-manpowergroup-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3338779",
+        "title": "Specjalista/specjalistka ds. administrowania i obsługi sieci informatycznych, sprzętu komputerowego",
+        "url": "https://www.aplikuj.pl/oferta/3338779/specjalista-specjalistka-ds-administrowania-i-obslugi-sieci-informatycznych-sprzetu-komputerowego-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3336109",
+        "title": "Starszy specjalista/starsza specjalistka ds. Jednoosobowego Stanowiska do Spraw Łączności i Informat",
+        "url": "https://www.aplikuj.pl/oferta/3336109/starszy-specjalista-starsza-specjalistka-ds-jednoosobowego-stanowiska-do-spraw-lacznosci-i-informat-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3336096",
+        "title": "Specjalista/specjalistka ds. administrowania danymi przetwarzanymi w Krajowym Systemie Informacyjnym",
+        "url": "https://www.aplikuj.pl/oferta/3336096/specjalista-specjalistka-ds-administrowania-danymi-przetwarzanymi-w-krajowym-systemie-informacyjnym-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3334141",
+        "title": "Starszy specjalista/starsza specjalistka ds. bezpieczeństwa systemów IT",
+        "url": "https://www.aplikuj.pl/oferta/3334141/starszy-specjalista-starsza-specjalistka-ds-bezpieczenstwa-systemow-it-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3334137",
+        "title": "Główny specjalista/główna specjalistka w Wydziale Rozwoju Usług Informatycznych, Biuro Zarządzania K",
+        "url": "https://www.aplikuj.pl/oferta/3334137/glowny-specjalista-glowna-specjalistka-w-wydziale-rozwoju-uslug-informatycznych-biuro-zarzadzania-k-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3334134",
+        "title": "Główny specjalista/główna specjalistka ds. realizacji zadań prawno-regulacyjnych w obszarze Systemu",
+        "url": "https://www.aplikuj.pl/oferta/3334134/glowny-specjalista-glowna-specjalistka-ds-realizacji-zadan-prawno-regulacyjnych-w-obszarze-systemu-umowa-o-prace",
+        "conservative_it": false
+      },
+      {
+        "id": "3342069",
+        "title": "Security Analyst, Threat Intelligence &amp; Incident Response",
+        "url": "https://www.aplikuj.pl/oferta/3342069/security-analyst-threat-intelligence-ampamp-incident-response-umowa-o-prace-michael-page-international-poland-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3338822",
+        "title": "Senior Network Administrator (Zscaler) - IT Contracting",
+        "url": "https://www.aplikuj.pl/oferta/3338822/senior-network-administrator-zscaler-it-contracting-umowa-o-prace-michael-page-international-poland-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3338820",
+        "title": "Specjalista/ka ds. Rozliczeń - IT Contracting",
+        "url": "https://www.aplikuj.pl/oferta/3338820/specjalista-ka-ds-rozliczen-it-contracting-umowa-o-prace-michael-page-international-poland-sp-z-o-o",
+        "conservative_it": false
+      },
+      {
+        "id": "3338490",
+        "title": "Specjalista do spraw administrowania i obsługi sieci informatycznych",
+        "url": "https://www.aplikuj.pl/oferta/3338490/specjalista-do-spraw-administrowania-i-obslugi-sieci-informatycznych-umowa-o-prace-komenda-miejska-policji-w-grudziadzu",
+        "conservative_it": false
+      },
+      {
+        "id": "3338334",
+        "title": "Starszy specjalista ds. analizy biznesowej it/deweloper systemu work (nr ref.: cł_ba-it_28_2026) k/m",
+        "url": "https://www.aplikuj.pl/oferta/3338334/starszy-specjalista-ds-analizy-biznesowej-it-deweloper-systemu-work-nr-ref-cl_ba-it_28_2026-k-m-umowa-o-prace-centrum-lukasiewicz",
+        "conservative_it": false
+      },
+      {
+        "id": "3338259",
+        "title": "Pozostali technicy wsparcia informatycznego i technicznego (k/m)",
+        "url": "https://www.aplikuj.pl/oferta/3338259/pozostali-technicy-wsparcia-informatycznego-i-technicznego-k-m-staz-praktyka",
+        "conservative_it": false
+      },
+      {
+        "id": "3337948",
+        "title": "Nauczyciel/nauczycielka  informatyki",
+        "url": "https://www.aplikuj.pl/oferta/3337948/nauczyciel-nauczycielka-informatyki-umowa-o-prace",
+        "conservative_it": false
+      }
+    ],
+    "per_page": [
+      {
+        "page": 1,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 2,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 3,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 4,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 5,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 6,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 7,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 8,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 9,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 10,
+        "site_declared": 509,
+        "listed_cards": 50
+      },
+      {
+        "page": 11,
+        "site_declared": 509,
+        "listed_cards": 9
+      }
+    ]
+  },
+  "teamquest": {
+    "status": 200,
+    "url": "https://teamquest.pl/praca-w-it",
+    "h1": [
+      "Oferty pracy w IT"
+    ],
+    "declared": 109
+  },
+  "justjoinit": {
+    "status": 200,
+    "url": "https://justjoin.it/job-offers/all-locations",
+    "h1": [
+      "",
+      "Work: All offers - 19 756 offers"
+    ],
+    "declared": null
+  },
+  "nofluffjobs": {
+    "status": 200,
+    "url": "https://nofluffjobs.com/pl/it",
+    "h1": [
+      "Tu znajdziesz nową pracę. Sprawdź zarobki i aplikuj.",
+      "Otrzymuj dopasowane oferty pracy"
+    ],
+    "declared": null
+  },
+  "bulldogjob": {
+    "status": 200,
+    "url": "https://bulldogjob.com/companies/jobs",
+    "h1": [
+      "IT Job Offers"
+    ],
+    "declared": null
+  }
+}
