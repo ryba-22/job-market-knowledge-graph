@@ -74,6 +74,11 @@ def identity(record: dict) -> str:
 
 
 def classify_title(title: str) -> str:
+    # Negative controls: a marketing "platform" is not Platform Engineering.
+    if re.search(r"\b(?:PPC|SEO|SEM|marketing|marketer|sales|sprzedaż|account manager)\b", title, re.I) and not re.search(
+        r"\b(?:software engineer|developer|architect|architekt|programist)\b", title, re.I
+    ):
+        return "nontechnical"
     for family, pattern in FAMILY:
         if pattern.search(title):
             return family
@@ -160,6 +165,26 @@ def language_candidate(record: dict) -> str:
     if en >= 2:
         return "en"
     return "pl" if len(re.findall("[ąćęłńóśźż]", text)) >= 3 else "unknown"
+
+
+def reviewer_source_text(record: dict) -> str:
+    """Complete available archived evidence projection, with typed source rows.
+
+    This is still a projection, NOT a claim that the original page was complete.
+    """
+    base = candidate_text(record)
+    sem = get_sem(record)
+    req = sem.get("requirements") or {}
+    specs = sem.get("specs") or {}
+    sections = []
+    for field, heading in (("musts", "SOURCE STRUCTURED MUSTS"), ("nices", "SOURCE STRUCTURED NICE-TO-HAVES")):
+        vals = [x.get("value") for x in req.get(field) or [] if isinstance(x, dict) and x.get("value")]
+        if vals:
+            sections.append(f"[{heading}]\n" + "\n".join("- " + str(v) for v in vals))
+    tasks = [v for v in specs.get("dailyTasks") or [] if isinstance(v, str)]
+    if tasks:
+        sections.append("[SOURCE DAILY TASKS]\n" + "\n".join("- " + v for v in tasks))
+    return base + ("\n\n" + "\n\n".join(sections) if sections else "")
 
 
 def sample_corpus(records: list[dict], quota: dict[str, int]) -> list[dict]:

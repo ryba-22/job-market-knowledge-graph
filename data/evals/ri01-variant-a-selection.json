@@ -1,0 +1,2832 @@
+{
+  "format": "ri01-variant-a-v1",
+  "decision": "A",
+  "corpus": "data/corpora/corpus-10/corpus.jsonl.gz",
+  "original_200": [
+    {
+      "posting_id": "bulldogjob:256210",
+      "revision_id": 230,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:254957",
+      "revision_id": 49,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:254870",
+      "revision_id": 4,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:256206",
+      "revision_id": 226,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:251708",
+      "revision_id": 85,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255644",
+      "revision_id": 118,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:256200",
+      "revision_id": 221,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255872",
+      "revision_id": 97,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255857",
+      "revision_id": 90,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255251",
+      "revision_id": 11,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:256074",
+      "revision_id": 170,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255560",
+      "revision_id": 105,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:247248",
+      "revision_id": 29,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255740",
+      "revision_id": 56,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:206609",
+      "revision_id": 65,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:233932",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255586",
+      "revision_id": 112,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255763",
+      "revision_id": 65,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255374",
+      "revision_id": 50,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255176",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3644",
+      "revision_id": "local-itleaders-3644-4504ed9206446fe2",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "itleaders:3636",
+      "revision_id": "local-itleaders-3636-36615f5b29c3ade8",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3646",
+      "revision_id": "local-itleaders-3646-dc757dce6f80a382",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3767",
+      "revision_id": "local-itleaders-3767-83e8e08805185205",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3818",
+      "revision_id": "local-itleaders-3818-fd08c5611d40202c",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3851",
+      "revision_id": "local-itleaders-3851-7f4920bab37779c4",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "itleaders:3643",
+      "revision_id": "local-itleaders-3643-33285e2e1122a85a",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3645",
+      "revision_id": "local-itleaders-3645-8072966c649630c0",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3716",
+      "revision_id": "local-itleaders-3716-a4d987653d1062db",
+      "split": "development"
+    },
+    {
+      "posting_id": "itleaders:3593",
+      "revision_id": "local-itleaders-3593-f9eb38fe34413019",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:act-digital-analityk-biznesowy---salesforce-crm-warszawa-analytics",
+      "revision_id": 21,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:cloudflight-angular-stream-leader-wroclaw-javascript-70da1847",
+      "revision_id": 187,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:be-in-it--full-stack-developer-java-react--katowice-java",
+      "revision_id": 22,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:itlt-manual-qa-engineer-wroclaw-testing",
+      "revision_id": 208,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:air-space-intelligence-senior-frontend-software-engineer-gdansk-javascript-c054086d",
+      "revision_id": 134,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:comarch-specjalista-ds-cyberbezpieczenstwa-k-m-x--krakow-security",
+      "revision_id": 195,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:astek-polska-programista-android---kotlin-multiplatform-warszawa-mazowieckie--mobile",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capco-poland-senior-ai-fullstack-engineer-krakow-ai",
+      "revision_id": 77,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:standard-chartered-gbs-lead-software-engineer-warszawa-java",
+      "revision_id": 73,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:accenture-junior-azure-data-engineer-with-databricks-ai-data--warszawa-data-c50b0a1e",
+      "revision_id": 13,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capgemini-senior-consultant-workday-integration--wroclaw-other",
+      "revision_id": 173,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:g2a-ai-program-coordinator-pmo-ai--warszawa-ai",
+      "revision_id": 181,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:link-group-qa-engineer-warszawa-testing-9e6264f1",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:emagine-polska-senior-infrastructure-architect-d365--warszawa-architecture-e3936197",
+      "revision_id": 199,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capgemini-polska-senior-lead-engineer-ai--krakow-ai",
+      "revision_id": 169,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:comarch-principal-product-manager-krakow-pm",
+      "revision_id": 194,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:clurgo-principal-software-engineer-warszawa-java",
+      "revision_id": 190,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:intent-quality-assurance-lead-warszawa-testing-bb821291",
+      "revision_id": 151,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:cloudatus-senior-it-project-manager---head-of-professional-services-rzeszow-pm",
+      "revision_id": 185,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:blazity-sp-z-o-o--mid-full-stack-developer-react-next-js-typescript-warszawa-javascript",
+      "revision_id": 180,
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7109447",
+      "revision_id": "local-michaelpage-jn-092026-7109447-6c0b2d0700bc7345",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-102026-7119481",
+      "revision_id": "local-michaelpage-jn-102026-7119481-4d1913e0c380a792",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7107872",
+      "revision_id": "local-michaelpage-jn-092026-7107872-427edffef9a21734",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7113051",
+      "revision_id": "local-michaelpage-jn-092026-7113051-3390f5e21effa657",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7113194",
+      "revision_id": "local-michaelpage-jn-092026-7113194-bd8afa83ca0bb6eb",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7099993",
+      "revision_id": "local-michaelpage-jn-092026-7099993-35151c84666c5d77",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-072026-7070873",
+      "revision_id": "local-michaelpage-jn-072026-7070873-a2111e6a770ed5f2",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7107913",
+      "revision_id": "local-michaelpage-jn-092026-7107913-0a57f0b78e6470a4",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7082104",
+      "revision_id": "local-michaelpage-jn-082026-7082104-a03504d6c08300d8",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7095320",
+      "revision_id": "local-michaelpage-jn-092026-7095320-75c0b38eeda34857",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-072026-7070864",
+      "revision_id": "local-michaelpage-jn-072026-7070864-01172d1dc8603850",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-102026-7120291",
+      "revision_id": "local-michaelpage-jn-102026-7120291-39235c50d19da06e",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7105955",
+      "revision_id": "local-michaelpage-jn-092026-7105955-59c032b268c2275c",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-052026-7020978",
+      "revision_id": "local-michaelpage-jn-052026-7020978-f53147d44cddacaa",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7090735",
+      "revision_id": "local-michaelpage-jn-082026-7090735-65b6d80c5fc00540",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7109527",
+      "revision_id": "local-michaelpage-jn-092026-7109527-09f7e7ec17f370d7",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7112198",
+      "revision_id": "local-michaelpage-jn-092026-7112198-b44ee30f6b331bbd",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7084521",
+      "revision_id": "local-michaelpage-jn-082026-7084521-e582f7e2f5f866ea",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-062026-7040940",
+      "revision_id": "local-michaelpage-jn-062026-7040940-785d4e7d20e13c4b",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-052026-7014049",
+      "revision_id": "local-michaelpage-jn-052026-7014049-eec8d34fc2e632cd",
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:AAI1EEEC",
+      "revision_id": 74,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:WKRIKZZW",
+      "revision_id": 88,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:4SLKCLTI",
+      "revision_id": 174,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:I0PUVXZR",
+      "revision_id": 130,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:3XUUPBFO",
+      "revision_id": 143,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:5BTVGNXZ",
+      "revision_id": 194,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:BV0G43SY",
+      "revision_id": 15,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:HCG7CHWF",
+      "revision_id": 93,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:39SWW749",
+      "revision_id": 117,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:O7BFMEIT",
+      "revision_id": 172,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:AA7YATP6",
+      "revision_id": 99,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:UBOLUQDJ",
+      "revision_id": 273,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:6JGZUH3R",
+      "revision_id": 232,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:2RZFAEUC",
+      "revision_id": 101,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2P7R4TSX",
+      "revision_id": 94,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2USQ7GYI",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:0CPJGTRT",
+      "revision_id": 9,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:LYJCWCV4",
+      "revision_id": 143,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2PAFWHC3",
+      "revision_id": 98,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:4LFBDJDB",
+      "revision_id": 167,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:JZZUAHAH",
+      "revision_id": 87,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:XOOWP8KT",
+      "revision_id": 81,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2LVO133O",
+      "revision_id": 94,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:35WOTPPS",
+      "revision_id": 83,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:9VVEFD5Z",
+      "revision_id": 80,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005132819",
+      "revision_id": 45,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005129158",
+      "revision_id": 34,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005129211",
+      "revision_id": 3,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005123626",
+      "revision_id": 14,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "pracuj:1005129318",
+      "revision_id": 22,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005135786",
+      "revision_id": 24,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005135313",
+      "revision_id": 41,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005129271",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005135369",
+      "revision_id": 37,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005099832",
+      "revision_id": 25,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005135143",
+      "revision_id": 54,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005112850",
+      "revision_id": 18,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "pracuj:1005081421",
+      "revision_id": 13,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005099023",
+      "revision_id": 9,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "pracuj:1005128864",
+      "revision_id": 75,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005130166",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005129272",
+      "revision_id": 38,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005114560",
+      "revision_id": 27,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005101329",
+      "revision_id": 28,
+      "split": "development"
+    },
+    {
+      "posting_id": "pracuj:1005129345",
+      "revision_id": 4,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:zue-s-a--robotnik-torowy-k-m--lomza-budownictwo-infrastrukturalne",
+      "revision_id": 29,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-technology-digital-strategy-manager-warszawa-consulting-it-telekomunikacja",
+      "revision_id": 115,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:hirewise---rekrutacja-w-sprzedazy-i-marketingu-konsultant-konsultantka-sprzedazy---dolacz-do-zespolu-wisegroup--gliwice-sales-uslugi-profesjonalne",
+      "revision_id": 124,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-responsible-ai-data-and-monitoring-manager-warszawa-consulting-it-telekomunikacja",
+      "revision_id": 108,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-junior-order-to-cash-specialist-with-german-the-agile-team--gdansk-support-uslugi-profesjonalne",
+      "revision_id": 102,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:nationale-nederlanden-specjalista-ds-ubezpieczen-gotowe-leady-narzedzia-ai--poznan-sales-finanse-bankowosc-ubezpieczenia",
+      "revision_id": 178,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adampol-s-a--mlodszy-specjalista-mlodsza-specjalistka-ds-obslugi-klienta-logistycznego-malaszewicze-support-motoryzacja-transport-6bfc5971",
+      "revision_id": 154,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:abc-work-technical-project-manager---architekt-architektka-stoiska-targowe--poznan-budownictwo-architektura-projektowanie-06cf6620",
+      "revision_id": 84,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:action-gear-brands-starszy-specjalista-starsza-specjalistka-ds-marketplace-rynki-europejskie--lodz-marketing-ecommerce",
+      "revision_id": 120,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-sales-senior-manager-accenture-song-warszawa-sales-it-i-telekomunikacja",
+      "revision_id": 109,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:capgemini-supply-chain-transformation-lead-fulfillment-order-management-consulting--krakow-consulting-biznes-strategia",
+      "revision_id": 133,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:six-cloud-data-engineer-warszawa-inzynieria-technologia-konstrukcje",
+      "revision_id": 175,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:limango--senior-business-analyst-m-f-d--wroclaw-marketing-ecommerce",
+      "revision_id": 12,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adampol-s-a--starszy-specjalista-starsza-specjalistka-ds-sprzedazy-uslug-logistycznych-cargo-zascianki-sales-motoryzacja-transport",
+      "revision_id": 162,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:six-junior-data-scientist-warszawa-bi-data",
+      "revision_id": 176,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:capgemini-executive-assistant-with-german--krakow-praca-biurowa-stanowiska-asystenckie-e35db392",
+      "revision_id": 136,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adshero-junior-product-owner-warszawa-marketing-ecommerce",
+      "revision_id": 181,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:ab-industry-programista-systemow-automatyki-macierzysz-inzynieria-automatyka-5b21e1d7",
+      "revision_id": 41,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:pit-radwar-s-a--specjalista-ds-cyberbezpieczenstwa-ot-k-m--warszawa-inne",
+      "revision_id": 55,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:cyclad-customer-care-advisor-with-german-krakow-support-it-i-telekomunikacja",
+      "revision_id": 197,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:people-hub-poland-mobilny-technik-serwisu-wozkow-widlowych-gizycko-i-okolice-m-k-n--gizycko-inzynieria-mechanika-32d2d84b",
+      "revision_id": 199,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:addepto-marketing-specialist---europe-warszawa-marketing-marketing-b40f4ba2",
+      "revision_id": 171,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:zue-s-a--kierownik-robot-torowych-infrastruktura-kolejowa-k-m--gdynia-budownictwo-infrastrukturalne",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-junior-salesforce-consultant--internship-program-she-he-they--warszawa-bi-data-91d3d319",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:addepto-senior-marketing-specialist---europe-warszawa-marketing-marketing-e04ec1aa",
+      "revision_id": 173,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:38859",
+      "revision_id": 77,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:38553",
+      "revision_id": 47,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:30828",
+      "revision_id": 13,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:36432",
+      "revision_id": 90,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:31627",
+      "revision_id": 11,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38376",
+      "revision_id": 145,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34610",
+      "revision_id": 77,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38454",
+      "revision_id": 210,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38713",
+      "revision_id": 190,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37866",
+      "revision_id": 154,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:37113",
+      "revision_id": 189,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:36422",
+      "revision_id": 88,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34508",
+      "revision_id": 24,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37459",
+      "revision_id": 115,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:33384",
+      "revision_id": 87,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34736",
+      "revision_id": 144,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:35754",
+      "revision_id": 26,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:35677",
+      "revision_id": 173,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37251",
+      "revision_id": 34,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38907",
+      "revision_id": 4,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:31646",
+      "revision_id": 12,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:30864",
+      "revision_id": 2,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38324",
+      "revision_id": 101,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37004",
+      "revision_id": 147,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:34968",
+      "revision_id": 98,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102460",
+      "revision_id": 22,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:103041",
+      "revision_id": 59,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:94110",
+      "revision_id": 115,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:103256",
+      "revision_id": 104,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102280",
+      "revision_id": 15,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102480",
+      "revision_id": 24,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:103056",
+      "revision_id": 74,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102560",
+      "revision_id": 27,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:103220",
+      "revision_id": 87,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102202",
+      "revision_id": 12,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:103090",
+      "revision_id": 79,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:102970",
+      "revision_id": 36,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:94950",
+      "revision_id": 118,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:97050",
+      "revision_id": 121,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:103190",
+      "revision_id": 84,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:88650",
+      "revision_id": 110,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:94090",
+      "revision_id": 114,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:102950",
+      "revision_id": 34,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "teamquest:99290",
+      "revision_id": 122,
+      "split": "development"
+    },
+    {
+      "posting_id": "teamquest:99370",
+      "revision_id": 124,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-0a66-08df2460229a",
+      "revision_id": 9,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-c83d-08df245eb528",
+      "revision_id": 13,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-e117-08df2450c30d",
+      "revision_id": 37,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-d43a-08df2458ac38",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-bf7f-08df245b40cb",
+      "revision_id": 17,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-5559-08df245dbc3b",
+      "revision_id": 14,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-d02e-08df2457dec8",
+      "revision_id": 25,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-178b-08df244e8117",
+      "revision_id": 43,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-7305-08df2455ed49",
+      "revision_id": 27,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-6591-08df24605bc3",
+      "revision_id": 8,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-7f28-08df244bc830",
+      "revision_id": 46,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-f939-08df24524764",
+      "revision_id": 33,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-a69e-08df2461699b",
+      "revision_id": 1,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-3755-08df244ff0e3",
+      "revision_id": 41,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-ce8f-08df245114c0",
+      "revision_id": 36,
+      "split": "holdout"
+    }
+  ],
+  "kept": [
+    {
+      "posting_id": "bulldogjob:256210",
+      "revision_id": 230,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:254957",
+      "revision_id": 49,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:254870",
+      "revision_id": 4,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:256206",
+      "revision_id": 226,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:251708",
+      "revision_id": 85,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255644",
+      "revision_id": 118,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:256200",
+      "revision_id": 221,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255872",
+      "revision_id": 97,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255857",
+      "revision_id": 90,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255251",
+      "revision_id": 11,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:256074",
+      "revision_id": 170,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255560",
+      "revision_id": 105,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:247248",
+      "revision_id": 29,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255740",
+      "revision_id": 56,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:206609",
+      "revision_id": 65,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:233932",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255586",
+      "revision_id": 112,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:255763",
+      "revision_id": 65,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255374",
+      "revision_id": 50,
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255176",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:act-digital-analityk-biznesowy---salesforce-crm-warszawa-analytics",
+      "revision_id": 21,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:cloudflight-angular-stream-leader-wroclaw-javascript-70da1847",
+      "revision_id": 187,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:be-in-it--full-stack-developer-java-react--katowice-java",
+      "revision_id": 22,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:itlt-manual-qa-engineer-wroclaw-testing",
+      "revision_id": 208,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:air-space-intelligence-senior-frontend-software-engineer-gdansk-javascript-c054086d",
+      "revision_id": 134,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:comarch-specjalista-ds-cyberbezpieczenstwa-k-m-x--krakow-security",
+      "revision_id": 195,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:astek-polska-programista-android---kotlin-multiplatform-warszawa-mazowieckie--mobile",
+      "revision_id": 7,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capco-poland-senior-ai-fullstack-engineer-krakow-ai",
+      "revision_id": 77,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:standard-chartered-gbs-lead-software-engineer-warszawa-java",
+      "revision_id": 73,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:accenture-junior-azure-data-engineer-with-databricks-ai-data--warszawa-data-c50b0a1e",
+      "revision_id": 13,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capgemini-senior-consultant-workday-integration--wroclaw-other",
+      "revision_id": 173,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:g2a-ai-program-coordinator-pmo-ai--warszawa-ai",
+      "revision_id": 181,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:link-group-qa-engineer-warszawa-testing-9e6264f1",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:emagine-polska-senior-infrastructure-architect-d365--warszawa-architecture-e3936197",
+      "revision_id": 199,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:capgemini-polska-senior-lead-engineer-ai--krakow-ai",
+      "revision_id": 169,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:comarch-principal-product-manager-krakow-pm",
+      "revision_id": 194,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:clurgo-principal-software-engineer-warszawa-java",
+      "revision_id": 190,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:intent-quality-assurance-lead-warszawa-testing-bb821291",
+      "revision_id": 151,
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:cloudatus-senior-it-project-manager---head-of-professional-services-rzeszow-pm",
+      "revision_id": 185,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "justjoinit:blazity-sp-z-o-o--mid-full-stack-developer-react-next-js-typescript-warszawa-javascript",
+      "revision_id": 180,
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7109447",
+      "revision_id": "local-michaelpage-jn-092026-7109447-6c0b2d0700bc7345",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-102026-7119481",
+      "revision_id": "local-michaelpage-jn-102026-7119481-4d1913e0c380a792",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7107872",
+      "revision_id": "local-michaelpage-jn-092026-7107872-427edffef9a21734",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7113051",
+      "revision_id": "local-michaelpage-jn-092026-7113051-3390f5e21effa657",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7113194",
+      "revision_id": "local-michaelpage-jn-092026-7113194-bd8afa83ca0bb6eb",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7099993",
+      "revision_id": "local-michaelpage-jn-092026-7099993-35151c84666c5d77",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-072026-7070873",
+      "revision_id": "local-michaelpage-jn-072026-7070873-a2111e6a770ed5f2",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7107913",
+      "revision_id": "local-michaelpage-jn-092026-7107913-0a57f0b78e6470a4",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7082104",
+      "revision_id": "local-michaelpage-jn-082026-7082104-a03504d6c08300d8",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7095320",
+      "revision_id": "local-michaelpage-jn-092026-7095320-75c0b38eeda34857",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-072026-7070864",
+      "revision_id": "local-michaelpage-jn-072026-7070864-01172d1dc8603850",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-102026-7120291",
+      "revision_id": "local-michaelpage-jn-102026-7120291-39235c50d19da06e",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7105955",
+      "revision_id": "local-michaelpage-jn-092026-7105955-59c032b268c2275c",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-052026-7020978",
+      "revision_id": "local-michaelpage-jn-052026-7020978-f53147d44cddacaa",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7090735",
+      "revision_id": "local-michaelpage-jn-082026-7090735-65b6d80c5fc00540",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7109527",
+      "revision_id": "local-michaelpage-jn-092026-7109527-09f7e7ec17f370d7",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-092026-7112198",
+      "revision_id": "local-michaelpage-jn-092026-7112198-b44ee30f6b331bbd",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-082026-7084521",
+      "revision_id": "local-michaelpage-jn-082026-7084521-e582f7e2f5f866ea",
+      "split": "development"
+    },
+    {
+      "posting_id": "michaelpage:jn-062026-7040940",
+      "revision_id": "local-michaelpage-jn-062026-7040940-785d4e7d20e13c4b",
+      "split": "holdout"
+    },
+    {
+      "posting_id": "michaelpage:jn-052026-7014049",
+      "revision_id": "local-michaelpage-jn-052026-7014049-eec8d34fc2e632cd",
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:AAI1EEEC",
+      "revision_id": 74,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:WKRIKZZW",
+      "revision_id": 88,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:4SLKCLTI",
+      "revision_id": 174,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:I0PUVXZR",
+      "revision_id": 130,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:3XUUPBFO",
+      "revision_id": 143,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:5BTVGNXZ",
+      "revision_id": 194,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:BV0G43SY",
+      "revision_id": 15,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:HCG7CHWF",
+      "revision_id": 93,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:39SWW749",
+      "revision_id": 117,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:O7BFMEIT",
+      "revision_id": 172,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:AA7YATP6",
+      "revision_id": 99,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:UBOLUQDJ",
+      "revision_id": 273,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:6JGZUH3R",
+      "revision_id": 232,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:2RZFAEUC",
+      "revision_id": 101,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2P7R4TSX",
+      "revision_id": 94,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2USQ7GYI",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:0CPJGTRT",
+      "revision_id": 9,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:LYJCWCV4",
+      "revision_id": 143,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2PAFWHC3",
+      "revision_id": 98,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:4LFBDJDB",
+      "revision_id": 167,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:JZZUAHAH",
+      "revision_id": 87,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:XOOWP8KT",
+      "revision_id": 81,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:2LVO133O",
+      "revision_id": 94,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:35WOTPPS",
+      "revision_id": 83,
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:9VVEFD5Z",
+      "revision_id": 80,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:zue-s-a--robotnik-torowy-k-m--lomza-budownictwo-infrastrukturalne",
+      "revision_id": 29,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-technology-digital-strategy-manager-warszawa-consulting-it-telekomunikacja",
+      "revision_id": 115,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:hirewise---rekrutacja-w-sprzedazy-i-marketingu-konsultant-konsultantka-sprzedazy---dolacz-do-zespolu-wisegroup--gliwice-sales-uslugi-profesjonalne",
+      "revision_id": 124,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-responsible-ai-data-and-monitoring-manager-warszawa-consulting-it-telekomunikacja",
+      "revision_id": 108,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-junior-order-to-cash-specialist-with-german-the-agile-team--gdansk-support-uslugi-profesjonalne",
+      "revision_id": 102,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:nationale-nederlanden-specjalista-ds-ubezpieczen-gotowe-leady-narzedzia-ai--poznan-sales-finanse-bankowosc-ubezpieczenia",
+      "revision_id": 178,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adampol-s-a--mlodszy-specjalista-mlodsza-specjalistka-ds-obslugi-klienta-logistycznego-malaszewicze-support-motoryzacja-transport-6bfc5971",
+      "revision_id": 154,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:abc-work-technical-project-manager---architekt-architektka-stoiska-targowe--poznan-budownictwo-architektura-projektowanie-06cf6620",
+      "revision_id": 84,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:action-gear-brands-starszy-specjalista-starsza-specjalistka-ds-marketplace-rynki-europejskie--lodz-marketing-ecommerce",
+      "revision_id": 120,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-sales-senior-manager-accenture-song-warszawa-sales-it-i-telekomunikacja",
+      "revision_id": 109,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:capgemini-supply-chain-transformation-lead-fulfillment-order-management-consulting--krakow-consulting-biznes-strategia",
+      "revision_id": 133,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:six-cloud-data-engineer-warszawa-inzynieria-technologia-konstrukcje",
+      "revision_id": 175,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:limango--senior-business-analyst-m-f-d--wroclaw-marketing-ecommerce",
+      "revision_id": 12,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adampol-s-a--starszy-specjalista-starsza-specjalistka-ds-sprzedazy-uslug-logistycznych-cargo-zascianki-sales-motoryzacja-transport",
+      "revision_id": 162,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:six-junior-data-scientist-warszawa-bi-data",
+      "revision_id": 176,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:capgemini-executive-assistant-with-german--krakow-praca-biurowa-stanowiska-asystenckie-e35db392",
+      "revision_id": 136,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:adshero-junior-product-owner-warszawa-marketing-ecommerce",
+      "revision_id": 181,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:ab-industry-programista-systemow-automatyki-macierzysz-inzynieria-automatyka-5b21e1d7",
+      "revision_id": 41,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:pit-radwar-s-a--specjalista-ds-cyberbezpieczenstwa-ot-k-m--warszawa-inne",
+      "revision_id": 55,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:cyclad-customer-care-advisor-with-german-krakow-support-it-i-telekomunikacja",
+      "revision_id": 197,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:people-hub-poland-mobilny-technik-serwisu-wozkow-widlowych-gizycko-i-okolice-m-k-n--gizycko-inzynieria-mechanika-32d2d84b",
+      "revision_id": 199,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "rocketjobs:addepto-marketing-specialist---europe-warszawa-marketing-marketing-b40f4ba2",
+      "revision_id": 171,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:zue-s-a--kierownik-robot-torowych-infrastruktura-kolejowa-k-m--gdynia-budownictwo-infrastrukturalne",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:accenture-junior-salesforce-consultant--internship-program-she-he-they--warszawa-bi-data-91d3d319",
+      "revision_id": 103,
+      "split": "development"
+    },
+    {
+      "posting_id": "rocketjobs:addepto-senior-marketing-specialist---europe-warszawa-marketing-marketing-e04ec1aa",
+      "revision_id": 173,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:38859",
+      "revision_id": 77,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:38553",
+      "revision_id": 47,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:30828",
+      "revision_id": 13,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:36432",
+      "revision_id": 90,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:31627",
+      "revision_id": 11,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38376",
+      "revision_id": 145,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34610",
+      "revision_id": 77,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38454",
+      "revision_id": 210,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38713",
+      "revision_id": 190,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37866",
+      "revision_id": 154,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:37113",
+      "revision_id": 189,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:36422",
+      "revision_id": 88,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34508",
+      "revision_id": 24,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37459",
+      "revision_id": 115,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:33384",
+      "revision_id": 87,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:34736",
+      "revision_id": 144,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:35754",
+      "revision_id": 26,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:35677",
+      "revision_id": 173,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37251",
+      "revision_id": 34,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38907",
+      "revision_id": 4,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:31646",
+      "revision_id": 12,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:30864",
+      "revision_id": 2,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38324",
+      "revision_id": 101,
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37004",
+      "revision_id": 147,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "solidjobs:34968",
+      "revision_id": 98,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-0a66-08df2460229a",
+      "revision_id": 9,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-c83d-08df245eb528",
+      "revision_id": 13,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-e117-08df2450c30d",
+      "revision_id": 37,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-d43a-08df2458ac38",
+      "revision_id": 20,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-bf7f-08df245b40cb",
+      "revision_id": 17,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-5559-08df245dbc3b",
+      "revision_id": 14,
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-d02e-08df2457dec8",
+      "revision_id": 25,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-178b-08df244e8117",
+      "revision_id": 43,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-7305-08df2455ed49",
+      "revision_id": 27,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-6591-08df24605bc3",
+      "revision_id": 8,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-7f28-08df244bc830",
+      "revision_id": 46,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-f939-08df24524764",
+      "revision_id": 33,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-a69e-08df2461699b",
+      "revision_id": 1,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-3755-08df244ff0e3",
+      "revision_id": 41,
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-ce8f-08df245114c0",
+      "revision_id": 36,
+      "split": "holdout"
+    }
+  ],
+  "removed": [
+    {
+      "posting_id": "itleaders:3644",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3644-4504ed9206446fe2"
+    },
+    {
+      "posting_id": "itleaders:3636",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3636-36615f5b29c3ade8"
+    },
+    {
+      "posting_id": "itleaders:3646",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3646-dc757dce6f80a382"
+    },
+    {
+      "posting_id": "itleaders:3767",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3767-83e8e08805185205"
+    },
+    {
+      "posting_id": "itleaders:3818",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3818-fd08c5611d40202c"
+    },
+    {
+      "posting_id": "itleaders:3851",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3851-7f4920bab37779c4"
+    },
+    {
+      "posting_id": "itleaders:3643",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3643-33285e2e1122a85a"
+    },
+    {
+      "posting_id": "itleaders:3645",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3645-8072966c649630c0"
+    },
+    {
+      "posting_id": "itleaders:3716",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3716-a4d987653d1062db"
+    },
+    {
+      "posting_id": "itleaders:3593",
+      "source": "itleaders",
+      "revision_id": "local-itleaders-3593-f9eb38fe34413019"
+    },
+    {
+      "posting_id": "pracuj:1005132819",
+      "source": "pracuj",
+      "revision_id": 45
+    },
+    {
+      "posting_id": "pracuj:1005129158",
+      "source": "pracuj",
+      "revision_id": 34
+    },
+    {
+      "posting_id": "pracuj:1005129211",
+      "source": "pracuj",
+      "revision_id": 3
+    },
+    {
+      "posting_id": "pracuj:1005123626",
+      "source": "pracuj",
+      "revision_id": 14
+    },
+    {
+      "posting_id": "pracuj:1005129318",
+      "source": "pracuj",
+      "revision_id": 22
+    },
+    {
+      "posting_id": "pracuj:1005135786",
+      "source": "pracuj",
+      "revision_id": 24
+    },
+    {
+      "posting_id": "pracuj:1005135313",
+      "source": "pracuj",
+      "revision_id": 41
+    },
+    {
+      "posting_id": "pracuj:1005129271",
+      "source": "pracuj",
+      "revision_id": 7
+    },
+    {
+      "posting_id": "pracuj:1005135369",
+      "source": "pracuj",
+      "revision_id": 37
+    },
+    {
+      "posting_id": "pracuj:1005099832",
+      "source": "pracuj",
+      "revision_id": 25
+    },
+    {
+      "posting_id": "pracuj:1005135143",
+      "source": "pracuj",
+      "revision_id": 54
+    },
+    {
+      "posting_id": "pracuj:1005112850",
+      "source": "pracuj",
+      "revision_id": 18
+    },
+    {
+      "posting_id": "pracuj:1005081421",
+      "source": "pracuj",
+      "revision_id": 13
+    },
+    {
+      "posting_id": "pracuj:1005099023",
+      "source": "pracuj",
+      "revision_id": 9
+    },
+    {
+      "posting_id": "pracuj:1005128864",
+      "source": "pracuj",
+      "revision_id": 75
+    },
+    {
+      "posting_id": "pracuj:1005130166",
+      "source": "pracuj",
+      "revision_id": 7
+    },
+    {
+      "posting_id": "pracuj:1005129272",
+      "source": "pracuj",
+      "revision_id": 38
+    },
+    {
+      "posting_id": "pracuj:1005114560",
+      "source": "pracuj",
+      "revision_id": 27
+    },
+    {
+      "posting_id": "pracuj:1005101329",
+      "source": "pracuj",
+      "revision_id": 28
+    },
+    {
+      "posting_id": "pracuj:1005129345",
+      "source": "pracuj",
+      "revision_id": 4
+    },
+    {
+      "posting_id": "teamquest:102460",
+      "source": "teamquest",
+      "revision_id": 22
+    },
+    {
+      "posting_id": "teamquest:103041",
+      "source": "teamquest",
+      "revision_id": 59
+    },
+    {
+      "posting_id": "teamquest:94110",
+      "source": "teamquest",
+      "revision_id": 115
+    },
+    {
+      "posting_id": "teamquest:103256",
+      "source": "teamquest",
+      "revision_id": 104
+    },
+    {
+      "posting_id": "teamquest:102280",
+      "source": "teamquest",
+      "revision_id": 15
+    },
+    {
+      "posting_id": "teamquest:102480",
+      "source": "teamquest",
+      "revision_id": 24
+    },
+    {
+      "posting_id": "teamquest:103056",
+      "source": "teamquest",
+      "revision_id": 74
+    },
+    {
+      "posting_id": "teamquest:102560",
+      "source": "teamquest",
+      "revision_id": 27
+    },
+    {
+      "posting_id": "teamquest:103220",
+      "source": "teamquest",
+      "revision_id": 87
+    },
+    {
+      "posting_id": "teamquest:102202",
+      "source": "teamquest",
+      "revision_id": 12
+    },
+    {
+      "posting_id": "teamquest:103090",
+      "source": "teamquest",
+      "revision_id": 79
+    },
+    {
+      "posting_id": "teamquest:102970",
+      "source": "teamquest",
+      "revision_id": 36
+    },
+    {
+      "posting_id": "teamquest:94950",
+      "source": "teamquest",
+      "revision_id": 118
+    },
+    {
+      "posting_id": "teamquest:97050",
+      "source": "teamquest",
+      "revision_id": 121
+    },
+    {
+      "posting_id": "teamquest:103190",
+      "source": "teamquest",
+      "revision_id": 84
+    },
+    {
+      "posting_id": "teamquest:88650",
+      "source": "teamquest",
+      "revision_id": 110
+    },
+    {
+      "posting_id": "teamquest:94090",
+      "source": "teamquest",
+      "revision_id": 114
+    },
+    {
+      "posting_id": "teamquest:102950",
+      "source": "teamquest",
+      "revision_id": 34
+    },
+    {
+      "posting_id": "teamquest:99290",
+      "source": "teamquest",
+      "revision_id": 122
+    },
+    {
+      "posting_id": "teamquest:99370",
+      "source": "teamquest",
+      "revision_id": 124
+    }
+  ],
+  "replacement": [
+    {
+      "posting_id": "nofluffjobs:7VSWTAWJ",
+      "revision_id": 166,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1765,
+        "source_fragments": 19,
+        "typed_fragments": 13,
+        "family_candidate": "product_management",
+        "seniority_candidate": "mid",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:NZLSCSBX",
+      "revision_id": 136,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2093,
+        "source_fragments": 30,
+        "typed_fragments": 19,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:Z1GRE6IS",
+      "revision_id": 44,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1945,
+        "source_fragments": 25,
+        "typed_fragments": 13,
+        "family_candidate": "data",
+        "seniority_candidate": "lead",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:N9ABKZ0C",
+      "revision_id": 298,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1425,
+        "source_fragments": 40,
+        "typed_fragments": 22,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:110UOPZR",
+      "revision_id": 34,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2340,
+        "source_fragments": 46,
+        "typed_fragments": 32,
+        "family_candidate": "architecture",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:3Q8HJHKQ",
+      "revision_id": 131,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1565,
+        "source_fragments": 49,
+        "typed_fragments": 49,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:52H1ZSUB",
+      "revision_id": 184,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1939,
+        "source_fragments": 31,
+        "typed_fragments": 23,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "mid",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:Y0ITNCNO",
+      "revision_id": 216,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 951,
+        "source_fragments": 19,
+        "typed_fragments": 10,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "mid",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:SZCALFB1",
+      "revision_id": 13,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 909,
+        "source_fragments": 16,
+        "typed_fragments": 9,
+        "family_candidate": "data",
+        "seniority_candidate": "senior",
+        "language_candidate": "pl"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "nofluffjobs:ZA0U3TR3",
+      "revision_id": 237,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2253,
+        "source_fragments": 22,
+        "typed_fragments": 15,
+        "family_candidate": "architecture",
+        "seniority_candidate": "mid",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:LZXPKPSN",
+      "revision_id": 33,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1176,
+        "source_fragments": 27,
+        "typed_fragments": 14,
+        "family_candidate": "data",
+        "seniority_candidate": "mid",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "nofluffjobs:O1SZFZCD",
+      "revision_id": 45,
+      "source": "nofluffjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 4816,
+        "source_fragments": 20,
+        "typed_fragments": 10,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-8dcb-08df244ff4d9",
+      "revision_id": 40,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2788,
+        "source_fragments": 20,
+        "typed_fragments": 20,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-42d8-08df24558f37",
+      "revision_id": 30,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3377,
+        "source_fragments": 28,
+        "typed_fragments": 28,
+        "family_candidate": "security",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-e794-08df2455e6f2",
+      "revision_id": 29,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 4895,
+        "source_fragments": 12,
+        "typed_fragments": 12,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-f20d-08df244b1f86",
+      "revision_id": 50,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3802,
+        "source_fragments": 25,
+        "typed_fragments": 25,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "pl"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-e289-08df2457e625",
+      "revision_id": 24,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3620,
+        "source_fragments": 19,
+        "typed_fragments": 19,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "junior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-3093-08df2451f612",
+      "revision_id": 35,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3284,
+        "source_fragments": 19,
+        "typed_fragments": 19,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-4b2e-08df2455eaba",
+      "revision_id": 28,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3704,
+        "source_fragments": 16,
+        "typed_fragments": 16,
+        "family_candidate": "product_management",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-029a-5b89-591c-08df245b534e",
+      "revision_id": 16,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 4789,
+        "source_fragments": 28,
+        "typed_fragments": 28,
+        "family_candidate": "platform_devops",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "theprotocol:01000000-af85-32bc-04d3-08df2460ff4c",
+      "revision_id": 3,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2672,
+        "source_fragments": 26,
+        "typed_fragments": 26,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "theprotocol:01000000-ae91-c143-5fd7-08df245fe87c",
+      "revision_id": 11,
+      "source": "theprotocol",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2389,
+        "source_fragments": 24,
+        "typed_fragments": 24,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "mid",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255856",
+      "revision_id": 89,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 8485,
+        "source_fragments": 55,
+        "typed_fragments": 20,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "unknown"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:256001",
+      "revision_id": 158,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 6794,
+        "source_fragments": 49,
+        "typed_fragments": 30,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255366",
+      "revision_id": 43,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 4404,
+        "source_fragments": 28,
+        "typed_fragments": 17,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:256060",
+      "revision_id": 162,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 4703,
+        "source_fragments": 27,
+        "typed_fragments": 15,
+        "family_candidate": "product_management",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:254972",
+      "revision_id": 59,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 7847,
+        "source_fragments": 44,
+        "typed_fragments": 5,
+        "family_candidate": "architecture",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "holdout"
+    },
+    {
+      "posting_id": "bulldogjob:254790",
+      "revision_id": 21,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2701,
+        "source_fragments": 26,
+        "typed_fragments": 16,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:254791",
+      "revision_id": 22,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2644,
+        "source_fragments": 31,
+        "typed_fragments": 4,
+        "family_candidate": "qa",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:213759",
+      "revision_id": 7,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3516,
+        "source_fragments": 50,
+        "typed_fragments": 28,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "junior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:255863",
+      "revision_id": 94,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 3317,
+        "source_fragments": 32,
+        "typed_fragments": 18,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "bulldogjob:254971",
+      "revision_id": 58,
+      "source": "bulldogjob",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2701,
+        "source_fragments": 20,
+        "typed_fragments": 12,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37685",
+      "revision_id": 52,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1777,
+        "source_fragments": 22,
+        "typed_fragments": 12,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37675",
+      "revision_id": 49,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1469,
+        "source_fragments": 26,
+        "typed_fragments": 5,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:31264",
+      "revision_id": 133,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1848,
+        "source_fragments": 28,
+        "typed_fragments": 17,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37079",
+      "revision_id": 177,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2567,
+        "source_fragments": 31,
+        "typed_fragments": 31,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38387",
+      "revision_id": 152,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2134,
+        "source_fragments": 28,
+        "typed_fragments": 12,
+        "family_candidate": "architecture",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:38460",
+      "revision_id": 216,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1552,
+        "source_fragments": 15,
+        "typed_fragments": 15,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:37407",
+      "revision_id": 91,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1527,
+        "source_fragments": 16,
+        "typed_fragments": 6,
+        "family_candidate": "qa",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:35942",
+      "revision_id": 85,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2046,
+        "source_fragments": 25,
+        "typed_fragments": 6,
+        "family_candidate": "security",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:31321",
+      "revision_id": 148,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 2033,
+        "source_fragments": 24,
+        "typed_fragments": 9,
+        "family_candidate": "ai_ml",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "solidjobs:33638",
+      "revision_id": 193,
+      "source": "solidjobs",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 1789,
+        "source_fragments": 31,
+        "typed_fragments": 26,
+        "family_candidate": "data",
+        "seniority_candidate": "senior",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:7n-sp-z-o-o--administrator--ka-infrastruktury-warszawa-admin",
+      "revision_id": 1,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 9262,
+        "source_fragments": 16,
+        "typed_fragments": 0,
+        "family_candidate": "platform_devops",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:synerise-senior-product-designer-cracow-ux-4a55d55b",
+      "revision_id": 170,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 12195,
+        "source_fragments": 55,
+        "typed_fragments": 0,
+        "family_candidate": "ambiguous_other",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:darize-senior-android-developer-gdansk-mobile",
+      "revision_id": 211,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 9750,
+        "source_fragments": 19,
+        "typed_fragments": 0,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:bluesoft-frontend-developer-angular-warszawa-javascript",
+      "revision_id": 152,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 6178,
+        "source_fragments": 8,
+        "typed_fragments": 0,
+        "family_candidate": "frontend_mobile",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:transition-technologies-ms-senior-solution-architect-europe-architecture",
+      "revision_id": 200,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 8558,
+        "source_fragments": 8,
+        "typed_fragments": 0,
+        "family_candidate": "architecture",
+        "seniority_candidate": "senior",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:clurgo-expert-tech-lead-java-developer-warszawa-architecture",
+      "revision_id": 189,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 5409,
+        "source_fragments": 7,
+        "typed_fragments": 0,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "pl"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:bayer-sp-z-o-o--lead-software-engineer-warszawa-architecture-ebeee3ca",
+      "revision_id": 149,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 9066,
+        "source_fragments": 12,
+        "typed_fragments": 0,
+        "family_candidate": "backend_fullstack",
+        "seniority_candidate": "staff_lead",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    },
+    {
+      "posting_id": "justjoinit:experis-manpower-group-business-analyst-qa-test-engineer-german-speaking--wroclaw-analytics",
+      "revision_id": 108,
+      "source": "justjoinit",
+      "quality": {
+        "eligible": true,
+        "reasons": [],
+        "description_chars": 7790,
+        "source_fragments": 7,
+        "typed_fragments": 0,
+        "family_candidate": "qa",
+        "seniority_candidate": "unspecified",
+        "language_candidate": "en"
+      },
+      "split": "development"
+    }
+  ],
+  "policy": {
+    "keep_original_valid": 150,
+    "replace_zero_assertion": 50,
+    "replacement_quota": {
+      "nofluffjobs": 12,
+      "theprotocol": 10,
+      "bulldogjob": 10,
+      "solidjobs": 10,
+      "justjoinit": 8
+    },
+    "no_additional_crawling": true,
+    "selection_is_not_manual_gold": true,
+    "candidate_scope": "Existing frozen CORPUS-10 only"
+  },
+  "selection_correction": {
+    "reason": "PPC-marketing platform title was incorrectly categorized as Platform Engineering; replace with technical job using additional negative-title control",
+    "rejected_posting_id": "solidjobs:36214",
+    "replacement_posting_id": "solidjobs:37685"
+  }
+}

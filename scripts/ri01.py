@@ -14,7 +14,7 @@ from pathlib import Path
 from ingestion.ri01_review_ui import reviewer_html
 from ingestion.requirement_intelligence import (
     VERSION, candidate_text, classify_title, concepts, extract, identity,
-    language_candidate, sample_corpus, seniority, stable_hash, summarize,
+    language_candidate, reviewer_source_text, sample_corpus, seniority, stable_hash, summarize,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,7 +65,7 @@ small{color:#64748b;display:block;margin-top:6px;overflow-wrap:anywhere}code{fon
 @media(max-width:800px){body{padding:10px}table{display:block;overflow-x:auto}input{min-width:100%}}
 </style></head><body>
 <h1>Role Capability Explorer · RI-01</h1>
-<p>Eksplorator propozycji ekstrakcji z istniejącego korpusu. Statystyki dotyczą tylko 200 celowo dobranych rekordów, nie całego rynku pracy IT.</p>
+<p>Eksplorator propozycji ekstrakcji z istniejącego korpusu. Statystyki dotyczą wyłącznie próbki rozwojowej; holdout jest oddzielony. Nie są reprezentatywne dla całego rynku pracy IT.</p>
 <div class="notice"><strong>NIEWERYFIKOWANE:</strong> to są kandydaci wyodrębnieni algorytmem. Nie ma jeszcze zatwierdzonego goldsetu, a MUST/NICE z portali nie zawsze są zgodne z pełnym opisem. Nie interpretuj częstości jako popytu rynku.</div>
 """
     html_doc += f'<div class="metric"><b>{summary["sample_size"]}</b>Wybrane oferty</div><div class="metric"><b>{summary["candidate_assertions"]}</b>Kandydaci na stwierdzenia</div><div class="metric"><b>{summary["postings_with_assertions"]}</b>Oferty z ekstrakcją</div>'
@@ -97,6 +97,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--corpus", default="data/corpora/corpus-10/corpus.jsonl.gz")
     parser.add_argument("--out", default=".local-evidence/ri01")
+    parser.add_argument("--selection", default="data/evals/ri01-variant-a-selection.json")
+    parser.add_argument("--generate-holdout-reviewer", action="store_true",
+                        help="Explicitly create a separate blinded holdout reviewer file")
     args = parser.parse_args()
     corpus = ROOT / args.corpus
     out = ROOT / args.out
@@ -104,9 +107,26 @@ def main():
         raise SystemExit(f"No frozen corpus at {corpus}")
     with gzip.open(corpus, "rt", encoding="utf-8") as f:
         records = [json.loads(line) for line in f]
-    selected = sample_corpus(records, QUOTA)
-    if len(selected) != 200 or len({identity(r) for r in selected}) != 200:
-        raise SystemExit("Sampling integrity failure: expected 200 unique source posting IDs")
+    selection = json.loads((ROOT / args.selection).read_text(encoding="utf-8"))
+    if selection.get("format") != "ri01-variant-a-v1" or selection.get("corpus") != args.corpus:
+        raise SystemExit("Selection manifest incompatible with pinned frozen corpus")
+    lookup = {identity(r): r for r in records}
+    if len(lookup) != len(records):
+        raise SystemExit("Duplicate identities in frozen input corpus")
+    planned = selection["replacement"] + selection["kept"]
+    ids = [entry["posting_id"] for entry in planned]
+    excluded = {entry["posting_id"] for entry in selection["removed"]}
+    original = {entry["posting_id"] for entry in selection["original_200"]}
+    if not (len(ids) == len(set(ids)) == 200 and len(excluded) == 50 and len(original) == 200):
+        raise SystemExit("Selection manifest cardinality invalid")
+    if set(ids) & excluded or not set(e["posting_id"] for e in selection["kept"]).issubset(original):
+        raise SystemExit("Overlap with excluded ids or lost original continuity")
+    if set(e["posting_id"] for e in selection["replacement"]) & original:
+        raise SystemExit("Replacement has already appeared in original sample")
+    if any(x not in lookup or lookup[x].get("revision_id") != p["revision_id"]
+           for x, p in zip(ids, planned)):
+        raise SystemExit("Pinned corpus has missing or mismatched record revisions")
+    selected = [lookup[i] for i in ids]
     out.mkdir(parents=True, exist_ok=True)
     packets, assertions = [], []
     for r in selected:
@@ -128,16 +148,35 @@ def main():
     summary["language_candidates"] = dict(Counter(p["language_candidate"] for p in packets))
     summary["role_families"] = dict(Counter(p["family_candidate"] for p in packets))
     summary["seniority_candidates"] = dict(Counter(p["seniority_candidate"] for p in packets))
-    summary["selection_quota"] = QUOTA
+    summary["selection_quota"] = dict(Counter(p["source"] for p in packets))
+    summary["selection_manifest"] = args.selection
+    summary["selection_decision"] = "A"
+    summary["preserved_original"] = len(selection["kept"])
+    summary["replacements_from_frozen_corpus"] = len(selection["replacement"])
+    summary["original_incomplete_audit"] = len(selection["removed"])
+    zero = set(p["posting_id"] for p in packets) - {a["posting_id"] for a in assertions}
+    if zero:
+        raise SystemExit(f"Selection A failed: {len(zero)} new zero-assertion records ({sorted(zero)[:5]})")
     summary["corpus_path"] = args.corpus
     summary["corpus_postings"] = len(records)
     write_jsonl(out / "review-packets.jsonl", packets)
     write_jsonl(out / "assertion-candidates.jsonl", assertions)
     (out / "metrics.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (out / "explorer.html").write_text(make_explorer(assertions, summary), encoding="utf-8")
+    development = [p for p in packets if p["split"] == "development"]
+    dev_ids = {p["posting_id"] for p in development}
+    dev_assertions = [a for a in assertions if a["posting_id"] in dev_ids]
+    dev_summary = summarize([r for r in selected if identity(r) in dev_ids], dev_assertions)
+    (out / "explorer.html").write_text(make_explorer(dev_assertions, dev_summary), encoding="utf-8")
+    full_review_text = {identity(r): reviewer_source_text(r) for r in selected}
     (out / "reviewer.html").write_text(reviewer_html(
-        packets, assertions, {identity(r): candidate_text(r) for r in selected}
+        development, dev_assertions, full_review_text
     ), encoding="utf-8")
+    if args.generate_holdout_reviewer:
+        holdout = [p for p in packets if p["split"] == "holdout"]
+        holdout_ids = {p["posting_id"] for p in holdout}
+        (out / "reviewer-holdout.html").write_text(reviewer_html(
+            holdout, [a for a in assertions if a["posting_id"] in holdout_ids], full_review_text
+        ), encoding="utf-8")
     # Public-safe manifest: identifiers only, no entire descriptions or raw evidence.
     (out / "sample-ids.json").write_text(json.dumps({
         "extractor_version": VERSION,
