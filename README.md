@@ -34,3 +34,9 @@ Oferta może potwierdzić, że firma wymaga Kubernetes. Nie potwierdza sama w so
 ## Pierwszy seed
 
 T-Mobile / T-Hub — AIOps Engineer — AI Infrastructure & Orchestration, 2026-10-06.
+
+## RI-01 — evidence-backed requirements extraction (experimental)
+
+The offline baseline extracts source-linked candidate requirements, responsibilities and concept hints from frozen CORPUS-10 without resuming crawlers. It includes a reproducible 200-offer review queue, a local review workbench and a local Role Capability Explorer. Candidate labels are **not** verified ground truth; manual adjudication and quality gates remain open.
+
+See docs/ri01-execution-2026-10-08.md and docs/ri01-annotation-guidelines.md for commands, constraints, outputs, evaluation and next checkpoints. Evidence outputs with third-party advertisement excerpts remain in ignored .local-evidence/ri01/.
