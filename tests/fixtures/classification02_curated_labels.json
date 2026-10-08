@@ -1,0 +1,326 @@
+{
+  "description": "64 manually selected real posting IDs, informed by inspection of archived descriptions; diagnostic, non-independent evaluation; 2026-10-08",
+  "scope": "Technical software/data/IT systems/infrastructure/security role, excluding pure teaching, sales, logistics, industrial CNC & robot programming; hybrids abstain",
+  "cases": [
+    {
+      "id": "1398291",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "1398294",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "1903339",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "2087616",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "2836236",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "2836237",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3299728",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3299747",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3301054",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3302686",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3303186",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3313267",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3313362",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3313396",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3314775",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3316057",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3323508",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3328142",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3331981",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3331984",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3332013",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3332200",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3334177",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3335305",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3338779",
+      "expected": "IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3339960",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3341503",
+      "expected": "IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "1042074",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "1049229",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "740228",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "1964760",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3001521",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3092396",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3133758",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3241456",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3270137",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3316152",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3326404",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3336444",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3337610",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3338993",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3342145",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "1785427",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "1947556",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "2022983",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "2099814",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "2548983",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "2678121",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3296619",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3300416",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3301212",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3302368",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3309906",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3332009",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3332640",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "development"
+    },
+    {
+      "id": "3339311",
+      "expected": "NON_IT_CONFIRMED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "1454681",
+      "expected": "REVIEW_REQUIRED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "1902434",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    },
+    {
+      "id": "1109744",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    },
+    {
+      "id": "3302560",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    },
+    {
+      "id": "3335667",
+      "expected": "REVIEW_REQUIRED",
+      "split": "diagnostic_holdout"
+    },
+    {
+      "id": "3329579",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    },
+    {
+      "id": "3334141",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    },
+    {
+      "id": "3336096",
+      "expected": "REVIEW_REQUIRED",
+      "split": "development"
+    }
+  ]
+}

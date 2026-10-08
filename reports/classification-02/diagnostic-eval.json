@@ -1,0 +1,35 @@
+{
+  "method": "author-curated development/diagnostic set, NOT independent blinded gold",
+  "cases": 64,
+  "matches": 63,
+  "abstentions": [
+    {
+      "id": "3338993",
+      "expected": "NON_IT_CONFIRMED",
+      "actual": "REVIEW_REQUIRED"
+    }
+  ],
+  "disagreements": [
+    {
+      "id": "3338993",
+      "expected": "NON_IT_CONFIRMED",
+      "actual": "REVIEW_REQUIRED"
+    }
+  ],
+  "potential_unsafe_decisions": [],
+  "confusion": {
+    "IT_CONFIRMED -> IT_CONFIRMED": 27,
+    "NON_IT_CONFIRMED -> NON_IT_CONFIRMED": 28,
+    "NON_IT_CONFIRMED -> REVIEW_REQUIRED": 1,
+    "REVIEW_REQUIRED -> REVIEW_REQUIRED": 8
+  },
+  "by_split": {
+    "development: IT_CONFIRMED -> IT_CONFIRMED": 20,
+    "development: NON_IT_CONFIRMED -> NON_IT_CONFIRMED": 20,
+    "development: NON_IT_CONFIRMED -> REVIEW_REQUIRED": 1,
+    "development: REVIEW_REQUIRED -> REVIEW_REQUIRED": 6,
+    "diagnostic_holdout: IT_CONFIRMED -> IT_CONFIRMED": 7,
+    "diagnostic_holdout: NON_IT_CONFIRMED -> NON_IT_CONFIRMED": 8,
+    "diagnostic_holdout: REVIEW_REQUIRED -> REVIEW_REQUIRED": 2
+  }
+}

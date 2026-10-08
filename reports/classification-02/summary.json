@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-08T03:39:26.007851+00:00",
+  "checkpoint": "CLASSIFICATION-02",
+  "source_postings": 509,
+  "baseline_status_counts": {
+    "IT_CONFIRMED": 38,
+    "NON_IT_CONFIRMED": 6,
+    "REVIEW_REQUIRED": 465
+  },
+  "status_counts": {
+    "IT_CONFIRMED": 93,
+    "NON_IT_CONFIRMED": 149,
+    "REVIEW_REQUIRED": 267
+  },
+  "reason_counts": {
+    "CONFLICTING_ROLE_SIGNALS": 6,
+    "EXPLICIT_NON_IT_OCCUPATION": 83,
+    "INDUSTRIAL_EQUIPMENT_PROGRAMMING": 13,
+    "INSUFFICIENT_EVIDENCE": 148,
+    "IT_ADJACENT_OR_HYBRID_SCOPE": 17,
+    "IT_INDUSTRY_AND_TWO_DESCRIPTION_SIGNALS": 10,
+    "IT_ROLE_CONTRADICTS_INDUSTRY": 1,
+    "NON_IT_TITLE_WITH_TECH_MENTION": 2,
+    "TEACHING_DUTIES_AND_EDUCATION_INDUSTRY": 43,
+    "TEACHING_ROLE_NOT_TECHNICAL_IT": 10,
+    "TECH_CONTENT_WITHOUT_CLEAR_IT_ROLE": 53,
+    "TECH_ROLE_AND_DESCRIPTION_EVIDENCE": 83,
+    "TECH_TITLE_WITHOUT_DESCRIPTION_SUPPORT": 40
+  },
+  "role_families": {
+    "data_ai": 3,
+    "education": 54,
+    "enterprise_systems": 18,
+    "industrial": 25,
+    "infrastructure": 66,
+    "it_management": 4,
+    "office_marketing": 17,
+    "physical_services": 8,
+    "sales": 19,
+    "security": 6,
+    "software_engineering": 39,
+    "technical_generalist": 10,
+    "training_offer": 1,
+    "transport_logistics": 37,
+    "unclassified": 202
+  },
+  "transitions": {
+    "IT_CONFIRMED -> IT_CONFIRMED": 34,
+    "IT_CONFIRMED -> REVIEW_REQUIRED": 4,
+    "NON_IT_CONFIRMED -> NON_IT_CONFIRMED": 6,
+    "REVIEW_REQUIRED -> IT_CONFIRMED": 59,
+    "REVIEW_REQUIRED -> NON_IT_CONFIRMED": 143,
+    "REVIEW_REQUIRED -> REVIEW_REQUIRED": 263
+  },
+  "changed_from_v1": 206,
+  "review_queue_count": 267,
+  "source_archive_verification": "PASS",
+  "assessment_verification": "PASS",
+  "is_independently_validated": false,
+  "population_note": "Aplikuj IT site category; not deduplicated active technical-IT market",
+  "policy_version": "classification-02-rules-v1"
+}
