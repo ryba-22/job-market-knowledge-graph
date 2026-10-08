@@ -201,3 +201,29 @@ def test_inventory_does_not_reuse_title_pruned_v1_as_known(tmp_path, monkeypatch
     assert result["sources"]["aplikuj"]["known"] == 0
     assert result["sources"]["aplikuj"]["unknown"] == 2
     assert result["aplikuj_scope"] == "it-category-v2"
+
+
+def test_selected_aplikuj_inventory_does_not_query_other_sources(tmp_path, monkeypatch):
+    from ingestion import build_scale04_inventory as inventory
+    from ingestion.model import PostingRef
+    class Client:
+        def __init__(self, **kwargs): pass
+        def __enter__(self): return self
+        def __exit__(self, *args): pass
+    class OnlyAplikuj:
+        def discover(self, client, limit):
+            return [PostingRef("aplikuj", "https://www.aplikuj.pl/oferta/7/ambiguous", "7")]
+    class UnexpectedSource:
+        def discover(self, client, limit):
+            raise AssertionError("Unexpected external portal lookup")
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(inventory.httpx, "Client", Client)
+    monkeypatch.setattr(inventory, "load_known_ids", lambda *args: (_ for _ in ()).throw(AssertionError("Should not reuse v1 corpus")))
+    monkeypatch.setattr(inventory, "SOURCES", {"aplikuj": OnlyAplikuj(),
+                     "itleaders": UnexpectedSource(), "michaelpage": UnexpectedSource()})
+    result = inventory.build("ignored",str(tmp_path / "inventory"),sources=("aplikuj",))
+    assert list(result["sources"]) == ["aplikuj"]
+    assert result["sources"]["aplikuj"]["discoverable"] == 1
+    assert result["sources"]["aplikuj"]["unknown"] == 1
+    with pytest.raises(ValueError, match="invalid or duplicated"):
+        inventory.build("ignored", str(tmp_path / "other"), sources=("aplikuj","aplikuj"))

@@ -15,7 +15,10 @@ SOURCES_SCOPE=("aplikuj","itleaders","michaelpage")
 USER_AGENT="job-market-knowledge-graph/SCALE-04-inventory"
 
 
-def build(base_corpus: str, out_dir: str) -> dict:
+def build(base_corpus: str, out_dir: str, sources: tuple[str, ...] = SOURCES_SCOPE) -> dict:
+    invalid = set(sources) - set(SOURCES_SCOPE)
+    if invalid or not sources or len(set(sources)) != len(sources):
+        raise ValueError(f"invalid or duplicated discovery sources: {sources}")
     out=Path(out_dir)
     out.mkdir(parents=True,exist_ok=True)
     all_rows=[]
@@ -25,7 +28,7 @@ def build(base_corpus: str, out_dir: str) -> dict:
         follow_redirects=True,
         headers={"User-Agent":USER_AGENT,"Accept-Language":"pl,en;q=0.8"},
     ) as client:
-        for source in SOURCES_SCOPE:
+        for source in sources:
             refs=SOURCES[source].discover(client,100000)
             known=set() if source == "aplikuj" else load_known_ids(base_corpus,source)
             if source == "aplikuj":
@@ -80,8 +83,9 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--base-corpus",default="data/corpora/corpus-08-partial/corpus.jsonl.gz")
     p.add_argument("--out",default="reports/scale-04-inventory")
+    p.add_argument("--sources", nargs="+", choices=SOURCES_SCOPE, default=list(SOURCES_SCOPE))
     args=p.parse_args()
-    print(json.dumps(build(args.base_corpus,args.out),ensure_ascii=False,indent=2))
+    print(json.dumps(build(args.base_corpus,args.out,tuple(args.sources)),ensure_ascii=False,indent=2))
 
 
 if __name__=="__main__":
