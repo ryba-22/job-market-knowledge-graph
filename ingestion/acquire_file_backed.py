@@ -44,14 +44,20 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
     rows=_load_rows(plan_path,source,chunk_index)
     if source == "aplikuj":
         plan_scope = json.loads(Path(plan_path).read_text(encoding="utf-8")).get("aplikuj_scope")
-        if plan_scope != "technical-it-v1":
-            raise RuntimeError("REFUSED: Aplikuj requires technical-it-v1 category-scoped plan")
+        if plan_scope != "it-category-v2":
+            raise RuntimeError("REFUSED: Aplikuj requires lossless it-category-v2 plan")
+        existing_manifest=Path(out_dir)/"manifest.json"
+        if existing_manifest.exists():
+            existing=json.loads(existing_manifest.read_text(encoding="utf-8"))
+            if existing.get("scope") != "it-category-v2":
+                raise RuntimeError("REFUSED: cannot overwrite legacy title-pruned Aplikuj archive")
     adapter=ADAPTERS[source] if source in ADAPTERS else SOURCES[source]
     corpus=[]
     raw_rows=[]
     gone=[]
     errors=[]
-    excluded_non_it=[]
+    assessment_counts={"IT_CONFIRMED":0,"NON_IT_CONFIRMED":0,"REVIEW_REQUIRED":0}
+    assessment_rows=[]
     now=datetime.now(timezone.utc).isoformat()
     with httpx.Client(timeout=45,follow_redirects=True,headers={'User-Agent':'job-market-knowledge-graph/file-backed-local','Accept-Language':'pl,en;q=0.8'}) as client:
         for row in rows:
@@ -124,12 +130,16 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'attempt_errors':attempt_errors,
                 })
                 parsed=adapter.parse_detail(payload,final_url) if source in ADAPTERS else adapter.parse_detail(payload,ref)
+                assessment=None
                 if source == "aplikuj":
-                    from .aplikuj_it_scope import is_technical_it
-                    if not is_technical_it(parsed.title, parsed.source_specific.get("industry")):
-                        raw_rows.pop()  # do not retain non-IT details in the cache
-                        excluded_non_it.append(parsed.source_posting_id)
-                        continue
+                    from .aplikuj_policy import assess, CLASSIFIER_VERSION
+                    try:
+                        assessment=assess(parsed)
+                    except Exception as exc:
+                        # Assessment failure must never erase an acquired posting.
+                        assessment={"status":"REVIEW_REQUIRED","policy_version":CLASSIFIER_VERSION,
+                                    "evidence_codes":["ASSESSMENT_ERROR", type(exc).__name__]}
+                    assessment_counts[assessment["status"]]+=1
                 projection=parsed.normalized_projection()
                 revision_hash=parsed.normalized_hash()
                 corpus.append({
@@ -150,23 +160,30 @@ def acquire(plan_path: str, source: str, chunk_index: int, out_dir: str, raw_dir
                     'organization_mention':parsed.company_mention,
                     'organization_mention_normalized':(parsed.company_mention or '').casefold() or None,
                 })
+                if assessment is not None:
+                    assessment_rows.append({'source':source,'source_posting_id':parsed.source_posting_id,
+                                            'raw_payload_sha256':payload_sha,'assessment':assessment})
             except SourceGoneError as exc:
                 gone.append({'source_posting_id':ref.source_posting_id,'url':ref.url,'reason':str(exc)})
             except Exception as exc:
                 errors.append({'source_posting_id':ref.source_posting_id,'url':ref.url,'error':f'{type(exc).__name__}: {exc}'})
             time.sleep(delay)
     corpus.sort(key=lambda r:(r['source'],r['source_posting_id']))
+    assessment_rows.sort(key=lambda r:(r['source'],r['source_posting_id']))
     out=Path(out_dir); raw_out=Path(raw_dir)
     corpus_meta=_write_jsonl_gz(out/'corpus.jsonl.gz',corpus)
     raw_meta=_write_jsonl_gz(raw_out/'raw-observations.jsonl.gz',raw_rows)
+    assessment_meta=_write_jsonl_gz(out/'assessments.jsonl.gz',assessment_rows) if source=='aplikuj' else None
     manifest={
         'format':'file-backed-market-corpus-v1',
         'source':source,
         'planned':len(rows),
         'postings':len(corpus),
         'source_gone':len(gone),
-        'excluded_non_it':len(excluded_non_it),
-        'scope':'technical-it-v1' if source=='aplikuj' else None,
+        'excluded_non_it':0,
+        'scope':'it-category-v2' if source=='aplikuj' else None,
+        'assessment_counts':assessment_counts if source=='aplikuj' else None,
+        'assessment_archive':assessment_meta,
         'errors':errors,
         'by_source':{source:len(corpus)} if corpus else {},
         'corpus':corpus_meta,

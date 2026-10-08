@@ -21,13 +21,20 @@ def _atomic_json(path: Path, value: dict):
     tmp.replace(path)
 
 
-def _manifest_ok(path: Path) -> bool:
+def _manifest_ok(path: Path, expected_scope: str | None = None) -> bool:
     if not path.exists():
         return False
     try:
         m = json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return False
+    if expected_scope:
+        counts = m.get("assessment_counts") or {}
+        if (m.get("scope") != expected_scope or int(m.get("excluded_non_it", 0)) != 0
+                or set(counts) != {"IT_CONFIRMED", "NON_IT_CONFIRMED", "REVIEW_REQUIRED"}
+                or sum(int(v) for v in counts.values()) != int(m.get("postings", 0))
+                or int((m.get("assessment_archive") or {}).get("rows", -1)) != int(m.get("postings", 0))):
+            return False
     return (
         not m.get("errors")
         and int(m.get("planned", 0)) == int(m.get("postings", 0)) + int(m.get("source_gone", 0)) + int(m.get("excluded_non_it", 0))
@@ -46,6 +53,7 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
             "postings": 0,
             "source_gone": 0,
             "excluded_non_it": 0,
+            "assessment_counts": {"IT_CONFIRMED":0,"NON_IT_CONFIRMED":0,"REVIEW_REQUIRED":0} if source == "aplikuj" else None,
             "errors": 0,
         }
         for c in chunks:
@@ -57,11 +65,18 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
             except Exception:
                 d["errors"] += 1
                 continue
+            if source == "aplikuj" and not _manifest_ok(mp, expected_scope="it-category-v2"):
+                # Invalid or title-pruned chunks may not inflate v2 accounted totals.
+                d["errors"] += 1
+                continue
             d["postings"] += int(m.get("postings", 0))
             d["source_gone"] += int(m.get("source_gone", 0))
             d["excluded_non_it"] += int(m.get("excluded_non_it", 0))
+            if source == "aplikuj":
+                for status in d["assessment_counts"]:
+                    d["assessment_counts"][status] += int((m.get("assessment_counts") or {}).get(status,0))
             d["errors"] += len(m.get("errors") or [])
-            if _manifest_ok(mp):
+            if _manifest_ok(mp, expected_scope="it-category-v2" if source == "aplikuj" else None):
                 d["chunks_done"] += 1
         d["accounted"] = d["postings"] + d["source_gone"] + d["excluded_non_it"]
         d["pct"] = round(100 * d["accounted"] / d["planned"], 2) if d["planned"] else 100.0
@@ -83,8 +98,8 @@ def build_status(plan: dict, sources: set[str], out_root: Path) -> dict:
 def run(plan_path: str, sources: list[str], out_root: str, raw_root: str, status_path: str, max_attempts: int):
     plan = json.loads(Path(plan_path).read_text(encoding="utf-8"))
     selected = set(sources)
-    if "aplikuj" in selected and plan.get("aplikuj_scope") != "technical-it-v1":
-        raise RuntimeError("REFUSED: unscoped Aplikuj plan; rebuild from IT category inventory")
+    if "aplikuj" in selected and plan.get("aplikuj_scope") != "it-category-v2":
+        raise RuntimeError("REFUSED: Aplikuj requires new lossless it-category-v2 inventory and plan")
     out = Path(out_root)
     raw = Path(raw_root)
     status = Path(status_path)
@@ -93,7 +108,7 @@ def run(plan_path: str, sources: list[str], out_root: str, raw_root: str, status
         if c["source"] not in selected:
             continue
         mp = out / c["source"] / str(c["chunk_index"]) / "manifest.json"
-        if not _manifest_ok(mp):
+        if not _manifest_ok(mp, expected_scope="it-category-v2" if c["source"] == "aplikuj" else None):
             jobs.append(c)
 
     lock = threading.Lock()
@@ -148,12 +163,16 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--plan", required=True)
     p.add_argument("--sources", nargs="+", required=True)
-    p.add_argument("--out-root", default=".local-crawl/scale-04")
-    p.add_argument("--raw-root", default=".local-evidence/scale-04")
-    p.add_argument("--status", default=".local-crawl/scale-04/status.json")
+    p.add_argument("--out-root")
+    p.add_argument("--raw-root")
+    p.add_argument("--status")
     p.add_argument("--max-attempts", type=int, default=4)
     args = p.parse_args()
-    run(args.plan, args.sources, args.out_root, args.raw_root, args.status, args.max_attempts)
+    v2 = "aplikuj" in args.sources
+    out_root = args.out_root or (".local-crawl/scale-04-it-v2" if v2 else ".local-crawl/scale-04")
+    raw_root = args.raw_root or (".local-evidence/scale-04-it-v2" if v2 else ".local-evidence/scale-04")
+    status_path = args.status or f"{out_root}/status.json"
+    run(args.plan, args.sources, out_root, raw_root, status_path, args.max_attempts)
 
 
 if __name__ == "__main__":

@@ -27,11 +27,16 @@ def build(base_corpus: str, out_dir: str) -> dict:
     ) as client:
         for source in SOURCES_SCOPE:
             refs=SOURCES[source].discover(client,100000)
-            known=load_known_ids(base_corpus,source)
+            known=set() if source == "aplikuj" else load_known_ids(base_corpus,source)
             if source == "aplikuj":
-                # Reuse retained IT evidence instead of downloading it again.
-                for prior in Path(".local-crawl/scale-04/aplikuj").glob("*/corpus.jsonl.gz"):
-                    with gzip.open(prior, "rt", encoding="utf-8") as handle:
+                # Never treat the 33 title-pruned v1 survivors as v2-complete.
+                # Only fully accounted, assessment-backed v2 chunks may be reused.
+                from .run_file_backed_plan import _manifest_ok
+                root = Path(".local-crawl/scale-04-it-v2/aplikuj")
+                for manifest in root.glob("*/manifest.json"):
+                    if not _manifest_ok(manifest, expected_scope="it-category-v2"):
+                        continue
+                    with gzip.open(manifest.with_name("corpus.jsonl.gz"), "rt", encoding="utf-8") as handle:
                         known.update(str(json.loads(line)["source_posting_id"]) for line in handle if line.strip())
             rows=[
                 {
@@ -56,7 +61,7 @@ def build(base_corpus: str, out_dir: str) -> dict:
     manifest={
         "format":"source-inventory-v1",
         "scope":"scale-04-more-direct-sources-it-only",
-        "aplikuj_scope":"technical-it-v1",
+        "aplikuj_scope":"it-category-v2",
         "base_corpus":base_corpus,
         "sources":per_source,
         "discoverable_total":sum(v["discoverable"] for v in per_source.values()),

@@ -1,7 +1,8 @@
-"""Remove out-of-scope Aplikuj postings and their raw payloads from local crawl.
+"""Historical Aplikuj cleanup audit — permanently read-only.
 
-Only complete chunks are rewritten. Historical discovery inventory is left
-untouched as provenance; it must not be used to resume IT-only crawling.
+The former title-based deletion was unsafe: a title is not evidence that a
+recruitment is outside IT. `--apply` deliberately raises before any I/O mutation.
+The prior deleted material is NOT recovered by this audit.
 """
 from __future__ import annotations
 
@@ -29,53 +30,25 @@ def compressed_rows(rows: list[dict]) -> tuple[bytes, dict]:
     }
 
 
-def replace_bytes(path: Path, data: bytes):
-    tmp = path.with_suffix(path.suffix + ".scoped-tmp")
-    tmp.write_bytes(data)
-    tmp.replace(path)
-
-
 def clean(root: Path, evidence: Path, apply: bool = False) -> dict:
-    report = {"mode": "APPLIED" if apply else "DRY_RUN", "source": "aplikuj", "scope": "technical-it-v1", "before": 0, "kept": 0, "removed": 0, "chunks": 0, "failures": []}
+    if apply:
+        raise RuntimeError("DISABLED: title-based deletion is forbidden; retain all IT-category candidates")
+    report = {"mode": "HISTORICAL_READ_ONLY", "source": "aplikuj", "scope": "technical-it-v1", "before": 0,
+              "title_signal": 0, "needs_review": 0, "chunks": 0, "failures": []}
     for manifest_path in sorted((root / "aplikuj").glob("*/manifest.json")):
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        d = manifest_path.parent
-        corpus_path = d / "corpus.jsonl.gz"
-        raw_path = evidence / "aplikuj" / d.name / "raw-observations.jsonl.gz"
+        if manifest.get("scope") == "it-category-v2":
+            continue  # the old heuristic does not apply to new evidence
         try:
-            if manifest.get("errors"):
-                raise ValueError("chunk has errors")
-            corpus = read_gz(corpus_path)
-            raw = read_gz(raw_path)
-            previous_excluded = int(manifest.get("excluded_non_it", 0))
-            if int(manifest["postings"]) != len(corpus):
-                raise ValueError("corpus manifest mismatch")
-            keep = [r for r in corpus if is_technical_it(r["title"], (r.get("source_projection") or {}).get("industry"))]
-            excluded_ids = {str(r["source_posting_id"]) for r in corpus if not is_technical_it(r["title"], (r.get("source_projection") or {}).get("industry"))}
-            raw_keep = [r for r in raw if str(r["source_posting_id"]) not in excluded_ids]
-            if len(raw) - len(raw_keep) != len(excluded_ids):
-                raise ValueError("raw payload mismatch: not deleting without one-to-one identity")
-            if int(manifest["planned"]) != len(corpus) + int(manifest.get("source_gone", 0)) + previous_excluded:
-                raise ValueError("incomplete chunk; must not rewrite")
-            report["before"] += len(corpus)
-            report["kept"] += len(keep)
-            report["removed"] += len(excluded_ids)
+            rows = read_gz(manifest_path.with_name("corpus.jsonl.gz"))
+            signal = sum(is_technical_it(row["title"]) for row in rows)
+            report["before"] += len(rows)
+            report["title_signal"] += signal
+            report["needs_review"] += len(rows) - signal
             report["chunks"] += 1
-            if not apply or not excluded_ids:
-                continue
-            cb, cm = compressed_rows(keep)
-            rb, rm = compressed_rows(raw_keep)
-            manifest["postings"] = len(keep)
-            manifest["by_source"] = {"aplikuj": len(keep)} if keep else {}
-            manifest["excluded_non_it"] = previous_excluded + len(excluded_ids)
-            manifest["scope"] = "technical-it-v1"
-            manifest["corpus"] = cm
-            manifest["raw_archive"] = rm
-            replace_bytes(corpus_path, cb)
-            replace_bytes(raw_path, rb)
-            manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         except Exception as exc:
-            report["failures"].append({"chunk": d.name, "error": f"{type(exc).__name__}: {exc}"})
+            report["failures"].append({"chunk": manifest_path.parent.name,
+                                       "error": f"{type(exc).__name__}: {exc}"})
     return report
 
 

@@ -494,11 +494,8 @@ class AplikujSource:
     code = "aplikuj"
 
     def discover(self, client: httpx.Client, limit: int) -> list[PostingRef]:
-        from .aplikuj_it_scope import is_it_listing_candidate
-
-        # The full offer sitemap includes all professions, not just IT.
-        # The category listing still contains promoted/unrelated cards, hence
-        # the additional conservative job-title check.
+        # Discover *all* IDs exposed by the site's IT listing, including
+        # ambiguous/promoted roles. Classification must happen after acquisition.
         refs = []
         seen = set()
         for page in range(1, 101):
@@ -510,24 +507,24 @@ class AplikujSource:
             soup = BeautifulSoup(response.text, "html.parser")
             cards = soup.select("li.offer-card a.offer-title[href]")
             if not cards:
-                break
-            new_ids = 0
+                raise RuntimeError("APLIKUJ_DISCOVERY_INCOMPLETE: listing page has no job cards")
             for link in cards:
-                title = norm_text(link.get_text(" ", strip=True))
                 target = canonical_url(link.get("href", ""))
                 match = re.search(r"/oferta/(\d+)(?:/|$)", target)
-                if not match or not is_it_listing_candidate(title):
+                if not match:
                     continue
                 sid = match.group(1)
                 if sid in seen:
                     continue
                 seen.add(sid)
-                new_ids += 1
                 refs.append(PostingRef(self.code, target, sid))
                 if len(refs) >= limit:
                     return refs
-            if not soup.select(f'a[href$="strona-{page + 1}"]'):
+            has_next = bool(soup.select(f'a[href$="strona-{page + 1}"]'))
+            if not has_next:
                 break
+            if page == 100:
+                raise RuntimeError("APLIKUJ_DISCOVERY_INCOMPLETE: pagination exceeds safety cap")
         return refs
 
     def fetch_detail(self, client: httpx.Client, ref: PostingRef):
@@ -574,7 +571,7 @@ class AplikujSource:
                     "salary_currency": None,
                     "direct_apply": None,
                     "observation_provenance": "DIRECT",
-                    "discovery_scope": "it-category-listing-filtered",
+                    "discovery_scope": "it-category-all-candidates",
                     "parse_mode": "HTML_FALLBACK",
                     "meta_description": meta_description or None,
                 },
@@ -610,7 +607,7 @@ class AplikujSource:
                 "salary_currency": structured.get("salaryCurrency"),
                 "direct_apply": structured.get("directApply"),
                 "observation_provenance": "DIRECT",
-                "discovery_scope": "it-category-listing-filtered",
+                "discovery_scope": "it-category-all-candidates",
                 "parse_mode": "JSON_LD",
             },
             revision_projection={

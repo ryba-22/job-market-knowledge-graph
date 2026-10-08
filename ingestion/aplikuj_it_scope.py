@@ -1,8 +1,7 @@
-"""Conservative technical-IT scope for Aplikuj.pl.
+"""Historical title-signal heuristics for Aplikuj.pl.
 
-The site's IT category is a discovery surface, not proof that every sponsored
-or keyword-matched job is a technical IT position. Uncertain titles are excluded
-from the automatic technical-IT corpus for manual review.
+These signals are advisory only. They must never filter discovery, raw
+archiving or source records. The active classification is in aplikuj_policy.py.
 """
 from __future__ import annotations
 

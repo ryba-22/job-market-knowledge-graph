@@ -41,7 +41,7 @@ def test_rejects_non_it_titles(title):
     assert not is_technical_it(title)
 
 
-def test_listing_discovery_uses_it_category_and_rejects_promoted_roles():
+def test_listing_discovery_keeps_all_category_roles_including_promoted():
     class FakeResponse:
         def __init__(self, html):
             self.text = html
@@ -61,14 +61,14 @@ def test_listing_discovery_uses_it_category_and_rejects_promoted_roles():
 
     client = FakeClient()
     refs = AplikujSource().discover(client, 100)
-    assert [r.source_posting_id for r in refs] == ["1", "3"]
+    assert [r.source_posting_id for r in refs] == ["1", "2", "3"]
     assert client.urls == ["https://www.aplikuj.pl/praca/it-informatyka", "https://www.aplikuj.pl/praca/it-informatyka/strona-2"]
 
 
 def test_unscoped_plan_is_rejected_before_fetch(tmp_path):
     plan = tmp_path / "legacy.json"
     plan.write_text(json.dumps({"chunks": [], "aplikuj_scope": None}))
-    with pytest.raises(RuntimeError, match="unscoped Aplikuj"):
+    with pytest.raises(RuntimeError, match="requires new lossless"):
         run(str(plan), ["aplikuj"], str(tmp_path / "crawl"), str(tmp_path / "raw"), str(tmp_path / "status.json"), 1)
 
 
@@ -86,12 +86,14 @@ def test_local_cache_prunes_non_it_raw_and_manifest_is_reconciled(tmp_path):
     (crawl / "corpus.jsonl.gz").write_bytes(corpus_bytes)
     (raw / "raw-observations.jsonl.gz").write_bytes(raw_bytes)
     (crawl / "manifest.json").write_text(json.dumps({"planned": 2, "postings": 2, "source_gone": 0, "errors": [], "corpus": corpus_meta, "raw_archive": raw_meta}))
-    report = clean(tmp_path / "crawl", tmp_path / "raw", apply=True)
-    assert report["removed"] == 1 and not report["failures"]
-    assert [r["source_posting_id"] for r in read_gz(crawl / "corpus.jsonl.gz")] == ["1"]
-    assert [r["source_posting_id"] for r in read_gz(raw / "raw-observations.jsonl.gz")] == ["1"]
+    with pytest.raises(RuntimeError, match="title-based deletion is forbidden"):
+        clean(tmp_path / "crawl", tmp_path / "raw", apply=True)
+    report = clean(tmp_path / "crawl", tmp_path / "raw", apply=False)
+    assert report["mode"] == "HISTORICAL_READ_ONLY"
+    assert report["needs_review"] == 1
+    assert [r["source_posting_id"] for r in read_gz(crawl / "corpus.jsonl.gz")] == ["1", "2"]
+    assert [r["source_posting_id"] for r in read_gz(raw / "raw-observations.jsonl.gz")] == ["1", "2"]
     assert _manifest_ok(crawl / "manifest.json")
-    assert clean(tmp_path / "crawl", tmp_path / "raw", apply=True)["removed"] == 0
 
 
 def test_scoped_inventory_propagates_into_chunk_plan(tmp_path):
@@ -99,8 +101,8 @@ def test_scoped_inventory_propagates_into_chunk_plan(tmp_path):
     inventory = tmp_path / "inventory.jsonl.gz"
     data, _ = compressed_rows([{"source": "aplikuj", "source_posting_id": "77", "url": "https://www.aplikuj.pl/oferta/77/python-developer", "known": False}])
     inventory.write_bytes(data)
-    (tmp_path / "manifest.json").write_text(json.dumps({"aplikuj_scope": "technical-it-v1"}))
+    (tmp_path / "manifest.json").write_text(json.dumps({"aplikuj_scope": "it-category-v2"}))
     result = plan(str(inventory), str(tmp_path / "chunks.json"), chunk_size=250)
-    assert result["aplikuj_scope"] == "technical-it-v1"
+    assert result["aplikuj_scope"] == "it-category-v2"
     assert result["unknown_total"] == 1
     assert result["chunks"][0]["rows"][0]["source_posting_id"] == "77"

@@ -1,4 +1,6 @@
-# APLIKUJ-IT-01 — source restriction, stop and cleanup
+# APLIKUJ-IT-01 — historical source restriction, stop and cleanup
+
+> **Superseded by `docs/aplikuj-it-category-v2-2026-10-08.md`.** This is a historical record of the v1 title-based cleanup, not the active ingestion policy. Its automatic title-based deletion has been disabled. The previously excluded 13,717 records cannot be recovered without authorized reacquisition.
 
 Date: 2026-10-08. User instruction: stop downloading, restrict Aplikuj.pl to IT, remove non-IT.
 
