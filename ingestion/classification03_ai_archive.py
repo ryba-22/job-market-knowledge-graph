@@ -40,8 +40,6 @@ def sha(obj):
     return sha256(json.dumps(obj,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
 
 def do_batch(index,items,dest,model):
-    if QUOTA_STOP.is_set():
-        return {"batch":index,"status":"BLOCKED_QUOTA","n":len(items),"reason":"provider session limit"}
     path=dest/"parts"/f"batch-{index:03}.json"
     source_hash=sha(items)
     if path.exists():
@@ -50,6 +48,8 @@ def do_batch(index,items,dest,model):
             raise ValueError("frozen 309 batch mismatch")
         validate_model_output(items,{"annotations":old["annotations"]})
         return {"batch":index,"status":"CACHED","n":len(items),"cost_usd":0}
+    if QUOTA_STOP.is_set():
+        return {"batch":index,"status":"BLOCKED_QUOTA","n":len(items),"reason":"provider session limit"}
     errs=[]
     for attempt in range(3):
         try:
@@ -73,9 +73,45 @@ def do_batch(index,items,dest,model):
             if attempt<2:time.sleep(1+attempt)
     return {"batch":index,"status":"FAILED","n":len(items),"errors":errs}
 
+def stored_progress(items:list[dict],root:Path,model:str)->dict:
+    """Read-only, source-verified progress; safe even when LLM quota is blocked."""
+    dest=root/model
+    contract_path=dest/"contract.json"
+    if not contract_path.exists():
+        return {"model":model,"expected":len(items),"assessed":0,
+                "remaining":len(items),"cached_chunks":0,"chunks_total":(len(items)+CHUNK-1)//CHUNK,
+                "label_counts":{},"next_missing_batch":0}
+    contract=json.loads(contract_path.read_text(encoding="utf-8"))
+    if contract.get("format")!=VERSION or contract.get("model")!=model or contract.get("count")!=len(items) or contract.get("source_sha256")!=sha(items) or contract.get("source_ids")!=[r["posting_id"] for r in items]:
+        raise ValueError("frozen archive source/model contract differs")
+    completed=[];labels=Counter();missing=[];cached_chunks=0
+    for i,start in enumerate(range(0,len(items),CHUNK)):
+        chunk=items[start:start+CHUNK]
+        part=dest/"parts"/f"batch-{i:03}.json"
+        if not part.exists():
+            missing.append(i)
+            continue
+        stored=json.loads(part.read_text(encoding="utf-8"))
+        if stored.get("format")!=VERSION or stored.get("model")!=model or stored.get("source_sha256")!=sha(chunk):
+            raise ValueError(f"cached batch {i} does not match frozen source")
+        annotations=validate_model_output(chunk,{"annotations":stored["annotations"]})
+        cached_chunks+=1
+        completed.extend(annotations)
+        labels.update(r["label"] for r in annotations)
+    if len(completed)!=len({r["posting_id"] for r in completed}):
+        raise ValueError("duplicate reviewed ID across cached batches")
+    return {"model":model,"expected":len(items),
+            "assessed":len(completed),"remaining":len(items)-len(completed),
+            "cached_chunks":cached_chunks,
+            "chunks_total":(len(items)+CHUNK-1)//CHUNK,
+            "label_counts":dict(sorted(labels.items())),
+            "next_missing_batch":missing[0] if missing else None}
+
+
 def run(model:str="sonnet",workers:int=3,root:Path=ROOT):
     if model not in MODELS or workers<1 or workers>4:
         raise ValueError("invalid model/worker configuration")
+    QUOTA_STOP.clear()
     items=sample()
     dest=root/model
     dest.mkdir(parents=True,exist_ok=True)
@@ -108,10 +144,17 @@ def run(model:str="sonnet",workers:int=3,root:Path=ROOT):
         tmp=dest/"annotations.jsonl.tmp"
         tmp.write_text("".join(json.dumps(x,ensure_ascii=False,sort_keys=True)+"\n" for x in assembled),encoding="utf-8")
         os.replace(tmp,dest/"annotations.jsonl")
-    status={"status":"AI_ARCHIVE_309_COMPLETE" if len(assembled)==309 else "AI_ARCHIVE_309_INCOMPLETE",
-            "model":model,"expected":309,"assessed":len(assembled),
-            "chunks":len(groups),"failed_chunks":fails,
-            "counts":dict(sorted(Counter(r["label"] for r in assembled).items())),
+    progress=stored_progress(items,root,model)
+    quota=[x for x in fails if x["status"]=="BLOCKED_QUOTA"]
+    other_failures=[x for x in fails if x["status"]!="BLOCKED_QUOTA"]
+    status={"status":("AI_ARCHIVE_309_COMPLETE" if progress["assessed"]==309 else
+                      "AI_ARCHIVE_309_BLOCKED_QUOTA" if quota else "AI_ARCHIVE_309_INCOMPLETE"),
+            "model":model,"expected":309,"assessed":progress["assessed"],
+            "remaining":progress["remaining"],"cached_chunks":progress["cached_chunks"],
+            "next_missing_batch":progress["next_missing_batch"],
+            "newly_assessed":sum(x["n"] for x in states if x["status"]=="PASS"),
+            "chunks":len(groups),"blocked_chunks":len(quota),"failed_chunks":other_failures,
+            "counts":progress["label_counts"],
             "new_cost_usd":round(sum(float(x.get("cost_usd") or 0) for x in states),3),
             "origin":"AI_ONLY_SILVER_NOT_HUMAN_GOLD"}
     (dest/"summary.json").write_text(json.dumps(status,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
@@ -218,6 +261,8 @@ def main():
     p.add_argument("--model",choices=tuple(MODELS),default="sonnet")
     p.add_argument("--workers",type=int,default=3)
     p.add_argument("--merge",action="store_true")
+    p.add_argument("--status",action="store_true",help="Verify cached progress without calling AI")
     opts=p.parse_args()
-    print(json.dumps(merge() if opts.merge else run(opts.model,opts.workers),ensure_ascii=False,indent=2))
+    result=(merge() if opts.merge else stored_progress(sample(),ROOT,opts.model) if opts.status else run(opts.model,opts.workers))
+    print(json.dumps(result,ensure_ascii=False,indent=2))
 if __name__=="__main__":main()

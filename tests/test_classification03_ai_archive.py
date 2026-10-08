@@ -129,3 +129,36 @@ def test_model_quota_error_extracted_from_stdout(monkeypatch):
         returncode=1,stdout=json.dumps({"is_error":True,"result":"You've hit your session limit; resets 11am"}),stderr=""))
     with pytest.raises(RuntimeError,match="PROVIDER_QUOTA"):
         ai.call_ai([],model="opus",timeout=10)
+
+def test_incomplete_run_reports_cached_progress_instead_of_zero(tmp_path,monkeypatch):
+    items=[row(i) for i in range(309)]
+    monkeypatch.setattr(m,"sample",lambda:items)
+    root=tmp_path/"partial"
+    dest=root/"opus"
+    (dest/"parts").mkdir(parents=True)
+    contract={"format":m.VERSION,"model":"opus","count":309,"chunk_size":m.CHUNK,
+              "source_sha256":m.sha(items),"source_ids":[x["posting_id"] for x in items]}
+    (dest/"contract.json").write_text(json.dumps(contract))
+    for i in range(2):
+        source_chunk=items[i*6:(i+1)*6]
+        batch={
+            "format":m.VERSION,"model":"opus","source_sha256":m.sha(source_chunk),
+            "annotations":m.validate_model_output(source_chunk,{
+                "annotations":[answer(x) for x in source_chunk]})
+        }
+        (dest/"parts"/f"batch-{i:03}.json").write_text(json.dumps(batch))
+    count=[]
+    def blocked(*args,**kwargs):
+        count.append(1)
+        raise RuntimeError("PROVIDER_QUOTA: You've hit your session limit")
+    monkeypatch.setattr(m,"call_ai",blocked)
+    summary=m.run(model="opus",workers=1,root=root)
+    assert summary["status"]=="AI_ARCHIVE_309_BLOCKED_QUOTA"
+    assert summary["assessed"]==12 and summary["remaining"]==297
+    assert summary["cached_chunks"]==2 and summary["next_missing_batch"]==2
+    assert summary["newly_assessed"]==0
+    assert summary["blocked_chunks"]==50
+    assert summary["failed_chunks"]==[]
+    assert len(count)==1, "must stop requesting after first provider quota"
+    assert m.stored_progress(items,root,"opus")["assessed"]==12
+    assert not (dest/"annotations.jsonl").exists()

@@ -194,3 +194,13 @@ Aggregated report: `reports/classification-03/ai-archive509.json`; local compreh
 The sample-200 source model audit produced **59 IT_TECHNICAL / 111 NON_IT / 30 REVIEW_REQUIRED** (181 3/3 matching labels, 19 2/3). The seven previously unresolved cases also received a fourth source-only Opus challenge review (3 technical IT, 3 IT-adjacent, 1 undeterminable), but no binary auto-promotion was applied: in case #3335098, the source lists requirements but not actual duties, so the model's positive IT label is insufficient evidence.
 
 **Gold/release gates remain BLOCKED**; human independent labels remain 0; source archive and original CLASSIFICATION-02 state remain unchanged.
+
+### OPUS quota resumption progress reporting — 2026-10-08
+
+A rerun at 07:12 showed 37 CACHED batches plus 15 BLOCKED_QUOTA batches. Historical CLI emitted an inaccurate `assessed: 0` when any batch remained missing, despite 222 source-verified cached annotations. This output reported *rollup availability*, not cumulative stored evidence.
+
+The runner now validates and counts every completed cache batch separately, reports `assessed` (cumulative), `remaining`, `cached_chunks`, `next_missing_batch`, `newly_assessed` and `blocked_chunks`, and retains `CACHED` for previously completed files even when provider quota is blocked. After a single actual quota failure, subsequent batches are marked BLOCKED_QUOTA without additional API calls.
+
+**Check without any AI request:** `.venv/bin/python -m ingestion.classification03_ai_archive --model opus --status`. At the recorded checkpoint this returns 222 assessed / 87 remaining, 37/52 cached, next batch 37.
+
+The provider supplied an explicit limit reset at 11:00 Europe/Warsaw on 2026-10-08. Do not invoke the model before that time. Afterwards manually resume with `.venv/bin/python -m ingestion.classification03_ai_archive --model opus --workers 1`, then `.venv/bin/python -m ingestion.classification03_ai_archive --merge`. A scheduler was not installed. Original source and goldset remain unchanged.
