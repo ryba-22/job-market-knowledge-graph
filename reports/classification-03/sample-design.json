@@ -1,0 +1,33 @@
+{
+  "checkpoint": "CLASSIFICATION-03",
+  "source_population": 509,
+  "selected": 200,
+  "probability_panel": 160,
+  "challenge_panel": 40,
+  "probability_quotas_by_previous_model_decision": {
+    "IT_CONFIRMED": 45,
+    "NON_IT_CONFIRMED": 45,
+    "REVIEW_REQUIRED": 70
+  },
+  "holdout_reserved": 40,
+  "double_review_reserved": 40,
+  "blind_packet_fields": [
+    "description",
+    "posting_id",
+    "raw_payload_sha256",
+    "revision_id",
+    "source",
+    "source_industry",
+    "source_url",
+    "title"
+  ],
+  "source_archive_verified": true,
+  "independent_gold_labels_received": 0,
+  "gold_release_gate": "BLOCKED_NO_INDEPENDENT_GOLD",
+  "sample_manifest_sha256": "9711167d650d74645faeace172524418576a32dddb0e4c609f21c7a6baeb149c",
+  "population_estimation": "Only probability panel with fixed stratum weights; challenge panel is adversarial only",
+  "limitations": [
+    "Current-site category, not active/recruitment-deduped market",
+    "No independent human gold labels; performance cannot be estimated yet"
+  ]
+}
