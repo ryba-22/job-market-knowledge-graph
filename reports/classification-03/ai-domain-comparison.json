@@ -1,0 +1,29 @@
+{
+  "checkpoint": "CLASSIFICATION-03-DOMAIN-THREE-AI-COMPARE",
+  "status": "AI_DOMAIN_DISPUTES_TRIAGED_HUMAN_GOLD_BLOCKED",
+  "reviewed": 12,
+  "ai_label_agreement_levels": {
+    "2/3": 11,
+    "3/3": 1
+  },
+  "needs_manual_adjudication": 12,
+  "human_gold_unlocked": false,
+  "disputed_ids": [
+    "2233593",
+    "3130802",
+    "3267627",
+    "3283887",
+    "3299747",
+    "3315746",
+    "3318748",
+    "3331981",
+    "3336315",
+    "3337104",
+    "3337254",
+    "738597"
+  ],
+  "limitations": [
+    "Third model is an AI opinion, not an independent human domain reviewer.",
+    "Majority AI vote must not be auto-relabelled as independent gold."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-SECOND-BLIND",
+  "status": "SECOND_AI_PASS_COMPLETE_HUMAN_GOLD_STILL_BLOCKED",
+  "source_offer_count": 69,
+  "assessed": 69,
+  "status_counts": {
+    "IT_TECHNICAL": 15,
+    "UNDETERMINABLE": 11,
+    "IT_ADJACENT": 18,
+    "NON_IT": 25
+  },
+  "batches": 12,
+  "batch_failures": [],
+  "model": "sonnet",
+  "cost_usd_this_run": 0.523,
+  "source_packet_sha256": "e078b97644bf77d1a3708fa71bc76383a69d148bbc1213d39f196dbc6548dded",
+  "not_independent_human_review": true,
+  "no_goldset_unlocked": true
+}

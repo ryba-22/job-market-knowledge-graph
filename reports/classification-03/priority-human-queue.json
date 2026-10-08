@@ -1,0 +1,16 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-TEAM-PRIORITY-HUMAN",
+  "status": "PRIORITY_HUMAN_QUEUE_READY_GOLD_STILL_BLOCKED",
+  "source_200": 200,
+  "ai_second_review_69": 69,
+  "third_domain_ai_12": 12,
+  "control_random_stratified_40": 40,
+  "overlap_5": 5,
+  "human_review_priority_unique": 47,
+  "human_completed": 0,
+  "human_packet": "reviewer-priority-human.jsonl",
+  "human_ui": "reviewer-priority-human.html",
+  "model_labels_hidden": true,
+  "no_independent_human_gold": true,
+  "gold_benchmark_release": "BLOCKED"
+}

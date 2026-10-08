@@ -1,0 +1,15 @@
+{
+  "checkpoint": "CLASSIFICATION-03-DOMAIN-THIRD-AI",
+  "status": "AI_DOMAIN_REVIEW_COMPLETE_NOT_HUMAN_GOLD",
+  "items": 12,
+  "selection": "10 inter-AI label conflicts union 6 critical rule-vs-AI differences",
+  "status_counts": {
+    "IT_ADJACENT": 3,
+    "NON_IT": 2,
+    "IT_TECHNICAL": 6,
+    "UNDETERMINABLE": 1
+  },
+  "model": "opus",
+  "new_cost_usd": 0.432,
+  "requires_real_human_adjudication": true
+}

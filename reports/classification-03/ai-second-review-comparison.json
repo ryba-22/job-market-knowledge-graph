@@ -1,0 +1,48 @@
+{
+  "checkpoint": "CLASSIFICATION-03-AI-SECOND-BLIND-COMPARE",
+  "status": "AI_CONSENSUS_RECORDED_HUMAN_REVIEW_STILL_REQUIRED",
+  "compared": 69,
+  "same_scope_label": 59,
+  "different_scope_label": 10,
+  "cross_model_agreement_not_accuracy": 0.8551,
+  "confusion_counts": {
+    "IT_ADJACENT -> IT_ADJACENT": 16,
+    "IT_ADJACENT -> IT_TECHNICAL": 4,
+    "IT_ADJACENT -> NON_IT": 3,
+    "IT_TECHNICAL -> IT_ADJACENT": 1,
+    "IT_TECHNICAL -> IT_TECHNICAL": 11,
+    "NON_IT -> NON_IT": 22,
+    "NON_IT -> UNDETERMINABLE": 1,
+    "UNDETERMINABLE -> IT_ADJACENT": 1,
+    "UNDETERMINABLE -> UNDETERMINABLE": 10
+  },
+  "reviewer_confidence_pairs": {
+    "high -> high": 25,
+    "high -> medium": 5,
+    "low -> low": 3,
+    "low -> medium": 2,
+    "medium -> high": 3,
+    "medium -> low": 1,
+    "medium -> medium": 30
+  },
+  "disputed_ids": [
+    "2233593",
+    "3130802",
+    "3267627",
+    "3283887",
+    "3299747",
+    "3318748",
+    "3331981",
+    "3337104",
+    "3337254",
+    "738597"
+  ],
+  "unreviewed_human_label_count": 69,
+  "independent_human_gold": 0,
+  "release_gate": "BLOCKED",
+  "limitations": [
+    "Two independent LLM invocations do not establish independent human annotation.",
+    "A and B can make correlated errors; agreement is not validation.",
+    "The enriched 69-offer queue is not an unbiased representative survey."
+  ]
+}

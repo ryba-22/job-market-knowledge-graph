@@ -181,7 +181,7 @@ show(0);
 def write_reviewers(root: Path):
     family_options = "".join('<option value="'+escape(x)+'">'+escape(x.replace("_"," "))+"</option>"
                              for x in FAMILIES)
-    for round in ("a", "b", "c", "human"):
+    for round in ("a", "b", "c", "human", "priority-human"):
         path = root / f"reviewer-{round}.jsonl"
         if not path.exists():
             continue
