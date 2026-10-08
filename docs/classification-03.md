@@ -124,3 +124,27 @@ Checkpoint: 2026-10-08. User requested delegation of review to the team. The fol
 Data contract: The existing full 200-item benchmark and original 69-item review queue are NOT overwritten. The 47-item priority queue is an optional minimized operational slice, not an unbiased replacement for the 200-item independent goldset; its 40 controls are stratified, and the other 7 additional roles are purposively sampled. The same AI family may exhibit correlated mistakes; the independent reviewer identity claim is not true for AI personas. Source hashes and annotation excerpts are revalidated, input packet selection frozen, and model outputs never written to the human-gold files.
 
 **Still blocked:** independent human review of the priority sample; adjudication of policy boundaries; independent quality-evaluation gold labels, confidence intervals and production GO/NO-GO. There is no human-recruiting, task dispatch to actual employees, or production side effect in this checkpoint.
+
+## AI-only delegation of all 47 priority offers — 2026-10-08
+
+User decision: allow the remaining priority review to be performed by AI. This authorizes operational silver review only, NOT independent human gold, production filtering, or changes to original C02 decisions.
+
+The Codex CLI model was checked but unavailable due to a usage-limit block. Instead, the separate source-only Opus reviewer evaluated all 47: 12 pre-existing source-only Opus assessments reused, plus 35 newly evaluated in seven source-bound, verified batches. Fresh reported usage: USD 0.644.
+
+Reproduce: python -m ingestion.classification03_ai_delegate --workers 3 (resumable). Compare: python -m ingestion.classification03_ai_delegate --reconcile.
+
+Private evidence: .local-evidence/classification-03/ai-delegation-v1/ includes frozen run contract, individual batch artifacts, opus-47-annotations.jsonl and ai-silver-proposals.jsonl. The decisions retain original source IDs, revision SHA hashes, three reviewer votes, validated source excerpts and policy-version tags. Public aggregate: reports/classification-03/ai-delegated-47.json.
+
+Three source-only AI opinions on all 47 records: two separate Sonnet sessions, one Opus model session. Two Sonnet sessions may have correlated mistakes. Agreement does not measure truth or generalizable accuracy.
+
+| Provisional AI-silver classification | Count |
+|---|---:|
+| IT_TECHNICAL | 16 |
+| NON_IT | 24 |
+| REVIEW_REQUIRED | 7 |
+
+Disposition: 33 unanimous binary AI outcomes; 7 majority (2 of 3) unverified binary decisions; 7 kept in review due to adjacent/undeterminable scope. Three records conflict with confident original rules. No original source/assessment writes.
+
+Quality gate: THREE_AI_SILVER_RECONCILED_HUMAN_GOLD_STILL_BLOCKED. No human labels; no independent-gold quality score; no production GO. The human review UI remains available for future independent verification, but the requested AI-only review has been executed.
+
+Statistical limitation: this 47-case priority queue is enriched for ambiguity and high-risk disagreements, so distribution 16/24/7 is not an unbiased sample of Polish or even Aplikuj-wide IT vacancies.

@@ -1,0 +1,27 @@
+{
+  "checkpoint": "CLASSIFICATION-03-THREE-AI-CONSENSUS-47",
+  "status": "THREE_AI_SILVER_RECONCILED_HUMAN_GOLD_STILL_BLOCKED",
+  "source_reviewed": 47,
+  "gold_labels": 0,
+  "proposed_silver_scope_counts": {
+    "IT_TECHNICAL": 16,
+    "NON_IT": 24,
+    "REVIEW_REQUIRED": 7
+  },
+  "disposition_counts": {
+    "AI_AGREE_OUTSIDE_BINARY_SCOPE": 7,
+    "AI_MAJORITY_SILVER_UNVERIFIED": 7,
+    "AI_UNANIMOUS_SILVER": 33
+  },
+  "conflicts_with_confident_rules": 3,
+  "models": "Sonnet first + separate Sonnet second + Opus source-only (reused 12 + new 35)",
+  "majority_is_not_accuracy": true,
+  "risks": [
+    "Correlated errors in two Sonnet runs, even with distinct sessions",
+    "Three-way agreement does not establish human truth",
+    "Strict human-gold quality gate remains blocked",
+    "Source selection enriched for risk; counts are not market estimates"
+  ],
+  "proposal_path": ".local-evidence/classification-03/ai-delegation-v1/ai-silver-proposals.jsonl",
+  "production_go": false
+}
